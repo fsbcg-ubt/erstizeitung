@@ -1,0 +1,15 @@
+--- 
+title: "Welcome to the Jungle - Ein Reiseführer für Neuankömmlinge"
+author: "Fachschaft BCG"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+github-repo: fsbcg-ubt/erstizeitung-2022
+---
+
+# Einleitung
+```{r, echo=FALSE}
+knitr::include_graphics("images/cover.png")
+```
