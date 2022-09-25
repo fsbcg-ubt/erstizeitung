@@ -1,6 +1,6 @@
 ## Der EduCare-Studiensupport
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/der-educare-studensupport.png")
 ```
 

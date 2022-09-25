@@ -10,6 +10,6 @@ github-repo: fsbcg-ubt/erstizeitung-2022
 ---
 
 # Einleitung
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/cover.png")
 ```
