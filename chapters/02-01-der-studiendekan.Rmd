@@ -1,6 +1,6 @@
 ## Der Studiendekan
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/der-studiendekan.jpg")
 ```
 
