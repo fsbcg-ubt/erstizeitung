@@ -268,32 +268,34 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Proj
 <p>Dann bleibt uns nur noch folgendes zu sagen:</p>
 <p><strong>Viel Glück im Studium und einen guten Und schnellen Abschluss,</strong><br>
 <strong>Deine Fachschaft!</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="bachelor-chemie.html#cb1-1" aria-hidden="true" tabindex="-1"></a>praktika <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/bachelor-chemie-praktika.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning in read.table(file = file, header = header, sep = sep, quote = quote, :
-## incomplete final line found by readTableHeader on &#39;data/bachelor-chemie-
-## praktika.csv&#39;</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="bachelor-chemie.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(praktika), <span class="st">&quot;pipe&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="bachelor-chemie.html#cb1-1" aria-hidden="true" tabindex="-1"></a>praktika <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/bachelor-chemie-praktika.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="bachelor-chemie.html#cb1-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(praktika), <span class="st">&quot;pipe&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
-<th align="right">Semetser</th>
-<th align="left">Modul</th>
-<th align="left">Wdh.</th>
+<th align="left">V1</th>
+<th align="left">V2</th>
+<th align="left">V3</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">1</td>
+<td align="left">1</td>
 <td align="left">AC I</td>
 <td align="left">Wöchentlich</td>
 </tr>
 <tr class="even">
-<td align="right">1</td>
+<td align="left"><em>1</em></td>
 <td align="left">Physik</td>
 <td align="left">Wöchentlich ODER als Block zum Ferienbeginn (2 Wochen)</td>
 </tr>
 <tr class="odd">
-<td align="right">2</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
 <td align="left">PC II</td>
 <td align="left">Einzelversuche nach Vereinbarung</td>
 </tr>
