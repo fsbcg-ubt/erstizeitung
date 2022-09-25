@@ -268,21 +268,19 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Proj
 <p>Dann bleibt uns nur noch folgendes zu sagen:</p>
 <p><strong>Viel Glück im Studium und einen guten Und schnellen Abschluss,</strong><br>
 <strong>Deine Fachschaft!</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="bachelor-chemie.html#cb1-1" aria-hidden="true" tabindex="-1"></a>praktika <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/bachelor-chemie-praktika.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="bachelor-chemie.html#cb1-1" aria-hidden="true" tabindex="-1"></a>praktika <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/bachelor-chemie-praktika.csv&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>)</span>
 <span id="cb1-2"><a href="bachelor-chemie.html#cb1-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(praktika, <span class="st">&quot;pipe&quot;</span>)</span></code></pre></div>
 <table>
 <colgroup>
-<col width="28%" />
-<col width="5%" />
-<col width="47%" />
-<col width="18%" />
+<col width="42%" />
+<col width="31%" />
+<col width="26%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">V1</th>
-<th align="left">V2</th>
-<th align="left">V3</th>
-<th align="left">V4</th>
+<th align="left">Semester</th>
+<th align="left">Modul</th>
+<th align="left">Durchführung</th>
 </tr>
 </thead>
 <tbody>
@@ -290,16 +288,13 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Proj
 <td align="left"><strong>1</strong></td>
 <td align="left">AC I</td>
 <td align="left">Wöchentlich</td>
-<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">Physik</td>
-<td align="left">Wöchentlich ODER als Block zum Ferienbeginn (2 Wochen)</td>
+<td align="left">Physik,Wöchentlich ODER als Block zum Ferienbeginn (2 Wochen)</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -308,16 +303,13 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Proj
 <td align="left"><strong>2</strong></td>
 <td align="left">PC II</td>
 <td align="left">Einzelversuche nach Vereinbarung</td>
-<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left"></td>
 <td align="left">OC I</td>
-<td align="left">Block im Juli: 3 Wochen</td>
-<td align="left">4 Nachmittage pro Woche</td>
+<td align="left">Block im Juli: 3 Wochen, 4 Nachmittage pro Woche</td>
 </tr>
 <tr class="even">
-<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -326,16 +318,13 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Proj
 <td align="left"><strong>3</strong></td>
 <td align="left">PC III</td>
 <td align="left">Einzelversuche nach Vereinbarung</td>
-<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left"></td>
 <td align="left">OC II</td>
-<td align="left">Block Nov.-Jan.: 6 Wochen</td>
-<td align="left">4 Nachmittage pro Woche</td>
+<td align="left">Block Nov.-Jan.: 6 Wochen, 4 Nachmittage pro Woche</td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -344,78 +333,60 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Proj
 <td align="left"><strong>4</strong></td>
 <td align="left">MC</td>
 <td align="left">Wöchentlich</td>
-<td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">,AC III,2x Block: je 4 Wochen, 2,5 Volle Tage pro Woche (Anm. Ende 3. Sem.!)</td>
 <td align="left"></td>
-<td align="left">AC III</td>
-<td align="left">2x Block: je 4 Wochen</td>
-<td align="left">2</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">5 Volle Tage pro Woche (Anm. Ende 3. Sem.!)</td>
-<td align="left"></td>
+<td align="left">,AC III,Mitarbeiterpraktikum: 2 Wochen n. Vereinbarung (Ende 4. Sem. Eintragen!)</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">,,</td>
 <td align="left"></td>
-<td align="left">AC III</td>
-<td align="left">Mitarbeiterpraktikum: 2 Wochen n. Vereinbarung (Ende 4. Sem. Eintragen!)</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"></td>
+<td align="left"><strong>5</strong>,PC IV,Einzelversuche nach Vereinbarung</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>5</strong></td>
-<td align="left">PC IV</td>
-<td align="left">Einzelversuche nach Vereinbarung</td>
+<td align="left">,KolloidC,Einzelversuche nach Vereinbarung (nur für Polymer– und Kolloidchemiker)</td>
+<td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left">KolloidC</td>
-<td align="left">Einzelversuche nach Vereinbarung (nur für Polymer– und Kolloidchemiker)</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left">Wahl</td>
-<td align="left">Praktikum im 5. oder 6. Semester</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left">AC IV</td>
-<td align="left">Block Ferienbeginn: 3 Wochen</td>
-<td align="left">Vollzeit</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left">OC IV</td>
-<td align="left">Block im Anschluss: 3 Wochen</td>
-<td align="left">Vollzeit (nur für Chemiker)</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">,Wahl,Praktikum im 5. oder 6. Semester</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>6</strong></td>
-<td align="left">PT</td>
-<td align="left">Wöchentlich (nur für Polymer– und Kolloidchemiker)</td>
+<td align="left">,AC IV,Block Ferienbeginn: 3 Wochen, Vollzeit</td>
+<td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">,OC IV,Block im Anschluss: 3 Wochen, Vollzeit (nur für Chemiker)</td>
 <td align="left"></td>
-<td align="left">Wahl</td>
-<td align="left">Praktikum im 5. oder 6. Semester</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">,,</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>6</strong>,PT,Wöchentlich (nur für Polymer– und Kolloidchemiker)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">,Wahl,Praktikum im 5. oder 6. Semester</td>
+<td align="left"></td>
 <td align="left"></td>
 </tr>
 </tbody>
