@@ -1,5 +1,9 @@
 ## Der EduCare-Studiensupport
 
+```{r, echo=FALSE}
+knitr::include_graphics("images/der-educare-studensupport.png")
+```
+
 Lina Fürst<br>
 Raum: B3—Raum 13<br>
 Telefon: 0921/55-2187<br>
