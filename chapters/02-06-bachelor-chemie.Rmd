@@ -68,7 +68,13 @@ Dabei handelt es sich um Vorträge zu aktuellen Forschungsthemen der Chemie von 
 Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner ihre Projekte vorstellen. Den Besuch der Veranstaltungen kannst du dir über eine Laufkarte bestätigen lassen
 (sofern nicht alle Profs schon verschwunden sind). Diese umfasst 10 Vorlesungen und kann im Sekretariat der PC II abgeholt werden.
 
-Dann bleibt uns nur noch folgendes zu sagen:
+Zuletzt gibts hier noch den Praktikumsplan des Studiums für euch (alle Angaben ohne Gewähr)
 
+```{r, echo=FALSE}
+praktika <- read.csv(file = "data/bachelor-chemie-praktika.csv", sep = ";")
+knitr::kable(praktika, "pipe")
+```
+
+Dann bleibt uns nur noch folgendes zu sagen:<br>
 **Viel Glück im Studium und einen guten Und schnellen Abschluss,**<br>
 **Deine Fachschaft!**
