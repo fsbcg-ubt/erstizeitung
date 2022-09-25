@@ -1,5 +1,9 @@
 # Der Studiendekan
 
+```{r, echo=FALSE}
+knitr::include_graphics("images/der-studiendekan.jpg")
+```
+
 Prof. Dr. Roland Marschall<br>
 Telefon: 0921 / 55 - 2760<br>
 Email: roland.marschall@uni-bayreuth.de
