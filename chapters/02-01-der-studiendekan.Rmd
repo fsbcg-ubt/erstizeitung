@@ -1,4 +1,4 @@
-# Der Studiendekan
+## Der Studiendekan
 
 ```{r, echo=FALSE}
 knitr::include_graphics("images/der-studiendekan.jpg")

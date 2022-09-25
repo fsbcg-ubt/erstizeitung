@@ -1,0 +1,5 @@
+# Fakultät II
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/fakultaet-ii-cover.png")
+```
