@@ -23,6 +23,10 @@ Bis zum Ende des dritten Semesters musst du mindestens 40 davon gesammelt haben,
 dass du eine Klausur (wie zum Beispiel Sysmo oder OC I) nicht bestehst, kannst du diese immer mindestens einmal wiederholen.
 Trotzdem ist es natürlich besser die Klausuren sofort zu bestehen – das erspart dir viel Stress und noch dazu ein gutes Stück an Organisationsaufwand.
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/bachelor-biologie-meme.png")
+```
+
 Selbstverständlich gehört auch Leichenfledderei zum Biologiestudium. Damit darfst du gleich im 1. Semester anfangen,
 wo du vom Pantoffeltierchen über Regenwurm und Saibling bis hin zur Ratte alles auf deinem Tisch liegen hast.
 Einen vergleichbaren Kurs gibt es übrigens auch für Pflanzen: Hier wäre aufgrund der verwendeten Färbemittel ein Kittel ziemlich praktisch!
