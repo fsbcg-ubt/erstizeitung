@@ -55,6 +55,10 @@ Höhepunkte eures Studiums werden die zahlreichen kleinen und großen Exkursione
 
 Und für alle, die nach sechs Semestern Bachelor-Studium noch nicht genug haben, gibt es die Masterstudiengänge der Geografie.
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/bachelor-geografie-meme.png")
+```
+
 Wenn ihr weitere Fragen zum Studiengang Geografie B. Sc. oder allgemeine Fragen zur Universität Bayreuth habt, kommt bei der Fachschaft Biologie,
 Chemie und Geowissenschaften vorbei oder löchert ältere Studierende des Studiengangs Geografie. Auch das Modulhandbuch gibt Aufschluss.
 
