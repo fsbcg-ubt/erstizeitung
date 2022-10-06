@@ -52,6 +52,10 @@ Im zweiten Semester finden dann die ersten biologischen Vorlesungen, Zellbiologi
 So kommen Genetik, Molekularbiologie sowie Botanik (# TODO Verweis auf Dschungel-ABC) dazu und es wird vertieft auf Zellbiologie und Biochemie eingegangen.
 Der Studiengang erhält nun seinen biochemischen Kern, was jedoch ein gesundes Bewusstsein für Lernen und Verantwortung voraussetzt.
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/bachelor-biochemie-meme.png")
+```
+
 Neben den Vorlesungen und den dazugehörigen Übungen gibt es noch diverse Praktika: Im Labor werden nach Anweisung Synthesen, Umlagerungen und andere interessante Sachen gemacht,
 was abermals umfangreiche Vor- und Nachbereitung bedarf. Ihr solltet auf keinen Fall unterschätzen, wie viel Eigeninitiative hier mitgebracht werden muss.
 Wer in den ersten beiden Semestern schläft und zu wenig lernt, dem wird es später fehlen. Dann ist es aber meistens schon zu spät, da die Zeit zu knapp ist, den Rückstand wieder aufzuholen.
