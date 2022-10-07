@@ -12,6 +12,10 @@ Wenn ihr bei uns, also in der Fakultät NW I angekommen seid, dann studiert ihr 
 Fast alle Lehramtskombinationen laufen im klassischen Muster ab. Dies bedeutet, beide Fächer sind gleich gewichtet mit dem Ziel Staatsexamen. Damit keine unbeantworteten Fragen auftauchen:
 Natürlich müssen auch die Modellstudiengangsteilnehmer das Staatsexamen in ihren jeweiligen Fächern sowie den Erziehungswissenschaften ablegen.
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/lehramt-meme.png")
+```
+
 Die ersten Examen stehen meist nach dem 7. Semester (Realschule) bzw. dem 9. Semester (Gymnasium) an. Doch keine Angst!
 Jeder hat einen "Freischuss" und bis dahin ist noch viel Zeit um sich einen Kopf zu machen. Wichtig ist jetzt erst mal ein guter Start ins Semester und Unileben!
 
