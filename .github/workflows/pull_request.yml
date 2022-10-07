@@ -76,3 +76,19 @@ jobs:
           git commit -m $GITHUB_SHA
           git branch -M gh-pages
           git push -u origin gh-pages --force
+
+  create_deployment_comment:
+    needs: deploy_gitbook
+    name: "Create comment with GH Pages URL"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "Das Ergebnis des PRs kann unter https://fsbcg-ubt.github.io/${{ env.PR_REPO_NAME }}/ eingesehen werden. 📖👀"
+            })
