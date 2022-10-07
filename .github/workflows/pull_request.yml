@@ -8,6 +8,8 @@ name: "GitHub Pages deployment for PRs"
 
 env:
   PR_REPO_NAME: ${{ github.event.repository.name }}_${{ github.event.pull_request.node_id }}
+  PR_COMMENT_TEXT_BEGIN: "Das Ergebnis des PRs kann unter "
+  PR_COMMENT_TEXT_END: " eingesehen werden. 📖👀"
 
 jobs:
   create_repository:
@@ -82,13 +84,33 @@ jobs:
     name: "Create comment with GH Pages URL"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v3
+      - uses: actions/github-script@7dff1a87643417cf3b95bb10b29f4c4bc60d8ebd
         with:
           github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
           script: |
+            const commentBody = "${{ env.PR_COMMENT_TEXT_BEGIN }}https://fsbcg-ubt.github.io/${{ env.PR_REPO_NAME }}/${{ env.PR_COMMENT_TEXT_END }}"
+
+            let commentFound = false
+            await github.paginate(github.rest.issues.listComments, {
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo
+            })
+            .then((comments) => {
+              for (const comment of comments) {
+                if (comment.body.includes("https://fsbcg-ubt.github.io/${{ env.PR_REPO_NAME }}")) {
+                  commentFound = true
+                }
+              }
+            })
+
+            if (true == commentFound) {
+              return
+            }
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "Das Ergebnis des PRs kann unter https://fsbcg-ubt.github.io/${{ env.PR_REPO_NAME }}/ eingesehen werden. 📖👀"
+              body: commentBody
             })
