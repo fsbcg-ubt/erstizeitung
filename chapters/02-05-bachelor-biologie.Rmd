@@ -1,6 +1,6 @@
 ## Bachelor Biologie
 
-Herzlichen Glückwunsch! Du hast dich für ein Biologie-Studium an der Uni Bayreuth entschieden. Wie du bald merken wirst, war dies die "beste" Entscheidung deines Lebens, bis jetzt!
+🎉Herzlichen Glückwunsch!🎉 Du hast dich für ein Biologie-Studium an der Uni Bayreuth entschieden. Wie du bald merken wirst, war dies die "beste" Entscheidung deines Lebens, bis jetzt!
 
 Nun wollen wir dir zeigen wie du immer nur noch bessere Entscheidungen für dein Leben (= Studium) treffen kannst. Zuallererst gilt es,
 das nötige Rüstzeug für deinen Kampf durch die Praktika zu besorgen: Sezierbesteck (in der Fachschaft), Kittel (den brauchst du zwar im 1. Semester nicht zwingend, aber in späteren Semestern brauchst du ihn sicher,
@@ -10,12 +10,12 @@ Wie du bei deiner Ankunft in Bayreuth vielleicht am fehlenden Oberleitungsnetz d
 Dies betrifft leider auch einige Lehrstühle an der Uni Bayreuth, weshalb du für die Praktika teilweise auf traditionellere Formen der Anmeldung zurückgreifen musst.
 
 > Übrigens:<br>
-> *Für jede Klausur gibt es Anmeldefristen, die meistens eine Woche davor enden (manchmal auch früher!); also immer rechtzeitig um die Anmeldung kümmern!*
+> *Für jede Klausur gibt es **Anmeldefristen**, die meistens eine Woche davor enden (manchmal auch früher!); also immer rechtzeitig um die Anmeldung kümmern!*
 
 Die Anmeldung kann über Listen in den Sekretariaten, über eLearning oder über cmlife erfolgen.
 Du solltest daher kurz vor oder spätestens zu Semesterbeginn regelmäßig die Aushangbretter und entsprechenden Internetseiten checken. Welcome to the Jungle!
 
-Für die Nutzung von cmlife benötigst du dein persönliches Unipasswort. Wie du dieses bekommst sagen wir dir in der Einführungsveranstaltung. Also alle hingehen! Falls dir dieses jemals abhandenkommen sollte,
+Für die Nutzung von cmlife benötigst du dein persönliches Unipasswort. Wie du dieses bekommst sagen wir dir in der Einführungsveranstaltung. Also alle hingehen❗ Falls dir dieses jemals abhandenkommen sollte,
 kannst du dir mit deinem Studierendenausweis ein neues in der Studierendenkanzlei abholen.
 
 Außerdem gibt es für jede Prüfung eine gewisse Anzahl an Leistungspunkten (LP) die dir, wenn du ein Modul bestehst komplett, also unabhängig von der Note, gutgeschrieben werden.
@@ -29,6 +29,11 @@ knitr::include_graphics("images/bachelor-biologie-meme.png")
 
 Selbstverständlich gehört auch Leichenfledderei zum Biologiestudium. Damit darfst du gleich im 1. Semester anfangen,
 wo du vom Pantoffeltierchen über Regenwurm und Saibling bis hin zur Ratte alles auf deinem Tisch liegen hast.
-Einen vergleichbaren Kurs gibt es übrigens auch für Pflanzen: Hier wäre aufgrund der verwendeten Färbemittel ein Kittel ziemlich praktisch!
 
-**Die Fachschaft wünscht dir also viel Spaß beim Schnipseln und Biben (siehe Dschungel-ABC) und natürlich einen erfolgreichen Start ins Studium.**
+>Zitat für Zwischendurch:<br>
+> *Ihhhh, die Maus fass ich nicht an!!!*<br>
+> Biologie- Studentin
+
+Einen vergleichbaren Kurs gibt es übrigens auch für Pflanzen: Hier wäre aufgrund der verwendeten Färbemittel ein Kittel ziemlich praktisch!😊
+
+💕**Die Fachschaft wünscht dir also viel Spaß beim Schnipseln und Biben (# TODO siehe Dschungel-ABC) und natürlich einen erfolgreichen Start ins Studium.**💕
