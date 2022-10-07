@@ -1,0 +1,21 @@
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+name: "Delete Repository of closed PR"
+
+env:
+  PR_REPO_NAME: ${{ github.event.repository.name }}_${{ github.event.pull_request.node_id }}
+
+jobs:
+  delete_repository:
+    name: "Delete PR Repository"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Delete repository for temporary deployment"
+        uses: octobay/delete-repository-action@7694acb7e5d793664e71a2373af5cb37811d709d
+        with:
+          name: fsbcg-ubt/${{ env.PR_REPO_NAME }}
+          access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
