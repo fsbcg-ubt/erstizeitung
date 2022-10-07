@@ -1,4 +1,4 @@
-## Der EduCare-Studiensupport
+## Servicestelle PULS
 
 ```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/der-educare-studensupport.png")
@@ -7,7 +7,7 @@ knitr::include_graphics("images/der-educare-studensupport.png")
 Lina Fürst<br>
 Raum: B3—Raum 13<br>
 Telefon: 0921/55-2187<br>
-Email: educare.bcg@uni-bayreuth.de
+Email: puls.bcg@uni-bayreuth.de
 
 **Name**
 
@@ -39,8 +39,8 @@ Email: educare.bcg@uni-bayreuth.de
 
 **Wenn ich 3 Wünsche frei hätte**
 
-> 1. hätte der Tag mehr als 24 Stunden!
-> 2. gäbe es ECTS-Punkte für soziales bzw ökologisches Engagement
+> 1. Hätte der Tag mehr als 24 Stunden!
+> 2. Gäbe es ECTS-Punkte für soziales bzw ökologisches Engagement
 > 3. Wären noch mehr Studierende aktive Fachschaftsmitglieder
 
 **Mein Tipp fürs Studium**
@@ -64,4 +64,4 @@ Darüber hinaus beraten wir Dich gerne zu allen Fragen, Konflikten und Entscheid
 
 Was findest Du gut? Was möchtest Du verbessern? Gemeinsam entwickeln wir die Qualität der Studiengänge kontinuierlich weiter. Wir freuen uns auf Rückmeldungen und Ideen!
 
-Weitere Infos finden unter [PULS Studiensupport](https://www.bcg.uni-bayreuth.de/de/studium/unterstuetzungsangebote/PULS/index.html).
+Weitere Infos findest Du unter [PULS Studiensupport](https://www.bcg.uni-bayreuth.de/de/studium/unterstuetzungsangebote/PULS/index.html).
