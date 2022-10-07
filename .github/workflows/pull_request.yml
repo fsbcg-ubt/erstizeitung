@@ -1,0 +1,78 @@
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+name: "GitHub Pages deployment for PRs"
+
+env:
+  PR_REPO_NAME: ${{ github.event.repository.name }}_${{ github.event.pull_request.node_id }}
+
+jobs:
+  create_repository:
+    name: "Create PR Repository"
+    runs-on: ubuntu-latest
+    steps:
+      # The job tolerates existing repositories. (https://github.com/mktcode/create-repository-action/blob/main/index.js)
+      - name: "Create new repository for temporary deployment"
+        uses: octobay/create-repository-action@7694acb7e5d793664e71a2373af5cb37811d709d
+        with:
+          name: ${{ env.PR_REPO_NAME }}
+          org: "fsbcg-ubt"
+          access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+
+  build_gitbook:
+    name: "Render GitBook"
+    runs-on: macOS-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      - name: "Install R"
+        uses: r-lib/actions/setup-r@cc43801a5c7c7730c2bb132cc3b245281df03764 # v2.2.8 (2022-08-31)
+      - name: "Install Pandoc"
+        uses: r-lib/actions/setup-pandoc@cc43801a5c7c7730c2bb132cc3b245281df03764 # v2.2.8 (2022-08-31)
+      - name: "Install R dependencies (and cache)"
+        uses: r-lib/actions/setup-r-dependencies@cc43801a5c7c7730c2bb132cc3b245281df03764 # v2.2.8 (2022-08-31)
+        with:
+          cache-version: 2
+          needs: |
+            rmarkdown
+            bookdown
+      - name: "Render book as GitBook"
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
+      - name: "Upload artifact"
+        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # v3.1.0
+        with:
+          name: _book_gitbook
+          path: _book/
+
+  deploy_gitbook:
+    needs: [create_repository, build_gitbook]
+    name: "Deploy GitBook to PR Repository"
+    runs-on: ubuntu-latest
+    environment:
+      name: pull-request-staging
+      url: https://fsbcg-ubt.github.io/${{ env.PR_REPO_NAME }}/
+    steps:
+      # https://github.com/actions/checkout#push-a-commit-using-the-built-in-token
+      - name: "Set GitHub Actions as Commit Author"
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+      - name: "Checkout PR Repository"
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+        with:
+          repository: fsbcg-ubt/${{ env.PR_REPO_NAME }}
+          token: ${{ secrets.ORG_ADMIN_TOKEN }}
+      - name: "Download artifact"
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # v3.0.0
+        with:
+          name: _book_gitbook
+      - name: "Push files to target"
+        run: |
+          touch .nojekyll
+          git add .
+          git commit -m $GITHUB_SHA
+          git branch -M gh-pages
+          git push -u origin gh-pages --force
