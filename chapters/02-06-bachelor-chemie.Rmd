@@ -18,14 +18,14 @@ die teilweise auch über den Stoff der Vorlesung hinausgehen, lernst du hier vor
 Auch zu AC I wirst du ein Praktikum absolvieren müssen, für das die Studis auf das gelbe und das blaue Labor verteilt werden.
 In diesen Laboratorien befindet sich dein Arbeitsplatz (= Bench, engl. für Labortisch), an dem du deine Lebenszeit mit spannenden Titrationen verbringen darfst.
 Bei beiden Praktika muss wöchentlich ein Protokoll abgegeben werden, in dem die Arbeit beschrieben und daraus Schlussfolgerungen gezogen werden sollen.
-Nur keine Angst davor: aller Anfang ist schwer aber mit der Zeit fällt es dir erfahrungsgemäß deutlich leichter, diese zu schreiben.
+Nur keine Angst davor: aller Anfang ist schwer aber mit der Zeit fällt es dir erfahrungsgemäß deutlich leichter, diese zu schreiben.😉
 Spätestens zur Abschlussarbeit wirst du dankbar sein, etwas Übung im Formulieren von wissenschaftlichen Texten zu haben.
 
 > Zitat für Zwischendurch:<br>
 > *"Ziel dieser Vorlesung ist die Homogenisierung Ihrer heterogenen Vorbildung."*<br>
 > Dozentin über die Vorlesung AC 1
 
-Was du unbedingt noch zu den Veranstaltungen wissen musst: Für Praktika und Seminare herrscht Anwesenheitspflicht.
+❗Was du unbedingt noch zu den Veranstaltungen wissen musst❗: Für Praktika und Seminare herrscht **Anwesenheitspflicht**.
 Also Termin in den Kalender eintragen und pünktlich dort auftauchen! Im Gegensatz dazu ist der Besuch von Vorlesungen und den Übungen freiwillig.
 Es lohnt sich aber, hinzugehen, da es den Vorbereitungsaufwand für die Klausuren drastisch reduzieren kann.
 Vor allem die Übungen bringen dahingehend viel. Dort wird der Vorlesungsstoff an Beispielen nochmals aufgearbeitet und du kannst die Betreuer mit Fragen löchern, solltest du etwas nicht verstanden haben.
@@ -41,32 +41,32 @@ Die Klausuren bilden nämlich den Abschluss der jeweiligen Vorlesungsmodule und 
 
 Wenn du zusätzlich zu Vorlesungsskripten auf Bücher zurückgreifen möchtest, diese sind in ausreichender Zahl in der Teilbibliothek NW I vorhanden.
 Es lohnt sich nämlich kaum, bereits im ersten Semester eine kleine (oder große) Büchersammlung anzulegen, da viele von den Büchern, die in den Vorlesungen genannt werden,
-nur einmal gebraucht werden und dann meistens auch nur ein Kapitel davon relevant ist.
+nur einmal gebraucht werden und dann meistens auch nur ein Kapitel davon relevant ist.😣
 
 > Zitat für Zwischendurch:<br>
 > *"Wer am lautesten schreit, hat am meisten Recht ..."*<br>
 > Mitglied der Fachschaft
 
-Das einzige Material, das du für dein Studium brauchst und bei dem du auch nicht an einem Kauf vorbeikommst, ist der Laborkittel.
+Das einzige Material, das du für dein Studium brauchst und bei dem du auch nicht an einem Kauf vorbeikommst, ist der Laborkittel.🥼
 Dieser ist in allen Chemiepraktika verpflichtend, da er dich vor den "gefährlichen" Chemikalien und anderen Widrigkeiten des Dschungels schützt.
-Kittel gibt es im Online-Shop oder bei uns im Fachschaftszimmer (für nur (TODO: Kittelpreis einfügen)).
+Kittel gibt es im Online-Shop oder bei uns im Fachschaftszimmer (für nur 13 Euro).
 
-Für jedes Praktikum solltest du außerdem versichert sein, falls doch mal was zu Bruch geht.
+Für jedes Praktikum solltest du außerdem versichert sein, falls doch mal was zu Bruch geht!
 Aus diesem Grund wird zu Beginn der meisten Praktika ein schriftlicher Nachweis einer Haftpflichtversicherung verlangt.
 
 ```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/bachelor-chemie-meme.png")
 ```
 
-Im zweiten Semester wird dann noch einmal richtig nachgelegt: Einerseits wird eure Nebenfachausbildung mit Mathe 2 und Biochemie/Zellbiologe abgeschlossen.
+Im zweiten Semester wird dann noch einmal richtig nachgelegt: Einerseits wird eure Nebenfachausbildung mit Mathe 2 und Biochemie 1 abgeschlossen.
 Andererseits habt ihr eure zweiten Vorlesungen in AC und PC. In letzterem habt ihr auch ein Praktikum, wo ihr euch die Termine frei einteilen könnt –
 frühes fertig sein lohnt sich meistens, um Überschneidungen zu verhindern. Außerdem habt ihr auch eure Grundlagenvorlesung in der Organischen Chemie und das dazugehörige Praktikum.
-Vor allem diese Klausur sorgt häufig für schlechte Noten und hohe Durchfallquoten. Zu allen Vorlesungen gehen,alle Übungen machen und beim Lernen früh anfangen (am besten in einer kleinen Gruppe) und alle Altklausuren lösen hilft.
+Vor allem diese Klausur sorgt häufig für schlechte Noten und hohe Durchfallquoten. Zu **allen** Vorlesungen gehen,**alle** Übungen machen und beim Lernen **früh** anfangen (am besten in einer kleinen Gruppe) und alle Altklausuren lösen hilft.
 Übrigens solltet ihr diese Tipps auch bei allen anderen Vorlesungen anwenden, dann kann nichts schiefgehen 😉.
 
 > Zitat für Zwischendurch:<br>
 > *Klausuraufgabe AC 2: Na + H~2~O -> ???*<br>
-> *Antwort eines Studenten: "Das Natrium wird nass ..."*<br>
+> *Antwort eines Studierenden: "Das Natrium wird nass ..."*<br>
 
 Was vielen gerne auch erst gegen Ende des Bachelorstudiums "einfällt" ist, dass jeder Chemiker einen Leistungspunkt über das Besuchen sogenannter Ringvorlesungen einbringen muss.
 Dabei handelt es sich um Vorträge zu aktuellen Forschungsthemen der Chemie von verschiedenen Professoren unserer Hochschule.
@@ -81,5 +81,5 @@ knitr::kable(praktika, "pipe")
 ```
 
 Dann bleibt uns nur noch folgendes zu sagen:<br>
-**Viel Glück im Studium und einen guten Und schnellen Abschluss,<br>
-Deine Fachschaft!**
+💕**Viel Glück im Studium und einen guten Und schnellen Abschluss,<br>
+Deine Fachschaft!**💕
