@@ -1,5 +1,9 @@
 ## Das Lernzentrum Chemie
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/lernzentrum-titelbild.png")
+```
+
 Das Lernzentrum ist ein Zusatzangebot zur Unterstützung des selbstorganisierten Lernens, das insbesondere die regelmäßige Vor– und Nachbereitung von Lehrveranstaltungen und das eigenständige Lernen unterstützt.
 Bitte schreiben Sie sich bei Interesse selbst als Teilnehmer*in in diesen Kurs ein.
 
