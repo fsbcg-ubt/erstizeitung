@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Delete repository for temporary deployment"
-        uses: octobay/delete-repository-action@7694acb7e5d793664e71a2373af5cb37811d709d
+        uses: octobay/delete-repository-action@be9c20ef81c1563444e569aeeca909eb2bbb3ce5
         with:
           name: fsbcg-ubt/${{ env.PR_REPO_NAME }}
           access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
