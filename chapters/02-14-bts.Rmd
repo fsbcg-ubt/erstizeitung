@@ -1,5 +1,9 @@
 ## btS. e.V. - Biotechnologische Studenteninitiative
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/bts-titelbild.png")
+```
+
 Die Abkürzung btS steht für die Biotechnologische Studenteninitiative e.V., einem Netzwerk von über 800 Studenten der Life Sciences in 25 Geschäftsstellen deutschlandweit.
 Die Mitglieder der btS sind sowohl Studenten als auch Doktoranden, die sich neben dem Studium oder der Promotion ehrenamtlich engagieren.
 Wir sind motivierte Studenten, die an Ihrer Uni oder Hochschule mit dem Blick auf die eigene Persönlichkeitsentwicklung etwas bewegen wollen.
