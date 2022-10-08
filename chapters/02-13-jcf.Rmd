@@ -1,5 +1,9 @@
 ## JCF Bayreuth - Bayreuther Sektion des JungChemikerForums der GDCh
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/jcf-titelbild.png")
+```
+
 Das JCF Bayreuth wurde im Mai 2013 gegründet und ist seitdem die lokale Sektion des JungChemikerForums der Gesellschaft Deutscher Chemiker (GDCh) an der Uni Bayreuth.
 Die GDCh ist mit 31.000 Mitgliedern das größte Netzwerk von Chemikern in ganz Europa. Zu ihren Zielen gehören die Förderung der wissenschaftlichen Arbeit,
 die Schaffung von Netzwerken, Öffentlichkeitsarbeit sowie die Festigung des Nachhaltigkeitsgedankens im Bereich der Chemie.
