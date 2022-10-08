@@ -1,5 +1,9 @@
 ## BcG Alumni e.V. - Alumni-Verein der Bio- und Geowissenschaften
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/bcg-alumni-titelbild.png")
+```
+
 BcG Alumni e.V. ist seit 6. Mai 2009 der offizielle Alumni-Verein für alle Studiengänge der Bio- und Geowissenschaften an der Universität Bayreuth.
 Von B wie Biochemie und Molekulare Biologie bis L wie Lebensmittel- und Gesundheitswissenschaften kommen hier Studierende sowie Absolventinnen und Absolventen der verschiedensten Vertiefungsrichtungen zusammen.
 
