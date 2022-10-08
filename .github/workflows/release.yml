@@ -7,23 +7,16 @@ name: "Release as GitBook & PDF"
 jobs:
   build_gitbook:
     name: "Render GitBook"
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
-      - name: "Install R"
-        uses: r-lib/actions/setup-r@cc43801a5c7c7730c2bb132cc3b245281df03764 # v2.2.8 (2022-08-31)
-      - name: "Install Pandoc"
-        uses: r-lib/actions/setup-pandoc@cc43801a5c7c7730c2bb132cc3b245281df03764 # v2.2.8 (2022-08-31)
-      - name: "Install R dependencies (and cache)"
-        uses: r-lib/actions/setup-r-dependencies@cc43801a5c7c7730c2bb132cc3b245281df03764 # v2.2.8 (2022-08-31)
-        with:
-          cache-version: 2
-          needs: |
-            rmarkdown
-            bookdown
       - name: "Render book as GitBook"
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
+        uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3.0.0
+        with:
+          image: fsbcgubt/docker-bookdown@sha256:958170419607ab75d841f4bb2049d8b3a39603af7a0a3af4e112aae0dbbb2884
+          options: --mount src=${{ github.workspace }},target=/book,type=bind
+          run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
         uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # v3.1.0
         with:
