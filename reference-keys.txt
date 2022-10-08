@@ -12,6 +12,8 @@ bachelor-biochemie
 bachelor-chemie
 bachelor-polymer--und-kolloidchemie
 bachelor-geoökologie
+biosphäre
+wissenschaftliches-lesen-und-abstract-schreiben
 bachelor-geografie-gesellschaft-und-umwelt
 lehramt
 gymnasiales-mint-lehramt
