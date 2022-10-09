@@ -1,5 +1,12 @@
 ## Die CampusCard
 
+```{r, echo=FALSE, out.width="45%"}
+knitr::include_graphics("images/die-campus-card-vorderseite.png")
+```
+```{r, echo=FALSE, out.width="45%"}
+knitr::include_graphics("images/die-campus-card-rückseite.png")
+```
+
 ### Studierendenausweis (Vorderseite) {-}
 
 Wie der Name schon sagt, könnt ihr euch mit der CampusCard als Studierende der Universität Bayreuth ausweisen; nützlich für diverse Vergünstigungen.
