@@ -1,5 +1,9 @@
 ## Das Glashaus
 
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/das-glashaus-titelbild.jpg")
+```
+
 Gerade Lust auf eine Pause vom Unistress - aber wo ist das nächste Sofa? Lust auf Kaffee - aber die Kaffeeautomaten entsprechen einfach nicht deinem Geschmack?
 Wie sieht eigentlich die Live-Musikszene in Bayreuth aus? Wo kann ich mich in meiner Freizeit engagieren und eine Menge Spaß haben? Viele Fragen auf die das Glashaus eine Antwort kennt.
 
