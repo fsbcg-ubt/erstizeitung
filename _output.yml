@@ -1,7 +1,10 @@
 bookdown::gitbook:
   css: style.css
   split_by: section
+  toc_depth: 3
   config:
+    toc:
+      collapse: section
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
