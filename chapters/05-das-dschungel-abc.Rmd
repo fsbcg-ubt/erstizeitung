@@ -1,1 +1,809 @@
 # Das Dschungel-ABC
+
+### Absolventen der Uni Bayreuth, bekannte {#dschungel-abc-bekannte-absolventen .unnumbered}
+
+Auma Obama, Halbschwester von Barack Obama; Andreas Voßkuhle, Präsident des Bundesverfassungsgerichts; Martin Bader, Sportdirektor des 1. FC Nürnberg; Karl-Theodor zu Guttenberg.
+
+### AC {#dschungel-abc-ac .unnumbered}
+
+= Anorganische Chemie.
+
+### AI {#dschungel-abc-ai .unnumbered}
+
+Artificial Intelligence; Angewandte Informatik (neben der [ZUV](#dschungel-abc-zuv)).
+
+### Allgemeiner Hochschulsport {#dschungel-abc-allgemeiner-hochschulsport .unnumbered}
+
+Gesunder Geist im gesunden Körper; bringt Vorteile ([Uni](#dschungel-abc-uni)). Nein im Ernst: Die Uni bietet ein äußerst umfangreiches Sport- und Fitnessprogramm an. Details finden sich unter [Links]. Er kostet zusätzlich zum Semesterbeitrag eine Gebühr von (# TODO Preis nachschauen, noch nicht öffentlich) Euro.
+
+### Anmelden {#dschungel-abc-anmelden .unnumbered}
+
+Für Prüfungen und Praktika müsst ihr euch anmelden. Je nach Studiengang (siehe entsprechende Artikel) gibt es hierfür verschiedene Modalitäten und Fristen. Für Prüfungen endet die Frist meist eine Woche vor dem Termin.
+
+### Arabidopsis thaliana {#dschungel-abc-arabidopsis-thaliana .unnumbered}
+
+Falls du Biologe bist: Warte einfach ab. Falls du kein Biologe bist: Vergiss es schnell wieder.
+
+### Audimax {#dschungel-abc-audimax .unnumbered}
+
+= Auditorium Maximum; können Studenten unserer Fakultät hauptsächlich zur Prüfungszeit mal von innen sehen.
+
+> Übrigens:
+> *Jeden Tag die Aushänge checken, vor allem in den ersten und letzten Wochen! In der Mitte des Semesters ist es aber auch recht wichtig. Hilft dabei, Seminare und Exkursionen nicht zu vergessen.*
+
+### Aufladestation {#dschungel-abc-aufladestation .unnumbered}
+
+Loading.... Error 404!! Wichtig! Es gibt auf dem [Studierendenausweis](#dschungel-abc-studierendenausweis) zwei Konten: eines um die Gaumenfreuden der [Mensa](#dschungel-abc-mensa) materiell abzugleichen; und eines um euch die ganzen Vorlesungsmitschriften abzukopieren, die ihr selbst gemacht hättet, wenn ihr auch immer morgens um 8 Uhr an der [Uni](#dschungel-abc-uni) gewesen wärt.
+
+### Augenringe {#dschungel-abc-augenringe .unnumbered}
+
+Statussymbol eines jeden anständigen Studierenden.
+
+### Auslandsstudium {#dschungel-abc-auslandsstudium .unnumbered}
+
+Nähere Infos gibt es im [International Office](#dschungel-abc-international-office) oder beim [DAAD](#dschungel-abc-daad).
+
+### Außenstation {#dschungel-abc-aussenstation .unnumbered}
+
+[Campus](#dschungel-abc-campus)
+
+### Automaten {#dschungel-abc-automaten .unnumbered}
+
+In allen Gebäuden anzutreffen, um euer Geld von der Mensakarte in [Getränke](#dschungel-abc-getraenkeautomat), [Snacks](#dschungel-abc-snackautomat) oder Leistung (Koffein) einzutauschen.
+
+### Bachelor {#dschungel-abc-bachelor .unnumbered}
+
+Der erste akademische Grad, der von der Universität und allen anderen Hochschulen verliehen wird. Das primäre Ziel für alle Erstis, das es nach 6 Semestern zu erreichen gilt (wenn man in der Regelstudienzeit studieren will; [Fachschaft](#dschungel-abc-fachschaft) berät gerne ^^). Insgesamt werden hierfür 180 [ECTS](#dschungel-abc-ects) benötigt, dann bekommt ihr ein level up und werdet zum Master zugelassen (Der Titel "Master of Disaster" stellt eine Ausnahme dar und kann jederzeit bei Laborarbeiten erworben werden).
+
+### BAföG {#dschungel-abc-bafoeg .unnumbered}
+
+Das Bundesausbildungsförderungsgesetz regelt die staatliche Unterstützung von Schülern und Studenten. Umgangssprachlich und durch die öffentliche Verwaltung selbst wird mit dem Begriff auch die sich aus dem Gesetz ergebende Förderung bezeichnet. Kurz gesagt, der eine bekommt es, der andere nicht. Konsequenzen: Neben der finanziellen Hilfe kannst du eventuell eine GEZ-Befreiung und Sonderkonditionen bei der Telekom beantragen. Auf jeden Fall hat man aber eine Menge Schreibkram. Es empfiehlt sich, den Antrag möglichst zeitig zu stellen und nicht zu vergessen, nach spätestens zehn Monaten einen Folgeantrag einzureichen. Vielleicht hast du dann auch schon gerade deine erste Auszahlung erhalten. Infos und Antrage gibt es im BAföG-Amt in der [ZUV](#dschungel-abc-zuv).
+
+### Baraufwerter {#dschungel-abc-baraufwerter .unnumbered}
+
+[Aufladestation](#dschungel-abc-aufladestation)
+
+### BC {#dschungel-abc-bc .unnumbered}
+
+= Biochemie.
+
+### Beurlaubung {#dschungel-abc-beurlaubung .unnumbered}
+
+[Urlaubssemester](#dschungel-abc-urlaubssemester)
+
+### BGI {#dschungel-abc-bgi .unnumbered}
+
+= Bayerisches GeoInstitut (weißes Hufeisen).
+
+### Bib(b)en {#dschungel-abc-biben .unnumbered}
+
+Studentischer Neologismus für das Vegetieren in der [Bib](#dschungel-abc-bib).
+
+### Bibliothek (Bib) {#dschungel-abc-bib .unnumbered}
+
+Liebster Aufenthaltsort aller Bibster, so ähnlich wie Hipster, nur mit mehr Büchern zum Lernen. Auch du wirst zu dieser Gattung gehören, sofern du Naturwissenschaftler bist.^^ Codewort für Lernen von Spökos: "Neocortex pumpen gehen".
+
+### BioMac {#dschungel-abc-biomac .unnumbered}
+
+= Forschungszentrum für Bio-Makromoleküle, nicht zu verwechseln mit einem berüchtigten Fertiggericht einer einschlägigen Fast-Food Kette im Bayreuther Industriegebiet.
+
+> Schon gehört?<br>
+> *"Niemand hat die Absicht eine Mauer zu errichten!"*<br>
+> Bob der Baumeister
+
+### BOC {#dschungel-abc-boc .unnumbered}
+
+Bioorganische Chemie; tert-Butoxycarbonyl-Schutzgruppe, werdet ihr in der BOC-Vorlesung lernen; verrät ja schon der Titel (höhö).
+
+### BPC {#dschungel-abc-bpc .unnumbered}
+
+= Biophysikalische Chemie. Wer hat den Größten ... magnetischen Fluss; jo 1000 MHz-NMR Bitch!
+
+### BT-Kennung {#dschungel-abc-bt-kennung .unnumbered}
+
+Mit eurer BT-Kennung könnt ihr euch an den [CIP-Pools](#dschungel-abc-cip-pool), in [cmlife](#dschungel-abc-cmlife) und [eLearning](#dschungel-abc-elearning) anmelden. Falls ihr sie mal wieder vergessen habt, sie steht auf eurem [Studierendenausweis](#dschungel-abc-studierendenausweis).
+
+### BtS {#dschungel-abc-bts .unnumbered}
+
+= biotechnologische Studenteninitative. Studenteninitiative im Bereich "Life science". Machen gelegentlich Exkursionen zu Unternehmen, die für bestimmte Studiengänge angerechnet werden können.
+
+### Bücher {#dschungel-abc-buecher .unnumbered}
+
+> Zitat für zwischendurch:<br>
+> *"Wir haben auf vier Seiten beschrieben, wie wir die Welt retten."*<br>
+> Professor über seine Forschung
+
+Ubiquitöse rudelbildende Spezies, deren bevorzugte Vegetationszone sich auf einige wenige Räumlichkeiten beschränkt! Die einzelnen Rudel (Rechtswissenschaften, Geisteswissenschaften, Geowissenschaften, Naturwissenschaften I und Naturwissenschaften II) sind streng getrennt und können zwischen 8 und 20 Uhr besichtigt werden; einige wenige nachtaktive Rudel (Geistes- und Rechtswissenschaften) können auch bis 22 respektive 24 Uhr in ihrem Habitat beobachtet werden.
+
+### BZKG {#dschungel-abc-bzkg .unnumbered}
+
+= Bayreuther Zentrum für Kolloide und Grenzflächen.
+
+### BZMB {#dschungel-abc-bzmb .unnumbered}
+
+= Bayreuther Zentrum für Molekulare Biowissenschaften.
+
+### c.t. {#dschungel-abc-ct .unnumbered}
+
+1. Computertomografie; aber keine Sorge, nicht in jeder Vorlesung werdet ihr geröntgt, dafür auf Herz und Nieren geprüft!
+2. cum tempore (hoffentlich hattet ihr Latein in der Schule^^, sonst lernt ihr das Warten, so 15 min. pro Vorlesung!)
+
+### Cafeteria {#dschungel-abc-cafeteria .unnumbered}
+
+Gutes Essen zu billigen Preisen, im Gegensatz zur [Mensa](#dschungel-abc-mensa) wesentlich länger geöffnet; ein besseres Preis-Leistung-Verhältnis gibt es nur im Knast, ich schwör Digga! Abends empfiehlt sich dann der Gang zum [Frischraum](#dschungel-abc-frischraum).
+
+### Campus {#dschungel-abc-campus .unnumbered}
+
+So wird der Hauptteil der Universität genannt, daneben gibt es noch folgende Außenstationen: Geschwister-Scholl-Platz, Dr. Hans Frisch Straße, Zapf Gelände, Ludwig-Thoma-Straße (IMA) und die Ökologische Außenstation in [Wallenfels](#dschungel-abc-wallenfels). Studenten der Fakultät II finden alles Wichtige direkt auf dem Campus!
+
+### Campus App {#dschungel-abc-campus-app .unnumbered}
+
+[UniNow](#dschungel-abc-uninow)
+
+### CampusCard {#dschungel-abc-campuscard .unnumbered}
+
+Plastikkärtchen, das ihr bei der Immatrikulation bekommt; Details findet ihr unter [Die CampusCard]. Falls ihr ihn mal wieder verliert, könnt ihr in der Poststelle, [Bib](#dschungel-abc-bib), [Dekanat](#dschungel-abc-dekan), [Studierendenkanzlei](#dschungel-abc-studierendenkanzlei) oder bei uns vorbeischauen, um ihn abzuholen. Ansonsten schreibt jemand noch für euch die ganzen Klausuren - schrecklich! ;) .
+
+> Übrigens:<br>
+> *Euer Studierendenausweis hat zwei Guthaben. Eins für Mensa und eines zum Kopieren. Entsprechend gibt es auch zwei Sorten von Ladestationen!*
+
+### cmlife {#dschungel-abc-cmlife .unnumbered}
+
+Computersystem zur Verwaltung deines Studiums, von [Prüfungsanmeldungen](#dschungel-abc-anmelden) und [ECTS](#dschungel-abc-ects). Hier könnt ihr eure Adressdaten verwalten, euren Studienfortschritt kontrollieren und euch eure erbrachten Prüfungsleistungen anschauen und ausdrucken.
+
+### CIP-Pool {#dschungel-abc-cip-pool .unnumbered}
+
+Die Uni Bayreuth ermöglicht jedem Studenten ohne mobilen Internetzugang oder Rechenkraft (Laptop, Tablet) in einem ihrer mit HighTech-Rechnern ausgestatteten Computerräume (uni-intern "CIP-Pools" genannt) Internetrecherchen oder der Arbeit an Protokollen nachzugehen.
+
+### Circus Halligalli {#dschungel-abc-circus-halligalli .unnumbered}
+
+Die Mensa jeden Tag zwischen 11:45 und 12:30.
+
+### Club Mate {#dschungel-abc-club-mate .unnumbered}
+
+Alternatives Aufputschmittel für alle, die keinen [Kaffee](#dschungel-abc-kaffeeautomat) trinken; erhältlich in der [Mensa](#dschungel-abc-mensa) und im [Glashaus](#dschungel-abc-glashaus).
+
+### CSG {#dschungel-abc-csg .unnumbered}
+
+= Chemiker Spaß Gesellschaft: Alumniverein der Chemiker, Details im gleichnamigen Kapitel [CSG e.V. - Alumniverein der Chemie an der Universität Bayreuth].
+
+> Übrigens:<br>
+> *Meistens ist die Fachschaft auch außerhalb der offiziellen Öffnungszeiten besetzt, im Zweifel also einfach mal reinschauen!*
+
+### DAAD {#dschungel-abc-daad .unnumbered}
+
+= Deutscher Akademischer Austauschdienst: neben dem [International Office](#dschungel-abc-international-office) eine der Anlaufstellen für ein [Auslandsstudium](#dschungel-abc-auslandsstudium).
+
+### Darmstadtium-Darstellung {#dschungel-abc-darmstadtium-darstellung .unnumbered}
+
+Wichtige Synthese, wie alle Synthesen in AC II. Einfach einen Nickel- mit einem Bleikern fusionieren. Abfallprodukt: ein Neutron. Kinderspiel.
+
+### Dekan {#dschungel-abc-dekan .unnumbered}
+
+Exekutive der [Fakultät](#dschungel-abc-fakultaet); er setzt die Beschlüsse unseres [Fakultätsrats](#dschungel-abc-fakultaetsrat) (Legislative) durch.
+
+### Dialektik der Aufklärung {#dschungel-abc-dialektik-der-aufklaerung .unnumbered}
+
+Würdest du Sie kennen, würdest du das hier bestimmt nicht lesen und auch nicht studieren!
+
+### Drucker {#dschungel-abc-drucker .unnumbered}
+
+PEBKAC = Problem Exists Between Keyboard And Chair. Meist stimmt das. Außer bei Druckern ... Drucker sind A.löcher! Sie merken, wenn es schnell gehen muss und beschweren sich dann, dass sie keine Farbe haben um eine Seite Text zu drucken ... selbst Schwarz-Weiß-Drucker.
+
+### Dschungel {#dschungel-abc-dschungel .unnumbered}
+
+Sollte mal ein repeating theme dieser Zeitung werden. Hat nur irgendwer in der Mitte vergessen. Tja ... Pech gehabt
+
+### E-Mail, universitäre {#dschungel-abc-universitaere-email .unnumbered}
+
+Mit deiner Immatrikulation erhältst du zwei Mailadressen, eine mit deiner [BT-Kennung](#dschungel-abc-bt-kennung) (btxxxxxx@uni-bayreuth.de) und nach Verfügbarkeit eine mit deinem Namen (deine.mudda@uni-bayreuth.de). Wichtig: An diese Adressen gehen alle offiziellen Uni-Mitteilungen, also regelmäßig checken oder eine Weiterleitung einrichten. Den Zugang zu Posteingang und Optionen findet ihr bei den [Links].
+
+### ECTS {#dschungel-abc-ects .unnumbered}
+
+Leistungspunkte, offiziell "credit points", doch leider gibt es keinen gratis Ball an der Tanke, wenn man sie sammelt, obwohl es der Name suggeriert. :-( Dafür aber gibt es einen akademischen Grad, für den kann man sich ganz viele Bälle kaufen. :-)
+
+### eduroam {#dschungel-abc-eduroam .unnumbered}
+
+[WLAN](#dschungel-abc-wlan) an der Uni Bayreuth. Keine Geräteregistrierung mehr, einfach mit der [BT-Kennung](#dschungel-abc-bt-kennung) einloggen. Geht auch an vielen anderen Universitäten einfach so automatisch von selbst ... Infos gibts beim [ITS](#dschungel-abc-its).
+
+### eLearning {#dschungel-abc-elearning .unnumbered}
+
+Hoffentlich funktionierts! Wenn es das tut: Verwaltungsplattform für Vorlesungen, Seminare, Praktika und was sonst noch so ansteht. Anmeldung mit [BT-Kennung](#dschungel-abc-bt-kennung) und Passwort: Passwort (psst. nicht weiter verraten!). Link gibts unter [Links].
+
+> Zitat für zwischendurch:<br>
+> *"[...] Wenn das Zeug explodiert, dann sehen Sie eventuell noch die Spektrallinie von Natrium im Augenwinkel. Als nächstes betrachten Sie die Sache von oben mit einer Harfe in der Hand."*<br>
+> Dozent in der OC-Vorlesung
+
+### Erasmus {#dschungel-abc-erasmus .unnumbered}
+
+Ein Austauschprogramm für Studenten; weiteres unter [Auslandsstudium](#dschungel-abc-auslandsstudium).
+
+### Ersti, der {#dschungel-abc-ersti .unnumbered}
+
+Frisch geschlüpftes, rudelbildendes Lebewesen mit potenziell exponentiell steigendem Koffeinkonsum und Wissensdurst. Du bist einer! Und zwar zwei Semester lang, bis die neuen kommen!
+
+### Evaluation {#dschungel-abc-evaluation .unnumbered}
+
+Beurteilung der Vorlesungen in Form von Fragebögen: Da dürft ihr den Profs Noten geben, wer will das denn nicht!
+
+### Exkursion {#dschungel-abc-exkursion .unnumbered}
+
+Ein ein- oder mehrtägiger Aufenthalt im Dschungel (= außerhalb des gewohnten Habitats), der für Biologen und Geowissenschaftler zum Pflichtprogramm gehört. Achtung: Anmelden nicht vergessen! (Hab ich natürlich vergessen. Was auch sonst.)
+
+### Exmatrikulation {#dschungel-abc-exmatrikulation .unnumbered}
+
+Wie überall im Leben gilt: erst die Kohle; also überweist brav jedes Semester rechtzeitig den anfallenden Semesterbeitrag, sonst werdet ihr exmatrikuliert! Falls ihr das Geld überwiesen habt und trotzdem exmatrikuliert werdet, tja, dann lag‘s nicht am Geld ...
+
+### Fachbereich {#dschungel-abc-fachbereich .unnumbered}
+
+Organisationseinheit der [Uni](#dschungel-abc-uni), die quasi den Lehrstühlen entspricht (Anorganische Chemie, Tierökologie usw.).
+
+### Fachgruppe {#dschungel-abc-fachgruppe .unnumbered}
+
+Biologie, Chemie und Geowissenschaften; weißte Bescheid, ne!
+
+### Fachschaft {#dschungel-abc-fachschaft .unnumbered}
+
+Die Fachschaft stellt die Interessenvertretung der Studierenden dar. Sprich: wir setzen uns für eure Belange ein und das ehrenamtlich (jeder darf mitmachen!). Ihr könnt also einfach bei uns vorbeikommen und euch Hilfe holen oder auch geben! Wir freuen uns auch auf alle Erstis, die aktiv bei uns mitwirken wollen. Die Fachschaft ist gut! Die Fachschaft ist toll! Die Fachschaft hat (fast) immer Recht! Die Fachschaft hat euch alle lieb!
+
+### Fahrradflickstation {#dschungel-abc-fahrradflickstation .unnumbered}
+
+Das ist ein schwarzes Kasten direkt neben dem Eingang der [ZUV](#dschungel-abc-zuv). Punkt.
+
+### Fakultät {#dschungel-abc-fakultaet .unnumbered}
+
+Zusammenschluss der [Fachgruppen](#dschungel-abc-fachgruppe).
+
+### Fakultätsrat {#dschungel-abc-fakultaetsrat .unnumbered}
+
+[Unipolitik]
+
+### Fak. Ing. {#dschungel-abc-faking .unnumbered}
+
+= Fakultät für Ingenieurwissenschaften (Fakultät 6).
+
+### FAN {#dschungel-abc-fan .unnumbered}
+
+= Ehemals Fakultät angewandte Naturwissenschaften, heute Heimat der Ingenieure aus der [Fak. Ing.](#dschungel-abc-faking).
+
+> Zitat für zwischendurch:<br>
+> *"Die PolKols, das sind ja eh ein ganz kleiner Haufen, eher unbedeutend."*<br>
+> Ein Dozent
+
+### Frischraum {#dschungel-abc-frischraum .unnumbered}
+
+Hier gibt's auch Essen. Im Gegensatz zur [Mensa](#dschungel-abc-mensa) und der [Cafeteria](#dschungel-abc-cafeteria) auch abends, allerdings nur, wenn man Spaß versteht.
+
+### Fundbüro {#dschungel-abc-funfbuero .unnumbered}
+
+Fundsachen findet ihr in der Poststelle (am Gang bei den Kopierern), [Bib](#dschungel-abc-bib), [Dekanat](#dschungel-abc-dekan) und [Fachschaftszimmer](#dschungel-abc-fachschaft).
+
+### Gandalf {#dschungel-abc-gandalf .unnumbered}
+
+Mächtigster Zauberer der Fachschaft; einziger natürlicher Feind: Kopiergeräte.
+
+> Übrigens:<br>
+> *Skripte, Kittel und Altklausuren gibt es in der Fachschaft! Schutzbrillen, alte Protokolle oder Freibier gibt‘s nicht. Leider.*
+
+### Garten {#dschungel-abc-garten .unnumbered}
+
+Auch Dschungel genannt, zumindest in den Innenhöfen des NW I. Alternativ siehe [ÖBG](#dschungel-abc-oebg).
+
+### GDCh {#dschungel-abc-gdch .unnumbered}
+
+= Gesellschaft deutscher Chemiker (Berufsverband der Chemiker). Jungmitglieder organisieren sich im [JCF](#dschungel-abc-jcf).
+
+### Gecko {#dschungel-abc-gecko .unnumbered}
+
+= Geoökologe.
+
+### Geckologie {#dschungel-abc-geckologie .unnumbered}
+
+Lehre über die Sozialisation des Geoökologen. Zumeist im Glashaus anzufinden.
+
+### Gedächtnisprotokoll {#dschungel-abc-gedaechtnisprotokoll .unnumbered}
+
+Eine Zusammenschrift der Klausur-/ Prüfungsaufgaben: Könnt ihr nach euren Prüfungen anfertigen und in der Fachschaft vorbeibringen. Wir verteilen diese dann an eure nachfolgenden Jahrgänge.
+
+### GEO I/II {#dschungel-abc-geo-i-ii .unnumbered}
+
+Gebäude der Geowissenschaften (ältestes Gebäude der Uni) zu finden, wenn man das NW I Richtung Parkplatz verlässt.
+
+### Getränkeautomat {#dschungel-abc-getraenkeautomat .unnumbered}
+
+Quelle einer schönen Erfrischung ...
+
+### Glashaus {#dschungel-abc-glashaus .unnumbered}
+
+Kultur (und Kaffee) am Campus; bei den Baracken neben dem [GEO](#dschungel-abc-geo-i-ii).
+
+### Goldene Kreide {#dschungel-abc-goldene-kreide .unnumbered}
+
+Preis für gute Lehre an der Fakultät 2 als Ergebnis der [Evaluation](#dschungel-abc-evaluation) der Vorlesungen. Rotiert halbjährlich zwischen den drei [Fachgruppen](#dschungel-abc-fachgruppe) und wird durch die Fachschaft vergeben.
+
+### Grüner Hügel {#dschungel-abc-gruener-huegel .unnumbered}
+
+Wie das Berghain, nur die Karten sind viel teurer und nur 10 Jahre im Voraus zu kaufen.
+
+### GSP {#dschungel-abc-gsp .unnumbered}
+
+= Geschwister-Scholl-Platz: Außenstelle der Uni Bayreuth.
+
+### GW {#dschungel-abc-gw .unnumbered}
+
+= Geisteswissenschaften.
+
+> Zitat für zwischendurch:<br>
+> Frage an ein Fachschaftsmitglied bezüglich der Schutzbrillen: *"Brauchen Biologen eine Brille?"*<br>
+> Antwort: *"Wenn sie schlecht sehen ..."*
+
+### Härtefallantrag {#dschungel-abc-haertefallantrag .unnumbered}
+
+Eure letzte Chance, wenn ihr die -> Nachklausuren nicht bestanden habt. Dabei handelt es sich um einen Antrag, den ihr beim Prüfungsausschuss stellen müsst. Im Ernstfall aber genau informieren!
+
+### Heute geh ich Tod (HGich.t) {#dschungel-abc-hgicht .unnumbered}
+
+Das Motto am Abend vor ziemlich jeder Klausur (oder Kneipentour).
+
+### Hipster {#dschungel-abc-hipster .unnumbered}
+
+Leider ist es dieser Subkultur in Bayreuth nicht möglich, mit aktuellen Trends Schritt zu halten (siehe Ray Ban), daher sind sie in Bayreuth durch das Tragen von American Apparel, Abercrombie & Fitch (inklusive Hollister) oder schlimmstenfalls Billabong in Verbindung mit Jutebeutel gekennzeichnet. Solltet ihr also aus einer größeren Stadt oder außerhalb Bayerns kommen: Hipster laufen hier rum wie bei uns unsere Großeltern!
+
+P.S.: erste Carhartt und Colour collective Exemplare wurden bereits gesichtet!
+
+### HiWi {#dschungel-abc-hiwi .unnumbered}
+
+= Hilfswissenschaftler, d.h. "Knecht", der für Bezahlung an den Lehrstühlen mitarbeiten kann. Wenn ihr ein höheres Semester erreicht habt, dürft ihr auch Praktika, Seminare und Übungen betreuen.
+
+### Hochschulrat {#dschungel-abc-hochschulrat .unnumbered}
+
+[Unipolitik]
+
+### Hochschulsport {#dschungel-abc-hochschulsport .unnumbered}
+
+[Allgemeiner Hochschulsport](#dschungel-abc-allgemeiner-hochschulsport)
+
+### Hochschulwahl {#dschungel-abc-hochschulwahl .unnumbered}
+
+Findet immer im Sommersemester statt, dort könnt ihr eure Vertretung fürs [StuPa](#dschungel-abc-stupa), die [Fachschaft](#dschungel-abc-fachschaft), den [Senat](#dschungel-abc-senat) und den [Hochschulrat](#dschungel-abc-hochschulrat) wählen. Näheres siehe [Unipolitik].
+
+### Intelligenz {#dschungel-abc-intelligenz .unnumbered}
+
+Stark überschätzte Kompetenz für das Studium.
+
+### International Office (INO) {#dschungel-abc-international-office .unnumbered}
+
+Neben dem [DAAD](#dschungel-abc-daad) eine der Anlaufstellen für ein [Auslandsstudium](#dschungel-abc-auslandsstudium). Details siehe [Ansprechpartner].
+
+### ITS {#dschungel-abc-its .unnumbered}
+
+= IT-Servicezentrum; früher Rechenzentrum, ganz früher Elektronenhirn-Röhren-Fakultät.
+
+Kümmern sich um alle Software- und Hardware-Belange an der Uni. Auch bei kleineren Zickereien eures Laptops stehen euch die ITS-Leute in der [PC-Garage](#dschungel-abc-pc-garage) oder der [Laptopsprechstunde](#dschungel-abc-laptopsprechstunde) zur Seite.
+
+> Übrigens:<br>
+> *Klausurergebnisse und Anmeldelisten für Praktika hängen nicht ausschließlich am Hauptbrett im Gang, sondern häufig auch an den Lehrstuhlbrettern.*
+
+### JCF {#dschungel-abc-jcf .unnumbered}
+
+= JungChemikerForum. Jungmitglieder der [GDCh](#dschungel-abc-gdch). Näheres im Kapitel [JCF Bayreuth - Bayreuther Sektion des JungChemikerForums der GDCh].
+
+### Jonglieren {#dschungel-abc-jonglieren .unnumbered}
+
+Das Wort "jonglieren" kommt aus dem Indianischen und bedeutet soviel wie "Dinge aufheben". Dieser besonderen Form der Körperertüchtigung wird in der Turnhalle des Sportinstituts gefrönt (Termine ändern sich jedes Semester), von "Ich hab grad meinen ersten Ball aufgehoben" jauchzenden Frischlingen bis zu erfahrenen Vertretern, die selbst ein FünfKeulen-Staccato nicht mehr erschüttert, ist alles vertreten.
+
+### Jugendherberge {#dschungel-abc-jugendherberge .unnumbered}
+
+Falls ihr aufgrund der angespannten Wohnungssituation keine Wohnung oder WG-Platz bekommen habt, könnt ihr zur Not eine kurze Zeit in der Jugendherberge überbrücken, was jedoch natürlich relativ teuer ist.
+
+### Kaffeeautomat {#dschungel-abc-kaffeeautomat .unnumbered}
+
+Wichtige Koffeinquelle in der Klausurenzeit und den Vorlesungspausen, gängige Alternativen: [schwarzer Tee](#dschungel-abc-schwarzer-tee) oder [Club Mate](#dschungel-abc-club-mate).
+
+### Kaffee-Lounge {#dschungel-abc-kaffee-lounge .unnumbered}
+
+Privatwirtschaftliche Kaffee-Lounge im RW I-Gebäude: Hier wird Hartgeld verlangt, kein [Studierendenausweis](#dschungel-abc-studierendenausweis) oder Ostmark. Hierfür ist die Qualität und Auswahl an [Kaffeegetränken](#dschungel-abc-kaffeeautomat) riesig und Kuchen und belegte Brötchen runden das Angebot ab. Der Vorteil an der Kaffee-Lounge sind die Öffnungszeiten, hier bekommt ihr auch noch samstagnachmittags und sonntags was zu essen. Der Nachteil wurde bereits angesprochen: der Preis.
+
+### Klausur {#dschungel-abc-klausur .unnumbered}
+
+Nach monatelanger harter Arbeit *hust* (Neocortex pumpen: [Bib](#dschungel-abc-bib)) und bester Vorbereitung *hust* könnt ihr hier zeigen, was ihr drauf habt. *Asthmaanfall* Im Ernst: erst einmal rechtzeitig [anmelden](#dschungel-abc-anmelden), derweil fleißig lernen und falls es nicht gereicht hat, habt ihr ja auch noch einen weiteren Versuch ([Nachklausur](#dschungel-abc-nachholklausur)).
+
+> Übrigens:<br>
+> *Geh um 11 essen! Nein wirklich, geh um 11 essen!*
+
+### Klopfen {#dschungel-abc-klopfen .unnumbered}
+
+Erfolgt immer, wenn der Dozent die Vorlesung beendet (wird von Semester zu Semester leiser).
+
+### Kneipentour {#dschungel-abc-kneipentour .unnumbered}
+
+Veranstaltung der Fachschaft, um den Erstsemestern die Lokalitäten Bayreuths näherzubringen. Details siehe [Termine].
+
+### Kopierer {#dschungel-abc-kopierer .unnumbered}
+
+Zum Vervielfältigen von Vorlesungsmitschriften oder ähnlichem. Ihr werdet überall in allen Gebäuden Kopierer finden, die Bezahlung erfolgt elektronisch über euren [Studierendenausweis](#dschungel-abc-studierendenausweis), nachdem ihr ihn an einer [Aufladestation](#dschungel-abc-aufladestation) aufgeladen habt. Später, wenn ihr nach drei langen Jahren endlich eure Abschlussarbeit druckt, so könnt ihr das in der uni-internen Druckerei in der [ZUV] erledigen (ist billiger als in einem Copy-Shop).
+
+### KuWi {#dschungel-abc-kuwi .unnumbered}
+
+= Kulturwissenschaften (Fakultät 5).
+
+### Laptopsprechstunde {#dschungel-abc-laptopsprechstunde .unnumbered}
+
+Bei der Laptopsprechstunde gibt es Hilfe zu den Themen [eduroam](#dschungel-abc-eduroam), [VPN](#dschungel-abc-vpn), [Drucker](#dschungel-abc-drucker) und Microsoft Office. Auf der Website (siehe [Links]) gibt es die passenden Anleitungen. Unter "Kontakt" kann man sich auch direkt bei den Studis melden, die das Ganze betreuen.
+
+### Leistungspunkte {#dschungel-abc-leistungspunkte .unnumbered}
+
+[ECTS](#dschungel-abc-ects)
+
+### Mail {#dschungel-abc-mail .unnumbered}
+
+[E-Mail](#dschungel-abc-email)
+
+### MaPhI {#dschungel-abc-maphi .unnumbered}
+
+= Mathe, Physik, Informatik (Fakultät 1).
+
+### Master {#dschungel-abc-master .unnumbered}
+
+[Bachelor](#dschungel-abc-bachelor)
+
+### Materialienausgabe {#dschungel-abc-materialausgabe .unnumbered}
+
+Einige chemische Utensilien, insbesondere Schutzbrillen, gibt es in der Materialienausgabe im Keller des NW I (siehe Plan). Achtung: Bezahlt wird mit [Studierendenausweis](#dschungel-abc-studierendenausweis) (Kopierguthaben)!
+
+> Übrigens:<br>
+> *Fundsachen gibt's in der Bib, Poststelle oder Fachschaft (Abgabe ggf. im Fachschaftsbriefkasten).*
+
+### Matrikelnummer {#dschungel-abc-matrikelnummer .unnumbered}
+
+Eure Inventarnummer; steht auf dem [Studierendenausweis](#dschungel-abc-studierendenausweis).
+
+### MC {#dschungel-abc-mc .unnumbered}
+
+1. Music Cassette: Fragt euere Eltern ...
+2. Master of Ceremonies: Hip Hop,
+3. Minecraft — böses Ersti! so wird das nichts mit dem Studium!
+4. Makromolekulare Chemie
+
+> Witz für zwischendurch:<br>
+> Ein Biochemiker zum anderen: *"Neulich kam meine Freundin auf dem Fahrrad an. Sie warf das Fahrrad beiseite, zog sich ihr Kleid aus, stellte sich vor mich hin und sagte, ich soll mir endlich nehmen, was ich will. Da hab ich mir das Fahrrad genommen."*<br>
+> Darauf der andere: *"Völlig logische Entscheidung, ihr Kleid hätte dir sicher nicht gepasst."*
+
+### Mensa {#dschungel-abc-mensa .unnumbered}
+
+Bacchus und Lukullus würden bei der Mensa Bayreuth vor Neid erblassen. Drei reichhaltige Mähler, kombinierbar mit einer Unzahl an Beilagen werden kredenzt. Außerhalb der begrenzten Öffnungszeiten dieses Tempels des Genusses müsst ihr auf andere kulinarische Angebote der Universität zurückgreifen ([Cafeteria](#dschungel-abc-cafeteria) oder [Frischraum](#dschungel-abc-frischraum)). Die Zeit des Besuches ist entscheidend ([Circus Halligalli](#dschungel-abc-circus-halligalli)).
+
+### Modul {#dschungel-abc-modul .unnumbered}
+
+Das gesamte Studium ist in Module gegliedert. Jede [Vorlesung](#dschungel-abc-vorlesung) zusammen mit [Praktikum](#dschungel-abc-praktikum), [Übung](#dschungel-abc-uebung) und Klausur entspricht einem Modul, z.B. alle eure AC I-Leistungen (Klausur + Colloquium + Praktikumsprotokolle) ergeben das gesamte Modul.
+
+### Modulhandbuch {#dschungel-abc-modulhandbuch .unnumbered}
+
+Übersicht und Beschreibung aller [Module](#dschungel-abc-modul) eines Studiengangs: Hier könnt ihr nachlesen, welche Module es in eurem Studiengang gibt, aus welchen Leistungsnachweisen ([Klausur](#dschungel-abc-klausur), [Praktikum](#dschungel-abc-praktikum), etc.) sie bestehen, worum es eigentlich geht und welche Voraussetzungen existieren.
+
+### MPI {#dschungel-abc-mpi .unnumbered}
+
+1. Max-Planck-Institut,
+2. Neumodisch für [MaPhI](#dschungel-abc-maphi).
+
+### Nachholklausur {#dschungel-abc-nachholklausur .unnumbered}
+
+Hat es beim ersten Versuch nicht geklappt, solltet ihr jetzt eurer Wissen unter Beweis stellen, denn ansonsten braucht ihr doch noch einen [Härtefallantrag](#dschungel-abc-haertefallantrag). Manche haben auch bei ihrer Studiengangswahl Glück gehabt und dürfen sich mehrere Fehlversuche gönnen.
+
+> Zitat für Zwischendurch:<br>
+> *"[...] Es gibt sogenannte akademische Traditionen, und damit meine ich nicht, dass Sie sich jeden Abend die Kante geben müssen. Das ist durchaus leider auch eine akademische Tradition [...]"*<br>
+> Prof. Kempe
+
+### Nikofete {#dschungel-abc-nikofete .unnumbered}
+
+Die größte und geilste Party auf dem Campus, proudly presented by [Fachschaft BCG](#dschungel-abc-fachschaft).
+
+### NSA {#dschungel-abc-nsa .unnumbered}
+
+Nachsendeauftrag an die Post für die neue Adresse; ansonsten mal die [NSA](https://www.nsa.gov) fragen, die haben den Brief bestimmt schon!
+
+### NW I/II/III {#dschungel-abc-nw-i-ii-ii .unnumbered}
+
+1, 2, oder 3, letzte Chance ... Nein, einfach nur die naturwissenschaftlichen Gebäude am Campus.
+
+### ÖBG {#dschungel-abc-oebg .unnumbered}
+
+= Ökologisch-botanischer Garten; je nach Studiengangswahl Ort zum Ausspannen oder Arbeiten direkt am [Campus](#dschungel-abc-campus).
+
+> Zitat für Zwischendurch:<br>
+> *"Alter, promovier' mich nicht!"*<br>
+> Nico, fühlt sich provoziert
+
+### OC {#dschungel-abc-oc .unnumbered}
+
+= Organische Chemie. Passt vor den Lösungsmitteldämpfen auf, nach 3 Semestern wisst ihr, was gemeint ist!
+
+### PC {#dschungel-abc-pc .unnumbered}
+
+Personal Computer; die menschlichen PCs befinden sich in der Physikalischen Chemie, sie laufen mit Kaffee statt mit Strom. ;)
+
+### PC-Garage {#dschungel-abc-pc-garage .unnumbered}
+
+Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht Alles aber wenn der Computer "NEIN!" sagt, ist das eure Anlaufstelle! Die Website findet ihr in den [Links].
+
+### Pfeffi-Time ... {#dschungel-abc-pfeffi-time .unnumbered}
+
+... ist immer dann, wenn jemand nach der Uhrzeit fragt und eine Flasche Pfefferminzlikör in der Nähe steht. Mitmachen ist Pflicht! (Kann auch durch andere Spirituosen ersetzt werden: z. B. Rum-Time, Grünes-Zeug-Time, usw.)
+
+### PflÖk {#dschungel-abc-pfloek .unnumbered}
+
+= Pflanzenökologie.
+
+### PolKol {#dschungel-abc-polkol .unnumbered}
+
+= Polymer- und Kolloidchemiker.
+
+### Praktikum {#dschungel-abc-praktikum .unnumbered}
+
+Im Wesentlichen ist dabei der Aufenthalt in einer kontrollierten Umgebung zu verstehen, wo entweder du mit Chemikalien oder Schüler mit dir experimentieren, bis es zur Explosion kommt.
+
+### Projektor {#dschungel-abc-projektor .unnumbered}
+
+Dienstägliches Uni-Kino, ausgerichtet von unseren lieben Kollegen von der [MaPhI](#dschungel-abc-maphi) Fachschaft (Fakultät 1).
+
+### Prüfungsamt {#dschungel-abc-pruefungsamt .unnumbered}
+
+Hier werde eure Prüfungsleistungen verwaltet und auch eure Atteste könnt ihr hier abgeben, wenn ihr mal wieder am Prüfungstag krank wart. ("Schwankungen der Tagesform" und "Keine Ahnung von nichts haben" sind keine Krankheit!) Details siehe [Ansprechpartner].
+
+### Prüfungsordnung {#dschungel-abc-pruefungsordnung .unnumbered}
+
+Alles Wichtige, um immatrikuliert zu bleiben, steht hier drinnen. Falls euer Studium mal nicht nach Plan läuft, solltet ihr sie mal studieren, um euer Studium zu retten.^^
+
+### Quantenmechanik {#dschungel-abc-quantenmechanik .unnumbered}
+
+> *"I don't like it, and I'm sorry I ever had anything to do with it."*<br>
+> Erwin Schrödinger (1887-1961).
+
+Und ich schwöre euch ... Ihr wollt damit auch nichts zu tun haben. Niemals.
+
+### Ringvorlesung {#dschungel-abc-ringvorlesung .unnumbered}
+
+Wissenschaftliche Fachvorträge an der Fakultät, die für einige Studiengänge besucht werden müssen. Hierfür gibt es eine Laufkarte, die von anwesenden Professoren unterschrieben werden muss (sofern sie nicht schneller sind als ihr seid). Auch eingetragen werden können Ringvorlesungen der [GDCh](#dschungel-abc-gdch).
+
+> Zitat für Zwischendurch:<br>
+> *"Sie Kamel, Sie!"*<br>
+> Dr. "Gundi" Voss
+
+### Rückmeldung {#dschungel-abc-rueckmeldung .unnumbered}
+
+[Exmatrikulation](#dschungel-abc-exmatrikulation)
+
+### RW {#dschungel-abc-rw .unnumbered}
+
+= Rechtswissenschaftliche Fakultät (Fakultät 3). Hier findet ihr alle Studierenden rund um die Thematiken Recht und Wirtschaft. Den besten Kaffee gibt es hier ([KaffeeLounge](#dschungel-abc-kaffee-lounge)) und die größte [Bib](#dschungel-abc-bib). Doch manche Leute haben trotzdem eine Aversion gegen sie. Warum auch immer... :-(
+
+### RZ/Rechenzentrum {#dschungel-abc-rz-rechenzentrum .unnumbered}
+
+[ITS](#dschungel-abc-its)
+
+### s.t. {#dschungel-abc-st .unnumbered}
+
+= sine tempore: Wenn der Prof doch mal pünktlich kommt ... (siehe [c.t.](#dschungel-abc-ct))
+
+### Schwarze Bretter {#dschungel-abc-schwarze-bretter .unnumbered}
+
+Alles Wichtige wird ganz klassisch an schwarze Bretter gehängt, da manche Professoren den "Elektronenhirnen" nicht vertrauen. Also immer mal wieder an die entsprechenden Bretter gucken, hier könnt ihr eure Noten, Praktikumstermine oder was sonst so noch wichtig ist, erfahren. Für Praktika oder Exkursionen müsst ihr euch umgekehrt auch ggf. hier eintragen.
+
+### Semesterferien {#dschungel-abc-semesterferien .unnumbered}
+
+Hättest du keine Naturwissenschaft gewählt, würdest du wissen, was das ist!
+
+### Semesterticket {#dschungel-abc-semesterticket .unnumbered}
+
+Mit der Überweisung zu eurer Immatrikulation oder [Rückmeldung](#dschungel-abc-rueckmeldung) bezahlt ihr auch für die kostenlose Mitfahrt im Stadtbus und in einer Reihe regionaler Bus- und Bahnverbindungen mit. Details findest du unter [Links].
+
+> Zitat für Zwischendurch:<br>
+> *"Wie unterscheiden Sie einen Apfel von einer Birne? Der Apfel ist rund, die Birne birnenförmig!"*<br>
+> Ein Dozent der Biochemie
+
+### Seminar {#dschungel-abc-seminar .unnumbered}
+
+Meist zur Vorbereitung auf [Praktika](#dschungel-abc-praktikum) abgehaltene Mini-Vorlesung (z.B. zu AC I). Später gibt es auch eigenständige Seminare, in denen du durch deine Vortragskünste brillieren kannst.
+
+### Senat {#dschungel-abc-senat .unnumbered}
+
+[Unipolitik]
+
+### Skript {#dschungel-abc-skript .unnumbered}
+
+Häufig werden für Vorlesungen Skripte ausgeteilt. Ein Skript ist quasi die kommentierte [Vorlesung] des Profs und eignet sich in vielen Fällen gut zur Klausurvorbereitung.
+
+### Smartphone {#dschungel-abc-smartphone .unnumbered}
+
+Auch mit dem Smartphone könnt ihr ins [WLAN](#dschungel-abc-wlan), um damit zu arbeiten surfen. Außerdem nützlich ist sicher die [UniNow-App](#dschungel-abc-uninow).
+
+### Snackautomat {#dschungel-abc-snackautomat .unnumbered}
+
+[Automat](#dschungel-abc-automaten). Und zwar ein wichtiger!
+
+### Sokrates {#dschungel-abc-sokrates .unnumbered}
+
+Ein Austauschprogramm; weiteres unter [Auslandsstudium](#dschungel-abc-auslandsstudium).
+
+### SpLit {#dschungel-abc-split .unnumbered}
+
+= Sprach- und Literaturwissenschaften (Fakultät 4).
+
+### Spöko {#dschungel-abc-spoeko .unnumbered}
+
+= Sportökonom, die coolste Sau der Uni; durchtrainert, brilliante [Intelligenz](#dschungel-abc-intelligenz) und das alles in einer Person: Sexappeal pur!
+
+**Achtung: Der obenstehende Text kann Spuren von Ironie und Sarkasmus enthalten!**
+
+### Sport {#dschungel-abc-sport .unnumbered}
+
+[Allgemeiner Hochschulsport](#dschungel-abc-allgemeiner-hochschulsport)
+
+### Sprachenzentrum {#dschungel-abc-sprachenzentrum .unnumbered}
+
+Wolltest du schon immer mal Schwedisch, Kantonesisch oder Bambara sprechen? Dann ab ins Sprachenzentrum! Falls ihr Pirat am Horn von Afrika werden wollt, *arrr* dann könnt ihr auch Swahili lernen! *Klar machen zum entern, Matrosen*. Details siehe [Ansprechpartner].
+
+### Staatsexamen {#dschungel-abc-staatsexamen .unnumbered}
+
+Das ist der Abschluss den die Rechtswissenschaftler bzw. alle angehenden Lehrer schlussendlich zu erreichen suchen.
+
+> Schon gehört?<br>
+> *"Vive la resistance!"*<br>
+> Georg Simon Ohm
+
+### Stipendien {#dschungel-abc-stipendien .unnumbered}
+
+Wer gut oder sehr gut ist (soll vorkommen), kann aus einem bunten Strauß von Stipendienangeboten wählen: Zunächst gibt es seit einigen Jahren das sogenannte Deutschlandstipendium, das semesterweise direkt von der Uni vergeben wird. Weiterhin existiert neben der unabhängigen Studienstiftung des deutschen Volkes eine Reihe verschiedener politisch, religiös oder anderweitig motivierter Förderungen. Gerade für letztere gilt: Man muss nicht 1.0 haben, um genommen zu werden. Viele spezialisierte Stipendienprogramme achten teilweise sogar primär auf gesellschaftliches Engagement und nicht nur auf deine Noten. Im Zweifel: Einfach mal bewerben.
+
+### Studierendenausweis {#dschungel-abc-studierendenausweis .unnumbered}
+
+[Die CampusCard]
+
+### Studentenwerk {#dschungel-abc-studentenwerk .unnumbered}
+
+Das Studentenwerk Oberfranken ist für mehrere Studentenwohnheime, das subventionierte Essen in der [Mensa](#dschungel-abc-mensa), sowie das [BAföG](#dschungel-abc-bafoeg) zuständig. Du findest das Studentenwerk Oberfranken in der [ZUV](#dschungel-abc-zuv).
+
+### Studienbeiträge {#dschungel-abc-studienbeitraege .unnumbered}
+
+Gibt es seit dem WS 2013/14 nicht mehr. Dafür gibt es jetzt [Studienzuschüsse](#dschungel-abc-studienzuschuesse)!
+
+> Schon gehört?<br>
+> *"Sein oder nicht sein, das ist hier die Frage!"*<br>
+> Schrödingers Katze
+
+### Studienzuschüsse {#dschungel-abc-studienzuschuesse .unnumbered}
+
+= Studienbeitragsersatzmittel. Rate mal.
+
+### Studienberatung, zentrale {#dschungel-abc-zentrale-studienberatung .unnumbered}
+
+Solltest du über einen Studiengangswechsel nachdenken oder anderweitig verwaltungstechnische Hilfe mit deinem Studium benötigen, kannst du hier vorbeischauen. Zu empfehlen: Nicht in den Semesterferien hingehen, da kommen alle anderen ... Details siehe [Ansprechpartner].
+
+### Studienordnung {#dschungel-abc-studienordnung .unnumbered}
+
+Juristischer Rahmen für die Regelung deines Studiums. Nutzen für dich: keiner. Lies lieber in der [Prüfungsordnung](#dschungel-abc-pruefungsordnung) nach.
+
+### Studienverlaufsplan {#dschungel-abc-studienverlaufsplan .unnumbered}
+
+Übersicht über den zeitlichen Ablauf eures Studiums, d.h. die Verteilung der einzelnen Module. Spezifische Hinweise findest du in dem jeweiligen Kapitel für deinen Studiengang.
+
+> Zitat für Zwischendurch:<br>
+> *"Fullerene... Man hat Massen an Geld hineingesteckt und alles, was sie können, ist existieren."*<br>
+> Dr. Irrgang
+
+### Studierendenkanzlei {#dschungel-abc-studierendenkanzlei .unnumbered}
+
+Sie ist euer Anlaufpunkt für alle verwaltungstechnischen Angelegenheiten, die nicht vom [Prüfungsamt](#dschungel-abc-pruefungsamt) übernommen werden müssen. Dies sind v.a. Immatrikulation, Fachwechsel, Studiengangswechsel und [Urlaubssemester](#dschungel-abc-urlaubssemester). Zu finden ist sie in der [ZUV](#dschungel-abc-zuv). Details siehe [Ansprechpartner].
+
+### Studierendenparlament (StuPa) {#dschungel-abc-stupa .unnumbered}
+
+Siehe Kapitel [Unipolitik].
+
+### Studium Generale {#dschungel-abc-studium-generale .unnumbered}
+
+1. Bezeichnung für ein Studium ohne Fachausrichtung, das sich aus beliebigen [Modulen](#dschungel-abc-modul) zusammensetzen kann.
+2. Für bestimmte Studiengänge kann eine bestimmte Zahl an [ECTS](#dschungel-abc-ects) frei gewählt werden.
+3. Zusätzlich zum Pflichtprogramm kannst du auch freiwillig Kurse belegen, diese können in [cmlife](#dschungel-abc-cmlife) unter Studium Generale ausgewählt werden.
+
+### SWS {#dschungel-abc-sws .unnumbered}
+
+Der Zeitaufwand für alle Veranstaltungen wird in Semesterwochenstunden angegeben, d.h. 2 SWS bedeuten jede Vorlesungswoche zwei Schulstunden z.B. [Vorlesung](#dschungel-abc-vorlesung). Für (Block-)[Praktika](#dschungel-abc-praktikum) wird das entsprechend umgerechnet, sodass ein dreiwöchiges Vollzeitpraktikum 6 SWS entspricht. Gerade in letzterem Fall handelt es sich jedoch mehr um eine Richtlinie als um eine feste Umrechnung.
+
+### Tee, schwarzer {#dschungel-abc-schwarzer-tee .unnumbered}
+
+Ähnlicher, nicht so starker Effekt wie [Kaffee](#dschungel-abc-kaffeeautomat) oder [Club Mate](#dschungel-abc-club-mate), jedoch eher für Leute mit schwächeren Mägen zu empfehlen.
+
+### Tip {#dschungel-abc-tip .unnumbered}
+
+Das Printmedium der Uni bis Mitte 2016! Erschien einmal wöchentlich (Donnerstags) mit Informationen rund um den Campus, von lustig bis informativ! Gibt’s nicht mehr. Tja. Warum ist das noch im Wiki? Ich habe keinen Plan. Aber ok. Jetzt bin ich auch zu faul das hier zu löschen. Es ist 23:50 Uhr. Also ne!
+
+### TöK {#dschungel-abc-toek .unnumbered}
+
+Steht nicht für einen Töpferkurs der Volkshochschule, sondern für Tierökologie!
+
+### Trivial {#dschungel-abc-trivial .unnumbered}
+
+Erklärung: trivial.
+
+### Übung {#dschungel-abc-uebung .unnumbered}
+
+Fast noch wichtiger als die [Vorlesung](#dschungel-abc-vorlesung), hier werden die Übungsblätter zu den Vorlesungen besprochen, sodass ihr endlich mal euer Wissen praktisch anwenden könnt. Viele Klausuren in den ersten beiden Semestern bauen primär auf den Übungsblättern auf.
+
+### Ummelden {#dschungel-abc-ummelden .unnumbered}
+
+Wenn man in Deutschland umzieht, will der Staat das gern wissen. Daher muss man sich in einer gewissen Frist bei der Stadt ummelden. Genauere Informationen werden von der Stadt in dieser [Broschüre](https://www.studierendenkanzlei.uni-bayreuth.de/pool/dokumente/Semester-Info-Stadt-Bayreuth-2020.pdf) zur Verfügung gestellt.
+
+### Uni {#dschungel-abc-uni .unnumbered}
+
+Balzplatz, in dem gilt: Alles kann, nichts muss; klare Vorteile, wenn man JBG (jung, brutal, gutaussehend) ist. Ein Hort der Bildung, eine Enklave des Wissens in der geistigen Ödnis, der Ort an dem ihr eure geistigen Fähigkeiten zu Höchstleistungen treiben könnt.
+
+> Schon gehört?:<br>
+> *"Diese Vorgänge sind mir nicht bekannt gewesen und ich verspreche die brutalst mögliche Aufklärung!"*<br>
+> Dr. Sommer
+
+### UniNow-App {#dschungel-abc-uninow .unnumbered}
+
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/uninow-logo.png")
+```
+
+Das ist die Campus App schlechthin! Noten, Stundenplan, Mensa, Mails, Bibliothek, News und sogar ein eigenes Ersti-Modul. Außerdem bekommt ihr hier die neusten Informationen von der Fachschaft. **Ersti-Code: BT-BCG**
+
+Die App kann man unter https://uninow.de/install herunterladen (für Android und iOS).
+
+### Urlaubssemester {#dschungel-abc-urlaubssemester .unnumbered}
+
+Unterbrechung des Studiums aus persönlichen Gründen oder für lange [Praktika](#dschungel-abc-praktikum). Beantragung in der [Studierendenkanzlei](#dschungel-abc-studierendenkanzlei).
+
+### Vollversammlung {#dschungel-abc-vollversammlung .unnumbered}
+
+Wird von der [Fachschaft](#dschungel-abc-fachschaft) einberufen, um wichtige Themen mit allen Studenten der [Fakultät](#dschungel-abc-fakultaet) zu diskutieren.
+
+### Vorlesung {#dschungel-abc-vorlesung .unnumbered}
+
+Wie der Name schon sagt ...
+
+### Vorlesungsverzeichnis {#dschungel-abc-vorlesungsverzeichnis .unnumbered}
+
+Alle Details zu Vorlesungen und Veranstaltungen findet ihr in [cmlife](#dschungel-abc-cmlife). Dort könnt ihr euch direkt über euer Modulhandbuch Veranstaltungen anzeigen lassen und euren Stundenplan zusammenstellen. Das ganze läuft rein elektronisch ab, den Zugang findest du bei den [Links]. So einen Service hatte der Autor dieser Zeilen noch nicht ...
+
+### VPN {#dschungel-abc-vpn .unnumbered}
+
+Ein digitaler Tunnel in isolierte Netzwerke. Damit kommt ihr von zu Hause ins Netz der Universität und so z.B. an [Bücher](#dschungel-abc-buecher) und Veröffentlichungen.
+
+### Wahl {#dschungel-abc-wahl .unnumbered}
+
+[Hochschulwahl](#dschungel-abc-hochschulwahl)
+
+### Wallenfels {#dschungel-abc-wallenfels .unnumbered}
+
+Standort der ökologischen Außenstation der Universität Bayreuth und Veranstaltungsort des Erstiwochenendes, zu dem du dich sicher schon angemeldet hast.
+
+### Wetter {#dschungel-abc-wetter .unnumbered}
+
+Bayreuth ist die zweit-kälteste Stadt Deutschlands; werdet ihr noch früh genug merken! Noch kälter ist nur Hofiski (sibirisch für Hof).
+
+### WLAN {#dschungel-abc-wlan .unnumbered}
+
+Nicht zu verwechseln mit Prof. Dr.-Ing. Herbert Wehlan am Institut für System- Dynamik an der Uni Stuttgart. Falls es in den Hörsälen funktioniert, gibt es an der Uni einen kostenlosen Zugang mittels [eduroam](#dschungel-abc-eduroam).
+
+> Zitat für Zwischendurch:<br>
+> *"Diese Bor-Verbindung ist auch schön, aber einen Nutzen haben wir hierfür noch nicht gefunden."*<br>
+> Prof. Wrackmeyer
+
+### X-Chromosom {#dschungel-abc-x-chromosom .unnumbered}
+
+Einfach mal die Biologen fragen... ich bin nur Geograf, ich hab kein Plan davon. Sorry :D
+
+> Zitat zum Schluss:<br>
+> *"Klar, ich kann mir jetzt nicht ein Kilo Ascorbinsäure reinhauen und dann in Tschernobyl im Reaktorwasser baden"*<br>
+> Betreuer im OC-Praktikum
+
+### YOLO {#dschungel-abc-yolo .unnumbered}
+
+Carpe diem für Idioten, aber immer mit Hashtag benutzen! #Yolo
+
+### ZUV {#dschungel-abc-zuv .unnumbered}
+
+= Zentrale Univerwaltung. Hier findet ihr die [Studierendenkanzlei](#dschungel-abc-studierendenkanzlei), das [Prüfungsamt](#dschungel-abc-pruefungsamt) und die Uni-Druckerei ([Kopierer](#dschungel-abc-kopierer)) auf der rechten Seite,
+das [Studentenwerk](#dschungel-abc-studentenwerk) mit dem [BAföG](#dschungel-abc-bafoeg) Amt auf der linken Seite.
