@@ -1,0 +1,5 @@
+# BCG-Rätsel
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_app("https://www.xwords-generator.de/de/solve/ns7qq", height = "1000px")
+```
