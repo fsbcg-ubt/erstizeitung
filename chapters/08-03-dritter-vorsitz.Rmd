@@ -1,0 +1,41 @@
+## Der Mädchen für Alles
+
+```{r, echo=FALSE, out.width="500pt"}
+knitr::include_graphics("images/fachschaftler/chris.jpg")
+```
+
+**Name**
+
+> Chris
+
+**Job in der Fachschaft**
+
+> Mädchen für Alles
+
+**Studiengang**
+
+> M.Sc. Biochemie und Molekulare Biologie
+
+**Motto**
+
+> A yawn is a silent scream for coffee.
+
+**Beste Bar in Bayreuth**
+
+> Rosa Rosa
+
+**Bester Ort in Bayreuth**
+
+> Bunter Hügel
+
+**Ziel für dieses Jahr**
+
+> Vor der klausurenphase anfangen zu lernen.
+
+**Das kann ich gar nicht!**
+
+> Singen.
+
+**Wie viel Uhr ist es?**
+
+> Zeit für'n Kaffee!
