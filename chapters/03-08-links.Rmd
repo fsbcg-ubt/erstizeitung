@@ -42,7 +42,15 @@ https://www.ub.uni-bayreuth.de
 **Studentenwerk**<br>
 https://www.studentenwerk-oberfranken.de
 
-### Software {-}
+### IT {-}
+
+**Laptopsprechstunde**<br>
+Online, per E-Mail oder persönlich<br>
+https://laps.uni-bayreuth.de
+
+**PC Garage**<br>
+Hilfe bei Hard- und Software-Problemen<br>
+https://www.its.uni-bayreuth.de/de/hilfe-und-support
 
 **Microsoft Office (Office 365)**<br>
 Kostenlos für Studenten<br>
