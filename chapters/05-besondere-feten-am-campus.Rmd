@@ -1,0 +1,21 @@
+# Besondere Feten am Campus
+
+### FAN-Fete {-}
+
+Im Herbst in der Fakultät für Ingenieurwissenschaften, vormals Fakultät für angewandte Naturwissenschaften (FAN). Klasse Fete organisiert von der Fachschaft Ingenieurwissenschaften. Schon mal im Kalender vormerken und Lauscher für Details aufsperren oder einfach unter auf dem Laufenden bleiben.
+
+### NW II Fete {-}
+
+Im Herbst und im Frühling im NW II, organisiert von der Fachschaft Mathe/Physik/Info (Ma-PhI). Bringt regelmäßig das NW II zum Beben. Bekannt vor allem für die Asskicker-Crew
+an den Turntables. Einzelheiten zu gegebener Zeit auf https://fsmpi.uni-bayreuth.de.
+
+### Nikofete {-}
+
+Die mit Abstand wohl beste Fete auf'm Campus und das auch noch so gut wie zu Hause, nämlich in eurem NW I! Bloß nicht entgehen lassen, gibt's nur einmal im Jahr! Näheres gibt's bei eurer Fachschaft BCG oder einfach ältere Semester fragen ...
+
+```{r, echo=FALSE, out.height="300pt"}
+knitr::include_graphics("images/nikofete-plakat-1.png")
+```
+```{r, echo=FALSE, out.height="300pt"}
+knitr::include_graphics("images/nikofete-plakat-2.png")
+```
