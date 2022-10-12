@@ -1,0 +1,41 @@
+## Ihre Stellvertreterin
+
+```{r, echo=FALSE, out.width="500pt"}
+knitr::include_graphics("images/fachschaftler/lorena.jpg")
+```
+
+**Name**
+
+> Lorena
+
+**Job in der Fachschaft**
+
+> Vize-Vorsitz
+
+**Studiengang**
+
+> B.Sc. Biologie
+
+**Motto**
+
+> Bleib so, wie du bist.
+
+**Beste Bar in Bayreuth**
+
+> Hausbar
+
+**Bester Ort in Bayreuth**
+
+> Hofgarten und Röhrensee
+
+**Ziel für dieses Jahr**
+
+> Krümmel beschützen!
+
+**Das kann ich gar nicht!**
+
+> Mal nicht sarkastisch sein.
+
+**Wie viel Uhr ist es?**
+
+> Pfeffi Time!

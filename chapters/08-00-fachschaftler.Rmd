@@ -1,0 +1,5 @@
+# Fachschaftler und Fachschaftlerinnen
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/fachschaftler/wahlplaklat.jpg")
+```

@@ -1,0 +1,37 @@
+## Der Nikofete-Meister
+
+```{r, echo=FALSE, out.width="500pt"}
+knitr::include_graphics("images/fachschaftler/fabian.jpg")
+```
+
+**Name**
+
+> Fabian
+
+**Job in der Fachschaft**
+
+> Nikofetenbeauftragter
+
+**Studiengang**
+
+> B.Sc. Chemie
+
+**Beste Bar in Bayreuth**
+
+> Kanapee
+
+**Bester Ort in Bayreuth**
+
+> Hofgarten
+
+**Ziel für dieses Jahr**
+
+> Banger Nikofete schmeißen
+
+**Das kann ich gar nicht!**
+
+> Kittelgröße schätzen und Altklausuranfragen bearbeiten
+
+**Wie viel Uhr ist es?**
+
+> 16:20 Uhr

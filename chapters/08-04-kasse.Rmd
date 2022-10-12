@@ -1,0 +1,41 @@
+## Unsere Schatzhüterin
+
+```{r, echo=FALSE, out.width="500pt"}
+knitr::include_graphics("images/fachschaftler/michelle.jpg")
+```
+
+**Name**
+
+> Michelle
+
+**Job in der Fachschaft**
+
+> Kasse
+
+**Studiengang**
+
+> B.Sc. Biochemie
+
+**Motto**
+
+> Wenn ich jedem gefallen wollen würde, wäre ich ein Blumenstrauß geworden.
+
+**Beste Bar in Bayreuth**
+
+> Malibu
+
+**Bester Ort in Bayreuth**
+
+> Hofgarten, Eremitage
+
+**Ziel für dieses Jahr**
+
+> mehr Glühweiiin
+
+**Das kann ich gar nicht!**
+
+> Smalltalk
+
+**Wie viel Uhr ist es?**
+
+> Zeit für ein Bierchen
