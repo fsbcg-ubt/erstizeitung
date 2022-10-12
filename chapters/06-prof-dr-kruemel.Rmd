@@ -1,0 +1,37 @@
+# Prof. Dr. Krümel - Der dienstälteste Fachschaftler
+
+```{r, echo=FALSE, out.width="400pt"}
+knitr::include_graphics("images/kruemel.jpg")
+```
+
+**Name**
+
+> Prof. Dr. Krümel
+
+**Job**
+
+> Bestes Maskottchen der Welt
+
+**Studiengang/Semester**
+
+> Professur für allgemeine Backwissenschaften, Leiter des Krümellehrstuhls
+
+**Motto**
+
+> Sometimes Me think "What is friend?" and then Me say "Friend is someone to share the last cookie with."
+
+**Bester Ort in Bayreuth**
+
+> Fachschaftszimmer der BCG
+
+**Hauptbeschäftigung**
+
+> Beweisen, dass die Erde keine Kugel, sondern ein Keks ist.
+
+**Das kann ich gar nicht**
+
+> Kann alles! Für Kekse!
+
+**Wieviel Uhr ist es?**
+
+> Pfeffi-Time!
