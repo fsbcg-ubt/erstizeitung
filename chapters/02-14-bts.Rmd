@@ -1,6 +1,6 @@
 ## btS. e.V. - Biotechnologische Studenteninitiative
 
-```{r, echo=FALSE, out.width="400pt"}
+```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/bts-titelbild.png")
 ```
 
