@@ -1,5 +1,9 @@
 # BCG-Rätsel
 
+Damit ihr auch was zum Knobeln habt, gibt es hier noch ein Rätsel. Die Fragen gehen quer durch die Fachgebiete der Fakultät, den Inhalt dieser Zeitung und allgemeines Wissen über die Universität.
+
+Mit dem Lösungswort könnt ihr euch bei der Fachschaft eure Erstitüten neu auffüllen lassen! Wann es dir Erstitüten gibt, findet ihr unter [Termine].
+
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_app("https://www.xwords-generator.de/de/solve/ns7qq", height = "1000px")
 ```
