@@ -1,4 +1,4 @@
-## btS. e.V. - Biotechnologische Studenteninitiative
+## btS. e.V. - Biotechnologische Studenteninitiative {#bts}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/bts-titelbild.png")
