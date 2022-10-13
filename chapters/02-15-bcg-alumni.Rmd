@@ -1,6 +1,6 @@
 ## BcG Alumni e.V. - Alumni-Verein der Bio- und Geowissenschaften
 
-```{r, echo=FALSE, out.width="400pt"}
+```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/bcg-alumni-titelbild.png")
 ```
 
