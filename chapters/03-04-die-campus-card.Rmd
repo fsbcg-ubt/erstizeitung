@@ -1,10 +1,10 @@
 ## Die CampusCard
 
 ```{r, echo=FALSE, out.width="45%"}
-knitr::include_graphics("images/die-campus-card-vorderseite.png")
+knitr::include_graphics("images/studierendenausweis-vorserseite.png")
 ```
 ```{r, echo=FALSE, out.width="45%"}
-knitr::include_graphics("images/die-campus-card-rückseite.png")
+knitr::include_graphics("images/studierendenausweis-rueckseite.png")
 ```
 
 ### Studierendenausweis (Vorderseite) {-}
