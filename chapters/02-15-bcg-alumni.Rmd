@@ -1,4 +1,4 @@
-## BcG Alumni e.V. - Alumni-Verein der Bio- und Geowissenschaften
+## BcG Alumni e.V. - Alumni-Verein der Bio- und Geowissenschaften {#bcg-alumni}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/bcg-alumni-titelbild.png")
