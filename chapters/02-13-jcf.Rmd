@@ -1,6 +1,6 @@
 ## JCF Bayreuth - Bayreuther Sektion des JungChemikerForums der GDCh
 
-```{r, echo=FALSE, out.width="400pt"}
+```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/jcf-titelbild.png")
 ```
 
