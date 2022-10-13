@@ -1,4 +1,4 @@
-## CSG e.V. - Alumniverein der Chemie an der Universität Bayreuth
+## CSG e.V. - Alumniverein der Chemie an der Universität Bayreuth {#csg}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/csg-titelbild.png")
