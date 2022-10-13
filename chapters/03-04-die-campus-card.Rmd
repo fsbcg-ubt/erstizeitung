@@ -16,13 +16,13 @@ Wie der Name schon sagt, könnt ihr euch mit der CampusCard als Studierende der 
 Damit könnt ihr Bücher in sämtlichen Bibliotheken der Universität ausleihen. Für euch sind dabei die Teilbibliotheken NW I (für Chemie, Biochemie und Biologie)
 und Geowissenschaften (für Geografie und Geoökologie) von besonderem Interesse.
 
-Ebenso steht dort eure Nutzerkennung für den Onlinezugang der Bibliothek (#TODO: Verlinkung zu "Links").
+Ebenso steht dort eure Nutzerkennung für den Onlinezugang der Bibliothek ([Links]).
 Mit dieser und eurem Geburtsdatum (TTMMJJ) als Passwort könnt ihr euch anmelden, um zum Beispiel Bücher zu verlängern oder vorzumerken.
 
 ### Semesterticket {-}
 
 Damit könnt ihr den Busverkehr innerhalb Bayreuths und die Bahn auf einigen Strecken der Bayreuther Umgebung benutzen. Das Ticket habt ihr bereits mit eurer Immatrikulation bezahlt.
-Dabei fungiert die validierte CampusCard als Fahrschein. Für genauere Informationen zu den Strecken könnt ihr die Seite zur CampusCard im Internet aufrufen (#TODO: Verlinkung zu "Links").
+Dabei fungiert die validierte CampusCard als Fahrschein. Für genauere Informationen zu den Strecken könnt ihr die Seite zur CampusCard im Internet aufrufen ([Links]).
 
 ### Mensakarte {-}
 
