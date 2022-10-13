@@ -1,0 +1,15 @@
+# Termine
+
+### Erstiverantaltungen {-}
+
+```{r, echo=FALSE}
+praktika <- read.csv(file = "data/termine-erstiveranstaltungen.csv", sep = ";")
+knitr::kable(praktika, "pipe")
+```
+
+### Termine im Studienjahr {-}
+
+```{r, echo=FALSE}
+praktika <- read.csv(file = "data/termine-semester.csv", sep = ";")
+knitr::kable(praktika, "pipe")
+```
