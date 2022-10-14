@@ -1,5 +1,9 @@
 ## Wer ist eigentlich dieses StuPa
 
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/stupa-titelbild.png")
+```
+
 Herzlich willkommen an der Universität Bayreuth auch von uns! Das Studierendenparlament (kurz StuPa) ist eure fakultätsübergreifende Vertretung an der Uni und setzt sich, z.B. vor der Verwaltung für die Belange der Studierenden ein.
 
 ### Wie sind wir aufgebaut? {-}
