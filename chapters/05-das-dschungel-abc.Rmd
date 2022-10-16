@@ -1,4 +1,4 @@
-# Das Dschungel-ABC
+# Das Dschungel-ABC {#dschungel-abc}
 
 ### Absolventen der Uni Bayreuth, bekannte {#dschungel-abc-bekannte-absolventen .unnumbered}
 
@@ -142,7 +142,7 @@ So wird der Hauptteil der Universität genannt, daneben gibt es noch folgende Au
 
 ### CampusCard {#dschungel-abc-campuscard .unnumbered}
 
-Plastikkärtchen, das ihr bei der Immatrikulation bekommt; Details findet ihr unter [Die CampusCard]. Falls ihr ihn mal wieder verliert, könnt ihr in der Poststelle, [Bib](#dschungel-abc-bib), [Dekanat](#dschungel-abc-dekan), [Studierendenkanzlei](#dschungel-abc-studierendenkanzlei) oder bei uns vorbeischauen, um ihn abzuholen. Ansonsten schreibt jemand noch für euch die ganzen Klausuren - schrecklich! ;) .
+Plastikkärtchen, das ihr bei der Immatrikulation bekommt; Details findet ihr unter [CampusCard](#campus-card). Falls ihr ihn mal wieder verliert, könnt ihr in der Poststelle, [Bib](#dschungel-abc-bib), [Dekanat](#dschungel-abc-dekan), [Studierendenkanzlei](#dschungel-abc-studierendenkanzlei) oder bei uns vorbeischauen, um ihn abzuholen. Ansonsten schreibt jemand noch für euch die ganzen Klausuren - schrecklich! ;) .
 
 > Übrigens:<br>
 > *Euer Studierendenausweis hat zwei Guthaben. Eins für Mensa und eines zum Kopieren. Entsprechend gibt es auch zwei Sorten von Ladestationen!*
@@ -165,7 +165,7 @@ Alternatives Aufputschmittel für alle, die keinen [Kaffee](#dschungel-abc-kaffe
 
 ### CSG {#dschungel-abc-csg .unnumbered}
 
-= Chemiker Spaß Gesellschaft: Alumniverein der Chemiker, Details im gleichnamigen Kapitel [CSG e.V. - Alumniverein der Chemie an der Universität Bayreuth].
+= Chemiker Spaß Gesellschaft: Alumniverein der Chemiker, Details im gleichnamigen Kapitel [CSG e.V.](#csg).
 
 > Übrigens:<br>
 > *Meistens ist die Fachschaft auch außerhalb der offiziellen Öffnungszeiten besetzt, im Zweifel also einfach mal reinschauen!*
@@ -196,7 +196,7 @@ Sollte mal ein repeating theme dieser Zeitung werden. Hat nur irgendwer in der M
 
 ### E-Mail, universitäre {#dschungel-abc-universitaere-email .unnumbered}
 
-Mit deiner Immatrikulation erhältst du zwei Mailadressen, eine mit deiner [BT-Kennung](#dschungel-abc-bt-kennung) (btxxxxxx@uni-bayreuth.de) und nach Verfügbarkeit eine mit deinem Namen (deine.mudda@uni-bayreuth.de). Wichtig: An diese Adressen gehen alle offiziellen Uni-Mitteilungen, also regelmäßig checken oder eine Weiterleitung einrichten. Den Zugang zu Posteingang und Optionen findet ihr bei den [Links].
+Mit deiner Immatrikulation erhältst du zwei Mailadressen, eine mit deiner [BT-Kennung](#dschungel-abc-bt-kennung) (btxxxxxx@uni-bayreuth.de) und nach Verfügbarkeit eine mit deinem Namen (deine.mudda@uni-bayreuth.de). Wichtig: An diese Adressen gehen alle offiziellen Uni-Mitteilungen, also regelmäßig checken oder eine Weiterleitung einrichten. Den Zugang zu Posteingang und Optionen findet ihr bei den [Links](#links).
 
 ### ECTS {#dschungel-abc-ects .unnumbered}
 
@@ -208,7 +208,7 @@ Leistungspunkte, offiziell "credit points", doch leider gibt es keinen gratis Ba
 
 ### eLearning {#dschungel-abc-elearning .unnumbered}
 
-Hoffentlich funktionierts! Wenn es das tut: Verwaltungsplattform für Vorlesungen, Seminare, Praktika und was sonst noch so ansteht. Anmeldung mit [BT-Kennung](#dschungel-abc-bt-kennung) und Passwort: Passwort (psst. nicht weiter verraten!). Link gibts unter [Links].
+Hoffentlich funktionierts! Wenn es das tut: Verwaltungsplattform für Vorlesungen, Seminare, Praktika und was sonst noch so ansteht. Anmeldung mit [BT-Kennung](#dschungel-abc-bt-kennung) und Passwort: Passwort (psst. nicht weiter verraten!). Link gibts unter [Links](#links).
 
 > Zitat für zwischendurch:<br>
 > *"[...] Wenn das Zeug explodiert, dann sehen Sie eventuell noch die Spektrallinie von Natrium im Augenwinkel. Als nächstes betrachten Sie die Sache von oben mit einer Harfe in der Hand."*<br>
@@ -256,7 +256,7 @@ Zusammenschluss der [Fachgruppen](#dschungel-abc-fachgruppe).
 
 ### Fakultätsrat {#dschungel-abc-fakultaetsrat .unnumbered}
 
-[Unipolitik]
+[Unipolitik](#unipolitik)
 
 ### Fak. Ing. {#dschungel-abc-faking .unnumbered}
 
@@ -357,7 +357,7 @@ P.S.: erste Carhartt und Colour collective Exemplare wurden bereits gesichtet!
 
 ### Hochschulrat {#dschungel-abc-hochschulrat .unnumbered}
 
-[Unipolitik]
+[Unipolitik](#unipolitik)
 
 ### Hochschulsport {#dschungel-abc-hochschulsport .unnumbered}
 
@@ -365,7 +365,7 @@ P.S.: erste Carhartt und Colour collective Exemplare wurden bereits gesichtet!
 
 ### Hochschulwahl {#dschungel-abc-hochschulwahl .unnumbered}
 
-Findet immer im Sommersemester statt, dort könnt ihr eure Vertretung fürs [StuPa](#dschungel-abc-stupa), die [Fachschaft](#dschungel-abc-fachschaft), den [Senat](#dschungel-abc-senat) und den [Hochschulrat](#dschungel-abc-hochschulrat) wählen. Näheres siehe [Unipolitik].
+Findet immer im Sommersemester statt, dort könnt ihr eure Vertretung fürs [StuPa](#dschungel-abc-stupa), die [Fachschaft](#dschungel-abc-fachschaft), den [Senat](#dschungel-abc-senat) und den [Hochschulrat](#dschungel-abc-hochschulrat) wählen. Näheres siehe [Unipolitik](#unipolitik).
 
 ### Intelligenz {#dschungel-abc-intelligenz .unnumbered}
 
@@ -373,7 +373,7 @@ Stark überschätzte Kompetenz für das Studium.
 
 ### International Office (INO) {#dschungel-abc-international-office .unnumbered}
 
-Neben dem [DAAD](#dschungel-abc-daad) eine der Anlaufstellen für ein [Auslandsstudium](#dschungel-abc-auslandsstudium). Details siehe [Ansprechpartner].
+Neben dem [DAAD](#dschungel-abc-daad) eine der Anlaufstellen für ein [Auslandsstudium](#dschungel-abc-auslandsstudium). Details siehe [Ansprechpartner](#ansprechpartner).
 
 ### ITS {#dschungel-abc-its .unnumbered}
 
@@ -386,7 +386,7 @@ Kümmern sich um alle Software- und Hardware-Belange an der Uni. Auch bei kleine
 
 ### JCF {#dschungel-abc-jcf .unnumbered}
 
-= JungChemikerForum. Jungmitglieder der [GDCh](#dschungel-abc-gdch). Näheres im Kapitel [JCF Bayreuth - Bayreuther Sektion des JungChemikerForums der GDCh].
+= JungChemikerForum. Jungmitglieder der [GDCh](#dschungel-abc-gdch). Näheres im Kapitel [JCF Bayreuth](#jcf).
 
 ### Jonglieren {#dschungel-abc-jonglieren .unnumbered}
 
@@ -417,11 +417,11 @@ Erfolgt immer, wenn der Dozent die Vorlesung beendet (wird von Semester zu Semes
 
 ### Kneipentour {#dschungel-abc-kneipentour .unnumbered}
 
-Veranstaltung der Fachschaft, um den Erstsemestern die Lokalitäten Bayreuths näherzubringen. Details siehe [Termine].
+Veranstaltung der Fachschaft, um den Erstsemestern die Lokalitäten Bayreuths näherzubringen. Details siehe [Termine](#termine).
 
 ### Kopierer {#dschungel-abc-kopierer .unnumbered}
 
-Zum Vervielfältigen von Vorlesungsmitschriften oder ähnlichem. Ihr werdet überall in allen Gebäuden Kopierer finden, die Bezahlung erfolgt elektronisch über euren [Studierendenausweis](#dschungel-abc-studierendenausweis), nachdem ihr ihn an einer [Aufladestation](#dschungel-abc-aufladestation) aufgeladen habt. Später, wenn ihr nach drei langen Jahren endlich eure Abschlussarbeit druckt, so könnt ihr das in der uni-internen Druckerei in der [ZUV] erledigen (ist billiger als in einem Copy-Shop).
+Zum Vervielfältigen von Vorlesungsmitschriften oder ähnlichem. Ihr werdet überall in allen Gebäuden Kopierer finden, die Bezahlung erfolgt elektronisch über euren [Studierendenausweis](#dschungel-abc-studierendenausweis), nachdem ihr ihn an einer [Aufladestation](#dschungel-abc-aufladestation) aufgeladen habt. Später, wenn ihr nach drei langen Jahren endlich eure Abschlussarbeit druckt, so könnt ihr das in der uni-internen Druckerei in der [ZUV](#dschungel-abc-zuv) erledigen (ist billiger als in einem Copy-Shop).
 
 ### KuWi {#dschungel-abc-kuwi .unnumbered}
 
@@ -429,7 +429,7 @@ Zum Vervielfältigen von Vorlesungsmitschriften oder ähnlichem. Ihr werdet übe
 
 ### Laptopsprechstunde {#dschungel-abc-laptopsprechstunde .unnumbered}
 
-Bei der Laptopsprechstunde gibt es Hilfe zu den Themen [eduroam](#dschungel-abc-eduroam), [VPN](#dschungel-abc-vpn), [Drucker](#dschungel-abc-drucker) und Microsoft Office. Auf der Website (siehe [Links]) gibt es die passenden Anleitungen. Unter "Kontakt" kann man sich auch direkt bei den Studis melden, die das Ganze betreuen.
+Bei der Laptopsprechstunde gibt es Hilfe zu den Themen [eduroam](#dschungel-abc-eduroam), [VPN](#dschungel-abc-vpn), [Drucker](#dschungel-abc-drucker) und Microsoft Office. Auf der Website (siehe [Links](#links))) gibt es die passenden Anleitungen. Unter "Kontakt" kann man sich auch direkt bei den Studis melden, die das Ganze betreuen.
 
 ### Leistungspunkte {#dschungel-abc-leistungspunkte .unnumbered}
 
@@ -524,7 +524,7 @@ Personal Computer; die menschlichen PCs befinden sich in der Physikalischen Chem
 
 ### PC-Garage {#dschungel-abc-pc-garage .unnumbered}
 
-Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht Alles aber wenn der Computer "NEIN!" sagt, ist das eure Anlaufstelle! Die Website findet ihr in den [Links].
+Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht Alles aber wenn der Computer "NEIN!" sagt, ist das eure Anlaufstelle! Die Website findet ihr in den [Links](#links).
 
 ### Pfeffi-Time ... {#dschungel-abc-pfeffi-time .unnumbered}
 
@@ -548,7 +548,7 @@ Dienstägliches Uni-Kino, ausgerichtet von unseren lieben Kollegen von der [MaPh
 
 ### Prüfungsamt {#dschungel-abc-pruefungsamt .unnumbered}
 
-Hier werde eure Prüfungsleistungen verwaltet und auch eure Atteste könnt ihr hier abgeben, wenn ihr mal wieder am Prüfungstag krank wart. ("Schwankungen der Tagesform" und "Keine Ahnung von nichts haben" sind keine Krankheit!) Details siehe [Ansprechpartner].
+Hier werde eure Prüfungsleistungen verwaltet und auch eure Atteste könnt ihr hier abgeben, wenn ihr mal wieder am Prüfungstag krank wart. ("Schwankungen der Tagesform" und "Keine Ahnung von nichts haben" sind keine Krankheit!) Details siehe [Ansprechpartner](#ansprechpartner).
 
 ### Prüfungsordnung {#dschungel-abc-pruefungsordnung .unnumbered}
 
@@ -595,7 +595,7 @@ Hättest du keine Naturwissenschaft gewählt, würdest du wissen, was das ist!
 
 ### Semesterticket {#dschungel-abc-semesterticket .unnumbered}
 
-Mit der Überweisung zu eurer Immatrikulation oder [Rückmeldung](#dschungel-abc-rueckmeldung) bezahlt ihr auch für die kostenlose Mitfahrt im Stadtbus und in einer Reihe regionaler Bus- und Bahnverbindungen mit. Details findest du unter [Links].
+Mit der Überweisung zu eurer Immatrikulation oder [Rückmeldung](#dschungel-abc-rueckmeldung) bezahlt ihr auch für die kostenlose Mitfahrt im Stadtbus und in einer Reihe regionaler Bus- und Bahnverbindungen mit. Details findest du unter [Links](#links).
 
 > Zitat für Zwischendurch:<br>
 > *"Wie unterscheiden Sie einen Apfel von einer Birne? Der Apfel ist rund, die Birne birnenförmig!"*<br>
@@ -607,11 +607,11 @@ Meist zur Vorbereitung auf [Praktika](#dschungel-abc-praktikum) abgehaltene Mini
 
 ### Senat {#dschungel-abc-senat .unnumbered}
 
-[Unipolitik]
+[Unipolitik](#unipolitik)
 
 ### Skript {#dschungel-abc-skript .unnumbered}
 
-Häufig werden für Vorlesungen Skripte ausgeteilt. Ein Skript ist quasi die kommentierte [Vorlesung] des Profs und eignet sich in vielen Fällen gut zur Klausurvorbereitung.
+Häufig werden für Vorlesungen Skripte ausgeteilt. Ein Skript ist quasi die kommentierte [Vorlesung](#dschungel-abc-vorlesung) des Profs und eignet sich in vielen Fällen gut zur Klausurvorbereitung.
 
 ### Smartphone {#dschungel-abc-smartphone .unnumbered}
 
@@ -641,7 +641,7 @@ Ein Austauschprogramm; weiteres unter [Auslandsstudium](#dschungel-abc-auslandss
 
 ### Sprachenzentrum {#dschungel-abc-sprachenzentrum .unnumbered}
 
-Wolltest du schon immer mal Schwedisch, Kantonesisch oder Bambara sprechen? Dann ab ins Sprachenzentrum! Falls ihr Pirat am Horn von Afrika werden wollt, *arrr* dann könnt ihr auch Swahili lernen! *Klar machen zum entern, Matrosen*. Details siehe [Ansprechpartner].
+Wolltest du schon immer mal Schwedisch, Kantonesisch oder Bambara sprechen? Dann ab ins Sprachenzentrum! Falls ihr Pirat am Horn von Afrika werden wollt, *arrr* dann könnt ihr auch Swahili lernen! *Klar machen zum entern, Matrosen*. Details siehe [Ansprechpartner](#ansprechpartner).
 
 ### Staatsexamen {#dschungel-abc-staatsexamen .unnumbered}
 
@@ -657,7 +657,7 @@ Wer gut oder sehr gut ist (soll vorkommen), kann aus einem bunten Strauß von St
 
 ### Studierendenausweis {#dschungel-abc-studierendenausweis .unnumbered}
 
-[Die CampusCard]
+[Die CampusCard](#campus-card)
 
 ### Studentenwerk {#dschungel-abc-studentenwerk .unnumbered}
 
@@ -677,7 +677,7 @@ Gibt es seit dem WS 2013/14 nicht mehr. Dafür gibt es jetzt [Studienzuschüsse]
 
 ### Studienberatung, zentrale {#dschungel-abc-zentrale-studienberatung .unnumbered}
 
-Solltest du über einen Studiengangswechsel nachdenken oder anderweitig verwaltungstechnische Hilfe mit deinem Studium benötigen, kannst du hier vorbeischauen. Zu empfehlen: Nicht in den Semesterferien hingehen, da kommen alle anderen ... Details siehe [Ansprechpartner].
+Solltest du über einen Studiengangswechsel nachdenken oder anderweitig verwaltungstechnische Hilfe mit deinem Studium benötigen, kannst du hier vorbeischauen. Zu empfehlen: Nicht in den Semesterferien hingehen, da kommen alle anderen ... Details siehe [Ansprechpartner](#ansprechpartner).
 
 ### Studienordnung {#dschungel-abc-studienordnung .unnumbered}
 
@@ -697,7 +697,7 @@ Sie ist euer Anlaufpunkt für alle verwaltungstechnischen Angelegenheiten, die n
 
 ### Studierendenparlament (StuPa) {#dschungel-abc-stupa .unnumbered}
 
-Siehe Kapitel [Unipolitik].
+Siehe Kapitel [Unipolitik](#unipolitik).
 
 ### Studium Generale {#dschungel-abc-studium-generale .unnumbered}
 
@@ -765,7 +765,7 @@ Wie der Name schon sagt ...
 
 ### Vorlesungsverzeichnis {#dschungel-abc-vorlesungsverzeichnis .unnumbered}
 
-Alle Details zu Vorlesungen und Veranstaltungen findet ihr in [cmlife](#dschungel-abc-cmlife). Dort könnt ihr euch direkt über euer Modulhandbuch Veranstaltungen anzeigen lassen und euren Stundenplan zusammenstellen. Das ganze läuft rein elektronisch ab, den Zugang findest du bei den [Links]. So einen Service hatte der Autor dieser Zeilen noch nicht ...
+Alle Details zu Vorlesungen und Veranstaltungen findet ihr in [cmlife](#dschungel-abc-cmlife). Dort könnt ihr euch direkt über euer Modulhandbuch Veranstaltungen anzeigen lassen und euren Stundenplan zusammenstellen. Das ganze läuft rein elektronisch ab, den Zugang findest du bei den [Links](#links). So einen Service hatte der Autor dieser Zeilen noch nicht ...
 
 ### VPN {#dschungel-abc-vpn .unnumbered}
 

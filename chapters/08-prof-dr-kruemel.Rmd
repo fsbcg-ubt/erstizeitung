@@ -1,4 +1,4 @@
-# Prof. Dr. Krümel - Der dienstälteste Fachschaftler
+# Prof. Dr. Krümel - Der dienstälteste Fachschaftler {#kruemel}
 
 ```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/kruemel.jpg")

@@ -1,4 +1,4 @@
-# Fachschaftler und Fachschaftlerinnen
+# Fachschaftler und Fachschaftlerinnen {#fachschaftler-fachschaftlerinnen}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/fachschaftler/wahlplaklat.jpg")

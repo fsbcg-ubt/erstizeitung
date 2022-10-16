@@ -1,4 +1,4 @@
-## Wer ist eigentlich dieses StuPa
+## Wer ist eigentlich dieses StuPa {#stupa}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/stupa-titelbild.png")

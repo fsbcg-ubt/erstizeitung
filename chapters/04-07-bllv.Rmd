@@ -1,4 +1,4 @@
-## BLLV-Studierendengruppe Bayreuth - Erfolgreich Lehramt studieren!
+## BLLV-Studierendengruppe Bayreuth - Erfolgreich Lehramt studieren! {#bllv}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/bllv-titelbild.png")

@@ -1,4 +1,4 @@
-## Die CampusCard
+## Die CampusCard {#campus-card}
 
 ```{r, echo=FALSE, out.width="45%"}
 knitr::include_graphics("images/studierendenausweis-vorserseite.png")

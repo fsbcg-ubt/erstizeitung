@@ -1,4 +1,4 @@
-## Lehramt
+## Lehramt {#lehramt}
 
 An der Uni Bayreuth gibt es je nach Fächerkombination zwei verschiedene Arten des Lehramtsstudiums: den sogenannten Modellstudiengang mit dem Zwischenziel "Bachelor of Science"
 und mit Möglichkeit zum "Master of Education" mit dem Staatsexamen als Abschluss und die klassische Lehramtsvariante hin zum Staatsexamen ohne Zwischenprüfung.
