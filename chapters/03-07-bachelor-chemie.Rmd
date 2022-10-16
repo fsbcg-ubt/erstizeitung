@@ -49,7 +49,7 @@ nur einmal gebraucht werden und dann meistens auch nur ein Kapitel davon relevan
 
 Das einzige Material, das du für dein Studium brauchst und bei dem du auch nicht an einem Kauf vorbeikommst, ist der Laborkittel.🥼
 Dieser ist in allen Chemiepraktika verpflichtend, da er dich vor den "gefährlichen" Chemikalien und anderen Widrigkeiten des Dschungels schützt.
-Kittel gibt es im Online-Shop oder bei uns im Fachschaftszimmer (für nur 13 Euro).
+Kittel gibt es im Online-Shop oder bei uns im Fachschaftszimmer (für nur `r knitr::knit_child("data/preise-kittel.txt")`€).
 
 Für jedes Praktikum solltest du außerdem versichert sein, falls doch mal was zu Bruch geht!
 Aus diesem Grund wird zu Beginn der meisten Praktika ein schriftlicher Nachweis einer Haftpflichtversicherung verlangt.

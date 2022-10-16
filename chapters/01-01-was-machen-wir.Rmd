@@ -10,7 +10,7 @@ Aber wir finden sicher noch Möglichkeiten wie wir uns alle auf die ein oder and
 
 Neben unserem Wohlfühlprogramm zum Eingewöhnen in das Studium für unsere Ersties (#Nesthäckchen) bieten wir allen Studierenden das ganze Jahr über Hilfe an.
 Keine Frage bleibt bei uns unbeantwortet und kein Problem ungelöst, so dass du über dein Studium immer sagen kannst: #läuftbeimir.
-Zum einen versorgen wir euch mit dem Rüstzeug eines jeden guten Naturwissenschaftlers (**Kittel 12 €**, **Sezierbesteck 28 €**), welches bei uns zum Selbstkostenpreis erworben werden kann (#fuckshareholdervalue).
+Zum einen versorgen wir euch mit dem Rüstzeug eines jeden guten Naturwissenschaftlers (**Kittel `r knitr::knit_child("data/preise-kittel.txt")`€**, **Sezierbesteck `r knitr::knit_child("data/preise-sezierbesteck.txt")`€**), welches bei uns zum Selbstkostenpreis erworben werden kann (#fuckshareholdervalue).
 Zum anderen bieten wir auch Klausur-Altexemplare für viele Fächer an, sodass ihr euch optimal auf Prüfungen vorbereiten könnt. Die **Altklausuren** liegen digitalisiert vor und sind kostenfrei.
 Bitte für letzteres ein elektronisches Speichermedium mitbringen. All das funktioniert natürlich nur, wenn ihr eure geschriebenen Klausuren für die nachfolgenden Jahrgänge auch wieder vorbeibringt (#Altruismus).
 Was die Praktikumsprotokolle angeht, die du im Lauf deines Studiums schreiben must ... viel Spaß beim selber schreiben. Sorry L. #nolove
