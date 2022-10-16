@@ -1,4 +1,4 @@
-## Das Lernzentrum Chemie
+## Das Lernzentrum Chemie {#lernzentrum-chemie}
 
 ```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/lernzentrum-titelbild.png")

@@ -1,4 +1,4 @@
-# Universität Bayreuth
+# Universität Bayreuth {#uni}
 
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/uni-cover.png")
