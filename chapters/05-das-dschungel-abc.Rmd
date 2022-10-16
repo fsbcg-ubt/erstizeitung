@@ -14,7 +14,7 @@ Artificial Intelligence; Angewandte Informatik (neben der [ZUV](#dschungel-abc-z
 
 ### Allgemeiner Hochschulsport {#dschungel-abc-allgemeiner-hochschulsport .unnumbered}
 
-Gesunder Geist im gesunden Körper; bringt Vorteile ([Uni](#dschungel-abc-uni)). Nein im Ernst: Die Uni bietet ein äußerst umfangreiches Sport- und Fitnessprogramm an. Details finden sich unter [Links]. Er kostet zusätzlich zum Semesterbeitrag eine Gebühr von (# TODO Preis nachschauen, noch nicht öffentlich) Euro.
+Gesunder Geist im gesunden Körper; bringt Vorteile ([Uni](#dschungel-abc-uni)). Nein im Ernst: Die Uni bietet ein äußerst umfangreiches Sport- und Fitnessprogramm an. Details finden sich unter [Links](#links). Er kostet zusätzlich zum Semesterbeitrag eine Gebühr von `r knitr::knit_child("data/preise-hochschulsport.txt")`€.
 
 ### Anmelden {#dschungel-abc-anmelden .unnumbered}
 

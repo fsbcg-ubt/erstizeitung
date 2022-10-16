@@ -45,7 +45,7 @@ Die Jobaussichten als Bachelor-Absolvent sind eher bescheiden. Für einen einige
 Vielleicht kommt es euch noch nicht so vor, aber gerade ein Biochemiestudium bringt eine ganze Menge Arbeit mit sich. So sind die ersten beiden Semester von Biochemikern und Chemikern identisch.
 Hauptsächlich werden Grundlagen wie Mathematik, Physik, Anorganische Chemie, Organische Chemie und Physikalische Chemie gelehrt.
 Im zweiten Semester finden dann die ersten biologischen Vorlesungen, Zellbiologie und Biochemie, statt. Danach geht es richtig rund und das Studium entfernt sich weit von dem eines Chemikers.
-So kommen Genetik, Molekularbiologie sowie Botanik (# TODO Verweis auf Dschungel-ABC) dazu und es wird vertieft auf Zellbiologie und Biochemie eingegangen.
+So kommen Genetik, Molekularbiologie sowie Botanik dazu und es wird vertieft auf Zellbiologie und Biochemie eingegangen.
 Der Studiengang erhält nun seinen biochemischen Kern, was jedoch ein gesundes Bewusstsein für Lernen und Verantwortung voraussetzt.
 
 ```{r, echo=FALSE, out.width="400pt"}
