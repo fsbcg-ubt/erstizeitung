@@ -1,0 +1,41 @@
+## Die Vorsitzende {#fachschaftler-fachschaftlerinnen-erster-vorsitz}
+
+```{r, echo=FALSE, out.width="500pt"}
+knitr::include_graphics("images/fachschaftler/lisa.jpg")
+```
+
+**Name**
+
+> Lisa
+
+**Job in der Fachschaft**
+
+> Vositz
+
+**Studiengang**
+
+> Biologie und Chemie Lehramt (Gymnasium)
+
+**Motto**
+
+> Immer ruhig bleiben auch wenns mal stressiger wird.
+
+**Beste Bar in Bayreuth**
+
+> Bar am Kirchplatz, Kanapee
+
+**Bester Ort in Bayreuth**
+
+> ÖBG und unsere Fachschaft 😉
+
+**Ziel für dieses Jahr**
+
+> Aus jedem Tag das Beste machen und einen Menschen zum Lächeln zu bringen.
+
+**Das kann ich gar nicht!**
+
+> Auf meine Leute und meine Fachschaft verzichten :)
+
+**Wie viel Uhr ist es?**
+
+> Pfeffi Time!
