@@ -10,6 +10,9 @@ github-repo: fsbcg-ubt/erstizeitung
 ---
 
 # Einleitung
+
+**DAS IST EINE TESTVERSION. INHALTE SIND NICHT FINAL!**
+
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/cover.png")
 ```
