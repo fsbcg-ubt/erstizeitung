@@ -12,7 +12,7 @@ Raum: 6.0.01.23.1 (NW I)<br>
 
 **Dr. Marlen Goldschmidt**
 
-Telefon: +49 (0)921/55-5833<br>
+Telefon: 0921/55-5833<br>
 E-Mail: marlen.goldschmidt@uni-bayreuth.de<br>
 Raum: 6.0.01.23.1 (Gebäue NW I)<br>
 Sprechzeiten: nach Vereinbarung
@@ -21,7 +21,7 @@ Sprechzeiten: nach Vereinbarung
 
 **Jasmin Samimi**
 
-Telefon: +49 921 55-2257<br>
+Telefon: 0921/55-2257<br>
 Fax: +49 921 55-2792<br>
 E-Mail: jasmin.samimi@uni-bayreuth.de<br>
 Gebäude Geowissenschaften II, Zimmer 151
@@ -30,5 +30,5 @@ Gebäude Geowissenschaften II, Zimmer 151
 
 **Silke Reimann**
 
-Telefon: +49 921 55-2054<br>
+Telefon: 0921/55-2054<br>
 E-Mail: silke.reimann@uni-bayreuth.de
