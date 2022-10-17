@@ -1,7 +1,7 @@
 ## Euer Ersti-Koordinator {#fachschaftler-fachschaftlerinnen-ersti-koordination}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/dennis.jpg")
+knitr::include_graphics("images/fachschaftler/dennis.png")
 ```
 
 **Name**
