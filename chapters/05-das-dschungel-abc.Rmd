@@ -283,7 +283,7 @@ Fundsachen findet ihr in der Poststelle (am Gang bei den Kopierern), [Bib](#dsch
 Mächtigster Zauberer der Fachschaft; einziger natürlicher Feind: Kopiergeräte.
 
 > Übrigens:<br>
-> *Skripte, Kittel und Altklausuren gibt es in der Fachschaft! Schutzbrillen, alte Protokolle oder Freibier gibt‘s nicht. Leider.*
+> *Skripte, Kittel und Altklausuren gibt es in der Fachschaft! [Schutzbrillen](#dschungel-abc-schutzbrille), alte Protokolle oder Freibier gibt‘s nicht. Leider.*
 
 ### Garten {#dschungel-abc-garten .unnumbered}
 
@@ -334,7 +334,7 @@ Wie das Berghain, nur die Karten sind viel teurer und nur 10 Jahre im Voraus zu 
 = Geisteswissenschaften.
 
 > Zitat für zwischendurch:<br>
-> Frage an ein Fachschaftsmitglied bezüglich der Schutzbrillen: *"Brauchen Biologen eine Brille?"*<br>
+> Frage an ein Fachschaftsmitglied bezüglich der [Schutzbrillen](#dschungel-abc-schutzbrille): *"Brauchen Biologen eine Brille?"*<br>
 > Antwort: *"Wenn sie schlecht sehen ..."*
 
 ### Härtefallantrag {#dschungel-abc-haertefallantrag .unnumbered}
@@ -449,7 +449,9 @@ Bei der Laptopsprechstunde gibt es Hilfe zu den Themen [eduroam](#dschungel-abc-
 
 ### Materialienausgabe {#dschungel-abc-materialausgabe .unnumbered}
 
-Einige chemische Utensilien, insbesondere Schutzbrillen, gibt es in der Materialienausgabe im Keller des NW I (siehe Plan). Achtung: Bezahlt wird mit [Studierendenausweis](#dschungel-abc-studierendenausweis) (Kopierguthaben)!
+Einige chemische Utensilien, insbesondere [Schutzbrillen](#dschungel-abc-schutzbrille), gibt es in der Materialienausgabe im Keller des NW I (siehe Plan). Achtung: Bezahlt wird mit [Studierendenausweis](#dschungel-abc-studierendenausweis) (Kopierguthaben)!
+
+Leider befindet sich die Materialausgabe im Kellerlabyrinth des NW1 und ist damit schwer zu finden. [Hier](https://www.fsbcg.uni-bayreuth.de/de/fachschaft/studienbedarf/index.html) gibts ein Video mit dem Weg zur Materialausgabe.
 
 > Übrigens:<br>
 > *Fundsachen gibt's in der Bib, Poststelle oder Fachschaft (Abgabe ggf. im Fachschaftsbriefkasten).*
@@ -584,6 +586,10 @@ Wissenschaftliche Fachvorträge an der Fakultät, die für einige Studiengänge 
 ### s.t. {#dschungel-abc-st .unnumbered}
 
 = sine tempore: Wenn der Prof doch mal pünktlich kommt ... (siehe [c.t.](#dschungel-abc-ct))
+
+### Schutzbrille {#dschungel-abc-schutzbrille .unnumbered}
+
+Schutzbrillen werden für viele Praktika, insbesondere in der Chemie, zwingend benötigt und nicht gestellt. Man kann sie in der [Materialausgabe](#dschungel-abc-materialausgabe) kaufen. Deluxe-Modelle haben sogar Anti-Beschlagsbeschichtungen oder adaptive Licht-Filter. Sowas lohnt sich aber erst wenn man länger im Labor steht.
 
 ### Schwarze Bretter {#dschungel-abc-schwarze-bretter .unnumbered}
 
