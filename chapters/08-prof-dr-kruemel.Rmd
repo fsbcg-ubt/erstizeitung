@@ -14,7 +14,7 @@ knitr::include_graphics("images/kruemel.jpg")
 
 **Studiengang/Semester**
 
-> Professur für allgemeine Backwissenschaften, Leiter des Krümellehrstuhls
+> Professur für allgemeine Backwissenschaften, Leitung des Krümellehrstuhls
 
 **Motto**
 
