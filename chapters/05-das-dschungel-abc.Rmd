@@ -103,9 +103,9 @@ Bioorganische Chemie; tert-Butoxycarbonyl-Schutzgruppe, werdet ihr in der BOC-Vo
 
 Mit eurer BT-Kennung könnt ihr euch an den [CIP-Pools](#dschungel-abc-cip-pool), in [cmlife](#dschungel-abc-cmlife) und [eLearning](#dschungel-abc-elearning) anmelden. Falls ihr sie mal wieder vergessen habt, sie steht auf eurem [Studierendenausweis](#dschungel-abc-studierendenausweis).
 
-### BtS {#dschungel-abc-bts .unnumbered}
+### btS {#dschungel-abc-bts .unnumbered}
 
-= biotechnologische Studenteninitative. Studenteninitiative im Bereich "Life science". Machen gelegentlich Exkursionen zu Unternehmen, die für bestimmte Studiengänge angerechnet werden können.
+= biotechnologische Studenteninitative. Studenteninitiative im Bereich "Life science". Organisieren Vorträge und gelegentlich Exkursionen zu Unternehmen, die für bestimmte Studiengänge angerechnet werden können. Mehr im Kapitel [btS](#bts)
 
 ### Bücher {#dschungel-abc-buecher .unnumbered}
 
