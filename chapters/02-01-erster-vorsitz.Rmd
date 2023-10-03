@@ -10,7 +10,7 @@ knitr::include_graphics("images/fachschaftler/lisa.png")
 
 **Job in der Fachschaft**
 
-> 1. Vorsitz u.v.m.
+> 1. Vorstand u.v.m.
 
 **Studiengang**
 

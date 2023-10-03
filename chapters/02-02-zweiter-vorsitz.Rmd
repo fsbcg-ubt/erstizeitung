@@ -6,35 +6,35 @@ knitr::include_graphics("images/fachschaftler/lorena.png")
 
 **Name**
 
-> Lorena
+> Flo
 
 **Job in der Fachschaft**
 
-> Vize-Vorsitz
+> 2. Vorstand
 
 **Studiengang**
 
-> B.Sc. Biologie
+> Biologie Englisch Lehramt
 
 **Motto**
 
-> Bleib so, wie du bist.
+> "Fuck you, ninja cop"
 
 **Beste Bar in Bayreuth**
 
-> Hausbar
+> Rosa Rosa
 
 **Bester Ort in Bayreuth**
 
-> Hofgarten und Röhrensee
+> Eremitage
 
 **Ziel für dieses Jahr**
 
-> Krümmel beschützen!
+> nicht exmatrikuliert zu werden
 
 **Das kann ich gar nicht!**
 
-> Mal nicht sarkastisch sein.
+> mich früh genug auf Klausuren vorbereiten
 
 **Wie viel Uhr ist es?**
 
