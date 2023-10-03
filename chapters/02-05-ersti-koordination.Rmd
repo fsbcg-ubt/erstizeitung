@@ -30,7 +30,7 @@ knitr::include_graphics("images/fachschaftler/dennis.png")
 
 **Ziel für dieses Jahr**
 
-> Im Studium bleiben (nochmal!)
+> Bachelor vollenden (oder so)
 
 **Das kann ich gar nicht!**
 
