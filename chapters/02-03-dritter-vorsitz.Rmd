@@ -1,4 +1,4 @@
-## Der Mädchen für Alles {#fachschaftler-fachschaftlerinnen-dritter-vorsitz}
+## Das Mädchen für Alles {#fachschaftler-fachschaftlerinnen-dritter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/chris.png")
