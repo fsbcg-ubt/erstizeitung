@@ -1,7 +1,7 @@
 ## Sein Stellvertreter {#fachschaftler-fachschaftlerinnen-zweiter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/lorena.png")
+knitr::include_graphics("images/fachschaftler/flo.png")
 ```
 
 **Name**
