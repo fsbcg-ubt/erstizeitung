@@ -18,11 +18,11 @@ knitr::include_graphics("images/fachschaftler/michelle.png")
 
 **Motto**
 
-> Wenn ich jedem gefallen wollen würde, wäre ich ein Blumenstrauß geworden.
+> Lebe jeden Tag, als seist du das Letzte
 
 **Beste Bar in Bayreuth**
 
-> Malibu
+> Lamperie
 
 **Bester Ort in Bayreuth**
 
@@ -30,7 +30,7 @@ knitr::include_graphics("images/fachschaftler/michelle.png")
 
 **Ziel für dieses Jahr**
 
-> mehr Glühweiiin
+> Endlich Freunde finden
 
 **Das kann ich gar nicht!**
 
@@ -38,4 +38,4 @@ knitr::include_graphics("images/fachschaftler/michelle.png")
 
 **Wie viel Uhr ist es?**
 
-> Zeit für ein Bierchen
+> Zeit für'n Bierchen
