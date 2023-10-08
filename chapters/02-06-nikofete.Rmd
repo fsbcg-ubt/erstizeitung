@@ -1,16 +1,16 @@
 ## Der Nikofete-Meister {#fachschaftler-fachschaftlerinnen-nikofete}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/fabian.png")
+knitr::include_graphics("images/fachschaftler/leopold.png")
 ```
 
 **Name**
 
-> Fabian
+> Leopold
 
 **Job in der Fachschaft**
 
-> Nikofetenbeauftragter
+> Herr über die Nikofete
 
 **Studiengang**
 
@@ -18,20 +18,20 @@ knitr::include_graphics("images/fachschaftler/fabian.png")
 
 **Beste Bar in Bayreuth**
 
-> Kanapee
+> Dafür bin ich nicht der richtige Ansprechpartner
 
 **Bester Ort in Bayreuth**
 
-> Hofgarten
+> NW 1
 
 **Ziel für dieses Jahr**
 
-> Banger Nikofete schmeißen
+> Eine Nikofete organisieren
 
 **Das kann ich gar nicht!**
 
-> Kittelgröße schätzen und Altklausuranfragen bearbeiten
+> Dichtefunktionaltheorie
 
 **Wie viel Uhr ist es?**
 
-> 16:20 Uhr
+> 17:56 Uhr
