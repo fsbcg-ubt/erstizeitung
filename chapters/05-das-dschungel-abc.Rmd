@@ -14,7 +14,7 @@ Artificial Intelligence; Angewandte Informatik (neben der [ZUV](#dschungel-abc-z
 
 ### Allgemeiner Hochschulsport {#dschungel-abc-allgemeiner-hochschulsport .unnumbered}
 
-Gesunder Geist im gesunden Körper; bringt Vorteile ([Uni](#dschungel-abc-uni)). Nein im Ernst: Die Uni bietet ein äußerst umfangreiches Sport- und Fitnessprogramm an. Details finden sich unter [Links](#links). Er kostet zusätzlich zum Semesterbeitrag eine Gebühr von `r knitr::knit_child("data/preise-hochschulsport.txt")`€.
+Gesunder Geist im gesunden Körper; bringt Vorteile ([Uni](#dschungel-abc-uni)). Nein, im Ernst: Die Uni bietet ein äußerst umfangreiches Sport- und Fitnessprogramm an. Details finden sich unter [Links](#links). Er kostet zusätzlich zum Semesterbeitrag eine Gebühr von `r knitr::knit_child("data/preise-hochschulsport.txt")`€.
 
 ### Anmelden {#dschungel-abc-anmelden .unnumbered}
 
@@ -26,14 +26,14 @@ Falls du Biologe bist: Warte einfach ab. Falls du kein Biologe bist: Vergiss es 
 
 ### Audimax {#dschungel-abc-audimax .unnumbered}
 
-= Auditorium Maximum; können Studenten unserer Fakultät hauptsächlich zur Prüfungszeit mal von innen sehen.
+= Auditorium Maximum; können Studierende unserer Fakultät hauptsächlich zur Prüfungszeit mal von innen sehen.
 
 > Übrigens:
 > *Jeden Tag die Aushänge checken, vor allem in den ersten und letzten Wochen! In der Mitte des Semesters ist es aber auch recht wichtig. Hilft dabei, Seminare und Exkursionen nicht zu vergessen.*
 
 ### Aufladestation {#dschungel-abc-aufladestation .unnumbered}
 
-Loading.... Error 404!! Wichtig! Es gibt auf dem [Studierendenausweis](#dschungel-abc-studierendenausweis) zwei Konten: eines um die Gaumenfreuden der [Mensa](#dschungel-abc-mensa) materiell abzugleichen; und eines um euch die ganzen Vorlesungsmitschriften abzukopieren, die ihr selbst gemacht hättet, wenn ihr auch immer morgens um 8 Uhr an der [Uni](#dschungel-abc-uni) gewesen wärt.
+Loading.... Error 404!! Wichtig! Es gibt auf dem [Studierendenausweis](#dschungel-abc-studierendenausweis) zwei Konten: eines, um die Gaumenfreuden der [Mensa](#dschungel-abc-mensa) materiell abzugleichen, und eines, um euch die ganzen Vorlesungsmitschriften abzukopieren, die ihr selbst gemacht hättet, wenn ihr auch immer morgens um 8 Uhr an der [Uni](#dschungel-abc-uni) gewesen wärt.
 
 ### Augenringe {#dschungel-abc-augenringe .unnumbered}
 
@@ -53,11 +53,11 @@ In allen Gebäuden anzutreffen, um euer Geld von der Mensakarte in [Getränke](#
 
 ### Bachelor {#dschungel-abc-bachelor .unnumbered}
 
-Der erste akademische Grad, der von der Universität und allen anderen Hochschulen verliehen wird. Das primäre Ziel für alle Erstis, das es nach 6 Semestern zu erreichen gilt (wenn man in der Regelstudienzeit studieren will; [Fachschaft](#dschungel-abc-fachschaft) berät gerne ^^). Insgesamt werden hierfür 180 [ECTS](#dschungel-abc-ects) benötigt, dann bekommt ihr ein level up und werdet zum Master zugelassen (Der Titel "Master of Disaster" stellt eine Ausnahme dar und kann jederzeit bei Laborarbeiten erworben werden).
+Der erste akademische Grad, der von der Universität und allen anderen Hochschulen verliehen wird. Das primäre Ziel für alle Erstis, das es nach sechs Semestern zu erreichen gilt (wenn man in der Regelstudienzeit studieren will; [Fachschaft](#dschungel-abc-fachschaft) berät gerne ^^). Insgesamt werden hierfür 180 [ECTS](#dschungel-abc-ects) benötigt, dann bekommt ihr ein level up und werdet zum Master zugelassen (Der Titel "Master of Disaster" stellt eine Ausnahme dar und kann jederzeit bei Laborarbeiten erworben werden).
 
 ### BAföG {#dschungel-abc-bafoeg .unnumbered}
 
-Das Bundesausbildungsförderungsgesetz regelt die staatliche Unterstützung von Schülern und Studenten. Umgangssprachlich und durch die öffentliche Verwaltung selbst wird mit dem Begriff auch die sich aus dem Gesetz ergebende Förderung bezeichnet. Kurz gesagt, der eine bekommt es, der andere nicht. Konsequenzen: Neben der finanziellen Hilfe kannst du eventuell eine GEZ-Befreiung und Sonderkonditionen bei der Telekom beantragen. Auf jeden Fall hat man aber eine Menge Schreibkram. Es empfiehlt sich, den Antrag möglichst zeitig zu stellen und nicht zu vergessen, nach spätestens zehn Monaten einen Folgeantrag einzureichen. Vielleicht hast du dann auch schon gerade deine erste Auszahlung erhalten. Infos und Antrage gibt es im BAföG-Amt in der [ZUV](#dschungel-abc-zuv).
+Das Bundesausbildungsförderungsgesetz regelt die staatliche Unterstützung von Schülern und Studenten. Umgangssprachlich und durch die öffentliche Verwaltung selbst wird mit dem Begriff auch die sich aus dem Gesetz ergebende Förderung bezeichnet. Kurz gesagt, der eine bekommt es, der andere nicht. Konsequenzen: Neben der finanziellen Hilfe kannst du eventuell eine GEZ-Befreiung und Sonderkonditionen bei der Telekom beantragen. Auf jeden Fall hat man aber eine Menge Schreibkram. Es empfiehlt sich, den Antrag möglichst zeitig zu stellen und nicht zu vergessen, nach spätestens zehn Monaten einen Folgeantrag einzureichen. Vielleicht hast du dann auch schon gerade deine erste Auszahlung erhalten. Infos und Anträge gibt es im BAföG-Amt in der [ZUV](#dschungel-abc-zuv).
 
 ### Baraufwerter {#dschungel-abc-baraufwerter .unnumbered}
 
@@ -97,7 +97,7 @@ Bioorganische Chemie; tert-Butoxycarbonyl-Schutzgruppe, werdet ihr in der BOC-Vo
 
 ### BPC {#dschungel-abc-bpc .unnumbered}
 
-= Biophysikalische Chemie. Wer hat den Größten ... magnetischen Fluss; jo 1000 MHz-NMR Bitch!
+= Biophysikalische Chemie. Wer hat den Größten ... magnetischen Fluss; jo 1000 MHz-NMR, Bitch!
 
 ### BT-Kennung {#dschungel-abc-bt-kennung .unnumbered}
 
@@ -130,11 +130,11 @@ Ubiquitöse rudelbildende Spezies, deren bevorzugte Vegetationszone sich auf ein
 
 ### Cafeteria {#dschungel-abc-cafeteria .unnumbered}
 
-Gutes Essen zu billigen Preisen, im Gegensatz zur [Mensa](#dschungel-abc-mensa) wesentlich länger geöffnet; ein besseres Preis-Leistung-Verhältnis gibt es nur im Knast, ich schwör Digga! Abends empfiehlt sich dann der Gang zum [Frischraum](#dschungel-abc-frischraum).
+Gutes Essen zu billigen Preisen, im Gegensatz zur [Mensa](#dschungel-abc-mensa) wesentlich länger geöffnet; ein besseres Preis-Leistungs-Verhältnis gibt es nur im Knast, ich schwör Digga! Abends empfiehlt sich dann der Gang zum [Frischraum](#dschungel-abc-frischraum).
 
 ### Campus {#dschungel-abc-campus .unnumbered}
 
-So wird der Hauptteil der Universität genannt, daneben gibt es noch folgende Außenstationen: Geschwister-Scholl-Platz, Dr. Hans Frisch Straße, Zapf Gelände, Ludwig-Thoma-Straße (IMA) und die Ökologische Außenstation in [Wallenfels](#dschungel-abc-wallenfels). Studenten der Fakultät II finden alles Wichtige direkt auf dem Campus!
+So wird der Hauptteil der Universität genannt, daneben gibt es noch folgende Außenstationen: Geschwister-Scholl-Platz, Dr. Hans Frisch Straße, Zapf Gelände, Ludwig-Thoma-Straße (IMA) und die Ökologische Außenstation in [Wallenfels](#dschungel-abc-wallenfels). Studierende der Fakultät II finden alles Wichtige direkt auf dem Campus!
 
 ### Campus App {#dschungel-abc-campus-app .unnumbered}
 
@@ -188,11 +188,11 @@ Würdest du Sie kennen, würdest du das hier bestimmt nicht lesen und auch nicht
 
 ### Drucker {#dschungel-abc-drucker .unnumbered}
 
-PEBKAC = Problem Exists Between Keyboard And Chair. Meist stimmt das. Außer bei Druckern ... Drucker sind A.löcher! Sie merken, wenn es schnell gehen muss und beschweren sich dann, dass sie keine Farbe haben um eine Seite Text zu drucken ... selbst Schwarz-Weiß-Drucker.
+PEBKAC = Problem Exists Between Keyboard And Chair. Meist stimmt das. Außer bei Druckern ... Drucker sind A.löcher! Sie merken, wenn es schnell gehen muss und beschweren sich dann, dass sie keine Farbe haben, um eine Seite Text zu drucken ... selbst Schwarz-Weiß-Drucker.
 
 ### Dschungel {#dschungel-abc-dschungel .unnumbered}
 
-Sollte mal ein repeating theme dieser Zeitung werden. Hat nur irgendwer in der Mitte vergessen. Tja ... Pech gehabt
+Sollte mal ein repeating theme dieser Zeitung werden. Hat nur irgendwer in der Mitte vergessen. Tja ... Pech gehabt.
 
 ### E-Mail, universitäre {#dschungel-abc-universitaere-email .unnumbered}
 
@@ -402,14 +402,14 @@ Wichtige Koffeinquelle in der Klausurenzeit und den Vorlesungspausen, gängige A
 
 ### Kaffee-Lounge {#dschungel-abc-kaffee-lounge .unnumbered}
 
-Privatwirtschaftliche Kaffee-Lounge im RW I-Gebäude: Hier wird Hartgeld verlangt, kein [Studierendenausweis](#dschungel-abc-studierendenausweis) oder Ostmark. Hierfür ist die Qualität und Auswahl an [Kaffeegetränken](#dschungel-abc-kaffeeautomat) riesig und Kuchen und belegte Brötchen runden das Angebot ab. Der Vorteil an der Kaffee-Lounge sind die Öffnungszeiten, hier bekommt ihr auch noch samstagnachmittags und sonntags was zu essen. Der Nachteil wurde bereits angesprochen: der Preis.
+Privatwirtschaftliche Kaffee-Lounge im RW I-Gebäude: Hier wird Hartgeld verlangt, kein [Studierendenausweis](#dschungel-abc-studierendenausweis) oder Ostmark. Hierfür ist die Qualität und Auswahl an [Kaffeegetränken](#dschungel-abc-kaffeeautomat) riesig, und Kuchen und belegte Brötchen runden das Angebot ab. Der Vorteil an der Kaffee-Lounge sind die Öffnungszeiten, hier bekommt ihr auch noch samstagnachmittags und sonntags was zu essen. Der Nachteil wurde bereits angesprochen: der Preis.
 
 ### Klausur {#dschungel-abc-klausur .unnumbered}
 
 Nach monatelanger harter Arbeit *hust* (Neocortex pumpen: [Bib](#dschungel-abc-bib)) und bester Vorbereitung *hust* könnt ihr hier zeigen, was ihr drauf habt. *Asthmaanfall* Im Ernst: erst einmal rechtzeitig [anmelden](#dschungel-abc-anmelden), derweil fleißig lernen und falls es nicht gereicht hat, habt ihr ja auch noch einen weiteren Versuch ([Nachklausur](#dschungel-abc-nachholklausur)).
 
 > Übrigens:<br>
-> *Geh um 11 essen! Nein wirklich, geh um 11 essen!*
+> *Geh um 11 essen! Nein, wirklich, geh um 11 essen!*
 
 ### Klopfen {#dschungel-abc-klopfen .unnumbered}
 
@@ -421,7 +421,7 @@ Veranstaltung der Fachschaft, um den Erstsemestern die Lokalitäten Bayreuths n�
 
 ### Kopierer {#dschungel-abc-kopierer .unnumbered}
 
-Zum Vervielfältigen von Vorlesungsmitschriften oder ähnlichem. Ihr werdet überall in allen Gebäuden Kopierer finden, die Bezahlung erfolgt elektronisch über euren [Studierendenausweis](#dschungel-abc-studierendenausweis), nachdem ihr ihn an einer [Aufladestation](#dschungel-abc-aufladestation) aufgeladen habt. Später, wenn ihr nach drei langen Jahren endlich eure Abschlussarbeit druckt, so könnt ihr das in der uni-internen Druckerei in der [ZUV](#dschungel-abc-zuv) erledigen (ist billiger als in einem Copy-Shop).
+Zum Vervielfältigen von Vorlesungsmitschriften oder Ähnlichem. Ihr werdet überall in allen Gebäuden Kopierer finden, die Bezahlung erfolgt elektronisch über euren [Studierendenausweis](#dschungel-abc-studierendenausweis), nachdem ihr ihn an einer [Aufladestation](#dschungel-abc-aufladestation) aufgeladen habt. Später, wenn ihr nach drei langen Jahren endlich eure Abschlussarbeit druckt, so könnt ihr das in der uni-internen Druckerei in der [ZUV](#dschungel-abc-zuv) erledigen (ist billiger als in einem Copy-Shop).
 
 ### KuWi {#dschungel-abc-kuwi .unnumbered}
 
@@ -473,7 +473,7 @@ Eure Inventarnummer; steht auf dem [Studierendenausweis](#dschungel-abc-studiere
 
 ### Mensa {#dschungel-abc-mensa .unnumbered}
 
-Bacchus und Lukullus würden bei der Mensa Bayreuth vor Neid erblassen. Drei reichhaltige Mähler, kombinierbar mit einer Unzahl an Beilagen werden kredenzt. Außerhalb der begrenzten Öffnungszeiten dieses Tempels des Genusses müsst ihr auf andere kulinarische Angebote der Universität zurückgreifen ([Cafeteria](#dschungel-abc-cafeteria) oder [Frischraum](#dschungel-abc-frischraum)). Die Zeit des Besuches ist entscheidend ([Circus Halligalli](#dschungel-abc-circus-halligalli)).
+Bacchus und Lukullus würden bei der Mensa Bayreuth vor Neid erblassen. Drei reichhaltige Mahlzeiten, kombinierbar mit einer Unzahl an Beilagen, werden kredenzt. Außerhalb der begrenzten Öffnungszeiten dieses Tempels des Genusses müsst ihr auf andere kulinarische Angebote der Universität zurückgreifen ([Cafeteria](#dschungel-abc-cafeteria) oder [Frischraum](#dschungel-abc-frischraum)). Die Zeit des Besuches ist entscheidend ([Circus Halligalli](#dschungel-abc-circus-halligalli)).
 
 ### Modul {#dschungel-abc-modul .unnumbered}
 
@@ -490,7 +490,7 @@ Das gesamte Studium ist in Module gegliedert. Jede [Vorlesung](#dschungel-abc-vo
 
 ### Nachholklausur {#dschungel-abc-nachholklausur .unnumbered}
 
-Hat es beim ersten Versuch nicht geklappt, solltet ihr jetzt eurer Wissen unter Beweis stellen, denn ansonsten braucht ihr doch noch einen [Härtefallantrag](#dschungel-abc-haertefallantrag). Manche haben auch bei ihrer Studiengangswahl Glück gehabt und dürfen sich mehrere Fehlversuche gönnen.
+Hat es beim ersten Versuch nicht geklappt, solltet ihr jetzt euer Wissen unter Beweis stellen, denn ansonsten braucht ihr doch noch einen [Härtefallantrag](#dschungel-abc-haertefallantrag). Manche haben auch bei ihrer Studiengangswahl Glück gehabt und dürfen sich mehrere Fehlversuche gönnen.
 
 > Zitat für Zwischendurch:<br>
 > *"[...] Es gibt sogenannte akademische Traditionen, und damit meine ich nicht, dass Sie sich jeden Abend die Kante geben müssen. Das ist durchaus leider auch eine akademische Tradition [...]"*<br>
@@ -518,7 +518,7 @@ Nachsendeauftrag an die Post für die neue Adresse; ansonsten mal die [NSA](http
 
 ### OC {#dschungel-abc-oc .unnumbered}
 
-= Organische Chemie. Passt vor den Lösungsmitteldämpfen auf, nach 3 Semestern wisst ihr, was gemeint ist!
+= Organische Chemie. Passt vor den Lösungsmitteldämpfen auf, nach drei Semestern wisst ihr, was gemeint ist!
 
 ### PC {#dschungel-abc-pc .unnumbered}
 
@@ -526,7 +526,7 @@ Personal Computer; die menschlichen PCs befinden sich in der Physikalischen Chem
 
 ### PC-Garage {#dschungel-abc-pc-garage .unnumbered}
 
-Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht Alles aber wenn der Computer "NEIN!" sagt, ist das eure Anlaufstelle! Die Website findet ihr in den [Links](#links).
+Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht Alles, aber wenn der Computer "NEIN!" sagt, ist das eure Anlaufstelle! Die Website findet ihr in den [Links](#links).
 
 ### Pfeffi-Time ... {#dschungel-abc-pfeffi-time .unnumbered}
 
@@ -550,7 +550,7 @@ Dienstägliches Uni-Kino, ausgerichtet von unseren lieben Kollegen von der [MaPh
 
 ### Prüfungsamt {#dschungel-abc-pruefungsamt .unnumbered}
 
-Hier werde eure Prüfungsleistungen verwaltet und auch eure Atteste könnt ihr hier abgeben, wenn ihr mal wieder am Prüfungstag krank wart. ("Schwankungen der Tagesform" und "Keine Ahnung von nichts haben" sind keine Krankheit!) Details siehe [Ansprechpartner](#ansprechpartner).
+Hier werde eure Prüfungsleistungen verwaltet, und auch eure Atteste könnt ihr hier abgeben, wenn ihr mal wieder am Prüfungstag krank wart. ("Schwankungen der Tagesform" und "Keine Ahnung von nichts haben" sind keine Krankheit!) Details siehe [Ansprechpartner](#ansprechpartner).
 
 ### Prüfungsordnung {#dschungel-abc-pruefungsordnung .unnumbered}
 
@@ -637,7 +637,7 @@ Ein Austauschprogramm; weiteres unter [Auslandsstudium](#dschungel-abc-auslandss
 
 ### Spöko {#dschungel-abc-spoeko .unnumbered}
 
-= Sportökonom, die coolste Sau der Uni; durchtrainert, brilliante [Intelligenz](#dschungel-abc-intelligenz) und das alles in einer Person: Sexappeal pur!
+= Sportökonom, die coolste Sau der Uni; durchtrainiert, brillante [Intelligenz](#dschungel-abc-intelligenz) und das alles in einer Person: Sexappeal pur!
 
 **Achtung: Der obenstehende Text kann Spuren von Ironie und Sarkasmus enthalten!**
 
@@ -647,11 +647,11 @@ Ein Austauschprogramm; weiteres unter [Auslandsstudium](#dschungel-abc-auslandss
 
 ### Sprachenzentrum {#dschungel-abc-sprachenzentrum .unnumbered}
 
-Wolltest du schon immer mal Schwedisch, Kantonesisch oder Bambara sprechen? Dann ab ins Sprachenzentrum! Falls ihr Pirat am Horn von Afrika werden wollt, *arrr* dann könnt ihr auch Swahili lernen! *Klar machen zum entern, Matrosen*. Details siehe [Ansprechpartner](#ansprechpartner).
+Wolltest du schon immer mal Schwedisch, Kantonesisch oder Bambara sprechen? Dann ab ins Sprachenzentrum! Falls ihr Pirat am Horn von Afrika werden wollt, *arrr* dann könnt ihr auch Swahili lernen! *Klar machen zum Entern, Matrosen*. Details siehe [Ansprechpartner](#ansprechpartner).
 
 ### Staatsexamen {#dschungel-abc-staatsexamen .unnumbered}
 
-Das ist der Abschluss den die Rechtswissenschaftler bzw. alle angehenden Lehrer schlussendlich zu erreichen suchen.
+Das ist der Abschluss, den die Rechtswissenschaftler bzw. alle angehenden Lehrer schlussendlich zu erreichen suchen.
 
 > Schon gehört?<br>
 > *"Vive la resistance!"*<br>
@@ -741,7 +741,7 @@ Wenn man in Deutschland umzieht, will der Staat das gern wissen. Daher muss man 
 
 ### Uni {#dschungel-abc-uni .unnumbered}
 
-Balzplatz, in dem gilt: Alles kann, nichts muss; klare Vorteile, wenn man JBG (jung, brutal, gutaussehend) ist. Ein Hort der Bildung, eine Enklave des Wissens in der geistigen Ödnis, der Ort an dem ihr eure geistigen Fähigkeiten zu Höchstleistungen treiben könnt.
+Balzplatz, in dem gilt: Alles kann, nichts muss; klare Vorteile, wenn man JBG (jung, brutal, gutaussehend) ist. Ein Hort der Bildung, eine Enklave des Wissens in der geistigen Ödnis, der Ort, an dem ihr eure geistigen Fähigkeiten zu Höchstleistungen treiben könnt.
 
 > Schon gehört?:<br>
 > *"Diese Vorgänge sind mir nicht bekannt gewesen und ich verspreche die brutalst mögliche Aufklärung!"*<br>

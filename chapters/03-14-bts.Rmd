@@ -4,20 +4,14 @@
 knitr::include_graphics("images/bts-titelbild.png")
 ```
 
-Die Abkürzung btS steht für die Biotechnologische Studenteninitiative e.V., einem Netzwerk von über 800 Studenten der Life Sciences in 25 Geschäftsstellen deutschlandweit.
-Die Mitglieder der btS sind sowohl Studenten als auch Doktoranden, die sich neben dem Studium oder der Promotion ehrenamtlich engagieren.
-Wir sind motivierte Studenten, die an Ihrer Uni oder Hochschule mit dem Blick auf die eigene Persönlichkeitsentwicklung etwas bewegen wollen.
+Die Abkürzung btS steht für die Biotechnologische Studenteninitiative e.V., ein Netzwerk von über 800 Studierenden der Life Sciences in 25 Geschäftsstellen deutschlandweit. Die Mitglieder der btS sind sowohl Studierende als auch Doktorand*innen, die sich neben dem Studium oder der Promotion ehrenamtlich engagieren. Wir sind motivierte Studierende, die an ihrer Uni oder Hochschule mit dem Blick auf die eigene Persönlichkeitsentwicklung etwas bewegen wollen.
 
 Eines der Ziele der btS ist es, die Kontakte zwischen Wirtschaftsunternehmen und der Bildungseinrichtung zu verbessern.
 
-Der Grund dafür? Das ist doch klar! Die Unternehmen sind unsere späteren Arbeitgeber und sie brennen darauf motivierte und vor allem engagierte Leute kennenzulernen.
-So ergibt sich schon mal der ein oder andere Kontakt zu personalverantwortlichen Personen im Unternehmen. Und mal ehrlich, wem hat so ein Kontakt jemals geschadet?
+Der Grund dafür? Das ist doch klar! Die Unternehmen sind unsere späteren Arbeitgeber und sie brennen darauf, motivierte und vor allem engagierte Leute kennenzulernen. So ergibt sich schon mal der ein oder andere Kontakt zu personalverantwortlichen Personen im Unternehmen. Und mal ehrlich, wem hat so ein Kontakt jemals geschadet?
 
-Weiterhin bietet so ein Netzwerk immer die Möglichkeit des Erfahrungsaustausches zwischen den Studenten aller Geschäftsstellen!
-Um dies zu gewährleisten, findet jedes Semester ein btS-Wochenende statt, bei dem sich Mitglieder aller Geschäftsstellen treffen und austauschen.
+Weiterhin bietet so ein Netzwerk immer die Möglichkeit des Erfahrungsaustausches zwischen den Studierenden aller Geschäftsstellen! Um dies zu gewährleisten, findet jedes Semester ein btS-Wochenende statt, bei dem sich Mitglieder aller Geschäftsstellen treffen und austauschen.
 
-Durch die Organisation von Projekten wie Workshops, Vorträgen, Exkursionen zu Unternehmen, Typisierungsaktionen u.v.m. verbessern wir nicht nur das Image unserer Universität/Hochschule,
-sondern tragen auch zur ganz persönlichen Entwicklung der Soft Skills eines jeden einzelnen erheblich bei. Nicht nur für angehender Biotechnologen,
-Biochemiker oder Biologen ist die Mitgliedschaft und Mitarbeit bei der btS interessant, sondern auch Studenten der BWL oder Energiesysteme können ihre Fähigkeiten einbringen und von unserem Vereinsleben profitieren!
+Durch die Organisation von Projekten wie Workshops, Vorträgen, Exkursionen zu Unternehmen, Typisierungsaktionen u.v.m. verbessern wir nicht nur das Image unserer Universität/Hochschule, sondern tragen auch zur ganz persönlichen Entwicklung der Soft Skills eines jeden Einzelnen erheblich bei. Nicht nur für angehende Biotechnolog*innen, Biochemiker*innen oder Biolog*innen ist die Mitgliedschaft und Mitarbeit bei der btS interessant, sondern auch Studierende der BWL oder Energiesysteme können ihre Fähigkeiten einbringen und von unserem Vereinsleben profitieren!
 
 **Klingt interessant? Dann informiere dich doch auch auf unserer [Homepage](https://bts-ev.de) oder schreib uns einfach eine [E-Mail](mailto:vorstand.bayreuth@btS-eV.de).**

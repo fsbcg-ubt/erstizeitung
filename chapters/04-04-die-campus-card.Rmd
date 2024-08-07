@@ -13,21 +13,17 @@ Wie der Name schon sagt, könnt ihr euch mit der CampusCard als Studierende der 
 
 ### Bibliotheksausweis (Rückseite) {-}
 
-Damit könnt ihr Bücher in sämtlichen Bibliotheken der Universität ausleihen. Für euch sind dabei die Teilbibliotheken NW I (für Chemie, Biochemie und Biologie)
-und Geowissenschaften (für Geografie und Geoökologie) von besonderem Interesse.
+Damit könnt ihr Bücher in sämtlichen Bibliotheken der Universität ausleihen. Für euch sind dabei die Teilbibliotheken NW I (für Chemie, Biochemie und Biologie) und Geowissenschaften (für Geografie und Geoökologie) von besonderem Interesse.
 
-Ebenso steht dort eure Nutzerkennung für den Onlinezugang der Bibliothek ([Links]).
-Mit dieser und eurem Geburtsdatum (TTMMJJ) als Passwort könnt ihr euch anmelden, um zum Beispiel Bücher zu verlängern oder vorzumerken.
+Ebenso steht dort eure Nutzerkennung für den Onlinezugang der Bibliothek ([Links]). Mit dieser und eurem Geburtsdatum (TTMMJJ) als Passwort könnt ihr euch anmelden, um zum Beispiel Bücher zu verlängern oder vorzumerken.
 
 ### Semesterticket {-}
 
-Damit könnt ihr den Busverkehr innerhalb Bayreuths und die Bahn auf einigen Strecken der Bayreuther Umgebung benutzen. Das Ticket habt ihr bereits mit eurer Immatrikulation bezahlt.
-Dabei fungiert die validierte CampusCard als Fahrschein. Für genauere Informationen zu den Strecken könnt ihr die Seite zur CampusCard im Internet aufrufen ([Links]).
+Damit könnt ihr den Busverkehr innerhalb Bayreuths und die Bahn auf einigen Strecken der Bayreuther Umgebung nutzen. Das Ticket habt ihr bereits mit eurer Immatrikulation bezahlt. Dabei fungiert die validierte CampusCard als Fahrschein. Für genauere Informationen zu den Strecken könnt ihr die Seite zur CampusCard im Internet aufrufen ([Links]).
 
 ### Mensakarte {-}
 
-Mit dieser Funktion könnt ihr in der Mensa und an den Snack- bzw. Getränkeautomaten Futter und Nervennahrung erwerben.
-Besonders nützlich ist die Möglichkeit, sich mit der Mensakarte in den Pausen der Vorlesung einen Kaffee von den Automaten zu holen.
+Mit dieser Funktion könnt ihr in der Mensa und an den Snack- bzw. Getränkeautomaten Futter und Nervennahrung erwerben. Besonders nützlich ist die Möglichkeit, sich mit der Mensakarte in den Pausen der Vorlesung einen Kaffee von den Automaten zu holen.
 
 ### Geldkarte für den Campus {-}
 
@@ -36,5 +32,4 @@ Diese braucht ihr, wenn ihr Skripte und andere Dokumente drucken wollt oder auch
 
 ### Validieren {-}
 
-Nach jeder Rückmeldung müsst ihr eure CampusCard neu validieren lassen, um die Gültigkeit für ein weiteres Semester zu verlängern.
-Das könnt ihr an den Validierungsstationen (siehe Campus-Plan) erledigen.
+Nach jeder Rückmeldung müsst ihr eure CampusCard neu validieren lassen, um die Gültigkeit für ein weiteres Semester zu verlängern. Das könnt ihr an den Validierungsstationen (siehe Campus-Plan) erledigen.
