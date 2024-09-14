@@ -16,12 +16,12 @@ jobs:
     name: "Create PR Repository"
     runs-on: ubuntu-latest
     steps:
-      # The job tolerates existing repositories. (https://github.com/mktcode/create-repository-action/blob/main/index.js)
       - name: "Create new repository for temporary deployment"
-        uses: octobay/create-repository-action@7694acb7e5d793664e71a2373af5cb37811d709d
+        uses: f1lander/create-repository-action@790b25d255717b5a81416a8390f3344396181805
         with:
           name: ${{ env.PR_REPO_NAME }}
           org: "fsbcg-ubt"
+          private: false
           access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
 
   build_gitbook:
