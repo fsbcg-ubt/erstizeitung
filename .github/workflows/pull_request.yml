@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
       - name: "Render book as GitBook"
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3.0.0
         with:
@@ -37,7 +37,7 @@ jobs:
           options: --mount src=${{ github.workspace }},target=/book,type=bind
           run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
-        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # v3.1.0
+        uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3.2.1
         with:
           name: _book_gitbook
           path: _book/
@@ -56,12 +56,12 @@ jobs:
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
       - name: "Checkout PR Repository"
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
         with:
           repository: fsbcg-ubt/${{ env.PR_REPO_NAME }}
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
       - name: "Download artifact"
-        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # v3.0.0
+        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a # v3.0.2
         with:
           name: _book_gitbook
       - name: "Push files to target"
@@ -77,7 +77,7 @@ jobs:
     name: "Create comment with GH Pages URL"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@7dff1a87643417cf3b95bb10b29f4c4bc60d8ebd
+      - uses: actions/github-script@58d7008c60bc638cd07845c89db844ed32ee7014
         with:
           github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
           script: |
