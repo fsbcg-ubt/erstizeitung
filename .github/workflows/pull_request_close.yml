@@ -18,5 +18,5 @@ jobs:
         uses: f1lander/delete-repository-action@0cdc2d8b1f6362b063d946e028af636e7b8a7b64
         with:
           owner: "fsbcg-ubt"
-          repo: ${{ env.PR_REPO_NAME }}
+          repo: fsbcg-ubt/${{ env.PR_REPO_NAME }}
           access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
