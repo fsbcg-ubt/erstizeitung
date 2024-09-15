@@ -19,4 +19,4 @@ jobs:
         with:
           owner: "fsbcg-ubt"
           repo: ${{ env.PR_REPO_NAME }}
-          access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          token: ${{ secrets.ORG_ADMIN_TOKEN }}
