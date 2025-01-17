@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: "Render book as GitBook"
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3.0.0
         with:
@@ -37,7 +37,7 @@ jobs:
           options: --mount src=${{ github.workspace }},target=/book,type=bind
           run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
-        uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
         with:
           name: _book_gitbook
           path: _book/
@@ -56,7 +56,7 @@ jobs:
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
       - name: "Checkout PR Repository"
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: fsbcg-ubt/${{ env.PR_REPO_NAME }}
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
@@ -77,7 +77,7 @@ jobs:
     name: "Create comment with GH Pages URL"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@58d7008c60bc638cd07845c89db844ed32ee7014
+      - uses: actions/github-script@d70566966bbb446d06887700f68d905602745985
         with:
           github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
           script: |
