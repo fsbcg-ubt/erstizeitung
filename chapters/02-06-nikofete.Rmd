@@ -1,4 +1,4 @@
-## Der Nikofete-Meister {#fachschaftler-fachschaftlerinnen-nikofete}
+## Die Nikofete-Meisterin {#fachschaftler-fachschaftlerinnen-nikofete}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/fabian.png")
@@ -6,32 +6,36 @@ knitr::include_graphics("images/fachschaftler/fabian.png")
 
 **Name**
 
-> Fabian
+> Marie
 
 **Job in der Fachschaft**
 
-> Nikofetenbeauftragter
+> Nikofete-Hauptorga
 
 **Studiengang**
 
-> B.Sc. Chemie
+> Bio/Englisch Lehramt Gymnasium
+
+**Motto**
+
+> Just do it yo! (und: 4 gewinnt!)
 
 **Beste Bar in Bayreuth**
 
-> Kanapee
+> Latibo
 
 **Bester Ort in Bayreuth**
 
-> Hofgarten
+> Eremitage und der ÖBG
 
 **Ziel für dieses Jahr**
 
-> Banger Nikofete schmeißen
+> Eine noch bessere Nikofete als letztes Jahr 🥳
 
 **Das kann ich gar nicht!**
 
-> Kittelgröße schätzen und Altklausuranfragen bearbeiten
+> nein sagen 
 
 **Wie viel Uhr ist es?**
 
-> 16:20 Uhr
+> Pfeffi-Time!

@@ -1,4 +1,4 @@
-## Der Mädchen für Alles {#fachschaftler-fachschaftlerinnen-dritter-vorsitz}
+## Der 3. Vorstand {#fachschaftler-fachschaftlerinnen-dritter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/chris.png")
@@ -6,36 +6,36 @@ knitr::include_graphics("images/fachschaftler/chris.png")
 
 **Name**
 
-> Chris
+> Simon
 
 **Job in der Fachschaft**
 
-> Mädchen für Alles
+> 3. Vorstand
 
 **Studiengang**
 
-> M.Sc. Biochemie und Molekulare Biologie
+> Nachhaltige Chemie und Energie
 
 **Motto**
 
-> A yawn is a silent scream for coffee.
+> Ein Bier ist kein Bier
 
 **Beste Bar in Bayreuth**
 
-> Rosa Rosa
+> Kanapee
 
 **Bester Ort in Bayreuth**
 
-> Bunter Hügel
+> ÖBG
 
 **Ziel für dieses Jahr**
 
-> Vor der klausurenphase anfangen zu lernen.
+> Weiterhin Spaß an der Uni haben
 
 **Das kann ich gar nicht!**
 
-> Singen.
+> Mathe
 
 **Wie viel Uhr ist es?**
 
-> Zeit für'n Kaffee!
+> 11:02
