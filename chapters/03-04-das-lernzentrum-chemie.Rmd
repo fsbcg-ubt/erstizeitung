@@ -1,8 +1,10 @@
-## Das Lernzentrum Chemie {#lernzentrum-chemie}
+## Die Lernzentren Chemie und Mathematik {#lernzentrum-chemie}
 
 ```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/lernzentrum-titelbild.png")
 ```
+
+### Chemie {-}
 
 Das Lernzentrum ist ein Zusatzangebot zur Unterstützung des selbstorganisierten Lernens, das insbesondere die regelmäßige Vor– und Nachbereitung von Lehrveranstaltungen und das eigenständige Lernen unterstützt.
 Bitte schreiben Sie sich bei Interesse selbst als Teilnehmer*in in diesen Kurs ein.
@@ -12,9 +14,9 @@ Zusätzlich zu den regelmäßigen Terminen bieten wir auch in diesem Semester wi
 
 Neben den fachlichen Inhalten vermitteln wir semesterbegleitend auch Strategien zur effektiven Prüfungsvorbereitung, zur Lernmotivation und zum Selbstmanagement.
 
-### Öffnungszeiten im WS 2022/23 {-}
+### Öffnungszeiten im WS 2023/24 {-}
 
-Dienstag und Donnerstag von 15 bis 17 Uhr im S33 (ab 03.11.2022)
+Dienstag und Donnerstag von 15 bis 17 Uhr im S33 (ab 03.11.2023)
 
 ### Teilnahme {-}
 
@@ -26,3 +28,25 @@ Die Termine finden sich auch in [CampusOnline](https://campusonline.uni-bayreuth
 Eva-Maria Schäffer, Didaktik der Chemie<br>
 Eva-Maria.Schaeffer@uni-bayreuth.de<br>
 Tel. 0921 55-3104
+
+
+### Mathematik {-}
+
+Das Mathematische Institut hat ein Lernzentrum, welches Treffpunk für Lerngruppen, sowie Arbeitsplatz für jeden ist. Zudem findet ihr hier Hilfe im Studium durch Mitarbeiter*innen des Instituts und durch Student*innen höherer Semester.
+
+### Öffnungszeiten {-}
+
+Während den Semesterferien: 8- (ca.) 18 Uhr; während der Vorlesungszeit: ab 12 Uhr, wobei von 12-17 Uhr Mitarbeiter*innen des Mathematischen Instituts als Ansprechpartner*in anwesend sind.
+
+### Ort {-}
+
+Seminarraum S79 im NW II 
+
+### Teilnahme {-}
+
+Zum Teilnehmen kann sich jeder im E-learning ohne Zugangscode einschreiben. Dort findet ihr dann auch Informationen zum aktuellen Semester, wie den Stundenplan, eine Liste der Helfer*innen und Lektürevorschläge.
+
+### Kontakt {-}
+
+Dr. E. Geigant, Prof. Grüne, Prof. V. Ulm 
+edith.geigant@uni-bayreuth.de 

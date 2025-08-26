@@ -1,0 +1,41 @@
+## Die Goldene-Kreide-Verantwortliche {#fachschaftler-fachschaftlerinnen-nikofete}
+
+```{r, echo=FALSE, out.width="500pt"}
+knitr::include_graphics("images/fachschaftler/fabian.png")
+```
+
+**Name**
+
+> Lena
+
+**Job in der Fachschaft**
+
+> 
+
+**Studiengang**
+
+> 
+
+**Motto**
+
+> 
+
+**Beste Bar in Bayreuth**
+
+> 
+
+**Bester Ort in Bayreuth**
+
+> Eremitage und der ÖBG
+
+**Ziel für dieses Jahr**
+
+> 
+
+**Das kann ich gar nicht!**
+
+> 
+
+**Wie viel Uhr ist es?**
+
+> Pfeffi-Time!
