@@ -1,7 +1,7 @@
 ## Die Goldene-Kreide-Verantwortliche {#fachschaftler-fachschaftlerinnen-nikofete}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/fabian.png")
+knitr::include_graphics("images/fachschaftler/lena.png")
 ```
 
 **Name**
@@ -10,32 +10,32 @@ knitr::include_graphics("images/fachschaftler/fabian.png")
 
 **Job in der Fachschaft**
 
-> 
+> Goldene Kreide
 
 **Studiengang**
 
-> 
+> Polymerscience M. Sc.
 
 **Motto**
 
-> 
+> That's halt irgendwo auch the game
 
 **Beste Bar in Bayreuth**
 
-> 
+> Heimathafen
 
 **Bester Ort in Bayreuth**
 
-> Eremitage und der ÖBG
+> NW1 Bib
 
 **Ziel für dieses Jahr**
 
-> 
+> Keine Krise kriegen
 
 **Das kann ich gar nicht!**
 
-> 
+> Hydrated bleiben
 
 **Wie viel Uhr ist es?**
 
-> Pfeffi-Time!
+> Immer zwei Minuten nach der eigentlichen Uhrzeit

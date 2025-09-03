@@ -1,41 +1,41 @@
 ## Euer Ersti-Koordinator {#fachschaftler-fachschaftlerinnen-ersti-koordination}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/dennis.png")
+knitr::include_graphics("images/fachschaftler/lucy.png")
 ```
 
 **Name**
 
-> Dennis
+> Lucy
 
 **Job in der Fachschaft**
 
-> Euer Erstikoordinator natürlich 😜
+> Ersti Koordination
 
 **Studiengang**
 
-> B.Sc. Biochemie
+> Geoökologie
 
 **Motto**
 
-> Du lebst nur einmal, nimm alles mit was du kannst!
+> Leben und leben lassen
 
 **Beste Bar in Bayreuth**
 
-> Rosa Rosa, Waikikibar
+> Rosa Rosa, Heimathafen
 
 **Bester Ort in Bayreuth**
 
-> Hofgarten, Röhrensee
+> Wilhelminenaue
 
 **Ziel für dieses Jahr**
 
-> Im Studium bleiben (nochmal!)
+> Besser mit meinem Geld umgehen
 
 **Das kann ich gar nicht!**
 
-> In nen Club gehen und nicht tanzen. Fristen sind auch son Ding ...
+> Früh aufstehen
 
 **Wie viel Uhr ist es?**
 
-> 19:41 in der Bahn und nem Pfeffi in der Hand
+> Vine o'clock
