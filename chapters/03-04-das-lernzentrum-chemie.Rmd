@@ -1,36 +1,5 @@
-## Die Lernzentren Chemie und Mathematik {#lernzentrum-chemie}
+## Das Lernzentrum Mathematik {#lernzentrum-mathematik}
 
-```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/lernzentrum-titelbild.png")
-```
-
-### Chemie {-}
-
-Das Lernzentrum ist ein Zusatzangebot zur Unterstützung des selbstorganisierten Lernens, das insbesondere die regelmäßige Vor– und Nachbereitung von Lehrveranstaltungen und das eigenständige Lernen unterstützt.
-Bitte schreiben Sie sich bei Interesse selbst als Teilnehmer*in in diesen Kurs ein.
-
-An jedem Termin nehmen immer mind. 2 Hiwis teil. Fachliche Fragen aus den Bereichen AC, PC und OC können so individuell beantwortet werden.
-Zusätzlich zu den regelmäßigen Terminen bieten wir auch in diesem Semester wieder Workshops zur effektiven Prüfungsvorbereitung (für die Klausuren AC I und PC I) an.
-
-Neben den fachlichen Inhalten vermitteln wir semesterbegleitend auch Strategien zur effektiven Prüfungsvorbereitung, zur Lernmotivation und zum Selbstmanagement.
-
-### Öffnungszeiten im WS 2023/24 {-}
-
-Dienstag und Donnerstag von 15 bis 17 Uhr im S33 (ab 03.11.2023)
-
-### Teilnahme {-}
-
-Die Einschreibung zur Teilnahme erfolgt über e-Learning über den Kurs [26146 Lernzentrum Chemie](https://elearning.uni-bayreuth.de/course/view.php?id=30867).
-Die Termine finden sich auch in [CampusOnline](https://campusonline.uni-bayreuth.de/ubto/wbLv.wbShowLVDetail?pStpSpNr=311770&pSpracheNr=1).
-
-### Kontakt {-}
-
-Eva-Maria Schäffer, Didaktik der Chemie<br>
-Eva-Maria.Schaeffer@uni-bayreuth.de<br>
-Tel. 0921 55-3104
-
-
-### Mathematik {-}
 
 Das Mathematische Institut hat ein Lernzentrum, welches Treffpunk für Lerngruppen, sowie Arbeitsplatz für jeden ist. Zudem findet ihr hier Hilfe im Studium durch Mitarbeiter*innen des Instituts und durch Student*innen höherer Semester.
 
