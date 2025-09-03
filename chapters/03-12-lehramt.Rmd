@@ -1,71 +1,60 @@
 ## Lehramt {#lehramt}
 
-An der Uni Bayreuth gibt es je nach Fächerkombination zwei verschiedene Arten des Lehramtsstudiums: den sogenannten Modellstudiengang mit dem Zwischenziel "Bachelor of Science"
-und mit Möglichkeit zum "Master of Education" mit dem Staatsexamen als Abschluss und die klassische Lehramtsvariante hin zum Staatsexamen ohne Zwischenprüfung.
+An der Uni Bayreuth gibt es je nach Schulart zwei verschiedene Arten des Lehramtsstudiums: Das gymnasiale Lehramt mit dem Zwischenziel “Bachelor of Science” (in deinem Hauptfach) und “Master of Education” 
+oder das Realschullehramt mit dem “Bachelor of Education” (in der Didaktik eines deiner Fächer) und “Master of Education”. Egal wie ist das Staatsexamen der Abschluss deines Studiums, bevor du als ReferendarIn in der Schule Praxiserfahrung sammelst. 
+Das ist eine stressige Zeit mit vielen weiteren Regeln, aber das ist noch weit hin… Bis dahin ist erstmal ein Studium zu genießen! <3
 
 > Zitat für Zwischendurch:<br>
 > *"Chromologe Homosomen"*<br>
 > Dozent aus der Genetik
 
-Wenn ihr bei uns, also in der Fakultät 2 angekommen seid, dann studiert ihr Lehramt für Realschule oder Gymnasium mit einem der Fächer Chemie, Biologie oder Geografie.
-
-Fast alle Lehramtskombinationen laufen im klassischen Muster ab. Dies bedeutet, beide Fächer sind gleich gewichtet mit dem Ziel Staatsexamen. Damit keine unbeantworteten Fragen auftauchen:
-Natürlich müssen auch die Modellstudiengangsteilnehmer das Staatsexamen in ihren jeweiligen Fächern sowie den Erziehungswissenschaften ablegen.
+Wenn ihr bei uns, also in der Fakultät 2 angekommen seid, dann studiert ihr Lehramt für Realschule oder Gymnasium mit einem der Fächer Chemie, Biologie oder Geografie. Dabei wählen die Gymis ein Hauptfach, in welchem sie auch eine vollwertige Bachelorarbeit schreiben. 
+Diese bezieht sich dann auch nur auf fachliche Dinge und hat in erster Linie nichts mit dem Unterrichten zu tun. Deshalb haben die Gymis auch viel mehr von ihrem Hauptfach, etwas weniger von ihrem Nebenfach und nur ganz wenig Erziehungswissenschaft. 
+Die RealschullehrerInnen studieren stattdessen ihre Fächer gleichwertig, haben also keine Gewichtung und fangen schon früher und mehr EWS-Module (Erziehungswissenschaften 🤗). Aber keine Angst liebe Realis; 
+Nach dem Bachelor der Gymis dreht sich das Spiel um und die holen im Master den ganzen EWS-Kram nach ^^  
 
 ```{r, echo=FALSE, out.width="400pt"}
 knitr::include_graphics("images/lehramt-meme.png")
 ```
 
-Die ersten Examen stehen meist nach dem 7. Semester (Realschule) bzw. dem 9. Semester (Gymnasium) an. Doch keine Angst!🤗
-Jeder hat einen "Freischuss" und bis dahin ist noch viel Zeit um sich einen Kopf zu machen. Wichtig ist jetzt erst mal ein guter Start ins Semester und Unileben!🙂
-
-Gerade die ersten Semester werden ihr fast den gleichen Stundenplan wie Fachstudenten haben.
-Der Wechsel ins Fach ist also fließend, eigene Fachveranstaltungen nur für Lehrämter wie bei einigen anderen Universitäten sind kaum vorgesehen.
-Eben dieser Fakt veranlasste die Universität zu dem schon angesprochenen "Modellstudiengang".
-
-### Gymnasiales MINT-Lehramt {-}
-
-Hier wird die Fachkenntnis noch etwas weiter vertieft um einen "Bachelor of Science" im Erstfach ablegen zu können und so nach Ende von sechs Semestern die Freiheit zu haben,
-dieses Fach weiterzustudieren. Dieses System ist so gut wie einzigartig in Deutschland, die Vorteile liegen jedoch klar auf der Hand: Wenn ihr im Studium merkt,
-dass euch der Lehramtsbereich doch nicht so liegen sollte, ihr aber enorm Spaß (haha - okay, sagen wir Interesse😅) an eurem Erstfach habt, dann steht es euch offen,
-dieses Fach im Master zu intensivieren und das Lehramtsstudium an diesem Punkt zu beenden bzw. auszusetzen.
-Möglich wird dies durch eine geschickte Vertauschung der Fachveranstaltungen Erstfach/Zweitfach sowie der Erziehungswissenschaften.
-So werdet ihr in den ersten sechs Semestern euer erstes Fach viel intensiver behandeln, um so die Bachelor-Kriterien zu erfüllen.
-Das zweite Fach wird dann ebenso wie die Erziehungswissenschaften in den vier Semestern der Masterstudienzeit, also Semester 7-10, in den Fokus gerückt.
-Im 10. Semester habt ihr als Lehrämter die Möglichkeit eine Masterarbeit zu schreiben und so den Master of Education zu erreichen.
-
 #### Alles, was ihr sonst noch wissen solltet {-}
 
-Doch genug zum eigentlichen System. Schließlich stehen ja auch noch die diversen Praktika an, welche ihr ziemlich bald (oder so wie der Autor sehr verspätet und deswegen arg in Zeitnot) in Angriff nehmen solltet.☝️
-Dort werdet ihr dann auf die Kids losgelassen und dürft eigene Stunden halten - hier gilt: nehmt so viele ihr kriegen könnt, denn die ganze Theorie nützt ohne Praxis nichts.
-In den Stunden merkt ihr schnell, ob euch der Beruf Spaß macht und woran man alles denken muss und sollte, Sachen, die eben nicht in Büchern stehen, sondern die man nur in der Praxis lernt:
-Denn wer arbeitet, macht auch Fehler - und aus denen lernt man bekanntlich ja am besten.
+Doch genug zum eigentlichen System. Schließlich stehen auch noch die diversen Praktika an, welche ihr ziemlich bald (oder so wie der Autor sehr verspätet und deswegen arg in Zeitnot) in Angriff nehmen solltet. ☝️ 
+Dort werdet ihr dann auf die Kids losgelassen und dürft eigene Stunden halten - hier gilt: nehmt so viele ihr kriegen könnt, denn die ganze Theorie nützt ohne Praxis nichts. In den Stunden merkt ihr schnell, 
+ob euch der Beruf Spaß macht und woran man alles denken muss und sollte, Sachen, die eben nicht in Büchern stehen, sondern die man nur in der Praxis lernt: Denn wer arbeitet, macht auch Fehler - und aus denen lernt man bekanntlich ja am besten. 
 
 > Zitat für Zwischendurch:<br>
 > *"Hm, dann schneiden wir ihr halt mal die Eier ab!"*<br>
 > Biologie-Student beim Sezieren einer Ratte
 
-Zuerst gäbe es da das "Orientierungspraktikum", welches je nach Möglichkeit bereits vor Studienbeginn oder nach dem ersten Semester abgelegt werden sollte.
-Es umfasst drei Wochen Schulpraktikum - im Optimalfall zwei Wochen an der Schule für die ihr studiert (also Realschule oder Gymnasium) und eine Woche an einer alternativen Schulform (z.B. Grundschule).
+Zuerst gäbe es da das “Orientierungspraktikum”, welches je nach Möglichkeit bereits vor Studienbeginn oder nach dem ersten Semester abgelegt werden sollte. Es umfasst drei Wochen Schulpraktikum - im Optimalfall zwei Wochen an der Schule für die ihr studiert 
+(also Realschule oder Gymnasium) und eine Woche an einer alternativen Schulform (z.B. Grundschule oder Hauptschule). Wahrscheinlich haben das einige von euch schon absolviert, den anderen würde ich es ans Herz legen sich in den ersten Semestern schon drum zu kümmern. 
 
-Noch in den ersten sechs Semestern, dem sogenannten Grundstudium, wird das "schulpädagogisch-fachdidaktische Blockpraktikum" auf dich zukommen.
+Noch in der Bachelorphase wird nach dem „O-Prak“ das “schulpädagogisch-fachdidaktische Blockpraktikum” auf dich zukommen. Hier bist du für sechs Wochen in einer Schule deiner Schulart (Gym/Real) und wirst dich richtig einarbeiten können. Für die meisten ist das spätestens die Gelegenheit mal richtig Stunden vorzubereiten und zu halten.
 
-Manch einer wird sich vielleicht fragen, wieso ich in einer Erstizeitung bereits mit solch anstrengenden Dingen daherkomme - eigentlich wollen wir doch alle erstmal entspannt das erste Semester durchkriegen.
-Dies ist dem Umstand gezollt, dass es enorm wichtig ist, sich **frühzeitig** bei den Schulen um einen Praktikumsplatz zu bemühen. Der Autor fiel aus allen Wolken, als er erfuhr,
-dass Wartezeiten von einem halben Jahr oder mehr für einen Platz im Blockpraktikum an Bayreuther Gymnasien die völlige Norm sind.😐 Etwas besser soll die Situation auf dem Land sein. Nichtsdestotrotz,
-meldet euch frühzeitig bei den Schulen eurer Wahl, damit das Blockpraktikum (optimal jeweils 3 Wochen nach 2. und 3. Semester) gemäß eurer Planwünsche stattfinden kann.
+Manch einer wird sich vielleicht fragen, wieso ich in einer Erstizeitung bereits mit solch anstrengenden Dingen daherkomme - eigentlich wollen wir doch alle erstmal entspannt das erste Semester durchkriegen. Dies ist dem Umstand gezollt, dass es enorm wichtig ist, sich frühzeitig bei den Schulen um einen Praktikumsplatz zu bemühen. 
+Der Autor fiel aus allen Wolken, als er erfuhr, dass Wartezeiten von einem halben Jahr oder mehr für einen Platz im Blockpraktikum an Bayreuther Gymnasien die völlige Norm sind. 😐 Etwas besser soll die Situation auf dem Land sein. Nichtsdestotrotz meldet euch frühzeitig bei den Schulen eurer Wahl, damit das Blockpraktikum 
+(optimal jeweils 3 Wochen nach dem 2, 3, 4 oder 5. Semester) gemäß eurer Planwünsche stattfinden kann. 
 
 Je nach Fächerkombination würde ich euch empfehlen, die jeweiligen Seiten für die Fachstudenten ebenfalls zu lesen. Ob Uni-Praktika für die Chemiker,
 Exkursionen für die Geografen oder Pflanzenkurse für die Biologen - wichtige Informationen, die auch für Lehramtsstudenten relevant sind, gibt es dort.
 
-Des Weiteren kann ich euch raten, die Kurse der Erziehungswissenschaften frühzeitig zu belegen. So ist es möglich, euer EWS-Examen vorzuziehen und euch zusätzlichen Stress auf der Examens-Schlussgerade zu ersparen.
+Des Weiteren kann ich euch raten, die Kurse der Erziehungswissenschaften frühzeitig zu belegen. So ist es möglich, euer EWS-Examen vorzuziehen und euch zusätzlichen Stress auf der Examens-Schlussgerade zu ersparen („Das ist ein sehr guter Tipp“ sagte der Überarbeitende Student dieses Artikels). 
+
+#### Und noch ein persönlicher Hinweis {-} 
+
+Gerade die ersten Semester werden ihr fast den gleichen Stundenplan wie Fachstudenten haben. Der Wechsel ins Fach ist also fließend, eigene Fachveranstaltungen nur für Lehrämter wie bei einigen anderen Universitäten sind kaum vorgesehen.  
+
+Deshalb hier ein persönlicher Hinweis: Ihr studiert da was richtig Schweres. Eure Kommilitonen, lieben ‚Fachstudis‘, haben nur ein Fach, worauf sie sich das ganze Studium lang stürzen. Bei euch ist das anders. Ihr müsst nämlich gleich drei Sachen (EWS + 2 Fächer) richtig gut lernen und das kann bisweilen echt hart sein. 
+Manchmal wird es dazu kommen, dass ihr was machen müsst, wofür die Grundlagen in anderen Modulen schon gelegt wurden, die ihr als Lehrämtler aber gar nicht hattet. Besonders toll sind auch die Stundenplanüberschneidungen verschiedener Module aus einzelnen Fächern, die ihr sicherlich früh kennen lernen werdet (Tipp: Die EWS-Sachen lassen sich gut schieben 
+und sind so ein super Lückenfüller!). Das ist manchmal hart, aber ihr schafft das mindestens genauso gut wie die vielen Generationen vor euch. Unserer Erfahrung nach ist es deshalb besonders wichtig: Lernt Leute kennen, übt mit denen, helft euch gegenseitig oder lasst euch helfen. Spätestens in der Fachschaft habt ihr IMMER eine Anlaufstation zu Leuten 
+-auch Lehrämtlern-, die das auch schon überstanden haben. Das Lehramtsstudium ist richtig erfüllend und vielseitig. Also habt Spaß und viel Erfolg!!  
 
 Ein letzter Tipp vor der Flut an Internet- links mit noch mehr Informationen: Gebt nicht auf!
 Am Anfang kann so einiges überfordernd und unlösbar scheinen (von der Suche nach den verstecktesten Hörsälen bis zu den Chemie-übungsblättern), aber mit der Zeit findet ihr euren Weg und auch den verborgensten Seminarraum.
 
 Und nun zum Abschluss noch die Links zu den Didaktik-Lehrstühlen, die speziell für Lehrämtler relevant sind:<br>
 https://didaktikchemie.uni-bayreuth.de/de/index.html<br>
-https://www.bayceer.uni-bayreuth.de/didaktik-bio/<br>
 https://www.geographiedidaktik.uni-bayreuth.de/de/index.html
 
 💕**Viel Erfolg und gute Orientierung im Dschungel wünscht deine Fachschaft!**💕
