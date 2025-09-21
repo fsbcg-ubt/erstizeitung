@@ -1,54 +1,56 @@
 ## Der Studiendekan {#studiendekan}
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/der-studiendekan.jpg")
+knitr::include_graphics("images/schuster.jpg")
 ```
 
-Prof. Dr. Roland Marschall<br>
-Telefon: 0921 / 55 - 2760<br>
-Email: roland.marschall@uni-bayreuth.de
+Prof. Dr. Stefan Schuster<br>
+Telefon: +49 (0)921 / 55-2470<br>
+Email: stefan.schuster@uni-bayreuth.de
 
-Der Studiendekan Prof. Marschall kümmert sich um die Belange der Studierenden und achtet auf die ordnungsgemäße Durchführung der Lehre.
+Der Studiendekan Prof. Schuster kümmert sich um die Belange der Studierenden und achtet auf die ordnungsgemäße Durchführung der Lehre.
 Des Weiteren ist er für die Evaluation der Lehrveranstaltungen sowie den Lehrbericht verantwortlich und zuständig für die Verteilung der Studienzuschüsse.
 
 **Name**
 
-> Prof. Dr. Roland Marschall
+> Prof. Dr. Stefan Schuster
 
 **Motto**
 
-> "Water is the coal of the future", nach Jules Verne (1874)
+> Alles wird gut!
 
 **Fachgebiet**
 
-> Physikalische Chemie, Photokatalyse
+> Wie Tiere funktionieren (Tierphysiologie)
 
 **Hobbies**
 
-> Lesen, Kino, Reisen, Computerspiele
+> Klavier, Bergwandern, Tauchen, Reiten, Tiere
 
 **Traumberuf als Kind**
 
-> Sänger
+> Ritter
 
 **Schönste Erinnerung ans Studium**
 
-> Das selbstkühlende Bierfass
+> Ein Jahr USA und meine Diplomarbeit
 
 **Schlimmste Erinnerung ans Studium**
 
-> Ein HF-Aufschluss im AC-Praktikum
+> Das erste Semester im (für mich) falschen Fach...
 
-**Wenn ich 3 Wünsche frei hätte**
+**Wenn ich 3 Wünsche frei hätte: für Studium und Forschung wünsche ich mir, dass...**
 
-> 1. Den Klimawandel rückgängig machen
-> 2. Dass Toleranz und Rücksicht immer im Vordergrund stehen
-> 3. Dass soziale Medien wieder sozialer werden
+> 1. ...Neugier und Verständnis immer an erster Stelle stehen.
+> 2. ...Zeit ist, Wissenschaft im Gespräch entstehen zu lassen.
+> 3. ...Wissenschaft als Abenteuer erfahren wird, für das es sich lohnt, sich anzustrengen.
 
 **Mein Tipp fürs Studium**
 
-> Wiederholung kann nicht schaden.
+> Den Mut und den Glauben nicht verlieren, dass man unbedingt gebraucht wird, um bei der Lösung 
+der vielen Probleme mitzuwirken und dass man in einem ernsthaft betriebenes Studium dafür Wichtiges lernt.
 
 **Ich möchte euch helfen bei ...**
 
-> .. dem (Zurück)finden nach der Corona-Krise in das Campus-/Studierendenleben
+> ...Allem wo der Schuh drückt. Es gibt leider viele Schwierigkeiten, die es überhaupt nicht geben müsste,
+wenn wir davon wüssten. 
