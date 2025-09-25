@@ -26,7 +26,7 @@ knitr::include_graphics("images/fachschaftler/miri.png")
 
 **Bester Ort in Bayreuth**
 
-> die Fachschaft 
+> Die Fachschaft 
 
 **Ziel für dieses Jahr**
 
