@@ -1,6 +1,6 @@
 # Besondere Feten am Campus {#feten-am-campus}
 
-### FAN-Fete {-}
+### FakIng-Fete {-}
 
 Im Herbst in der Fakultät für Ingenieurwissenschaften, vormals Fakultät für angewandte Naturwissenschaften (FAN). Klasse Fete organisiert von der Fachschaft Ingenieurwissenschaften. Schon mal im Kalender vormerken und Lauscher für Details aufsperren.
 
@@ -12,10 +12,3 @@ an den Turntables. Einzelheiten zu gegebener Zeit auf https://fsmpi.uni-bayreuth
 ### Nikofete {-}
 
 Die mit Abstand wohl beste Fete auf'm Campus und das auch noch so gut wie zu Hause, nämlich in eurem NW I! Bloß nicht entgehen lassen, gibt's nur einmal im Jahr! Näheres gibt's bei eurer Fachschaft BCG oder einfach ältere Semester fragen ...
-
-```{r, echo=FALSE, out.height="300pt"}
-knitr::include_graphics("images/nikofete-plakat-1.png")
-```
-```{r, echo=FALSE, out.height="300pt"}
-knitr::include_graphics("images/nikofete-plakat-2.png")
-```
