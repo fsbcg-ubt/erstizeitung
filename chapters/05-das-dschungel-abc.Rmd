@@ -77,7 +77,7 @@ Bioorganische Chemie; tert-Butoxycarbonyl-Schutzgruppe, werdet ihr in der BOC-Vo
 
 ### BPC {#dschungel-abc-bpc .unnumbered}
 
-= Biophysikalische Chemie. Wer hat den Größten ... magnetischen Fluss; jo 1000 MHz-NMR Bitch!
+= Biophysikalische Chemie 
 
 ### BT-Kennung {#dschungel-abc-bt-kennung .unnumbered}
 
@@ -166,7 +166,7 @@ Hoffentlich funktionierts! Wenn es das tut: Verwaltungsplattform für Vorlesunge
 
 Ein Austauschprogramm für Studenten; weiteres unter [Auslandsstudium](#dschungel-abc-auslandsstudium).
 
-### Ersti, der {#dschungel-abc-ersti .unnumbered}
+### Ersti {#dschungel-abc-ersti .unnumbered}
 
 Frisch geschlüpftes, rudelbildendes Lebewesen mit potenziell exponentiell steigendem Koffeinkonsum und Wissensdurst. Du bist einer! Und zwar zwei Semester lang, bis die neuen kommen!
 
@@ -248,7 +248,7 @@ Preis für gute Lehre an der Fakultät 2 als Ergebnis der [Evaluation](#dschunge
 
 ### Grüner Hügel {#dschungel-abc-gruener-huegel .unnumbered}
 
-Wie das Berghain, nur die Karten sind viel teurer und nur 10 Jahre im Voraus zu kaufen.
+Wie das Berghain, nur die Karten für das dort stehende Festspielhaus sind viel teurer und nur 10 Jahre im Voraus zu kaufen.
 
 ### GSP {#dschungel-abc-gsp .unnumbered}
 
@@ -282,6 +282,10 @@ Eure letzte Chance, wenn ihr die -> Nachklausuren nicht bestanden habt. Dabei ha
 
 Findet immer im Sommersemester statt, dort könnt ihr eure Vertretung fürs [StuPa](#dschungel-abc-stupa), die [Fachschaft](#dschungel-abc-fachschaft), den [Senat](#dschungel-abc-senat) und den [Hochschulrat](#dschungel-abc-hochschulrat) wählen. Näheres siehe [Unipolitik](#unipolitik).
 
+### Ing {#dschungel-abc-ing .unnumbered}
+
+=Ingenieurwissenschaften 
+
 ### International Office (INO) {#dschungel-abc-international-office .unnumbered}
 
 Neben dem [DAAD](#dschungel-abc-daad) eine der Anlaufstellen für ein [Auslandsstudium](#dschungel-abc-auslandsstudium). Details siehe [Ansprechpartner](#ansprechpartner).
@@ -297,15 +301,11 @@ Kümmern sich um alle Software- und Hardware-Belange an der Uni. Auch bei kleine
 
 ### JCF {#dschungel-abc-jcf .unnumbered}
 
-= JungChemikerForum. Jungmitglieder der [GDCh](#dschungel-abc-gdch). Näheres im Kapitel [JCF Bayreuth](#jcf).
-
-### Kaffee-Lounge {#dschungel-abc-kaffee-lounge .unnumbered}
-
-Privatwirtschaftliche Kaffee-Lounge im RW I-Gebäude: Hier wird Hartgeld verlangt, kein [Studierendenausweis](#dschungel-abc-studierendenausweis) oder Ostmark. Hierfür ist die Qualität und Auswahl an [Kaffeegetränken](#dschungel-abc-kaffeeautomat) riesig und Kuchen und belegte Brötchen runden das Angebot ab. Der Vorteil an der Kaffee-Lounge sind die Öffnungszeiten, hier bekommt ihr auch noch samstagnachmittags und sonntags was zu essen. Der Nachteil wurde bereits angesprochen: der Preis.
+= JungesChemieForum. Jungmitglieder der [GDCh](#dschungel-abc-gdch). Näheres im Kapitel [JCF Bayreuth](#jcf).
 
 ### Klausur {#dschungel-abc-klausur .unnumbered}
 
-Nach monatelanger harter Arbeit *hust* (Neocortex pumpen: [Bib](#dschungel-abc-bib)) und bester Vorbereitung *hust* könnt ihr hier zeigen, was ihr drauf habt. *Asthmaanfall* Im Ernst: erst einmal rechtzeitig [anmelden](#dschungel-abc-anmelden), derweil fleißig lernen und falls es nicht gereicht hat, habt ihr ja auch noch einen weiteren Versuch ([Nachklausur](#dschungel-abc-nachholklausur)).
+Nach monatelanger harter Arbeit (Neocortex pumpen: [Bib](#dschungel-abc-bib)) und bester Vorbereitung könnt ihr hier zeigen, was ihr drauf habt. Denk daran, euch rechtzeitig [anzumelden](#dschungel-abc-anmelden), derweil fleißig zu lernen und falls es nicht gereicht hat, habt ihr auch noch einen weiteren Versuch ([Nachklausur](#dschungel-abc-nachholklausur)).
 
 > Übrigens:<br>
 > *Geh um 11 essen! Nein wirklich, geh um 11 essen!*
@@ -353,10 +353,7 @@ Eure Inventarnummer; steht auf dem [Studierendenausweis](#dschungel-abc-studiere
 
 ### MC {#dschungel-abc-mc .unnumbered}
 
-1. Music Cassette: Fragt euere Eltern ...
-2. Master of Ceremonies: Hip Hop,
-3. Minecraft — böses Ersti! so wird das nichts mit dem Studium!
-4. Makromolekulare Chemie
+=Makromolekulare Chemie
 
 > Witz für zwischendurch:<br>
 > Ein Biochemiker zum anderen: *"Neulich kam meine Freundin auf dem Fahrrad an. Sie warf das Fahrrad beiseite, zog sich ihr Kleid aus, stellte sich vor mich hin und sagte, ich soll mir endlich nehmen, was ich will. Da hab ich mir das Fahrrad genommen."*<br>
@@ -376,8 +373,7 @@ Das gesamte Studium ist in Module gegliedert. Jede [Vorlesung](#dschungel-abc-vo
 
 ### MPI {#dschungel-abc-mpi .unnumbered}
 
-1. Max-Planck-Institut,
-2. Neumodisch für [MaPhI](#dschungel-abc-maphi).
+=Neumodisch für [MaPhI](#dschungel-abc-maphi).
 
 ### Nachholklausur {#dschungel-abc-nachholklausur .unnumbered}
 
@@ -431,10 +427,6 @@ Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht
 
 Im Wesentlichen ist dabei der Aufenthalt in einer kontrollierten Umgebung zu verstehen, wo entweder du mit Chemikalien oder Schüler mit dir experimentieren, bis es zur Explosion kommt.
 
-### Projektor {#dschungel-abc-projektor .unnumbered}
-
-Dienstägliches Uni-Kino, ausgerichtet von unseren lieben Kollegen von der [MaPhI](#dschungel-abc-maphi) Fachschaft (Fakultät 1).
-
 ### Prüfungsamt {#dschungel-abc-pruefungsamt .unnumbered}
 
 Hier werde eure Prüfungsleistungen verwaltet und auch eure Atteste könnt ihr hier abgeben, wenn ihr mal wieder am Prüfungstag krank wart. ("Schwankungen der Tagesform" und "Keine Ahnung von nichts haben" sind keine Krankheit!) Details siehe [Ansprechpartner](#ansprechpartner).
@@ -458,6 +450,10 @@ Wissenschaftliche Fachvorträge an der Fakultät, die für einige Studiengänge 
 ### RW {#dschungel-abc-rw .unnumbered}
 
 = Rechtswissenschaftliche Fakultät (Fakultät 3). Hier findet ihr alle Studierenden rund um die Thematiken Recht und Wirtschaft. Den besten Kaffee gibt es hier ([KaffeeLounge](#dschungel-abc-kaffee-lounge)) und die größte [Bib](#dschungel-abc-bib). Doch manche Leute haben trotzdem eine Aversion gegen sie. Warum auch immer... :-(
+
+### RW-Cafe {#dschungel-abc-kaffee-lounge .unnumbered}
+
+Privatwirtschaftliche Kaffee-Lounge im RW I-Gebäude: Hier wird Hartgeld verlangt, kein [Studierendenausweis](#dschungel-abc-studierendenausweis) oder Ostmark. Hierfür ist die Qualität und Auswahl an [Kaffeegetränken](#dschungel-abc-kaffeeautomat) riesig und Kuchen und belegte Brötchen runden das Angebot ab. Der Vorteil an der Kaffee-Lounge sind die Öffnungszeiten, hier bekommt ihr auch noch Samstagnachmittags und Sonntags was zu essen. Der Nachteil wurde bereits angesprochen: der Preis.
 
 ### RZ/Rechenzentrum {#dschungel-abc-rz-rechenzentrum .unnumbered}
 
@@ -591,6 +587,12 @@ Steht nicht für einen Töpferkurs der Volkshochschule, sondern für Tierökolog
 
 Erklärung: trivial.
 
+### UBT-App {#dschungel-abc-uninow .unnumbered}
+
+Das ist die Campus App schlechthin! Noten, Stundenplan, Mensa, Mails, Bibliothek, News und sogar ein eigenes Ersti-Modul. Außerdem bekommt ihr hier die neusten Informationen von der Fachschaft. **Ersti-Code: BT-BCG**
+
+Um die App herunterzuladen, könnt ihr mal auf dieser Webseite schauen: https://www.uni-bayreuth.de/uni-app (gibts für Android und iOS).
+
 ### Übung {#dschungel-abc-uebung .unnumbered}
 
 Fast noch wichtiger als die [Vorlesung](#dschungel-abc-vorlesung), hier werden die Übungsblätter zu den Vorlesungen besprochen, sodass ihr endlich mal euer Wissen praktisch anwenden könnt. Viele Klausuren in den ersten beiden Semestern bauen primär auf den Übungsblättern auf.
@@ -607,15 +609,9 @@ Balzplatz, in dem gilt: Alles kann, nichts muss; klare Vorteile, wenn man JBG (j
 > *"Diese Vorgänge sind mir nicht bekannt gewesen und ich verspreche die brutalst mögliche Aufklärung!"*<br>
 > Dr. Sommer
 
-### UBT-App {#dschungel-abc-uninow .unnumbered}
+### Unikino {#dschungel-abc-unikino .unnumbered}
 
-```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/uninow-logo.png")
-```
-
-Das ist die Campus App schlechthin! Noten, Stundenplan, Mensa, Mails, Bibliothek, News und sogar ein eigenes Ersti-Modul. Außerdem bekommt ihr hier die neusten Informationen von der Fachschaft. **Ersti-Code: BT-BCG**
-
-Die App kann man unter https://uninow.de/install herunterladen (für Android und iOS).
+Dienstägliches Uni-Kino, ausgerichtet von unseren lieben Kollegen von der [MaPhI](#dschungel-abc-maphi) Fachschaft (Fakultät 1).
 
 ### Urlaubssemester {#dschungel-abc-urlaubssemester .unnumbered}
 
