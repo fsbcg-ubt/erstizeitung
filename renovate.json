@@ -1,12 +1,29 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
+      "matchStrings": [
+        "image:\\s+(?<depName>[^\\s:]+?):(?<currentValue>[^@\\s]+)@(?<currentDigest>sha256:[a-f0-9]+)"
+      ],
+      "datasourceTemplate": "docker"
+    }
   ],
   "packageRules": [
     {
       "matchDatasources": ["github-tags"],
       "groupName": "github workflow actions",
+      "schedule": ["every weekend"]
+    },
+    {
+      "matchDatasources": ["docker"],
+      "groupName": "docker dependencies",
       "schedule": ["every weekend"]
     }
   ]
