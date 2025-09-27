@@ -1,7 +1,7 @@
 ## Unser Schatzhüter {#fachschaftler-fachschaftlerinnen-kasse}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/michelle.png")
+knitr::include_graphics("images/fachschaftler/joseph.png")
 ```
 
 **Name**

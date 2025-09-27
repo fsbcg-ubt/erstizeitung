@@ -1,7 +1,7 @@
 ## Die Nikofete-Meisterin {#fachschaftler-fachschaftlerinnen-nikofete}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/fabian.png")
+knitr::include_graphics("images/fachschaftler/marie.png")
 ```
 
 **Name**
@@ -34,8 +34,8 @@ knitr::include_graphics("images/fachschaftler/fabian.png")
 
 **Das kann ich gar nicht!**
 
-> nein sagen 
+> Nein sagen
 
 **Wie viel Uhr ist es?**
 
-> Pfeffi-Time!
+> 7:60, ich hab noch 40 Minuten
