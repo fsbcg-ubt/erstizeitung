@@ -26,7 +26,7 @@ Dabei fungiert die validierte CampusCard als Fahrschein. Für genauere Informati
 
 ### Mensakarte {-}
 
-Mit dieser Funktion könnt ihr in der Mensa und an den Snack- bzw. Getränkeautomaten Futter und Nervennahrung erwerben.
+Mit dieser Funktion könnt ihr in der Mensa und an den Snack- bzw. Getränkeautomaten Nervennahrung erwerben.
 Besonders nützlich ist die Möglichkeit, sich mit der Mensakarte in den Pausen der Vorlesung einen Kaffee von den Automaten zu holen.
 
 ### Geldkarte für den Campus {-}
