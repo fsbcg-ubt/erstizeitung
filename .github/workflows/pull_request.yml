@@ -21,7 +21,6 @@ jobs:
         with:
           name: ${{ env.PR_REPO_NAME }}
           org: "fsbcg-ubt"
-          private: false
           access-token: ${{ secrets.ORG_ADMIN_TOKEN }}
 
   build_gitbook:
@@ -33,7 +32,7 @@ jobs:
       - name: "Render book as GitBook"
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3.0.0
         with:
-          image: ghcr.io/fsbcg-ubt/docker-bookdown@sha256:7cd2d602529468167e9d672586d07d6bdccf839313670fc6565367d46f27df04
+          image: ghcr.io/fsbcg-ubt/docker-bookdown@sha256:3e45bec722a0b48560338f516ba2737b2b07bddf38a81aade9ff2b207e1822bc
           options: --mount src=${{ github.workspace }},target=/book,type=bind
           run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
