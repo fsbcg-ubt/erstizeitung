@@ -2,10 +2,10 @@
 
 ### Koordination B.Sc. Biologie {-}
 
-**Firdevs Kesici**
+**Laura Löhner**
 
 Telefon: 0921/55-5812<br>
-E-Mail: firdevs.kesici@uni-bayreuth.de<br>
+E-Mail: laura.loehner@uni-bayreuth.de<br>
 Raum: 6.0.01.23.1 (NW I)<br>
 
 ### Koordination M.Sc. Biologie {-}
@@ -25,10 +25,3 @@ Telefon: 0921/55-2257<br>
 Fax: +49 921 55-2792<br>
 E-Mail: jasmin.samimi@uni-bayreuth.de<br>
 Gebäude Geowissenschaften II, Zimmer 151
-
-### Koordination Chemie {-}
-
-**Silke Reimann**
-
-Telefon: 0921/55-2054<br>
-E-Mail: silke.reimann@uni-bayreuth.de
