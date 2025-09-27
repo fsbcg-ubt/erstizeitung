@@ -1,4 +1,4 @@
-## Die Goldene-Kreide-Verantwortliche {#fachschaftler-fachschaftlerinnen-nikofete}
+## Die Goldene-Kreide-Verantwortliche {#fachschaftler-fachschaftlerinnen-goldene-kreide}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/lena.png")
