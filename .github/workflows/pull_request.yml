@@ -32,7 +32,7 @@ jobs:
       - name: "Render book as GitBook"
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3.0.0
         with:
-          image: ghcr.io/fsbcg-ubt/docker-bookdown@sha256:3e45bec722a0b48560338f516ba2737b2b07bddf38a81aade9ff2b207e1822bc
+          image: ghcr.io/fsbcg-ubt/docker-bookdown:0.3.7@sha256:3e45bec722a0b48560338f516ba2737b2b07bddf38a81aade9ff2b207e1822bc
           options: --mount src=${{ github.workspace }},target=/book,type=bind
           run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
