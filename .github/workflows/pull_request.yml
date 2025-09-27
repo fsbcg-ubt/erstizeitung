@@ -37,7 +37,7 @@ jobs:
           options: --mount src=${{ github.workspace }},target=/book,type=bind
           run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
-        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: _book_gitbook
           path: _book/
@@ -77,7 +77,7 @@ jobs:
     name: "Create comment with GH Pages URL"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@d70566966bbb446d06887700f68d905602745985
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
           script: |
