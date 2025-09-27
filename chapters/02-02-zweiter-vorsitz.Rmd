@@ -1,41 +1,41 @@
-## Ihre Stellvertreterin {#fachschaftler-fachschaftlerinnen-zweiter-vorsitz}
+## Der 2.Vorstand {#fachschaftler-fachschaftlerinnen-zweiter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/lorena.png")
+knitr::include_graphics("images/fachschaftler/janik.png")
 ```
 
 **Name**
 
-> Lorena
+> Janik
 
 **Job in der Fachschaft**
 
-> Vize-Vorsitz
+> 2. Vorstand
 
 **Studiengang**
 
-> B.Sc. Biologie
+> Geo-Physik Lehramt Gymnasium (Geo Hauptfach)
 
 **Motto**
 
-> Bleib so, wie du bist.
+> Geographen torkeln nicht, sie Mäandrieren!
 
 **Beste Bar in Bayreuth**
 
-> Hausbar
+> Heimathafen
 
 **Bester Ort in Bayreuth**
 
-> Hofgarten und Röhrensee
+> Volleyballfelder an der Mainaue
 
 **Ziel für dieses Jahr**
 
-> Krümmel beschützen!
+> Unfallfrei älter werden
 
 **Das kann ich gar nicht!**
 
-> Mal nicht sarkastisch sein.
+> Spagat
 
 **Wie viel Uhr ist es?**
 
-> Pfeffi Time!
+> 11:46 vormittags (ich hab mein Leben unter Kontrolle!)

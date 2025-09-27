@@ -1,12 +1,12 @@
-## Unsere Schatzhüterin {#fachschaftler-fachschaftlerinnen-kasse}
+## Unser Schatzhüter {#fachschaftler-fachschaftlerinnen-kasse}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/michelle.png")
+knitr::include_graphics("images/fachschaftler/joseph.png")
 ```
 
 **Name**
 
-> Michelle
+> Seppl
 
 **Job in der Fachschaft**
 
@@ -14,28 +14,28 @@ knitr::include_graphics("images/fachschaftler/michelle.png")
 
 **Studiengang**
 
-> B.Sc. Biochemie
+> Biologie
 
 **Motto**
 
-> Wenn ich jedem gefallen wollen würde, wäre ich ein Blumenstrauß geworden.
+> Selbstzufriedenheit ist wichtiger als das, was andere über einen denken
 
 **Beste Bar in Bayreuth**
 
-> Malibu
+> Enchilada
 
 **Bester Ort in Bayreuth**
 
-> Hofgarten, Eremitage
+> Maximilianstraße
 
 **Ziel für dieses Jahr**
 
-> mehr Glühweiiin
+> Nicht aus dem Fenster zu fallen
 
 **Das kann ich gar nicht!**
 
-> Smalltalk
+> Mathe
 
 **Wie viel Uhr ist es?**
 
-> Zeit für ein Bierchen
+> 10 vor
