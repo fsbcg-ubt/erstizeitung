@@ -1,4 +1,4 @@
-## Die Nikofete-Meisterin {#fachschaftler-fachschaftlerinnen-nikofete}
+## Die Goldene-Kreide-Verantwortliche {#fachschaftler-fachschaftlerinnen-nikofete}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/fabian.png")
@@ -6,23 +6,23 @@ knitr::include_graphics("images/fachschaftler/fabian.png")
 
 **Name**
 
-> Marie
+> Lena
 
 **Job in der Fachschaft**
 
-> Nikofete-Hauptorga
+> 
 
 **Studiengang**
 
-> Bio/Englisch Lehramt Gymnasium
+> 
 
 **Motto**
 
-> Just do it yo! (und: 4 gewinnt!)
+> 
 
 **Beste Bar in Bayreuth**
 
-> Latibo
+> 
 
 **Bester Ort in Bayreuth**
 
@@ -30,11 +30,11 @@ knitr::include_graphics("images/fachschaftler/fabian.png")
 
 **Ziel für dieses Jahr**
 
-> Eine noch bessere Nikofete als letztes Jahr 🥳
+> 
 
 **Das kann ich gar nicht!**
 
-> nein sagen 
+> 
 
 **Wie viel Uhr ist es?**
 

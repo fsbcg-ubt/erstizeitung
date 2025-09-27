@@ -1,4 +1,4 @@
-## Die Vorsitzende {#fachschaftler-fachschaftlerinnen-erster-vorsitz}
+## Der 1. Vorstand {#fachschaftler-fachschaftlerinnen-erster-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/lisa.png")
@@ -6,36 +6,36 @@ knitr::include_graphics("images/fachschaftler/lisa.png")
 
 **Name**
 
-> Lisa
+> Miri
 
 **Job in der Fachschaft**
 
-> Vositz
+> 1. Vorstand
 
 **Studiengang**
 
-> Biologie und Chemie Lehramt (Gymnasium)
+> LA Realschule Bio/Englisch
 
 **Motto**
 
-> Immer ruhig bleiben auch wenns mal stressiger wird.
+> "In a world where you can be anything, be kind" - Jennifer Dukes Lee 
 
 **Beste Bar in Bayreuth**
 
-> Bar am Kirchplatz, Kanapee
+> Latibo
 
 **Bester Ort in Bayreuth**
 
-> ÖBG und unsere Fachschaft 😉
+> die Fachschaft 
 
 **Ziel für dieses Jahr**
 
-> Aus jedem Tag das Beste machen und einen Menschen zum Lächeln zu bringen.
+> Mehr Ordnung in meinem Kopf
 
 **Das kann ich gar nicht!**
 
-> Auf meine Leute und meine Fachschaft verzichten :)
+> Still sitzen
 
 **Wie viel Uhr ist es?**
 
-> Pfeffi Time!
+> Es ist 18:40
