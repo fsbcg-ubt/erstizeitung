@@ -8,4 +8,4 @@ help:
 
 render-gitbook:
 	rm -R -f $(.ROOT_DIR)/_book
-	docker run --rm --volume /etc/passwd:/etc/passwd:ro --user $(.USER_ID) --mount src=$(.ROOT_DIR),target=/book,type=bind fsbcgubt/docker-bookdown:latest Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+	docker run --rm --volume /etc/passwd:/etc/passwd:ro --user $(.USER_ID) --mount src=$(.ROOT_DIR),target=/book,type=bind ghcr.io/fsbcg-ubt/docker-bookdown:latest Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
