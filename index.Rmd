@@ -6,7 +6,7 @@ site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 link-citations: yes
-github-repo: fsbcg-ubt/erstizeitung-2022
+github-repo: fsbcg-ubt/erstizeitung
 ---
 
 # Einleitung
