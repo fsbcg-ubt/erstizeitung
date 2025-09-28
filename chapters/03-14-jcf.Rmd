@@ -1,0 +1,12 @@
+## JCF Bayreuth - Bayreuther Sektion des JungChemikerForums der GDCh {#jcf}
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/jcf25.png")
+```
+
+Das JCF Bayreuth ist die Bayreuther Abteilung des JungChemikerForums der Gesellschaft Deutscher Chemiker (GDCh) an der Uni Bayreuth. 
+Wir vertreten die Interessen der Jungmitglieder der GDCh an unserer Universität. Die Mitgliedschaft im JCF geht dabei mit der GDCh-Mitgliedschaft einher. Diese ist über die Homepage der GDCh [(www.gdch.de)](https://www.gdch.de/) zu erlangen. Wir organisieren jedes Semester Veranstaltungen für Studenten, wissenschaftliche Mitarbeiter und die breite Öffentlichkeit.
+Bei unseren Vorträgen geht es um Themen wie Karriere, Berufseinstieg oder Chemie im Alltag. Außerdem bieten wir neben Vorträgen auch Exkursionen zu verschiedenen Firmen an. 
+Um unsere Veranstaltungen zu planen und uns auszutauschen, treffen wir uns einmal im Monat zum Stammtisch in einem Bayreuther Lokal. Für weitere Informationen zu unseren Veranstaltungen schaue gerne auf unserem Instagram Kanal vorbei [(@jcf_bayreuth)](https://www.instagram.com/jcf_bayreuth/).
+
+**Interesse an einer Mitarbeit? Schreib uns einfach auf Instagram oder schau ganz unverbindlich bei unserem Stammtisch vorbei!**
