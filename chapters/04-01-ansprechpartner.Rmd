@@ -6,8 +6,9 @@ Raum: 1.88 bis 1.92 (ZUV)<br>
 Tel.: 0921 / 55 - 4433<br>
 E-Mail: [studienberatung@uni-bayreuth.de](mailto:studienberatung@uni-bayreuth.de)<br>
 Web: https://www.studienberatung.uni-bayreuth.de<br>
-Telefon: Di. und Do. 10.00 - 11.00 Uhr<br>
-Offene Sprechstunde via Zoom: Mi. 14.00 - 15.00 Uhr (mehr Informationen auf der Website)
+Telefon: Di., Mi., Do. 10.00 - 11.00 Uhr<br>
+Sprechstunde via Zoom: Mi. 14.00 - 15.00 Uhr (mehr Informationen auf der Website) <br>
+Offene Sprechstunde: Di., Mi., Do. 11.00-12.00 Uhr <br>
 
 Die Studienberatung bietet außerdem ein [Kontaktformular](https://www.studienberatung.uni-bayreuth.de/de/kontaktformular/index.php) an über das ihr euer Anliegen direkt eingrenzen könnt.
 
@@ -29,6 +30,8 @@ Web: https://www.international-office.uni-bayreuth.de
 ### Sprachenzentrum {-}
 
 Raum: GW I, Zi. 0.04<br>
+Tel.: 0921 / 55-3594 oder 0921 / 55-3584 <br>
+Sprechzeiten: Mo.-Do. 9.00–11.00 Uhr
 E-Mail: [sprachenzentrum@uni-bayreuth.de](mailto:sprachenzentrum@uni-bayreuth.de)<br>
 Web: https://www.sz.uni-bayreuth.de
 
@@ -36,14 +39,14 @@ Web: https://www.sz.uni-bayreuth.de
 
 Die Prüfungsämter an der Universität sind auf die einzelnen Fakultäten aufgeteilt. Für uns ist natürlich das Prüfungsamt BCG zuständig.
 
-Raum: 1.34 (ZUV)<br>
-Tel.: 0921 / 55 - 5253, - 5252 oder - 5267<br>
-E-Mail: [pruefungsamt.zuv1@uni-bayreuth.de](mailto:pruefungsamt.zuv1@uni-bayreuth.de)<br>
-Web: https://www.uni-bayreuth.de/pruefungsamt-bcg
+Raum: Prüfungsamt Referat I/4 Arbeitsgruppe II, NW II, Büro 3.2.00.344<br>
+Tel.: 0921/55-3035 oder 55-3191<br>
+E-Mail: [pruefungsamt.bcg@uni-bayreuth.de](mailto:pruefungsamt.bcg@uni-bayreuth.de)<br>
+Web: https://www.uni-bayreuth.de/pruefungsamt
 
 ### ITS Laptopsprechstunde {-}
 
-Raum: 3.2.U1.164.3 (NW II)<br>
+Raum: 3.2.U1.131 (Schalter im ITS Flur) (NW II)<br>
 Tel.: 0921 / 55 - 3003 (ITS-Anlaufstelle)<br>
 E-Mail: [laps@uni-bayreuth.de](mailto:laps@uni-bayreuth.de)<br>
 Web: https://laps.uni-bayreuth.de

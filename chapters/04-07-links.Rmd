@@ -50,15 +50,15 @@ https://laps.uni-bayreuth.de
 
 **PC Garage**<br>
 Hilfe bei Hard- und Software-Problemen<br>
-https://www.its.uni-bayreuth.de/de/hilfe-und-support
+https://www.its.uni-bayreuth.de/pc-garage 
 
 **Microsoft Office (Office 365)**<br>
 Kostenlos für Studenten<br>
-https://www.its.uni-bayreuth.de/de/hard-und-software
+https://www.its.uni-bayreuth.de/Software-fuer-Studierende 
 
 **eduroam/Netzzugang**<br>
 Anmeldung für Uni-WLAN<br>
-https://www.its.uni-bayreuth.de/de/internet-und-email
+https://laps.uni-bayreuth.de/category/10-eduroam-windows/tutorial/8-eduroam-unter-windows-einrichten 
 
 ### Uni-Umfeld/Freizeit {-}
 

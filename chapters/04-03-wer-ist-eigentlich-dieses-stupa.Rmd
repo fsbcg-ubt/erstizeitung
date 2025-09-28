@@ -1,7 +1,7 @@
 ## Wer ist eigentlich dieses StuPa {#stupa}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/stupa-titelbild.png")
+knitr::include_graphics("images/stupa2025.png")
 ```
 
 Herzlich willkommen an der Universität Bayreuth auch von uns! Das Studierendenparlament (kurz StuPa) ist eure fakultätsübergreifende Vertretung an der Uni und setzt sich, z.B. vor der Verwaltung für die Belange der Studierenden ein.
@@ -10,7 +10,7 @@ Herzlich willkommen an der Universität Bayreuth auch von uns! Das Studierendenp
 
 Das StuPa setzt sich zusammen aus 14 Fachschaftsvertretern (je zwei pro Fachschaft) und 17 Mitgliedern aus politischen Hochschulgruppen. Aus der Mitte des StuPa-Abgeordneten werden dann noch drei Senatsmitglieder und zwei Hochschulratsmitglieder gewählt.
 
-Eure Vertreter_Innen wählt ihr jeden Juni für das kommende Hochschuljahr. Das StuPa wählt dann eine/n Vorsitzende/n und eine/n Stellvertreter/in sowie sechs Sprecherräte, die sich um bestimmte Themenbereiche besonders kümmern und eure zentralen Ansprechpartner sind.
+Eure VertreterInnen wählt ihr jeden Juni für das kommende Hochschuljahr. Das StuPa wählt dann eine/n Vorsitzende/n und eine/n Stellvertreter/in sowie sechs Sprecherräte, die sich um bestimmte Themenbereiche besonders kümmern und eure zentralen Ansprechpartner sind.
 
 Wenn ihr mehr über die (noch viel komplexere) Organisationsstruktur wissen wollt, nach Kontaktdaten sucht oder allgemein mehr Infos zum StuPa haben wollt, schaut gerne auf unserer Website (https://www.studierendenparlament.uni-bayreuth.de/de/index.html) vorbei!
 
