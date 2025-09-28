@@ -118,7 +118,9 @@ Bevor du mit der Bearbeitung beginnst, erstelle immer einen neuen Branch:
 2. **Neuen Pull Request erstellen**: Folge den Anweisungen im Interface
 3. **Beschreibung hinzufügen**: Erkläre deine Änderungen
 
-[Screenshot: Pull Request erstellen]
+<img src="docs/image/vscode-web-pull-requests.png" alt="Pull Request Übersicht" width="1000" />
+
+<img src="docs/image/vscode-web-create-pull-request.png" alt="Pull Request erstellen" width="1000" />
 
 ## Workflow für Inhaltsanpassungen
 
