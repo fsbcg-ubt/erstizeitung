@@ -22,11 +22,11 @@ Für Prüfungen und Praktika müsst ihr euch anmelden. Je nach Studiengang (sieh
 
 ### Arabidopsis thaliana {#dschungel-abc-arabidopsis-thaliana .unnumbered}
 
-Falls du Biologe bist: Warte einfach ab. Falls du kein Biologe bist: Vergiss es schnell wieder.
+Falls du Biolog*in bist: Warte einfach ab. Falls du kein*e Biolog*in bist: Vergiss es schnell wieder.
 
 ### Audimax {#dschungel-abc-audimax .unnumbered}
 
-= Auditorium Maximum; können Studenten unserer Fakultät hauptsächlich zur Prüfungszeit mal von innen sehen.
+= Auditorium Maximum; können Studierende unserer Fakultät hauptsächlich zur Prüfungszeit mal von innen sehen.
 
 > Übrigens:
 > *Jeden Tag die Aushänge checken, vor allem in den ersten und letzten Wochen! In der Mitte des Semesters ist es aber auch recht wichtig. Hilft dabei, Seminare und Exkursionen nicht zu vergessen.*
@@ -49,7 +49,7 @@ Der erste akademische Grad, der von der Universität und allen anderen Hochschul
 
 ### BAföG {#dschungel-abc-bafoeg .unnumbered}
 
-Das Bundesausbildungsförderungsgesetz regelt die staatliche Unterstützung von Schülern und Studenten. Umgangssprachlich und durch die öffentliche Verwaltung selbst wird mit dem Begriff auch die sich aus dem Gesetz ergebende Förderung bezeichnet. Kurz gesagt, der eine bekommt es, der andere nicht. Konsequenzen: Neben der finanziellen Hilfe kannst du eventuell eine GEZ-Befreiung und Sonderkonditionen bei der Telekom beantragen. Auf jeden Fall hat man aber eine Menge Schreibkram. Es empfiehlt sich, den Antrag möglichst zeitig zu stellen und nicht zu vergessen, nach spätestens zehn Monaten einen Folgeantrag einzureichen. Vielleicht hast du dann auch schon gerade deine erste Auszahlung erhalten. Infos und Antrage gibt es im BAföG-Amt in der [ZUV](#dschungel-abc-zuv).
+Das Bundesausbildungsförderungsgesetz regelt die staatliche Unterstützung von Schüler*innen und Studierenden. Umgangssprachlich und durch die öffentliche Verwaltung selbst wird mit dem Begriff auch die sich aus dem Gesetz ergebende Förderung bezeichnet. Kurz gesagt, der eine bekommt es, der andere nicht. Konsequenzen: Neben der finanziellen Hilfe kannst du eventuell eine GEZ-Befreiung und Sonderkonditionen bei der Telekom beantragen. Auf jeden Fall hat man aber eine Menge Schreibkram. Es empfiehlt sich, den Antrag möglichst zeitig zu stellen und nicht zu vergessen, nach spätestens zehn Monaten einen Folgeantrag einzureichen. Vielleicht hast du dann auch schon gerade deine erste Auszahlung erhalten. Infos und Antrage gibt es im BAföG-Amt in der [ZUV](#dschungel-abc-zuv).
 
 ### BC {#dschungel-abc-bc .unnumbered}
 
@@ -69,7 +69,7 @@ Studentischer Neologismus für das Vegetieren in der [Bib](#dschungel-abc-bib).
 
 ### Bibliothek (Bib) {#dschungel-abc-bib .unnumbered}
 
-Liebster Aufenthaltsort aller Bibster, so ähnlich wie Hipster, nur mit mehr Büchern zum Lernen. Auch du wirst zu dieser Gattung gehören, sofern du Naturwissenschaftler bist.^^ Codewort für Lernen von Spökos: "Neocortex pumpen gehen".
+Liebster Aufenthaltsort aller Bibster, so ähnlich wie Hipster, nur mit mehr Büchern zum Lernen. Auch du wirst zu dieser Gattung gehören, sofern du Naturwissenschaftler*in bist.^^ Codewort für Lernen von Spökos: "Neocortex pumpen gehen".
 
 ### BOC {#dschungel-abc-boc .unnumbered}
 
@@ -85,7 +85,7 @@ Mit eurer BT-Kennung könnt ihr euch an den [CIP-Pools](#dschungel-abc-cip-pool)
 
 ### BtS {#dschungel-abc-bts .unnumbered}
 
-= biotechnologische Studenteninitative. Studenteninitiative im Bereich "Life science". Machen gelegentlich Exkursionen zu Unternehmen, die für bestimmte Studiengänge angerechnet werden können.
+= biotechnologische Studierendeninitiative. Studierendeninitiative im Bereich "Life science". Machen gelegentlich Exkursionen zu Unternehmen, die für bestimmte Studiengänge angerechnet werden können.
 
 ### BZKG {#dschungel-abc-bzkg .unnumbered}
 
@@ -268,7 +268,7 @@ Eure letzte Chance, wenn ihr die -> Nachklausuren nicht bestanden habt. Dabei ha
 
 ### HiWi {#dschungel-abc-hiwi .unnumbered}
 
-= Hilfswissenschaftler, d.h. "Knecht", der für Bezahlung an den Lehrstühlen mitarbeiten kann. Wenn ihr ein höheres Semester erreicht habt, dürft ihr auch Praktika, Seminare und Übungen betreuen.
+= Hilfswissenschaftler*in, d.h. "Knecht", der für Bezahlung an den Lehrstühlen mitarbeiten kann. Wenn ihr ein höheres Semester erreicht habt, dürft ihr auch Praktika, Seminare und Übungen betreuen.
 
 ### Hochschulrat {#dschungel-abc-hochschulrat .unnumbered}
 
@@ -425,7 +425,7 @@ Bei Problemen mit dem PC helfen die Leute vom ITS. Die Magier dort können nicht
 
 ### Praktikum {#dschungel-abc-praktikum .unnumbered}
 
-Im Wesentlichen ist dabei der Aufenthalt in einer kontrollierten Umgebung zu verstehen, wo entweder du mit Chemikalien oder Schüler mit dir experimentieren, bis es zur Explosion kommt.
+Im Wesentlichen ist dabei der Aufenthalt in einer kontrollierten Umgebung zu verstehen, wo entweder du mit Chemikalien oder Schüler*innen mit dir experimentieren, bis es zur Explosion kommt.
 
 ### Prüfungsamt {#dschungel-abc-pruefungsamt .unnumbered}
 
@@ -505,7 +505,7 @@ Ein Austauschprogramm; weiteres unter [Auslandsstudium](#dschungel-abc-auslandss
 
 ### Spöko {#dschungel-abc-spoeko .unnumbered}
 
-= Sportökonom, die coolste Sau der Uni; durchtrainert, brilliante [Intelligenz](#dschungel-abc-intelligenz) und das alles in einer Person: Sexappeal pur!
+= Sportökonom*in, die coolste Sau der Uni; durchtrainert, brilliante [Intelligenz](#dschungel-abc-intelligenz) und das alles in einer Person: Sexappeal pur!
 
 **Achtung: Der obenstehende Text kann Spuren von Ironie und Sarkasmus enthalten!**
 
@@ -515,7 +515,7 @@ Wolltest du schon immer mal Schwedisch, Kantonesisch oder Bambara sprechen? Dann
 
 ### Staatsexamen {#dschungel-abc-staatsexamen .unnumbered}
 
-Das ist der Abschluss den die Rechtswissenschaftler bzw. alle angehenden Lehrer schlussendlich zu erreichen suchen.
+Das ist der Abschluss den die Rechtswissenschaftler*innen bzw. alle angehenden Lehrkräfte schlussendlich zu erreichen suchen.
 
 > Schon gehört?<br>
 > *"Vive la resistance!"*<br>
@@ -619,7 +619,7 @@ Unterbrechung des Studiums aus persönlichen Gründen oder für lange [Praktika]
 
 ### Vollversammlung {#dschungel-abc-vollversammlung .unnumbered}
 
-Wird von der [Fachschaft](#dschungel-abc-fachschaft) einberufen, um wichtige Themen mit allen Studenten der [Fakultät](#dschungel-abc-fakultaet) zu diskutieren.
+Wird von der [Fachschaft](#dschungel-abc-fachschaft) einberufen, um wichtige Themen mit allen Studierenden der [Fakultät](#dschungel-abc-fakultaet) zu diskutieren.
 
 ### Vorlesung {#dschungel-abc-vorlesung .unnumbered}
 

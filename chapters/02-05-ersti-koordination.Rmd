@@ -1,4 +1,4 @@
-## Euere Ersti-Koordinatorin {#fachschaftler-fachschaftlerinnen-ersti-koordination}
+## Euere Ersti-Koordinatorin {#fachschaftsmitglieder-ersti-koordination}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/lucy.png")

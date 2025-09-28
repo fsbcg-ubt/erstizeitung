@@ -4,13 +4,13 @@
 knitr::include_graphics("images/bllv-titelbild.png")
 ```
 
-> "Du willst also wirklich Lehrer werden? Hast du dir das auch gut überlegt? Ich meine mit den Kindern und so... Na ja, wenigstens hast du dann lange Ferien!"
+> "Du willst also wirklich Lehrer\*in werden? Hast du dir das auch gut überlegt? Ich meine mit den Kindern und so... Na ja, wenigstens hast du dann lange Ferien!"
 
 Wenn Du mit deiner Entscheidung am Zweifeln bist oder einfach Rat und Unterstützung für Dein Studium brauchst, dann bist Du bei uns, der BLLV Studierendengruppe Bayreuth, richtig!
 
 Wir helfen Dir zu einem erfolgreichen Start auf dem Weg zu Deinem Traumberuf. Von Tipps zum Studienbeginn über weltweite Praktika bis zur Hilfe im Referendariat.
 Und wenn mal wieder nichts los ist in Bayreuth... Dann erlebe mit uns ein legendäres Teamwochenende, bei dem dich nicht nur spannenden Workshops erwarten,
-sondern Du dich auch auf lange Abende mit anderen Lehrämtlern vorbereiten solltest. ;)
+sondern Du dich auch auf lange Abende mit anderen Lehramtsstudierenden vorbereiten solltest. ;)
 
 Wir sind eine liebenswürdige und charmante Gruppe und freuen uns sehr Dich vielleicht schon am Mensaabend kennenzulernen. Ansonsten schau doch einfach an unserer Erstirunde im Cafe Kraftraum vorbei.
 

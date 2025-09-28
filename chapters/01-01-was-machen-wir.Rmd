@@ -7,7 +7,7 @@ Ab dem 13.10. könnt ihr eure Erstitüten in der Fachschaft abholen, die tolle D
 
 ### Studierendenbetreuung {-}
 
-Neben unserem Wohlfühlprogramm zum Eingewöhnen in das Studium für unsere Erstis bieten wir allen Studierenden das ganze Jahr über Hilfe an. Keine Frage bleibt bei uns unbeantwortet und kein Problem ungelöst. Zum einen versorgen wir euch mit dem Rüstzeug eines jeden guten Naturwissenschaftlers (**Kittel `r knitr::knit_child("data/preise-kittel.txt")`€**, **Sezierbesteck `r knitr::knit_child("data/preise-sezierbesteck.txt")`€**),, welches bei uns zum Selbstkostenpreis erworben werden kann. Zum anderen bieten wir auch Altklausur-Exemplare für viele Fächer an, sodass ihr euch optimal auf Prüfungen vorbereiten könnt. Die Altklausuren liegen digitalisiert vor und sind kostenfrei. Die  **Altklausuren** fragt ihr bitte per E-Mail an oder ihr kommt persönlich mit einem USB-Stick bei uns vorbei. Eure Anfrage wird so schnell wie möglich bearbeitet. All das funktioniert natürlich nur, wenn ihr eure geschriebenen Klausuren für die nachfolgenden Jahrgänge auch wieder vorbeibringt.
+Neben unserem Wohlfühlprogramm zum Eingewöhnen in das Studium für unsere Erstis bieten wir allen Studierenden das ganze Jahr über Hilfe an. Keine Frage bleibt bei uns unbeantwortet und kein Problem ungelöst. Zum einen versorgen wir euch mit dem Rüstzeug aller guten Naturwissenschaftler\*innen (**Kittel `r knitr::knit_child("data/preise-kittel.txt")`€**, **Sezierbesteck `r knitr::knit_child("data/preise-sezierbesteck.txt")`€**),, welches bei uns zum Selbstkostenpreis erworben werden kann. Zum anderen bieten wir auch Altklausur-Exemplare für viele Fächer an, sodass ihr euch optimal auf Prüfungen vorbereiten könnt. Die Altklausuren liegen digitalisiert vor und sind kostenfrei. Die  **Altklausuren** fragt ihr bitte per E-Mail an oder ihr kommt persönlich mit einem USB-Stick bei uns vorbei. Eure Anfrage wird so schnell wie möglich bearbeitet. All das funktioniert natürlich nur, wenn ihr eure geschriebenen Klausuren für die nachfolgenden Jahrgänge auch wieder vorbeibringt.
 
 ### Fachschaftsdienst {-}
 
@@ -15,7 +15,7 @@ Die obig genannten Service-Leistungen können ganzjährig während der Vorlesung
 
 ### Uni gestalten {-}
 
-Wir gestalten aktiv eure Studiengänge sowie Lehr- und Lernumgebungen, indem wir eure Interessen in diversen Gremien der Uni vertreten. In der Studienzuschusskommission entscheiden wir zusammen mit den Professor:innen, für welche Fächer zusätzliche Übungen und Tutorien finanziert werden, damit ihr besser auf die Prüfungen vorbereitet seid. Im Prüfungsausschuss vertreten wir eure Interessen, wenn es um Änderungen der Prüfungsordnung geht, und in der Fachgruppe bringen wir eure Anregungen und Vorschläge mit ein, um Probleme in einem Studiengang zu beseitigen und dessen Studierbarkeit zu verbessern.
+Wir gestalten aktiv eure Studiengänge sowie Lehr- und Lernumgebungen, indem wir eure Interessen in diversen Gremien der Uni vertreten. In der Studienzuschusskommission entscheiden wir zusammen mit den Professor\*innen, für welche Fächer zusätzliche Übungen und Tutorien finanziert werden, damit ihr besser auf die Prüfungen vorbereitet seid. Im Prüfungsausschuss vertreten wir eure Interessen, wenn es um Änderungen der Prüfungsordnung geht, und in der Fachgruppe bringen wir eure Anregungen und Vorschläge mit ein, um Probleme in einem Studiengang zu beseitigen und dessen Studierbarkeit zu verbessern.
 
 Auch im obersten Gremium der Fakultät, dem **Fakultätsrat**, sowie auf der Ebene der gesamten Universität, im [**Studierendenparlament**](#stupa), sind wir mit von der Partie und vertreten eure Interessen. Daher wendet euch bei Problemen und Anregungen an uns, sodass wir diese beheben können.
 
@@ -27,7 +27,7 @@ Was Veranstaltungen betrifft, gibt es vieles auf das ihr euch freuen dürft. Das
 
 Außerdem erwartet euch um Nikolaus unsere legendäre Nikofete, wobei der Nikolaus immer fleißige Helferlein braucht.🎅 Dabei verwandelt sich das ganze NW I in eine große Party-Area, mit einer Band plus DJ. Natürlich ist dabei auch für dein leibliches Wohl gesorgt.
 
-Darüber hinaus verleihen wir auch am Ende jedes Jahres die Goldene Kreide, mit der ein Dozent bzw. eine Dozentin für herausragende Lehre ausgezeichnet wird. Nach einer kurzen Ansprache und einem Vortrag der honorierten Lehrperson lassen wir die Feierlichkeiten bei Bier und Brezeln ausklingen. Um Kriterien für die Vergabe zu haben, führen wir am Ende jedes Semester eine Evaluation aller Grundvorlesungen einer Fachgruppe durch.
+Darüber hinaus verleihen wir auch am Ende jedes Jahres die Goldene Kreide, mit der ein\*e Dozent\*in für herausragende Lehre ausgezeichnet wird. Nach einer kurzen Ansprache und einem Vortrag der honorierten Lehrperson lassen wir die Feierlichkeiten bei Bier und Brezeln ausklingen. Um Kriterien für die Vergabe zu haben, führen wir am Ende jedes Semester eine Evaluation aller Grundvorlesungen einer Fachgruppe durch.
 
 ### Wie kannst du dich einbringen und wo sind wir zu finden {-}
 
