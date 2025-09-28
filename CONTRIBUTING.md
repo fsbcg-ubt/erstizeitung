@@ -81,6 +81,20 @@ Der VS Code Web-Editor bietet eine vollständige Entwicklungsumgebung im Browser
 
 <img src="docs/image/vscode-web-overview.png" alt="VS Code Web-Interface Übersicht" width="1000" />
 
+#### Branch erstellen (Wichtiger erster Schritt!)
+
+Bevor du mit der Bearbeitung beginnst, erstelle immer einen neuen Branch:
+
+1. **Branch-Symbol klicken**: Klicke unten links auf den aktuellen Branch-Namen (meist `main`)
+2. **Neuen Branch erstellen**: Wähle "Create new branch..." aus dem Menü
+3. **Branch benennen**: Verwende einen aussagekräftigen Namen nach der Namenskonvention
+4. **Von main erstellen**: Stelle sicher, dass der neue Branch vom `main` Branch abzweigt
+
+**Namenskonvention für Branches:**
+- Für Kapitel-spezifische Änderungen: `kapitel/beschreibung-der-aenderung`
+- Für übergreifende Änderungen (z.B. Sprachleitfaden): `allgemein/beschreibung`
+- Für technische Änderungen: Frag den Maintainer 🙃
+
 #### Dateien bearbeiten
 
 1. **Explorer öffnen**: Klicke auf das Datei-Symbol in der linken Seitenleiste
@@ -118,21 +132,9 @@ Diese Anleitung beschreibt den Workflow für die empfohlene Browser-basierte Bea
 
 ### Schritt-für-Schritt Anleitung
 
-#### 1. [Branch](#glossar-wichtiger-begriffe) erstellen
+> **Wichtig:** Du solltest bereits einen neuen Branch erstellt haben, wie im vorherigen Abschnitt beschrieben. Falls nicht, erstelle jetzt einen Branch bevor du fortfährst!
 
-Erstelle für jede Änderung einen neuen [Branch](#glossar-wichtiger-begriffe) direkt im VS Code Web-Editor:
-
-1. **Branch-Symbol klicken**: Klicke unten links auf den aktuellen Branch-Namen (meist `main`)
-2. **Neuen Branch erstellen**: Wähle "Create new branch..." aus dem Menü
-3. **Branch benennen**: Verwende einen aussagekräftigen Namen nach der Namenskonvention
-4. **Von main erstellen**: Stelle sicher, dass der neue Branch vom `main` Branch abzweigt
-
-**Namenskonvention für Branches:**
-- Für Kapitel-spezifische Änderungen: `kapitel/beschreibung-der-aenderung`
-- Für übergreifende Änderungen (z.B. Sprachleitfaden): `allgemein/beschreibung`
-- Für technische Änderungen: Frag den Maintainer 🙃
-
-#### 2. Änderungen vornehmen
+#### 1. Änderungen vornehmen
 
 Bearbeite die entsprechenden `.Rmd` Dateien direkt im VS Code Web-Editor:
 
@@ -151,7 +153,7 @@ chapters/
 └── ...
 ```
 
-#### 3. [Commits](#glossar-wichtiger-begriffe) erstellen
+#### 2. [Commits](#glossar-wichtiger-begriffe) erstellen
 
 Speichere deine Änderungen als Commit im VS Code Web-Editor:
 
@@ -180,7 +182,7 @@ Speichere deine Änderungen als Commit im VS Code Web-Editor:
 
 </details>
 
-#### 4. [Pull Request](#glossar-wichtiger-begriffe) erstellen
+#### 3. [Pull Request](#glossar-wichtiger-begriffe) erstellen
 
 Erstelle einen Pull Request direkt im VS Code Web-Editor:
 
