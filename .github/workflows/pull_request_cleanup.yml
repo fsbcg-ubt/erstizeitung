@@ -1,0 +1,152 @@
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+name: "Clean up PR preview repository"
+
+env:
+  PR_REPO_NAME: ${{ github.event.repository.name }}_${{ github.event.pull_request.node_id }}
+
+jobs:
+  delete_preview_repository:
+    name: "Delete Preview Repository"
+    runs-on: ubuntu-latest
+    outputs:
+      deletion_status: ${{ steps.set_outputs.outputs.status }}
+      deleted_repo_name: ${{ steps.set_outputs.outputs.repo_name }}
+      deletion_timestamp: ${{ steps.set_outputs.outputs.timestamp }}
+    steps:
+      - name: "Check if preview repository exists"
+        id: check_repo
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          script: |
+            try {
+              const response = await github.rest.repos.get({
+                owner: 'fsbcg-ubt',
+                repo: '${{ env.PR_REPO_NAME }}'
+              });
+              console.log(`Repository ${response.data.name} exists and will be deleted.`);
+              core.notice(`Found preview repository: ${response.data.name}`);
+              return true;
+            } catch (error) {
+              if (error.status === 404) {
+                console.log(`Repository ${{ env.PR_REPO_NAME }} does not exist or was already deleted.`);
+                core.warning(`Repository ${{ env.PR_REPO_NAME }} does not exist or was already deleted.`);
+                return false;
+              }
+              core.error(`Unexpected error checking repository: ${error.message}`);
+              throw error;
+            }
+          result-encoding: string
+
+      - name: "Delete preview repository"
+        id: delete_repo
+        if: steps.check_repo.outputs.result == 'true'
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          script: |
+            try {
+              await github.rest.repos.delete({
+                owner: 'fsbcg-ubt',
+                repo: '${{ env.PR_REPO_NAME }}'
+              });
+              console.log(`Successfully deleted repository: ${{ env.PR_REPO_NAME }}`);
+              core.notice(`Successfully deleted preview repository: ${{ env.PR_REPO_NAME }}`);
+              return 'success';
+            } catch (error) {
+              console.error(`Failed to delete repository: ${error.message}`);
+              core.error(`Failed to delete repository: ${error.message}`);
+              if (error.status !== 404) {
+                throw error;
+              }
+              return 'already_deleted';
+            }
+          result-encoding: string
+
+      - name: "Comment on PR about cleanup"
+        if: steps.check_repo.outputs.result == 'true'
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const commentBody = `🗑️ Das Preview-Repository \`${{ env.PR_REPO_NAME }}\` wurde automatisch gelöscht.`;
+
+            try {
+              await github.rest.issues.createComment({
+                owner: owner,
+                repo: repo,
+                issue_number: issueNumber,
+                body: commentBody
+              });
+            } catch (error) {
+              console.error(`Failed to create comment: ${error.message}`);
+              // Don't fail the workflow if comment creation fails
+            }
+
+      - name: "Set outputs"
+        id: set_outputs
+        if: always()
+        run: |
+          if [[ "${{ steps.check_repo.outputs.result }}" == "false" ]]; then
+            echo "status=skipped" >> "$GITHUB_OUTPUT"
+          elif [[ "${{ steps.delete_repo.outputs.result }}" == "success" ]]; then
+            echo "status=success" >> "$GITHUB_OUTPUT"
+          elif [[ "${{ steps.delete_repo.outputs.result }}" == "already_deleted" ]]; then
+            echo "status=already_deleted" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=failed" >> "$GITHUB_OUTPUT"
+          fi
+          echo "repo_name=${{ env.PR_REPO_NAME }}" >> "$GITHUB_OUTPUT"
+          echo "timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> "$GITHUB_OUTPUT"
+
+      - name: "Generate Job Summary Report"
+        if: always()
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_USER: ${{ github.event.pull_request.user.login }}
+        run: |
+          {
+            echo "## 🗑️ Preview Repository Cleanup Report"
+            echo ""
+
+            # Status badge
+            if [[ "${{ steps.check_repo.outputs.result }}" == "false" ]]; then
+              echo "### Status: ⚠️ Skipped"
+              echo "Repository did not exist or was already deleted."
+            elif [[ "${{ steps.delete_repo.outputs.result }}" == "success" ]]; then
+              echo "### Status: ✅ Success"
+              echo "Repository successfully deleted."
+            elif [[ "${{ steps.delete_repo.outputs.result }}" == "already_deleted" ]]; then
+              echo "### Status: ℹ️ Already Deleted"
+              echo "Repository was already deleted (404 during deletion attempt)."
+            else
+              echo "### Status: ❌ Failed"
+              echo "Failed to delete repository."
+            fi
+
+            echo ""
+            echo "### Details"
+            echo ""
+            echo "| Property | Value |"
+            echo "|----------|-------|"
+            echo "| **Repository Name** | \`${{ env.PR_REPO_NAME }}\` |"
+            echo "| **PR Number** | [#${{ github.event.pull_request.number }}](${{ github.event.pull_request.html_url }}) |"
+            echo "| **PR Title** | ${PR_TITLE} |"
+            echo "| **PR Author** | [@${PR_USER}](https://github.com/${PR_USER}) |"
+            echo "| **PR Merged** | ${{ github.event.pull_request.merged && '✅ Yes' || '❌ No' }} |"
+            echo "| **Cleanup Time** | $(date -u +"%Y-%m-%d %H:%M:%S UTC") |"
+            echo "| **Workflow Run** | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |"
+
+            echo ""
+            echo "---"
+            echo "*This cleanup was triggered by the closure of PR #${{ github.event.pull_request.number }}*"
+          } >> "$GITHUB_STEP_SUMMARY"
