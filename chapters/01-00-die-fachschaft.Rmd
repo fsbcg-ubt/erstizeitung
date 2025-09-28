@@ -5,3 +5,8 @@ Hallo, an dieser Stelle dürfen wir uns einmal vorstellen. Wir sind die Fachscha
 ## Was ist die Fachschaft? {#fachschaft-was-ist-das}
 
 Wir sind Studierende der Fakultät II, also der Biologie, Chemie und Geowissenschaften, die die Uni aktiv mitgestalten und in der Fachschaft BCG organisiert sind. Wenn du Hilfe zum Überleben im Uni-Dschungel brauchst oder Lust hast, dich in der Gestaltung deines Studiums, der Fakultät und der Uni mit einzubringen, bist du bei uns herzlich willkommen!
+
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/gruppenbild-fachschaft-2025.png")
+```
