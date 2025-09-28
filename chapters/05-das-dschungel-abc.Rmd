@@ -110,7 +110,7 @@ So wird der Hauptteil der Universität genannt, daneben gibt es noch folgende Au
 
 ### Campus App {#dschungel-abc-campus-app .unnumbered}
 
-[UniNow](#dschungel-abc-uninow)
+[UBT App](#dschungel-abc-ubt-app)
 
 ### CampusCard {#dschungel-abc-campuscard .unnumbered}
 
@@ -587,7 +587,7 @@ Steht nicht für einen Töpferkurs der Volkshochschule, sondern für Tierökolog
 
 Erklärung: trivial.
 
-### UBT-App {#dschungel-abc-uninow .unnumbered}
+### UBT-App {#dschungel-abc-ubt-app .unnumbered}
 
 Das ist die Campus App schlechthin! Noten, Stundenplan, Mensa, Mails, Bibliothek, News und sogar ein eigenes Ersti-Modul. Außerdem bekommt ihr hier die neusten Informationen von der Fachschaft. **Ersti-Code: BT-BCG**
 
