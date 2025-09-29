@@ -8,7 +8,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
+      "managerFilePatterns": [
+        "/^\\.github/workflows/[^/]+\\.ya?ml$/"
+      ],
       "matchStrings": [
         "image:\\s+(?<depName>[^\\s:]+?):(?<currentValue>[^@\\s]+)@(?<currentDigest>sha256:[a-f0-9]+)"
       ],
@@ -17,14 +19,22 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["github-tags"],
+      "matchDatasources": [
+        "github-tags"
+      ],
       "groupName": "github workflow actions",
-      "schedule": ["every weekend"]
+      "schedule": [
+        "every weekend"
+      ]
     },
     {
-      "matchDatasources": ["docker"],
+      "matchDatasources": [
+        "docker"
+      ],
       "groupName": "docker dependencies",
-      "schedule": ["every weekend"]
+      "schedule": [
+        "every weekend"
+      ]
     }
   ]
 }
