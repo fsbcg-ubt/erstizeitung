@@ -8,15 +8,13 @@ jobs:
   build_gitbook:
     name: "Render GitBook"
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/fsbcg-ubt/docker-bookdown:0.3.7@sha256:3e45bec722a0b48560338f516ba2737b2b07bddf38a81aade9ff2b207e1822bc
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - name: "Render book as GitBook"
-        uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3.0.0
-        with:
-          image: ghcr.io/fsbcg-ubt/docker-bookdown:0.3.7@sha256:3e45bec722a0b48560338f516ba2737b2b07bddf38a81aade9ff2b207e1822bc
-          options: --mount src=${{ github.workspace }},target=/book,type=bind
-          run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+        run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
       - name: "Upload artifact"
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
