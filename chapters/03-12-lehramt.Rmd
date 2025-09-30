@@ -1,7 +1,7 @@
 ## Lehramt {#lehramt}
 
 An der Uni Bayreuth gibt es je nach Schulart zwei verschiedene Arten des Lehramtsstudiums: Das gymnasiale Lehramt mit dem Zwischenziel “Bachelor of Science” (in deinem Hauptfach) und “Master of Education” 
-oder das Realschullehramt mit dem "Bachelor of Education" (in der Didaktik eines deiner Fächer) und "Master of Education". Egal wie ist das Staatsexamen der Abschluss deines Studiums, bevor du als Referendar\*in in der Schule Praxiserfahrung sammelst. 
+oder das Realschullehramt mit dem "Bachelor of Education" (in der Didaktik eines deiner Fächer) und "Master of Education". Egal wie ist das Staatsexamen der Abschluss deines Studiums, bevor du als Referendar\*in in der Schule Praxiserfahrung sammelst.
 Das ist eine stressige Zeit mit vielen weiteren Regeln, aber das ist noch weit hin… Bis dahin ist erstmal ein Studium zu genießen! <3
 
 > Zitat für Zwischendurch:<br>
@@ -10,7 +10,7 @@ Das ist eine stressige Zeit mit vielen weiteren Regeln, aber das ist noch weit h
 
 Wenn ihr bei uns, also in der Fakultät 2 angekommen seid, dann studiert ihr Lehramt für Realschule oder Gymnasium mit einem der Fächer Chemie, Biologie oder Geografie. Dabei wählen die Gymis ein Hauptfach, in welchem sie auch eine vollwertige Bachelorarbeit schreiben. 
 Diese bezieht sich dann auch nur auf fachliche Dinge und hat in erster Linie nichts mit dem Unterrichten zu tun. Deshalb haben die Gymis auch viel mehr von ihrem Hauptfach, etwas weniger von ihrem Nebenfach und nur ganz wenig Erziehungswissenschaft. 
-Die Realschullehrer\*innen studieren stattdessen ihre Fächer gleichwertig, haben also keine Gewichtung und fangen schon früher und mehr EWS-Module (Erziehungswissenschaften 🤗). Aber keine Angst liebe Realis; 
+Die Realschullehrer\*innen studieren stattdessen ihre Fächer gleichwertig, haben also keine Gewichtung und fangen schon früher und mehr EWS-Module (Erziehungswissenschaften 🤗). Aber keine Angst liebe Realis;
 Nach dem Bachelor der Gymis dreht sich das Spiel um und die holen im Master den ganzen EWS-Kram nach ^^  
 
 ```{r, echo=FALSE, out.width="400pt"}
@@ -39,16 +39,17 @@ Der Autor fiel aus allen Wolken, als er erfuhr, dass Wartezeiten von einem halbe
 Je nach Fächerkombination würde ich euch empfehlen, die jeweiligen Seiten für die Fachstudenten ebenfalls zu lesen. Ob Uni-Praktika für Chemiker\*innen,
 Exkursionen für Geograf\*innen oder Pflanzenkurse für Biolog\*innen - wichtige Informationen, die auch für Lehramtsstudierende relevant sind, gibt es dort.
 
-Des Weiteren kann ich euch raten, die Kurse der Erziehungswissenschaften frühzeitig zu belegen. So ist es möglich, euer EWS-Examen vorzuziehen und euch zusätzlichen Stress auf der Examens-Schlussgerade zu ersparen („Das ist ein sehr guter Tipp“ sagte der\*die überarbeitende Studierende dieses Artikels). 
+Des Weiteren kann ich euch raten, die Kurse der Erziehungswissenschaften frühzeitig zu belegen. So ist es möglich, euer EWS-Examen vorzuziehen und euch zusätzlichen Stress auf der Examens-Schlussgerade zu ersparen („Das ist ein sehr guter Tipp“ sagte der\*die überarbeitende Studierende dieses Artikels).
+Falls doch alles zu viel wirkt und ihr nicht so recht wisst, was ihr jetzt wie, wo und wann belegt, gibt es das [FüR Lehramt.] (https://www.ressort-lehramt.uni-bayreuth.de/de/index.html) Das ist eure Anlaufstelle für alle Fragen und Probleme rund um das Lehramtstudium.
 
 #### Und noch ein persönlicher Hinweis {-} 
 
-Gerade die ersten Semester werden ihr fast den gleichen Stundenplan wie Fachstudierende haben. Der Wechsel ins Fach ist also fließend, eigene Fachveranstaltungen nur für Lehrämter wie bei einigen anderen Universitäten sind kaum vorgesehen.  
+Gerade die ersten Semester werden ihr fast den gleichen Stundenplan wie Fachstudierende haben. Der Wechsel ins Fach ist also fließend, eigene Fachveranstaltungen nur für Lehrämter wie bei einigen anderen Universitäten sind kaum vorgesehen.
 
-Deshalb hier ein persönlicher Hinweis: Ihr studiert da was richtig Schweres. Eure Kommiliton\*innen, lieben ‚Fachstudis‘, haben nur ein Fach, worauf sie sich das ganze Studium lang stürzen. Bei euch ist das anders. Ihr müsst nämlich gleich drei Sachen (EWS + 2 Fächer) richtig gut lernen und das kann bisweilen echt hart sein. 
-Manchmal wird es dazu kommen, dass ihr was machen müsst, wofür die Grundlagen in anderen Modulen schon gelegt wurden, die ihr als Lehramtsstudierende aber gar nicht hattet. Besonders toll sind auch die Stundenplanüberschneidungen verschiedener Module aus einzelnen Fächern, die ihr sicherlich früh kennen lernen werdet (Tipp: Die EWS-Sachen lassen sich gut schieben 
+Deshalb hier ein persönlicher Hinweis: Ihr studiert da was richtig Schweres. Eure Kommiliton\*innen, lieben ‚Fachstudis‘, haben nur ein Fach, worauf sie sich das ganze Studium lang stürzen. Bei euch ist das anders. Ihr müsst nämlich gleich drei Sachen (EWS + 2 Fächer) richtig gut lernen und das kann bisweilen echt hart sein.
+Manchmal wird es dazu kommen, dass ihr was machen müsst, wofür die Grundlagen in anderen Modulen schon gelegt wurden, die ihr als Lehramtsstudierende aber gar nicht hattet. Besonders toll sind auch die Stundenplanüberschneidungen verschiedener Module aus einzelnen Fächern, die ihr sicherlich früh kennen lernen werdet (Tipp: Die EWS-Sachen lassen sich gut schieben
 und sind so ein super Lückenfüller!). Das ist manchmal hart, aber ihr schafft das mindestens genauso gut wie die vielen Generationen vor euch. Unserer Erfahrung nach ist es deshalb besonders wichtig: Lernt Leute kennen, übt mit denen, helft euch gegenseitig oder lasst euch helfen. Spätestens in der Fachschaft habt ihr IMMER eine Anlaufstation zu Leuten 
--auch Lehramtsstudierenden-, die das auch schon überstanden haben. Das Lehramtsstudium ist richtig erfüllend und vielseitig. Also habt Spaß und viel Erfolg!!  
+-auch Lehramtsstudierenden-, die das auch schon überstanden haben. Das Lehramtsstudium ist richtig erfüllend und vielseitig. Also habt Spaß und viel Erfolg!!
 
 Ein letzter Tipp vor der Flut an Internet- links mit noch mehr Informationen: Gebt nicht auf!
 Am Anfang kann so einiges überfordernd und unlösbar scheinen (von der Suche nach den verstecktesten Hörsälen bis zu den Chemie-übungsblättern), aber mit der Zeit findet ihr euren Weg und auch den verborgensten Seminarraum.
