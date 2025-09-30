@@ -5,9 +5,9 @@
 Wie im Erstibrief zu lesen ist, gibt es dieses Jahr wieder einige Veranstaltungen für euch. Darunter fallen die Kneipentour, Stadtralley und das Erstiwochenende auf Wallenfels. Für die Kneipentour sind zwei Termine vorgesehen (09.10. und 17.10.25). Die Stadtralley findet am Samstag, dem 11.10., also direkt vor Vorlesungsbeginn, statt. Das Erstiwochenende findet Anfang November statt. Die Anmeldung zum Erstiwochenende folgt noch.<br>
 Ab dem 13.10. könnt ihr eure Erstitüten in der Fachschaft abholen, die tolle Dinge beinhaltet!
 
-### Studierendenbetreuung {-}
+### Studibetreuung {-}
 
-Neben unserem Wohlfühlprogramm zum Eingewöhnen in das Studium für unsere Erstis bieten wir allen Studierenden das ganze Jahr über Hilfe an. Keine Frage bleibt bei uns unbeantwortet und kein Problem ungelöst. Zum einen versorgen wir euch mit dem Rüstzeug aller guten Naturwissenschaftler\*innen (**Kittel `r knitr::knit_child("data/preise-kittel.txt")`€**, **Sezierbesteck `r knitr::knit_child("data/preise-sezierbesteck.txt")`€**),, welches bei uns zum Selbstkostenpreis erworben werden kann. Zum anderen bieten wir auch Altklausur-Exemplare für viele Fächer an, sodass ihr euch optimal auf Prüfungen vorbereiten könnt. Die Altklausuren liegen digitalisiert vor und sind kostenfrei. Die  **Altklausuren** fragt ihr bitte per E-Mail an oder ihr kommt persönlich mit einem USB-Stick bei uns vorbei. Eure Anfrage wird so schnell wie möglich bearbeitet. All das funktioniert natürlich nur, wenn ihr eure geschriebenen Klausuren für die nachfolgenden Jahrgänge auch wieder vorbeibringt.
+Neben unserem Wohlfühlprogramm zum Eingewöhnen in das Studium für unsere Erstis bieten wir allen Studierenden das ganze Jahr über Hilfe an. Keine Frage bleibt bei uns unbeantwortet und kein Problem ungelöst. Zum einen versorgen wir euch mit dem Rüstzeug aller guten Naturwissenschaftler\*innen (**Kittel `r knitr::knit_child("data/preise-kittel.txt")`€**, **Sezierbesteck `r knitr::knit_child("data/preise-sezierbesteck.txt")`€**), welches bei uns zum Selbstkostenpreis erworben werden kann. Zum anderen bieten wir auch Altklausur-Exemplare für viele Fächer an, sodass ihr euch optimal auf Prüfungen vorbereiten könnt. Die Altklausuren liegen digitalisiert vor und sind kostenfrei. Die  **Altklausuren** fragt ihr bitte per E-Mail an oder ihr kommt persönlich mit einem USB-Stick bei uns vorbei. Eure Anfrage wird so schnell wie möglich bearbeitet. All das funktioniert natürlich nur, wenn ihr eure geschriebenen Klausuren für die nachfolgenden Jahrgänge auch wieder vorbeibringt.
 
 ### Fachschaftsdienst {-}
 
@@ -27,7 +27,7 @@ Was Veranstaltungen betrifft, gibt es vieles auf das ihr euch freuen dürft. Das
 
 Außerdem erwartet euch um Nikolaus unsere legendäre Nikofete, wobei der Nikolaus immer fleißige Helferlein braucht.🎅 Dabei verwandelt sich das ganze NW I in eine große Party-Area, mit einer Band plus DJ. Natürlich ist dabei auch für dein leibliches Wohl gesorgt.
 
-Darüber hinaus verleihen wir auch am Ende jedes Jahres die Goldene Kreide, mit der ein\*e Dozent\*in für herausragende Lehre ausgezeichnet wird. Nach einer kurzen Ansprache und einem Vortrag der honorierten Lehrperson lassen wir die Feierlichkeiten bei Bier und Brezeln ausklingen. Um Kriterien für die Vergabe zu haben, führen wir am Ende jedes Semester eine Evaluation aller Grundvorlesungen einer Fachgruppe durch.
+Darüber hinaus verleihen wir auch am Anfang jedes Jahres die Goldene Kreide, mit der ein\*e Dozent\*in für herausragende Lehre ausgezeichnet wird. Nach einer kurzen Ansprache und einem Vortrag der honorierten Lehrperson lassen wir die Feierlichkeiten bei Bier und Brezeln ausklingen. Um Kriterien für die Vergabe zu haben, führen wir am Ende jedes Semester eine Evaluation aller Vorlesungen einer Fachgruppe durch.
 
 ### Wie kannst du dich einbringen und wo sind wir zu finden {-}
 
