@@ -1,4 +1,4 @@
-## Der 1. Vorstand {#fachschaftler-fachschaftlerinnen-erster-vorsitz}
+## Der 1. Vorstand {#fachschaftsmitglieder-erster-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/miri.png")

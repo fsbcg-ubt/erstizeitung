@@ -1,4 +1,4 @@
-## Der 2.Vorstand {#fachschaftler-fachschaftlerinnen-zweiter-vorsitz}
+## Der 2.Vorstand {#fachschaftsmitglieder-zweiter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/janik.png")

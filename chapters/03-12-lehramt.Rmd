@@ -1,7 +1,7 @@
 ## Lehramt {#lehramt}
 
 An der Uni Bayreuth gibt es je nach Schulart zwei verschiedene Arten des Lehramtsstudiums: Das gymnasiale Lehramt mit dem Zwischenziel “Bachelor of Science” (in deinem Hauptfach) und “Master of Education” 
-oder das Realschullehramt mit dem “Bachelor of Education” (in der Didaktik eines deiner Fächer) und “Master of Education”. Egal wie ist das Staatsexamen der Abschluss deines Studiums, bevor du als ReferendarIn in der Schule Praxiserfahrung sammelst. 
+oder das Realschullehramt mit dem "Bachelor of Education" (in der Didaktik eines deiner Fächer) und "Master of Education". Egal wie ist das Staatsexamen der Abschluss deines Studiums, bevor du als Referendar\*in in der Schule Praxiserfahrung sammelst. 
 Das ist eine stressige Zeit mit vielen weiteren Regeln, aber das ist noch weit hin… Bis dahin ist erstmal ein Studium zu genießen! <3
 
 > Zitat für Zwischendurch:<br>
@@ -10,7 +10,7 @@ Das ist eine stressige Zeit mit vielen weiteren Regeln, aber das ist noch weit h
 
 Wenn ihr bei uns, also in der Fakultät 2 angekommen seid, dann studiert ihr Lehramt für Realschule oder Gymnasium mit einem der Fächer Chemie, Biologie oder Geografie. Dabei wählen die Gymis ein Hauptfach, in welchem sie auch eine vollwertige Bachelorarbeit schreiben. 
 Diese bezieht sich dann auch nur auf fachliche Dinge und hat in erster Linie nichts mit dem Unterrichten zu tun. Deshalb haben die Gymis auch viel mehr von ihrem Hauptfach, etwas weniger von ihrem Nebenfach und nur ganz wenig Erziehungswissenschaft. 
-Die RealschullehrerInnen studieren stattdessen ihre Fächer gleichwertig, haben also keine Gewichtung und fangen schon früher und mehr EWS-Module (Erziehungswissenschaften 🤗). Aber keine Angst liebe Realis; 
+Die Realschullehrer\*innen studieren stattdessen ihre Fächer gleichwertig, haben also keine Gewichtung und fangen schon früher und mehr EWS-Module (Erziehungswissenschaften 🤗). Aber keine Angst liebe Realis; 
 Nach dem Bachelor der Gymis dreht sich das Spiel um und die holen im Master den ganzen EWS-Kram nach ^^  
 
 ```{r, echo=FALSE, out.width="400pt"}
@@ -25,7 +25,7 @@ ob euch der Beruf Spaß macht und woran man alles denken muss und sollte, Sachen
 
 > Zitat für Zwischendurch:<br>
 > *"Hm, dann schneiden wir ihr halt mal die Eier ab!"*<br>
-> Biologie-Student beim Sezieren einer Ratte
+> Biologie-Studierende\*r beim Sezieren einer Ratte
 
 Zuerst gäbe es da das “Orientierungspraktikum”, welches je nach Möglichkeit bereits vor Studienbeginn oder nach dem ersten Semester abgelegt werden sollte. Es umfasst drei Wochen Schulpraktikum - im Optimalfall zwei Wochen an der Schule für die ihr studiert 
 (also Realschule oder Gymnasium) und eine Woche an einer alternativen Schulform (z.B. Grundschule oder Hauptschule). Wahrscheinlich haben das einige von euch schon absolviert, den anderen würde ich es ans Herz legen sich in den ersten Semestern schon drum zu kümmern. 
@@ -36,24 +36,24 @@ Manch einer wird sich vielleicht fragen, wieso ich in einer Erstizeitung bereits
 Der Autor fiel aus allen Wolken, als er erfuhr, dass Wartezeiten von einem halben Jahr oder mehr für einen Platz im Blockpraktikum an Bayreuther Gymnasien die völlige Norm sind. 😐 Etwas besser soll die Situation auf dem Land sein. Nichtsdestotrotz meldet euch frühzeitig bei den Schulen eurer Wahl, damit das Blockpraktikum 
 (optimal jeweils 3 Wochen nach dem 2, 3, 4 oder 5. Semester) gemäß eurer Planwünsche stattfinden kann. 
 
-Je nach Fächerkombination würde ich euch empfehlen, die jeweiligen Seiten für die Fachstudenten ebenfalls zu lesen. Ob Uni-Praktika für die Chemiker,
-Exkursionen für die Geografen oder Pflanzenkurse für die Biologen - wichtige Informationen, die auch für Lehramtsstudenten relevant sind, gibt es dort.
+Je nach Fächerkombination würde ich euch empfehlen, die jeweiligen Seiten für die Fachstudenten ebenfalls zu lesen. Ob Uni-Praktika für Chemiker\*innen,
+Exkursionen für Geograf\*innen oder Pflanzenkurse für Biolog\*innen - wichtige Informationen, die auch für Lehramtsstudierende relevant sind, gibt es dort.
 
-Des Weiteren kann ich euch raten, die Kurse der Erziehungswissenschaften frühzeitig zu belegen. So ist es möglich, euer EWS-Examen vorzuziehen und euch zusätzlichen Stress auf der Examens-Schlussgerade zu ersparen („Das ist ein sehr guter Tipp“ sagte der Überarbeitende Student dieses Artikels). 
+Des Weiteren kann ich euch raten, die Kurse der Erziehungswissenschaften frühzeitig zu belegen. So ist es möglich, euer EWS-Examen vorzuziehen und euch zusätzlichen Stress auf der Examens-Schlussgerade zu ersparen („Das ist ein sehr guter Tipp“ sagte der\*die überarbeitende Studierende dieses Artikels). 
 
 #### Und noch ein persönlicher Hinweis {-} 
 
-Gerade die ersten Semester werden ihr fast den gleichen Stundenplan wie Fachstudenten haben. Der Wechsel ins Fach ist also fließend, eigene Fachveranstaltungen nur für Lehrämter wie bei einigen anderen Universitäten sind kaum vorgesehen.  
+Gerade die ersten Semester werden ihr fast den gleichen Stundenplan wie Fachstudierende haben. Der Wechsel ins Fach ist also fließend, eigene Fachveranstaltungen nur für Lehrämter wie bei einigen anderen Universitäten sind kaum vorgesehen.  
 
-Deshalb hier ein persönlicher Hinweis: Ihr studiert da was richtig Schweres. Eure Kommilitonen, lieben ‚Fachstudis‘, haben nur ein Fach, worauf sie sich das ganze Studium lang stürzen. Bei euch ist das anders. Ihr müsst nämlich gleich drei Sachen (EWS + 2 Fächer) richtig gut lernen und das kann bisweilen echt hart sein. 
-Manchmal wird es dazu kommen, dass ihr was machen müsst, wofür die Grundlagen in anderen Modulen schon gelegt wurden, die ihr als Lehrämtler aber gar nicht hattet. Besonders toll sind auch die Stundenplanüberschneidungen verschiedener Module aus einzelnen Fächern, die ihr sicherlich früh kennen lernen werdet (Tipp: Die EWS-Sachen lassen sich gut schieben 
+Deshalb hier ein persönlicher Hinweis: Ihr studiert da was richtig Schweres. Eure Kommiliton\*innen, lieben ‚Fachstudis‘, haben nur ein Fach, worauf sie sich das ganze Studium lang stürzen. Bei euch ist das anders. Ihr müsst nämlich gleich drei Sachen (EWS + 2 Fächer) richtig gut lernen und das kann bisweilen echt hart sein. 
+Manchmal wird es dazu kommen, dass ihr was machen müsst, wofür die Grundlagen in anderen Modulen schon gelegt wurden, die ihr als Lehramtsstudierende aber gar nicht hattet. Besonders toll sind auch die Stundenplanüberschneidungen verschiedener Module aus einzelnen Fächern, die ihr sicherlich früh kennen lernen werdet (Tipp: Die EWS-Sachen lassen sich gut schieben 
 und sind so ein super Lückenfüller!). Das ist manchmal hart, aber ihr schafft das mindestens genauso gut wie die vielen Generationen vor euch. Unserer Erfahrung nach ist es deshalb besonders wichtig: Lernt Leute kennen, übt mit denen, helft euch gegenseitig oder lasst euch helfen. Spätestens in der Fachschaft habt ihr IMMER eine Anlaufstation zu Leuten 
--auch Lehrämtlern-, die das auch schon überstanden haben. Das Lehramtsstudium ist richtig erfüllend und vielseitig. Also habt Spaß und viel Erfolg!!  
+-auch Lehramtsstudierenden-, die das auch schon überstanden haben. Das Lehramtsstudium ist richtig erfüllend und vielseitig. Also habt Spaß und viel Erfolg!!  
 
 Ein letzter Tipp vor der Flut an Internet- links mit noch mehr Informationen: Gebt nicht auf!
 Am Anfang kann so einiges überfordernd und unlösbar scheinen (von der Suche nach den verstecktesten Hörsälen bis zu den Chemie-übungsblättern), aber mit der Zeit findet ihr euren Weg und auch den verborgensten Seminarraum.
 
-Und nun zum Abschluss noch die Links zu den Didaktik-Lehrstühlen, die speziell für Lehrämtler relevant sind:<br>
+Und nun zum Abschluss noch die Links zu den Didaktik-Lehrstühlen, die speziell für Lehramtsstudierende relevant sind:<br>
 https://didaktikchemie.uni-bayreuth.de/de/index.html<br>
 https://www.geographiedidaktik.uni-bayreuth.de/de/index.html
 

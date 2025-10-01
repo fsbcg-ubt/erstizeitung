@@ -1,4 +1,4 @@
-## Der 3. Vorstand {#fachschaftler-fachschaftlerinnen-dritter-vorsitz}
+## Der 3. Vorstand {#fachschaftsmitglieder-dritter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
 knitr::include_graphics("images/fachschaftler/simon.png")
