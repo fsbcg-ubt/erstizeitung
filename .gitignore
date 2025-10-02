@@ -1,3 +1,24 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+./Icon?
+ehthumbs.db
+Thumbs.db
+
+# Jetbrains-Project
+/.idea/
+!/.idea/icon.svg
+/.fleet/
+*.http
+/.run/
+
+# VSCode-Project
+/.vscode/
+!/.vscode/settings.json
+
 _book/
 _bookdown_files/
 libs/
@@ -10,3 +31,25 @@ libs/
 .Rhistory
 .RData
 .Ruserdata
+
+# AI/LLM Development Tools
+.claude/
+.cursor/
+.cursorrules
+.tabnine/
+.ai/
+.llm/
+.aider/
+.aiderignore
+.kite/
+.codewhispererignore
+
+# Local AI/LLM overrides
+*.local.md
+*.cursorignore.local
+*.cursorindexingignore.local
+*.tabnineignore.local
+
+# AI/LLM context files (keep AGENTS.md)
+CLAUDE.md
+GEMINI.md
