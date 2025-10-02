@@ -1,0 +1,61 @@
+# Dokumentation: https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github
+
+code_review:
+  enabled: true
+  comment_severity_threshold: LOW
+  max_review_comments: null
+  pull_request_opened:
+    enabled: true
+  ignore_files:
+    # Build-Output
+    - "_book/**"
+    - "_bookdown_files/**"
+
+    # R-spezifische generierte Dateien
+    - "*.Rproj"
+    - ".Rproj.user/**"
+    - ".Rhistory"
+    - ".RData"
+    - ".Ruserdata"
+
+    # Logs
+    - "*.log"
+    - "Erstizeitung.log"
+
+    # Docker
+    - "docker-bookdown/**"
+
+    # Git
+    - ".git/**"
+    - ".gitignore"
+
+    # GitHub Workflows (nicht Textinhalte)
+    - ".github/workflows/**"
+
+    # Konfigurationsdateien (YAML, JSON, etc.)
+    - "*.json"
+    - "*.yml"
+    - "*.yaml"
+    - "_bookdown.yml"
+    - "_output.yml"
+
+    # Binärdateien
+    - "*.png"
+    - "*.jpg"
+    - "*.jpeg"
+    - "*.gif"
+    - "*.pdf"
+    - "*.svg"
+
+    # Package-Management
+    - "renv/**"
+    - "renv.lock"
+    - "packrat/**"
+
+    # Makefile (keine Texte zum Gendern)
+    - "Makefile"
+
+    # LICENSE, .editorconfig etc.
+    - "LICENSE"
+    - ".editorconfig"
+    - ".gitattributes"
