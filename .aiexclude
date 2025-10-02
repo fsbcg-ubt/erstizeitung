@@ -1,0 +1,46 @@
+# .aiexclude - Dateien, die von Gemini Code Assist ignoriert werden
+# Dokumentation: https://developers.google.com/gemini-code-assist/docs
+
+# Build-Output
+_book/
+_bookdown_files/
+
+# R-spezifisch
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Logs
+*.log
+Erstizeitung.log
+
+# Docker
+docker-bookdown/
+
+# Git
+.git/
+
+# Dependencies
+renv/
+renv.lock
+packrat/
+
+# Binärdateien
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.svg
+
+# Generierte/Konfigurationsdateien
+*.json
+_bookdown.yml
+_output.yml
+Makefile
+LICENSE
+.editorconfig
+.gitignore
+.gitattributes
