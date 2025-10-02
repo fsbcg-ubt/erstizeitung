@@ -31,3 +31,25 @@ libs/
 .Rhistory
 .RData
 .Ruserdata
+
+# AI/LLM Development Tools
+.claude/
+.cursor/
+.cursorrules
+.tabnine/
+.ai/
+.llm/
+.aider/
+.aiderignore
+.kite/
+.codewhispererignore
+
+# Local AI/LLM overrides
+*.local.md
+*.cursorignore.local
+*.cursorindexingignore.local
+*.tabnineignore.local
+
+# AI/LLM context files (keep AGENTS.md)
+CLAUDE.md
+GEMINI.md
