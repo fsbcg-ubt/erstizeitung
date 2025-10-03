@@ -99,12 +99,13 @@ test.describe('Caching Strategies', () => {
     await homePage.navigateToPage('/fachschaft.html');
     await page.waitForLoadState('networkidle');
 
-    // Wait a moment for cache to be written
-    await page.waitForTimeout(500);
-
-    // Assert: New page is cached
-    const isCached = await pwaPage.isURLCached('fachschaft.html');
-    expect(isCached).toBe(true);
+    // Assert: New page is cached (poll with timeout instead of arbitrary wait)
+    await expect
+      .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(true);
   });
 
   test('cached pages remain accessible offline', async ({
@@ -116,12 +117,13 @@ test.describe('Caching Strategies', () => {
     await homePage.navigateToPage('/fachschaft.html');
     await page.waitForLoadState('networkidle');
 
-    // Wait a moment for cache to be written
-    await page.waitForTimeout(500);
-
-    // Assert: Verify page is cached
-    const isCached = await pwaPage.isURLCached('fachschaft.html');
-    expect(isCached).toBe(true);
+    // Assert: Verify page is cached (poll with timeout instead of arbitrary wait)
+    await expect
+      .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(true);
 
     // Verify cached content has expected structure
     const cachedContent = await page.evaluate(async () => {
@@ -288,19 +290,25 @@ test.describe('Caching Strategies', () => {
     expect(typeof areImagesCached).toBe('boolean');
   });
 
-  test('service worker handles cache updates', async ({ page, pwaPage }) => {
+  test('service worker handles cache updates', async ({ pwaPage }) => {
     // Arrange: Service worker is active
 
     // Act: Trigger update check
     await pwaPage.triggerServiceWorkerUpdate();
 
-    // Wait a moment for update to process
-    await page.waitForTimeout(1000);
-
-    // Assert: No errors occurred during update
-    const afterUpdateCaches = await pwaPage.getCacheNames();
-    expect(afterUpdateCaches).toBeDefined();
-    expect(afterUpdateCaches.length).toBeGreaterThan(0);
+    // Assert: No errors occurred during update (poll for cache update)
+    await expect
+      .poll(
+        async () => {
+          const caches = await pwaPage.getCacheNames();
+          return caches.length > 0;
+        },
+        {
+          intervals: [100, 250, 500],
+          timeout: 3000,
+        },
+      )
+      .toBe(true);
   });
 
   test('cache cleanup removes old versions', async ({ pwaPage }) => {
@@ -319,9 +327,36 @@ test.describe('Caching Strategies', () => {
     // Arrange: Cache a page
     await homePage.navigateToPage('/campus-card.html');
     await page.waitForLoadState('networkidle');
-    await page.waitForTimeout(500);
 
-    // Act: Verify page is cached with valid content
+    // Act: Verify page is cached with valid content (poll with timeout)
+    await expect
+      .poll(
+        async () => {
+          return await page.evaluate(async () => {
+            const response = await caches.match('campus-card.html', {
+              ignoreSearch: true,
+              ignoreVary: true,
+            });
+            if (!response) {
+              return null;
+            }
+            const html = await response.text();
+            return {
+              hasBookBody: html.includes('book-body'),
+              hasNoErrors:
+                !html.toLowerCase().includes('error') &&
+                !html.toLowerCase().includes('fehler'),
+            };
+          });
+        },
+        {
+          intervals: [100, 250, 500],
+          timeout: 2000,
+        },
+      )
+      .toBeTruthy();
+
+    // Assert: Verify cached content structure
     const cachedContent = await page.evaluate(async () => {
       const response = await caches.match('campus-card.html', {
         ignoreSearch: true,
@@ -339,7 +374,6 @@ test.describe('Caching Strategies', () => {
       };
     });
 
-    // Assert: Page is cached without errors
     expect(cachedContent).not.toBeNull();
     expect(cachedContent?.hasBookBody).toBe(true);
     expect(cachedContent?.hasNoErrors).toBe(true);

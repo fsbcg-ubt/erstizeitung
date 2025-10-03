@@ -1,4 +1,17 @@
+import * as os from 'node:os';
 import { defineConfig, devices } from '@playwright/test';
+
+/**
+ * Get available CPU cores for parallel test execution
+ * Uses os.availableParallelism() (Node.js 19.4.0+) which respects CPU quotas,
+ * falling back to os.cpus().length for older Node.js versions
+ */
+const getCpuCores = (): number => {
+  if (typeof os.availableParallelism === 'function') {
+    return os.availableParallelism();
+  }
+  return os.cpus().length;
+};
 
 /**
  * Playwright E2E Test Configuration for PWA
@@ -21,25 +34,28 @@ export default defineConfig({
   // Retry on CI only
   retries: process.env.CI ? 2 : 0,
 
-  // Opt out of parallel tests on CI for more stable results
-  workers: process.env.CI ? 1 : undefined,
+  // Dynamically detect available CPU cores in CI, run unlimited workers locally
+  workers: process.env.CI ? getCpuCores() : undefined,
 
   // Reporter configuration
-  reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
+  // Use blob reporter in CI for merging reports from parallel jobs
+  reporter: process.env.CI
+    ? [['blob'], ['list']]
+    : [['list'], ['html', { outputFolder: 'playwright-report' }]],
 
   // Shared settings for all the projects below
   use: {
     // Base URL for navigation
     baseURL: 'http://localhost:3000',
 
-    // Collect trace on first retry (for debugging)
-    trace: 'on-first-retry',
+    // Collect trace only on actual failure (not on retry)
+    trace: 'retain-on-failure',
 
     // Screenshot on failure
     screenshot: 'only-on-failure',
 
-    // Video on first retry
-    video: 'retain-on-failure',
+    // Disable video recording (traces provide better debugging info)
+    video: 'off',
 
     // Browser context options
     locale: 'de-DE',
@@ -112,8 +128,8 @@ export default defineConfig({
     url: 'http://localhost:3000',
   },
 
-  // Global timeout for each test
-  timeout: 30 * 1000, // 30 seconds
+  // Global timeout for each test (increased for CI due to service worker overhead)
+  timeout: process.env.CI ? 120 * 1000 : 30 * 1000, // 120s in CI, 30s locally
 
   // Global timeout for expect assertions
   expect: {

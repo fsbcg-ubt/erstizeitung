@@ -196,5 +196,3 @@ installWindow.__pwaInstallButtonHandlers__ = {
   beforeInstallPrompt: beforeInstallPromptHandler,
   beforeUnload: beforeUnloadHandler,
 };
-
-export type { BeforeInstallPromptEvent, EngagementData };

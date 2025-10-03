@@ -1,8 +1,3 @@
-interface OfflineIndicatorState {
-  hideOnlineTimer: NodeJS.Timeout | null;
-  removeTimer: NodeJS.Timeout | null;
-}
-
 let hideOnlineTimer: NodeJS.Timeout | null = null;
 let removeTimer: NodeJS.Timeout | null = null;
 
@@ -91,5 +86,3 @@ function showOnlineNotification(): void {
 
 globalThis.addEventListener('offline', showOfflineIndicator);
 globalThis.addEventListener('online', showOnlineNotification);
-
-export type { OfflineIndicatorState };
