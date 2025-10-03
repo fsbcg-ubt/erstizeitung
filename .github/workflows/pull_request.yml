@@ -39,8 +39,82 @@ jobs:
           name: _book_gitbook
           path: _book/
 
+  inject_pwa:
+    name: "Inject PWA Files"
+    runs-on: ubuntu-latest
+    needs: build_gitbook
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Download GitBook artifact"
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: _book_gitbook
+          path: _book
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Compile TypeScript"
+        run: npm run build
+        working-directory: pwa
+      - name: "Generate Service Worker"
+        run: npx workbox-cli@7.3.0 generateSW dist/workbox-config.js
+        working-directory: pwa
+        env:
+          BASE_PATH: /${{ env.PR_REPO_NAME }}
+      - name: "Inject PWA files into HTML"
+        run: node pwa/dist/inject-html.js
+        env:
+          BASE_PATH: /${{ env.PR_REPO_NAME }}
+      - name: "Upload PWA-enabled artifact"
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: _book_pwa
+          path: _book/
+
+  test_pwa_e2e:
+    name: "E2E Tests (Playwright)"
+    runs-on: ubuntu-latest
+    needs: inject_pwa
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Download PWA artifact"
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: _book_pwa
+          path: _book
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Install Playwright browsers"
+        run: npx playwright install --with-deps chromium firefox webkit
+        working-directory: pwa
+      - name: "Run E2E tests"
+        run: npm run test:e2e
+        working-directory: pwa
+      - name: "Upload Playwright report"
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: playwright-report
+          path: pwa/playwright-report/
+          retention-days: 7
+
   deploy_gitbook:
-    needs: [create_repository, build_gitbook]
+    needs: [create_repository, inject_pwa, test_pwa_e2e]
     name: "Deploy GitBook to PR Repository"
     runs-on: ubuntu-latest
     environment:
@@ -60,7 +134,7 @@ jobs:
       - name: "Download artifact"
         uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
-          name: _book_gitbook
+          name: _book_pwa
       - name: "Push files to target"
         run: |
           touch .nojekyll
