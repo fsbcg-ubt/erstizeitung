@@ -173,15 +173,24 @@ test.describe('Install Prompt', () => {
     // Simulate beforeinstallprompt to trigger tracking
     await simulateBeforeInstallPrompt(page);
 
-    // Act: Wait and trigger beforeunload
-    await page.waitForTimeout(1000);
+    // Act: Trigger beforeunload
     await page.evaluate(() => {
       globalThis.dispatchEvent(new Event('beforeunload'));
     });
 
-    // Assert: Total time should have increased
-    const data = await pwaPage.getEngagementData();
-    expect(data?.totalTime).toBeGreaterThanOrEqual(10_000);
+    // Assert: Total time should have increased (poll for data update)
+    await expect
+      .poll(
+        async () => {
+          const data = await pwaPage.getEngagementData();
+          return data?.totalTime ?? 0;
+        },
+        {
+          intervals: [100, 250, 500],
+          timeout: 2000,
+        },
+      )
+      .toBeGreaterThanOrEqual(10_000);
   });
 
   test('install button has accessibility attributes', async ({
@@ -255,11 +264,13 @@ test.describe('Install Prompt', () => {
       globalThis.dispatchEvent(new Event('appinstalled'));
     });
 
-    await page.waitForTimeout(500);
-
-    // Assert: Dismiss flag is cleared
-    const isDismissed = await pwaPage.isInstallDismissed();
-    expect(isDismissed).toBe(false);
+    // Assert: Dismiss flag is cleared (poll for state update)
+    await expect
+      .poll(async () => await pwaPage.isInstallDismissed(), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(false);
   });
 
   test('removes install button when app is installed', async ({
@@ -278,10 +289,12 @@ test.describe('Install Prompt', () => {
       globalThis.dispatchEvent(new Event('appinstalled'));
     });
 
-    await page.waitForTimeout(500);
-
-    // Assert: Button is removed
-    const isVisible = await homePage.isInstallButtonVisible();
-    expect(isVisible).toBe(false);
+    // Assert: Button is removed (poll for DOM update)
+    await expect
+      .poll(async () => await homePage.isInstallButtonVisible(), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(false);
   });
 });

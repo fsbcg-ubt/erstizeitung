@@ -196,17 +196,23 @@ test.describe('Offline Functionality', () => {
     // Arrange: Visit multiple pages while online to cache them
     await homePage.navigateToPage('/fachschaft.html');
     await page.waitForLoadState('networkidle');
-    await page.waitForTimeout(500);
 
-    const page1Cached = await pwaPage.isURLCached('fachschaft.html');
-    expect(page1Cached).toBe(true);
+    await expect
+      .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(true);
 
     await homePage.navigateToPage('/termine.html');
     await page.waitForLoadState('networkidle');
-    await page.waitForTimeout(500);
 
-    const page2Cached = await pwaPage.isURLCached('termine.html');
-    expect(page2Cached).toBe(true);
+    await expect
+      .poll(async () => await pwaPage.isURLCached('termine.html'), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(true);
 
     // Assert: Both pages remain cached and contain valid content
     const bothCached = await page.evaluate(async () => {
