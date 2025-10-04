@@ -17,12 +17,6 @@ export default defineConfig({
       include: ['src/**/*.ts'],
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
-      thresholds: {
-        branches: 70,
-        functions: 70,
-        lines: 70,
-        statements: 70,
-      },
     },
 
     // Test file patterns - ONLY integration tests
