@@ -20,10 +20,31 @@ jobs:
           echo "::error::PRs from forks are not allowed to run this workflow for security reasons"
           exit 1
 
+  detect_changes:
+    name: "Detect File Changes"
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      pwa: ${{ steps.filter.outputs.pwa }}
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Detect changed paths"
+        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+        id: filter
+        with:
+          filters: |
+            pwa:
+              - 'pwa/**'
+              - '.github/workflows/test-pwa.yml'
+              - '.github/workflows/pull_request.yml'
+              - '.github/workflows/release.yml'
+
   create_repository:
     name: "Create PR Repository"
     runs-on: ubuntu-latest
-    needs: [test, inject_pwa]
+    needs: [inject_pwa]
     steps:
       - name: "Create new repository for temporary deployment"
         uses: f1lander/create-repository-action@790b25d255717b5a81416a8390f3344396181805
@@ -34,6 +55,8 @@ jobs:
 
   test:
     name: "PWA Tests"
+    needs: detect_changes
+    if: needs.detect_changes.outputs.pwa == 'true'
     uses: ./.github/workflows/test-pwa.yml
 
   build_gitbook:
@@ -55,7 +78,8 @@ jobs:
   inject_pwa:
     name: "Inject PWA Files"
     runs-on: ubuntu-latest
-    needs: [test, build_gitbook]
+    needs: [detect_changes, test, build_gitbook]
+    if: always() && needs.build_gitbook.result == 'success' && (needs.test.result == 'success' || needs.test.result == 'skipped')
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
