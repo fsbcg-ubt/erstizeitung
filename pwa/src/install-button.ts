@@ -4,6 +4,10 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
+interface IOSNavigator extends Navigator {
+  standalone?: boolean;
+}
+
 interface InstallButtonHandlers {
   appInstalled: () => void;
   beforeInstallPrompt: (event: Event) => void;
@@ -17,13 +21,104 @@ type InstallWindow = Window &
 
 const ENGAGEMENT_KEY = 'pwa-engagement';
 const DISMISS_KEY = 'pwa-install-dismissed';
-const MIN_ENGAGEMENT_TIME = 30_000; // 30 seconds
+const IOS_INSTRUCTIONS_DISMISSED_KEY = 'pwa-ios-instructions-dismissed';
+const MIN_ENGAGEMENT_TIME = 30_000;
 const MIN_VISITS = 2;
 
 let deferredPrompt: BeforeInstallPromptEvent | null = null;
 let trackingStartTime: number | null = null;
 
 const installWindow = globalThis as InstallWindow;
+
+/**
+ * Detects if the PWA is already installed on the user's device.
+ *
+ * Checks both standard display-mode media query and iOS-specific
+ * navigator.standalone property.
+ *
+ * @returns {boolean} True if app is installed and running in standalone mode
+ */
+function isAlreadyInstalled(): boolean {
+  if (globalThis.matchMedia('(display-mode: standalone)').matches) {
+    return true;
+  }
+
+  if ((navigator as IOSNavigator).standalone === true) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * Detects if the browser is iOS Safari or macOS Safari.
+ *
+ * These browsers don't support the beforeinstallprompt event,
+ * so we need to show manual installation instructions instead.
+ *
+ * @returns {boolean} True if iOS/Safari without beforeinstallprompt support
+ */
+function isIOSorSafari(): boolean {
+  const userAgent = navigator.userAgent;
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent);
+  const isSafari = /^(?:(?!chrome|android).)*safari/i.test(userAgent);
+
+  const supportsBeforeInstallPrompt = 'BeforeInstallPromptEvent' in globalThis;
+
+  return (isIOS || isSafari) && !supportsBeforeInstallPrompt;
+}
+
+/**
+ * Displays installation instructions for iOS/Safari users.
+ *
+ * Shows a banner with manual "Add to Home Screen" instructions
+ * since iOS doesn't support the beforeinstallprompt event.
+ */
+function showIOSInstallInstructions(): void {
+  if (isAlreadyInstalled()) {
+    return;
+  }
+
+  if (localStorage.getItem(IOS_INSTRUCTIONS_DISMISSED_KEY)) {
+    return;
+  }
+
+  if (!shouldShowInstallPrompt()) {
+    return;
+  }
+
+  const banner = document.createElement('div');
+  banner.id = 'ios-install-banner';
+  banner.className = 'ios-install-banner';
+  banner.innerHTML = `
+    <div class="ios-install-content">
+      <span class="ios-install-icon">📱</span>
+      <div class="ios-install-text">
+        <strong>Als App installieren</strong>
+        <p>Tippen Sie auf <span class="ios-share-icon">⎙</span> und dann auf "Zum Home-Bildschirm"</p>
+      </div>
+    </div>
+    <button class="ios-install-dismiss" aria-label="Hinweis schließen">×</button>
+  `;
+
+  document.body.append(banner);
+
+  const dismissButton = banner.querySelector('.ios-install-dismiss');
+  const handleDismiss = (): void => {
+    localStorage.setItem(IOS_INSTRUCTIONS_DISMISSED_KEY, 'true');
+    banner.remove();
+  };
+
+  dismissButton?.addEventListener('click', handleDismiss);
+
+  dismissButton?.addEventListener('keydown', (event: Event) => {
+    const keyEvent = event as KeyboardEvent;
+    if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+      keyEvent.preventDefault();
+      handleDismiss();
+    }
+  });
+}
 
 interface EngagementData {
   firstVisit: number;
@@ -118,7 +213,12 @@ function showInstallButton(): void {
 
   const button = document.createElement('button');
   button.id = 'install-pwa-btn';
-  button.setAttribute('aria-label', 'Erstizeitung als App installieren');
+  button.setAttribute('role', 'button');
+  button.setAttribute(
+    'aria-label',
+    'Erstizeitung als Progressive Web App installieren',
+  );
+  button.setAttribute('tabindex', '0');
   button.innerHTML = `
     <span class="install-icon">📱</span>
     <span class="install-text">App installieren</span>
@@ -129,7 +229,7 @@ function showInstallButton(): void {
     button.style.display = 'flex';
   }, 100);
 
-  button.addEventListener('click', () => {
+  const handleInstallClick = (): void => {
     void (async () => {
       if (deferredPrompt) {
         await deferredPrompt.prompt();
@@ -141,22 +241,49 @@ function showInstallButton(): void {
         button.remove();
       }
     })();
+  };
+
+  button.addEventListener('click', handleInstallClick);
+
+  button.addEventListener('keydown', (event: KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleInstallClick();
+    }
   });
 
   const dismissButton = document.createElement('button');
   dismissButton.className = 'install-dismiss-btn';
   dismissButton.textContent = '×';
-  dismissButton.setAttribute('aria-label', 'Installation-Hinweis schließen');
+  dismissButton.setAttribute('role', 'button');
+  dismissButton.setAttribute(
+    'aria-label',
+    'Installation-Hinweis dauerhaft schließen',
+  );
+  dismissButton.setAttribute('tabindex', '0');
   button.append(dismissButton);
 
-  dismissButton.addEventListener('click', (event: MouseEvent): void => {
+  const handleDismissClick = (event: Event): void => {
     event.stopPropagation();
     localStorage.setItem(DISMISS_KEY, 'true');
     button.remove();
+  };
+
+  dismissButton.addEventListener('click', handleDismissClick);
+
+  dismissButton.addEventListener('keydown', (event: KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleDismissClick(event);
+    }
   });
 }
 
 const beforeInstallPromptHandler = (event: Event): void => {
+  if (isAlreadyInstalled()) {
+    return;
+  }
+
   event.preventDefault();
   deferredPrompt = event as BeforeInstallPromptEvent;
 
@@ -196,3 +323,17 @@ installWindow.__pwaInstallButtonHandlers__ = {
   beforeInstallPrompt: beforeInstallPromptHandler,
   beforeUnload: beforeUnloadHandler,
 };
+
+if (isAlreadyInstalled()) {
+  document.querySelector('#install-pwa-btn')?.remove();
+}
+
+if (isIOSorSafari()) {
+  updateEngagementData();
+  startTimeTracking();
+
+  // Wait 5 seconds before showing (allow user to orient themselves)
+  setTimeout(() => {
+    showIOSInstallInstructions();
+  }, 5000);
+}

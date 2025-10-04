@@ -246,4 +246,43 @@ test.describe('Install Prompt', () => {
       })
       .toBe(false);
   });
+
+  test('keyboard user can install PWA using Enter key', async ({
+    homePage,
+    page,
+  }) => {
+    await setEngagementData(page, 2, 30_000);
+    await simulateBeforeInstallPrompt(page, 'accepted');
+    await homePage.wait(2500);
+
+    expect(await homePage.isInstallButtonVisible()).toBe(true);
+
+    await page.locator('#install-pwa-btn').press('Enter');
+
+    await expect
+      .poll(async () => await homePage.isInstallButtonVisible(), {
+        intervals: [100, 250, 500],
+        timeout: 2000,
+      })
+      .toBe(false);
+  });
+
+  test('keyboard user can dismiss install prompt using Space key', async ({
+    homePage,
+    page,
+    pwaPage,
+  }) => {
+    await setEngagementData(page, 2, 30_000);
+    await simulateBeforeInstallPrompt(page);
+    await homePage.wait(2500);
+
+    expect(await homePage.isInstallButtonVisible()).toBe(true);
+
+    await page.locator('.install-dismiss-btn').press('Space');
+
+    expect(await homePage.isInstallButtonVisible()).toBe(false);
+
+    const isDismissed = await pwaPage.isInstallDismissed();
+    expect(isDismissed).toBe(true);
+  });
 });
