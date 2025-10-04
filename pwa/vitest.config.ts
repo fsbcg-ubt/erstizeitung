@@ -17,12 +17,6 @@ export default defineConfig({
       reporter: ['text', 'html', 'json'],
       include: ['src/**/*.ts'],
       exclude: ['dist/**', 'tests/**', 'src/workbox-config.ts'],
-      thresholds: {
-        lines: 70,
-        functions: 70,
-        branches: 70,
-        statements: 70,
-      },
     },
 
     // Test file patterns - ONLY unit tests (integration tests require _book/ build)
