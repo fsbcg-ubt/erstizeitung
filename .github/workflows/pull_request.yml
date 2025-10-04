@@ -1,8 +1,6 @@
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - main
 
 name: "GitHub Pages deployment for PRs"
 
@@ -12,6 +10,16 @@ env:
   PR_COMMENT_TEXT_END: " eingesehen werden. 📖👀"
 
 jobs:
+  security_check:
+    name: "Security Validation"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Reject PRs from forks"
+        if: github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          echo "::error::PRs from forks are not allowed to run this workflow for security reasons"
+          exit 1
+
   create_repository:
     name: "Create PR Repository"
     runs-on: ubuntu-latest
