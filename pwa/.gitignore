@@ -1,0 +1,12 @@
+node_modules/
+!offline-page.html
+# TypeScript build output
+dist/
+*.tsbuildinfo
+# Test coverage
+coverage/
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

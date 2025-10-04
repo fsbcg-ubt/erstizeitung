@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Coverage
+coverage/
+
+# Config files that should keep specific formatting
+*.config.js
+
+# Lock files
+package-lock.json
+
+# Test reports
+playwright-report/
+test-results/

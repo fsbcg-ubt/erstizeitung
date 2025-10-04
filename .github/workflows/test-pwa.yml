@@ -1,0 +1,195 @@
+on:
+  workflow_call:
+
+name: "PWA Tests & Build"
+
+jobs:
+  lint:
+    name: "PWA Lint (ESLint + Prettier)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Run ESLint"
+        run: npm run lint:check
+        working-directory: pwa
+      - name: "Run Prettier"
+        run: npm run format:check
+        working-directory: pwa
+
+  test_unit:
+    name: "PWA Unit Tests"
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Compile TypeScript"
+        run: npm run build
+        working-directory: pwa
+      - name: "Run unit tests with coverage"
+        run: npm run test:coverage
+        working-directory: pwa
+      - name: "Upload coverage report"
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coverage-report
+          path: pwa/coverage/
+          retention-days: 7
+
+  build_pwa_for_tests:
+    name: "Build PWA for Testing"
+    runs-on: ubuntu-latest
+    needs: test_unit
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Render GitBook (for testing)"
+        run: make render-gitbook
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Compile TypeScript"
+        run: npm run build
+        working-directory: pwa
+      - name: "Generate Service Worker"
+        run: npx workbox-cli@7.3.0 generateSW dist/workbox-config.js
+        working-directory: pwa
+      - name: "Inject PWA files"
+        run: node pwa/dist/inject-html.js
+      - name: "Verify PWA artifacts"
+        run: |
+          echo "=== Checking _book/ contents ==="
+          ls -la _book/
+          echo "=== Checking for critical PWA files ==="
+          test -f _book/install-button.js && echo "✓ install-button.js" || (echo "✗ MISSING: install-button.js" && exit 1)
+          test -f _book/offline-indicator.js && echo "✓ offline-indicator.js" || (echo "✗ MISSING: offline-indicator.js" && exit 1)
+          test -f _book/register-sw.js && echo "✓ register-sw.js" || (echo "✗ MISSING: register-sw.js" && exit 1)
+          test -f _book/service-worker.js && echo "✓ service-worker.js" || (echo "✗ MISSING: service-worker.js" && exit 1)
+          test -f _book/manifest.json && echo "✓ manifest.json" || (echo "✗ MISSING: manifest.json" && exit 1)
+          echo "=== Checking _book/icons/ ==="
+          test -d _book/icons && ls -la _book/icons/ || (echo "✗ MISSING: icons directory" && exit 1)
+      - name: "Run integration tests"
+        run: npm run test:integration
+        working-directory: pwa
+      - name: "Upload PWA artifact for testing"
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: _book_pwa_test
+          path: _book/
+
+  test_pwa_e2e:
+    name: "E2E Tests (${{ matrix.project }})"
+    runs-on: ubuntu-latest
+    needs: build_pwa_for_tests
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: chromium
+            browser: chromium
+          - project: firefox
+            browser: firefox
+          - project: webkit
+            browser: webkit
+          - project: mobile-chrome
+            browser: chromium
+          - project: mobile-safari
+            browser: webkit
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Download PWA artifact"
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: _book_pwa_test
+          path: _book
+      - name: "Verify downloaded PWA files"
+        run: |
+          echo "=== Downloaded artifact contents ==="
+          ls -la _book/
+          echo "=== Verifying critical PWA files ==="
+          test -f _book/install-button.js && echo "✓ install-button.js found" || (echo "✗ MISSING: install-button.js" && exit 1)
+          test -f _book/offline-indicator.js && echo "✓ offline-indicator.js found" || (echo "✗ MISSING: offline-indicator.js" && exit 1)
+          test -f _book/service-worker.js && echo "✓ service-worker.js found" || (echo "✗ MISSING: service-worker.js" && exit 1)
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Install Playwright browser for ${{ matrix.project }}"
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+        working-directory: pwa
+      - name: "Run E2E tests for ${{ matrix.project }}"
+        run: npm run test:e2e -- --project=${{ matrix.project }}
+        working-directory: pwa
+      - name: "Upload blob report"
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: blob-report-${{ matrix.project }}
+          path: pwa/blob-report/
+          retention-days: 1
+
+  merge_e2e_reports:
+    name: "Merge E2E Reports"
+    if: always()
+    needs: test_pwa_e2e
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Download all blob reports"
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          pattern: blob-report-*
+          path: pwa/all-blob-reports
+          merge-multiple: true
+      - name: "Merge reports"
+        run: npx playwright merge-reports --reporter html ./all-blob-reports
+        working-directory: pwa
+      - name: "Upload merged report"
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: playwright-report
+          path: pwa/playwright-report/
+          retention-days: 7

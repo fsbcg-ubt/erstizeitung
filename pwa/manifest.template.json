@@ -1,0 +1,124 @@
+{
+  "id": "{{BASE_PATH}}/",
+  "name": "Erstizeitung BCG - Universität Bayreuth",
+  "short_name": "Erstizeitung",
+  "description": "Welcome to the Jungle - Ein Reiseführer für Neuankömmlinge der Fakultät BCG",
+  "start_url": "{{BASE_PATH}}/",
+  "scope": "{{BASE_PATH}}/",
+  "display": "standalone",
+  "orientation": "any",
+  "dir": "ltr",
+  "lang": "de-DE",
+  "theme_color": "#249260",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "{{BASE_PATH}}/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/maskable-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "{{BASE_PATH}}/icons/apple-touch-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Studienstart",
+      "short_name": "Studium",
+      "description": "Informationen zum Studienstart",
+      "url": "{{BASE_PATH}}/studienstart.html",
+      "icons": [
+        {
+          "src": "{{BASE_PATH}}/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Fachschaft",
+      "short_name": "Fachschaft",
+      "description": "Über die Fachschaft BCG",
+      "url": "{{BASE_PATH}}/die-fachschaft.html",
+      "icons": [
+        {
+          "src": "{{BASE_PATH}}/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Campus & Stadt",
+      "short_name": "Campus",
+      "description": "Campus und Bayreuth kennenlernen",
+      "url": "{{BASE_PATH}}/campus-stadt.html",
+      "icons": [
+        {
+          "src": "{{BASE_PATH}}/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "categories": ["education", "reference"]
+}
