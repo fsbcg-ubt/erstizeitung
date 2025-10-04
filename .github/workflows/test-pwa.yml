@@ -1,29 +1,12 @@
 on:
   workflow_call:
 
-name: "PWA E2E Tests"
+name: "PWA Tests & Build"
 
 jobs:
-  build_gitbook:
-    name: "Render GitBook"
+  lint:
+    name: "PWA Lint (ESLint + Prettier)"
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/fsbcg-ubt/docker-bookdown:0.3.7@sha256:3e45bec722a0b48560338f516ba2737b2b07bddf38a81aade9ff2b207e1822bc
-    steps:
-      - name: "Checkout Repository"
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-      - name: "Render book as GitBook"
-        run: Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
-      - name: "Upload artifact"
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: _book_gitbook
-          path: _book/
-
-  build_pwa_for_tests:
-    name: "Build PWA for Testing"
-    runs-on: ubuntu-latest
-    needs: build_gitbook
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -33,11 +16,61 @@ jobs:
           node-version: '20.19.1'
           cache: 'npm'
           cache-dependency-path: 'pwa/package-lock.json'
-      - name: "Download GitBook artifact"
-        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Run ESLint"
+        run: npm run lint:check
+        working-directory: pwa
+      - name: "Run Prettier"
+        run: npm run format:check
+        working-directory: pwa
+
+  test_unit:
+    name: "PWA Unit & Integration Tests"
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          name: _book_gitbook
-          path: _book
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
+      - name: "Install Node.js dependencies"
+        run: npm ci
+        working-directory: pwa
+      - name: "Compile TypeScript"
+        run: npm run build
+        working-directory: pwa
+      - name: "Run tests with coverage"
+        run: npm run test:coverage
+        working-directory: pwa
+      - name: "Upload coverage report"
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coverage-report
+          path: pwa/coverage/
+          retention-days: 7
+
+  build_pwa_for_tests:
+    name: "Build PWA for Testing"
+    runs-on: ubuntu-latest
+    needs: test_unit
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: "Render GitBook (for testing)"
+        run: make render-gitbook
+      - name: "Setup Node.js"
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '20.19.1'
+          cache: 'npm'
+          cache-dependency-path: 'pwa/package-lock.json'
       - name: "Install Node.js dependencies"
         run: npm ci
         working-directory: pwa

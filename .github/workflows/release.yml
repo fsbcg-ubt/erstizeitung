@@ -19,8 +19,8 @@ jobs:
         run: python .github/scripts/validate-csv-escaping.py
 
   test:
-    name: "PWA E2E Tests"
-    uses: ./.github/workflows/test-pwa-e2e.yml
+    name: "PWA Tests"
+    uses: ./.github/workflows/test-pwa.yml
 
   build_gitbook:
     name: "Render GitBook"
@@ -42,7 +42,7 @@ jobs:
   inject_pwa:
     name: "Inject PWA Files"
     runs-on: ubuntu-latest
-    needs: test
+    needs: [test, build_gitbook]
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
