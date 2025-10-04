@@ -14,38 +14,28 @@ import { waitForServiceWorkerActive } from '../helpers/pwa-helpers';
 
 test.describe('Caching Strategies', () => {
   test.beforeEach(async ({ homePage, page }) => {
-    // Navigate to home and wait for SW
     await homePage.navigateToHome();
     await waitForServiceWorkerActive(page);
 
-    // Reload to populate caches
     await homePage.reload();
   });
 
   test('creates runtime caches in addition to precache', async ({
     pwaPage,
   }) => {
-    // Arrange: Service worker is active
-
-    // Act: Get all cache names
     const cacheNames = await pwaPage.getCacheNames();
 
-    // Assert: Multiple caches exist
     expect(cacheNames.length).toBeGreaterThan(0);
 
-    // Precache should exist
     const hasPrecache = cacheNames.some((name) => name.includes('precache'));
     expect(hasPrecache).toBe(true);
   });
 
   test('caches HTML pages in precache', async ({ page, pwaPage }) => {
-    // Arrange: Get current page URL pathname
     const pathname = new URL(page.url()).pathname;
 
-    // Act: Check if HTML is cached
     const isCached = await pwaPage.isURLCached(pathname);
 
-    // Assert: Current page is cached
     expect(isCached).toBe(true);
   });
 
@@ -54,17 +44,13 @@ test.describe('Caching Strategies', () => {
     page,
     pwaPage,
   }) => {
-    // Arrange: Verify page is loaded
     await expect(homePage.page.locator('.book-body')).toBeVisible();
 
-    // Act: Verify current page is cached
     const pathname = new URL(page.url()).pathname;
     const isCached = await pwaPage.isURLCached(pathname);
 
-    // Assert: Page is cached
     expect(isCached).toBe(true);
 
-    // Verify cached content has valid HTML structure
     const hasValidContent = await page.evaluate(async (path) => {
       const target = new URL(path, globalThis.location.origin);
       const normalized =
@@ -92,14 +78,11 @@ test.describe('Caching Strategies', () => {
     page,
     pwaPage,
   }) => {
-    // Arrange: Start on home page
     await expect(page.locator('.book-body')).toBeVisible();
 
-    // Act: Navigate to another page
     await homePage.navigateToPage('/fachschaft.html');
     await page.waitForLoadState('networkidle');
 
-    // Assert: New page is cached (poll with timeout instead of arbitrary wait)
     await expect
       .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
         intervals: [100, 250, 500],
@@ -113,11 +96,9 @@ test.describe('Caching Strategies', () => {
     page,
     pwaPage,
   }) => {
-    // Arrange: Visit and cache a page
     await homePage.navigateToPage('/fachschaft.html');
     await page.waitForLoadState('networkidle');
 
-    // Assert: Verify page is cached (poll with timeout instead of arbitrary wait)
     await expect
       .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
         intervals: [100, 250, 500],
@@ -125,7 +106,6 @@ test.describe('Caching Strategies', () => {
       })
       .toBe(true);
 
-    // Verify cached content has expected structure
     const cachedContent = await page.evaluate(async () => {
       const response = await caches.match('fachschaft.html', {
         ignoreSearch: true,
@@ -141,9 +121,6 @@ test.describe('Caching Strategies', () => {
   });
 
   test('precache includes critical resources', async ({ pwaPage }) => {
-    // Arrange: Service worker is active
-
-    // Act: Get precache name and count
     const cacheNames = await pwaPage.getCacheNames();
     const precacheName = cacheNames.find((name) => name.includes('precache'));
 
@@ -151,14 +128,10 @@ test.describe('Caching Strategies', () => {
 
     const itemCount = await pwaPage.getCachedItemCount(precacheName!);
 
-    // Assert: Precache has multiple items
     expect(itemCount).toBeGreaterThan(0);
   });
 
   test('CSS files are cached', async ({ page }) => {
-    // Arrange: Page is loaded with styles
-
-    // Act: Check if CSS is cached
     const isCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -174,14 +147,10 @@ test.describe('Caching Strategies', () => {
       return false;
     });
 
-    // Assert: CSS is cached
     expect(isCached).toBe(true);
   });
 
   test('JavaScript files are cached', async ({ page }) => {
-    // Arrange: Page is loaded with scripts
-
-    // Act: Check if JS is cached
     const isCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -197,14 +166,10 @@ test.describe('Caching Strategies', () => {
       return false;
     });
 
-    // Assert: JS is cached
     expect(isCached).toBe(true);
   });
 
   test('offline page is available when needed', async ({ page }) => {
-    // Arrange: Service worker is active
-
-    // Act: Check if offline page is cached
     const isOfflinePageCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -217,18 +182,13 @@ test.describe('Caching Strategies', () => {
       return false;
     });
 
-    // Assert: Offline page is cached (or it might be served from network)
     // Note: Offline page caching depends on workbox configuration
     expect(typeof isOfflinePageCached).toBe('boolean');
   });
 
   test('service worker cache ID matches configuration', async ({ pwaPage }) => {
-    // Arrange: Service worker is active
-
-    // Act: Get cache names
     const cacheNames = await pwaPage.getCacheNames();
 
-    // Assert: Cache names include configured ID
     const hasExpectedCacheId = cacheNames.some((name) =>
       name.includes('erstizeitung'),
     );
@@ -236,14 +196,11 @@ test.describe('Caching Strategies', () => {
   });
 
   test('cache persists across page reloads', async ({ homePage, pwaPage }) => {
-    // Arrange: Get initial cache names
     const initialCaches = await pwaPage.getCacheNames();
     expect(initialCaches.length).toBeGreaterThan(0);
 
-    // Act: Reload page
     await homePage.reload();
 
-    // Assert: Caches still exist
     const afterReloadCaches = await pwaPage.getCacheNames();
     expect(afterReloadCaches.length).toBeGreaterThanOrEqual(
       initialCaches.length,
@@ -255,22 +212,16 @@ test.describe('Caching Strategies', () => {
     page,
     pwaPage,
   }) => {
-    // Arrange: Get initial cache names
     const initialCaches = await pwaPage.getCacheNames();
 
-    // Act: Navigate to a new page
     await homePage.navigateToPage('/studienstart.html');
     await page.waitForLoadState('networkidle');
 
-    // Assert: Cache may have grown or new cache created
     const afterNavCaches = await pwaPage.getCacheNames();
     expect(afterNavCaches.length).toBeGreaterThanOrEqual(initialCaches.length);
   });
 
   test('verifies cache-first strategy for images', async ({ page }) => {
-    // Arrange: Page with images loaded
-
-    // Act: Check if images are cached
     const areImagesCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -286,17 +237,12 @@ test.describe('Caching Strategies', () => {
       return false;
     });
 
-    // Assert: Images are cached (if page has images)
     expect(typeof areImagesCached).toBe('boolean');
   });
 
   test('service worker handles cache updates', async ({ pwaPage }) => {
-    // Arrange: Service worker is active
-
-    // Act: Trigger update check
     await pwaPage.triggerServiceWorkerUpdate();
 
-    // Assert: No errors occurred during update (poll for cache update)
     await expect
       .poll(
         async () => {
@@ -312,10 +258,8 @@ test.describe('Caching Strategies', () => {
   });
 
   test('cache cleanup removes old versions', async ({ pwaPage }) => {
-    // Arrange: Service worker is active
     const cacheNames = await pwaPage.getCacheNames();
 
-    // Assert: Only active cache versions exist (no excessive old caches)
     // Workbox cleanup should keep cache count reasonable
     expect(cacheNames.length).toBeLessThan(10); // Reasonable upper limit
   });
@@ -324,11 +268,9 @@ test.describe('Caching Strategies', () => {
     homePage,
     page,
   }) => {
-    // Arrange: Cache a page
     await homePage.navigateToPage('/campus-card.html');
     await page.waitForLoadState('networkidle');
 
-    // Act: Verify page is cached with valid content (poll with timeout)
     await expect
       .poll(
         async () => {
@@ -356,7 +298,6 @@ test.describe('Caching Strategies', () => {
       )
       .toBeTruthy();
 
-    // Assert: Verify cached content structure
     const cachedContent = await page.evaluate(async () => {
       const response = await caches.match('campus-card.html', {
         ignoreSearch: true,

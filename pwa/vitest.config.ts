@@ -8,10 +8,8 @@ export default defineConfig({
     // Global test utilities (keep false to avoid magic globals)
     globals: false,
 
-    // Setup files for browser mocks
     setupFiles: ['tests/setup/browser.setup.ts'],
 
-    // Coverage configuration
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
@@ -22,7 +20,6 @@ export default defineConfig({
     // Test file patterns - ONLY unit tests (integration tests require _book/ build)
     include: ['tests/unit/**/*.test.ts'],
 
-    // Timeouts
     testTimeout: 10000,
     hookTimeout: 10000,
   },

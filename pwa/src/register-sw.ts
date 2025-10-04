@@ -36,7 +36,6 @@ function showUpdateNotification(newWorker: ServiceWorker): void {
   }
 }
 
-// Auto-initialize service worker registration
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker

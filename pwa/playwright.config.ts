@@ -19,19 +19,15 @@ const getCpuCores = (): number => {
  * See https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  // Test directory
+  fullyParallel: true,
+
   testDir: './tests/e2e',
 
-  // Glob patterns for test files
   testMatch: '**/*.spec.ts',
-
-  // Run tests in files in parallel
-  fullyParallel: true,
 
   // Fail the build on CI if you accidentally left test.only in the source code
   forbidOnly: Boolean(process.env.CI),
 
-  // Retry on CI only
   retries: process.env.CI ? 2 : 0,
 
   // Dynamically detect available CPU cores in CI, run unlimited workers locally
@@ -39,30 +35,6 @@ export default defineConfig({
 
   // Reporter configuration
   // Use blob reporter in CI for merging reports from parallel jobs
-  reporter: process.env.CI
-    ? [['blob'], ['list']]
-    : [['list'], ['html', { outputFolder: 'playwright-report' }]],
-
-  // Shared settings for all the projects below
-  use: {
-    // Base URL for navigation
-    baseURL: 'http://localhost:3000',
-
-    // Collect trace only on actual failure (not on retry)
-    trace: 'retain-on-failure',
-
-    // Screenshot on failure
-    screenshot: 'only-on-failure',
-
-    // Disable video recording (traces provide better debugging info)
-    video: 'off',
-
-    // Browser context options
-    locale: 'de-DE',
-    timezoneId: 'Europe/Berlin',
-  },
-
-  // Configure projects for major browsers
   projects: [
     {
       name: 'chromium',
@@ -96,7 +68,6 @@ export default defineConfig({
       },
     },
 
-    // Mobile viewports for PWA testing
     {
       name: 'mobile-chrome',
       use: {
@@ -118,7 +89,25 @@ export default defineConfig({
     },
   ],
 
-  // Run local dev server before starting tests
+  reporter: process.env.CI
+    ? [['blob'], ['list']]
+    : [['list'], ['html', { outputFolder: 'playwright-report' }]],
+
+  use: {
+    baseURL: 'http://localhost:3000',
+
+    // Collect trace only on actual failure (not on retry)
+    screenshot: 'only-on-failure',
+
+    trace: 'retain-on-failure',
+
+    // Disable video recording (traces provide better debugging info)
+    locale: 'de-DE',
+
+    timezoneId: 'Europe/Berlin',
+    video: 'off',
+  },
+
   webServer: {
     command: 'npm run serve:dev',
     reuseExistingServer: !process.env.CI,
@@ -129,10 +118,9 @@ export default defineConfig({
   },
 
   // Global timeout for each test (increased for CI due to service worker overhead)
-  timeout: process.env.CI ? 120 * 1000 : 30 * 1000, // 120s in CI, 30s locally
-
-  // Global timeout for expect assertions
   expect: {
     timeout: 5 * 1000, // 5 seconds
   },
+
+  timeout: process.env.CI ? 120 * 1000 : 30 * 1000, // 120s in CI, 30s locally
 });
