@@ -13,23 +13,23 @@ export default defineConfig({
 
     // Coverage configuration
     coverage: {
+      exclude: ['dist/**', 'tests/**', 'src/workbox-config.ts'],
+      include: ['src/**/*.ts'],
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
-      include: ['src/**/*.ts'],
-      exclude: ['dist/**', 'tests/**', 'src/workbox-config.ts'],
       thresholds: {
-        lines: 70,
-        functions: 70,
         branches: 70,
+        functions: 70,
+        lines: 70,
         statements: 70,
       },
     },
 
-    // Test file patterns - ONLY unit tests (integration tests require _book/ build)
-    include: ['tests/unit/**/*.test.ts'],
+    // Test file patterns - ONLY integration tests
+    include: ['tests/integration/**/*.test.ts'],
 
     // Timeouts
-    testTimeout: 10000,
-    hookTimeout: 10000,
+    hookTimeout: 10_000,
+    testTimeout: 10_000,
   },
 });
