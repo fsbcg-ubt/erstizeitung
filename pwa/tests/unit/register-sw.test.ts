@@ -58,7 +58,7 @@ describe('register-sw service worker management', () => {
       const consoleErrorSpy = vi
         .spyOn(console, 'error')
         .mockImplementation(() => {
-          // Mock implementation
+          // Intentionally empty to suppress console output in tests
         });
       const error = new Error('Registration failed');
 

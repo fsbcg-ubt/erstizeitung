@@ -208,7 +208,6 @@ if (require.main === module) {
   }
 }
 
-// Export functions for testing
 export {
   validateBasePath,
   processTemplate,

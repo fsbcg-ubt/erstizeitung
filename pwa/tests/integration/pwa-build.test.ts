@@ -4,7 +4,6 @@ import { describe, expect, test } from 'vitest';
 
 const BOOK_DIR = path.join(__dirname, '..', '..', '..', '_book');
 
-// Integration tests verify build output exists and is correct
 // Run 'make render-pwa' before running these tests
 
 describe('PWA Build Output', () => {

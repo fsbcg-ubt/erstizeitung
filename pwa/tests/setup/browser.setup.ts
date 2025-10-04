@@ -63,7 +63,6 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-// Mock BeforeInstallPromptEvent
 export const createBeforeInstallPromptEvent = (
   outcome: 'accepted' | 'dismissed' = 'accepted',
 ): BeforeInstallPromptEvent => {
@@ -78,9 +77,7 @@ export const createBeforeInstallPromptEvent = (
   return event;
 };
 
-// Global setup
 beforeEach(() => {
-  // Setup localStorage mock
   const localStorageMock = createLocalStorageMock();
   Object.defineProperty(globalThis, 'localStorage', {
     configurable: true,
@@ -88,7 +85,6 @@ beforeEach(() => {
     writable: true,
   });
 
-  // Setup Service Worker mock
   const serviceWorkerMock = createServiceWorkerMock();
   Object.defineProperty(navigator, 'serviceWorker', {
     configurable: true,
@@ -96,7 +92,6 @@ beforeEach(() => {
     writable: true,
   });
 
-  // Setup online property
   Object.defineProperty(navigator, 'onLine', {
     configurable: true,
     value: true,
@@ -104,15 +99,11 @@ beforeEach(() => {
   });
 });
 
-// Global cleanup
 afterEach(() => {
-  // Clear all mocks
   vi.clearAllMocks();
 
-  // Clean up DOM
   document.body.innerHTML = '';
   document.head.innerHTML = '';
 
-  // Clear localStorage
   localStorage.clear();
 });

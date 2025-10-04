@@ -19,16 +19,12 @@ import {
 
 test.describe('Offline Functionality', () => {
   test.beforeEach(async ({ context, homePage, page }) => {
-    // Ensure we start online
     await goOnline(context);
 
-    // Navigate to home page
     await homePage.navigateToHome();
 
-    // Wait for service worker to be active
     await waitForServiceWorkerActive(page);
 
-    // Reload to ensure content is cached
     await homePage.reload();
   });
 
@@ -37,7 +33,6 @@ test.describe('Offline Functionality', () => {
     page,
     pwaPage,
   }) => {
-    // Arrange: Verify content loads while online
     await expect(homePage.page.locator('.book-body')).toBeVisible();
 
     const onlineHeading = await homePage.page
@@ -46,12 +41,10 @@ test.describe('Offline Functionality', () => {
       .textContent();
     expect(onlineHeading).toBeTruthy();
 
-    // Act: Verify page is cached
     const pathname = new URL(page.url()).pathname;
     const isCached = await pwaPage.isURLCached(pathname);
     expect(isCached).toBe(true);
 
-    // Verify cached content matches online content
     const cachedContent = await page.evaluate(async (path) => {
       const target = new URL(path, globalThis.location.origin);
       const normalized =
@@ -68,7 +61,6 @@ test.describe('Offline Functionality', () => {
         return null;
       }
       const html = await response.text();
-      // Extract heading from cached HTML
       const parser = new DOMParser();
       const document = parser.parseFromString(html, 'text/html');
       const heading = document.querySelector('.page-inner h1')?.textContent;
@@ -78,7 +70,6 @@ test.describe('Offline Functionality', () => {
       };
     }, pathname);
 
-    // Assert: Cached content matches online content
     expect(cachedContent).not.toBeNull();
     expect(cachedContent?.hasBookBody).toBe(true);
     expect(cachedContent?.heading).toBe(onlineHeading);
@@ -88,19 +79,15 @@ test.describe('Offline Functionality', () => {
     context,
     homePage,
   }) => {
-    // Arrange: Start online
     const isOnline = await homePage.evaluate(() => navigator.onLine);
     expect(isOnline).toBe(true);
 
-    // Act: Go offline
     await goOffline(context);
 
-    // Trigger offline event (simulate network loss)
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
     });
 
-    // Assert: Offline indicator appears with German text
     await homePage.waitForOfflineIndicator();
     await homePage.verifyOfflineMessage();
   });
@@ -109,15 +96,12 @@ test.describe('Offline Functionality', () => {
     context,
     homePage,
   }) => {
-    // Arrange: Go offline
     await goOffline(context);
 
-    // Act: Trigger offline event
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
     });
 
-    // Assert: Verify accessibility attributes
     await homePage.waitForOfflineIndicator();
     await homePage.verifyOfflineIndicatorAccessibility();
   });
@@ -126,7 +110,6 @@ test.describe('Offline Functionality', () => {
     context,
     homePage,
   }) => {
-    // Arrange: Start offline
     await goOffline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
@@ -134,13 +117,11 @@ test.describe('Offline Functionality', () => {
 
     await homePage.waitForOfflineIndicator();
 
-    // Act: Go back online
     await goOnline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('online'));
     });
 
-    // Assert: Online notification appears
     await homePage.verifyOnlineMessage();
   });
 
@@ -148,7 +129,6 @@ test.describe('Offline Functionality', () => {
     context,
     homePage,
   }) => {
-    // Arrange: Go offline then back online
     await goOffline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
@@ -156,16 +136,13 @@ test.describe('Offline Functionality', () => {
 
     await homePage.waitForOfflineIndicator();
 
-    // Act: Go online
     await goOnline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('online'));
     });
 
-    // Wait for indicator to show
     await expect(homePage.page.locator('#offline-indicator')).toBeVisible();
 
-    // Assert: Indicator disappears after 3 seconds
     await homePage.waitForOfflineIndicatorHidden(5000);
   });
 
@@ -173,17 +150,14 @@ test.describe('Offline Functionality', () => {
     context,
     homePage,
   }) => {
-    // Arrange: Go offline
     await goOffline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
     });
 
-    // Assert: Indicator appears and stays visible
     await homePage.waitForOfflineIndicator();
     await expect(homePage.page.locator('#offline-indicator')).toBeVisible();
 
-    // Wait 2 seconds - indicator should still be visible
     await homePage.wait(2000);
     await expect(homePage.page.locator('#offline-indicator')).toBeVisible();
   });
@@ -193,7 +167,6 @@ test.describe('Offline Functionality', () => {
     page,
     pwaPage,
   }) => {
-    // Arrange: Visit multiple pages while online to cache them
     await homePage.navigateToPage('/fachschaft.html');
     await page.waitForLoadState('networkidle');
 
@@ -214,7 +187,6 @@ test.describe('Offline Functionality', () => {
       })
       .toBe(true);
 
-    // Assert: Both pages remain cached and contain valid content
     const bothCached = await page.evaluate(async () => {
       const cache1 = await caches.match('fachschaft.html', {
         ignoreSearch: true,
@@ -233,11 +205,9 @@ test.describe('Offline Functionality', () => {
     context,
     homePage,
   }) => {
-    // Arrange: Start online
     const initialOnline = await homePage.evaluate(() => navigator.onLine);
     expect(initialOnline).toBe(true);
 
-    // Act: Go offline
     await goOffline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
@@ -245,23 +215,19 @@ test.describe('Offline Functionality', () => {
 
     await homePage.waitForOfflineIndicator();
 
-    // Go online
     await goOnline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('online'));
     });
 
-    // Wait for online message to appear and dismiss
     await homePage.wait(100); // Small wait for message to appear
     await homePage.waitForOfflineIndicatorHidden(4000);
 
-    // Go offline again
     await goOffline(context);
     await homePage.page.evaluate(() => {
       globalThis.dispatchEvent(new Event('offline'));
     });
 
-    // Assert: Offline indicator appears again
     await homePage.waitForOfflineIndicator();
     await homePage.verifyOfflineMessage();
   });
