@@ -24,9 +24,14 @@ const DISMISS_KEY = 'pwa-install-dismissed';
 const IOS_INSTRUCTIONS_DISMISSED_KEY = 'pwa-ios-instructions-dismissed';
 const MIN_ENGAGEMENT_TIME = 30_000;
 const MIN_VISITS = 2;
+const DISMISS_COOLDOWN_DAYS = 14;
+const RE_PROMPT_VISIT_THRESHOLD = 10;
+const MAX_DISMISS_COUNT = 3;
+const RESET_CYCLE_DAYS = 90;
 
 let deferredPrompt: BeforeInstallPromptEvent | null = null;
 let trackingStartTime: number | null = null;
+let iosInstructionsShownThisSession = false;
 
 const installWindow = globalThis as InstallWindow;
 
@@ -69,6 +74,103 @@ function isIOSorSafari(): boolean {
 }
 
 /**
+ * Gets iOS banner dismiss data from localStorage with migration support.
+ *
+ * Handles migration from old boolean format ('true') to new structured format.
+ * Also handles edge case where engagement data was cleared but dismiss data wasn't.
+ *
+ * @returns {DismissData | null} Dismiss data or null if never dismissed
+ */
+function getIOSDismissData(): DismissData | null {
+  const raw = localStorage.getItem(IOS_INSTRUCTIONS_DISMISSED_KEY);
+  if (!raw) {
+    return null;
+  }
+
+  // Migration: Old boolean format
+  if (raw === 'true') {
+    const now = Date.now();
+    const migratedData: DismissData = {
+      dismissCount: 1,
+      dismissedAt: now - 14 * 24 * 60 * 60 * 1000, // Assume dismissed 14 days ago
+      firstDismissedAt: now - 14 * 24 * 60 * 60 * 1000,
+      visitCountAtDismiss: getEngagementData().visitCount,
+    };
+    saveIOSDismissData(migratedData);
+    return migratedData;
+  }
+
+  try {
+    const parsed = JSON.parse(raw) as DismissData;
+    const engagementData = getEngagementData();
+
+    // Reset if engagement was cleared (visit count < stored baseline)
+    if (engagementData.visitCount < parsed.visitCountAtDismiss) {
+      localStorage.removeItem(IOS_INSTRUCTIONS_DISMISSED_KEY);
+      return null;
+    }
+
+    return parsed;
+  } catch {
+    localStorage.removeItem(IOS_INSTRUCTIONS_DISMISSED_KEY);
+    return null;
+  }
+}
+
+/**
+ * Saves iOS banner dismiss data to localStorage.
+ *
+ * @param {DismissData} data - Dismiss data to save
+ */
+function saveIOSDismissData(data: DismissData): void {
+  try {
+    localStorage.setItem(IOS_INSTRUCTIONS_DISMISSED_KEY, JSON.stringify(data));
+  } catch (error) {
+    // Storage full → fail silently (banner shows again next visit, acceptable UX)
+    console.warn('Failed to save iOS dismiss state:', error);
+  }
+}
+
+/**
+ * Checks if iOS install banner should be re-prompted after dismissal.
+ *
+ * Re-prompts if:
+ * - 14+ days passed since last dismiss, OR
+ * - 10+ visits occurred since dismiss
+ * - AND dismissCount < 3 (max dismissals)
+ *
+ * @returns {boolean} True if banner should show again
+ */
+function shouldRepromptIOSBanner(): boolean {
+  const dismissData = getIOSDismissData();
+  if (!dismissData) {
+    return true;
+  }
+
+  if (dismissData.dismissCount >= MAX_DISMISS_COUNT) {
+    return false;
+  }
+
+  const engagementData = getEngagementData();
+  const now = Date.now();
+
+  // Calculate days since last dismiss (clamped to 0 for time manipulation edge case)
+  const daysSinceDismiss = Math.max(
+    0,
+    (now - dismissData.dismissedAt) / (1000 * 60 * 60 * 24),
+  );
+
+  // Calculate visits since dismiss (using visitCount - 1 to account for current visit increment)
+  const visitsSinceDismiss =
+    engagementData.visitCount - 1 - dismissData.visitCountAtDismiss;
+
+  return (
+    daysSinceDismiss >= DISMISS_COOLDOWN_DAYS ||
+    visitsSinceDismiss >= RE_PROMPT_VISIT_THRESHOLD
+  );
+}
+
+/**
  * Displays installation instructions for iOS/Safari users.
  *
  * Shows a banner with manual "Add to Home Screen" instructions
@@ -79,11 +181,15 @@ function showIOSInstallInstructions(): void {
     return;
   }
 
-  if (localStorage.getItem(IOS_INSTRUCTIONS_DISMISSED_KEY)) {
+  if (iosInstructionsShownThisSession) {
     return;
   }
 
   if (!shouldShowInstallPrompt()) {
+    return;
+  }
+
+  if (!shouldRepromptIOSBanner()) {
     return;
   }
 
@@ -95,17 +201,42 @@ function showIOSInstallInstructions(): void {
       <span class="ios-install-icon">📱</span>
       <div class="ios-install-text">
         <strong>Als App installieren</strong>
-        <p>Tippen Sie auf <span class="ios-share-icon">⎙</span> und dann auf "Zum Home-Bildschirm"</p>
+        <p>Tippe auf das Teilen-Symbol und dann auf "Zum Home-Bildschirm"</p>
       </div>
     </div>
     <button class="ios-install-dismiss" aria-label="Hinweis schließen">×</button>
   `;
 
   document.body.append(banner);
+  iosInstructionsShownThisSession = true;
 
   const dismissButton = banner.querySelector('.ios-install-dismiss');
   const handleDismiss = (): void => {
-    localStorage.setItem(IOS_INSTRUCTIONS_DISMISSED_KEY, 'true');
+    const currentData = getIOSDismissData();
+    const engagementData = getEngagementData();
+    const now = Date.now();
+
+    let dismissCount = (currentData?.dismissCount ?? 0) + 1;
+    let firstDismissedAt = currentData?.firstDismissedAt ?? now;
+
+    // Reset dismissCount if 90 days passed since first dismiss
+    if (currentData?.firstDismissedAt) {
+      const daysSinceFirst =
+        (now - currentData.firstDismissedAt) / (1000 * 60 * 60 * 24);
+      if (daysSinceFirst >= RESET_CYCLE_DAYS) {
+        dismissCount = 1;
+        firstDismissedAt = now;
+      }
+    }
+
+    const dismissData: DismissData = {
+      dismissCount,
+      dismissedAt: now,
+      firstDismissedAt,
+      visitCountAtDismiss: engagementData.visitCount - 1,
+    };
+
+    saveIOSDismissData(dismissData);
     banner.remove();
   };
 
@@ -125,6 +256,13 @@ interface EngagementData {
   lastVisit: number;
   totalTime: number;
   visitCount: number;
+}
+
+interface DismissData {
+  dismissCount: number;
+  dismissedAt: number;
+  firstDismissedAt: number;
+  visitCountAtDismiss: number;
 }
 
 function createDefaultEngagementData(): EngagementData {

@@ -701,9 +701,15 @@ describe('install-button engagement tracking', () => {
       dismissButton.click();
 
       expect(document.querySelector('.ios-install-banner')).toBeNull();
-      expect(localStorage.getItem('pwa-ios-instructions-dismissed')).toBe(
-        'true',
+      const dismissData = JSON.parse(
+        localStorage.getItem('pwa-ios-instructions-dismissed')!,
       );
+      expect(dismissData).toMatchObject({
+        dismissCount: 1,
+        dismissedAt: expect.any(Number),
+        firstDismissedAt: expect.any(Number),
+        visitCountAtDismiss: expect.any(Number),
+      });
 
       // Cleanup
       (globalThis as any).BeforeInstallPromptEvent =
@@ -784,9 +790,255 @@ describe('install-button engagement tracking', () => {
       dismissButton.dispatchEvent(enterEvent);
 
       expect(document.querySelector('.ios-install-banner')).toBeNull();
-      expect(localStorage.getItem('pwa-ios-instructions-dismissed')).toBe(
-        'true',
+      const dismissData = JSON.parse(
+        localStorage.getItem('pwa-ios-instructions-dismissed')!,
       );
+      expect(dismissData).toMatchObject({
+        dismissCount: 1,
+        dismissedAt: expect.any(Number),
+        firstDismissedAt: expect.any(Number),
+        visitCountAtDismiss: expect.any(Number),
+      });
+
+      // Cleanup
+      (globalThis as any).BeforeInstallPromptEvent =
+        originalBeforeInstallPromptEvent;
+    });
+
+    test('iOS banner re-prompts after 14 days', async () => {
+      // Mock iOS user agent
+      Object.defineProperty(navigator, 'userAgent', {
+        configurable: true,
+        value:
+          'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15',
+      });
+
+      const originalBeforeInstallPromptEvent = (globalThis as any)
+        .BeforeInstallPromptEvent;
+      delete (globalThis as any).BeforeInstallPromptEvent;
+
+      const now = Date.now();
+      const dismissData = {
+        dismissCount: 1,
+        dismissedAt: now - 15 * 24 * 60 * 60 * 1000, // 15 days ago
+        firstDismissedAt: now - 15 * 24 * 60 * 60 * 1000,
+        visitCountAtDismiss: 2,
+      };
+      localStorage.setItem(
+        'pwa-ios-instructions-dismissed',
+        JSON.stringify(dismissData),
+      );
+
+      localStorage.setItem(
+        'pwa-engagement',
+        JSON.stringify({
+          firstVisit: now - 20 * 24 * 60 * 60 * 1000,
+          lastVisit: now,
+          totalTime: 60_000,
+          visitCount: 5,
+        }),
+      );
+
+      await import('../../src/install-button');
+
+      vi.advanceTimersByTime(5100);
+
+      const banner = document.querySelector('.ios-install-banner');
+      expect(banner).toBeTruthy();
+
+      // Cleanup
+      (globalThis as any).BeforeInstallPromptEvent =
+        originalBeforeInstallPromptEvent;
+    });
+
+    test('iOS banner re-prompts after 10 visits', async () => {
+      // Mock iOS user agent
+      Object.defineProperty(navigator, 'userAgent', {
+        configurable: true,
+        value:
+          'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15',
+      });
+
+      const originalBeforeInstallPromptEvent = (globalThis as any)
+        .BeforeInstallPromptEvent;
+      delete (globalThis as any).BeforeInstallPromptEvent;
+
+      // Set up initial dismiss (only 5 days ago, not enough time)
+      const now = Date.now();
+      const dismissData = {
+        dismissCount: 1,
+        dismissedAt: now - 5 * 24 * 60 * 60 * 1000,
+        firstDismissedAt: now - 5 * 24 * 60 * 60 * 1000,
+        visitCountAtDismiss: 2,
+      };
+      localStorage.setItem(
+        'pwa-ios-instructions-dismissed',
+        JSON.stringify(dismissData),
+      );
+
+      // Set up engagement data with 13 total visits (11 since dismiss)
+      localStorage.setItem(
+        'pwa-engagement',
+        JSON.stringify({
+          firstVisit: now - 20 * 24 * 60 * 60 * 1000,
+          lastVisit: now,
+          totalTime: 60_000,
+          visitCount: 13,
+        }),
+      );
+
+      await import('../../src/install-button');
+
+      vi.advanceTimersByTime(5100);
+
+      const banner = document.querySelector('.ios-install-banner');
+      expect(banner).toBeTruthy();
+
+      // Cleanup
+      (globalThis as any).BeforeInstallPromptEvent =
+        originalBeforeInstallPromptEvent;
+    });
+
+    test('iOS banner does not re-prompt before thresholds', async () => {
+      // Mock iOS user agent
+      Object.defineProperty(navigator, 'userAgent', {
+        configurable: true,
+        value:
+          'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15',
+      });
+
+      const originalBeforeInstallPromptEvent = (globalThis as any)
+        .BeforeInstallPromptEvent;
+      delete (globalThis as any).BeforeInstallPromptEvent;
+
+      // Set up initial dismiss (only 5 days ago, not enough time)
+      const now = Date.now();
+      const dismissData = {
+        dismissCount: 1,
+        dismissedAt: now - 5 * 24 * 60 * 60 * 1000,
+        firstDismissedAt: now - 5 * 24 * 60 * 60 * 1000,
+        visitCountAtDismiss: 2,
+      };
+      localStorage.setItem(
+        'pwa-ios-instructions-dismissed',
+        JSON.stringify(dismissData),
+      );
+
+      // Set up engagement data with only 7 total visits (5 since dismiss)
+      localStorage.setItem(
+        'pwa-engagement',
+        JSON.stringify({
+          firstVisit: now - 20 * 24 * 60 * 60 * 1000,
+          lastVisit: now,
+          totalTime: 60_000,
+          visitCount: 7,
+        }),
+      );
+
+      await import('../../src/install-button');
+
+      vi.advanceTimersByTime(5100);
+
+      const banner = document.querySelector('.ios-install-banner');
+      expect(banner).toBeNull();
+
+      // Cleanup
+      (globalThis as any).BeforeInstallPromptEvent =
+        originalBeforeInstallPromptEvent;
+    });
+
+    test('iOS banner permanently hidden after 3 dismissals', async () => {
+      // Mock iOS user agent
+      Object.defineProperty(navigator, 'userAgent', {
+        configurable: true,
+        value:
+          'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15',
+      });
+
+      const originalBeforeInstallPromptEvent = (globalThis as any)
+        .BeforeInstallPromptEvent;
+      delete (globalThis as any).BeforeInstallPromptEvent;
+
+      // Set up dismiss data showing 3 dismissals, long time passed
+      const now = Date.now();
+      const dismissData = {
+        dismissCount: 3,
+        dismissedAt: now - 30 * 24 * 60 * 60 * 1000, // 30 days ago
+        firstDismissedAt: now - 90 * 24 * 60 * 60 * 1000,
+        visitCountAtDismiss: 2,
+      };
+      localStorage.setItem(
+        'pwa-ios-instructions-dismissed',
+        JSON.stringify(dismissData),
+      );
+
+      // Set up engagement data with many visits
+      localStorage.setItem(
+        'pwa-engagement',
+        JSON.stringify({
+          firstVisit: now - 100 * 24 * 60 * 60 * 1000,
+          lastVisit: now,
+          totalTime: 120_000,
+          visitCount: 50,
+        }),
+      );
+
+      await import('../../src/install-button');
+
+      vi.advanceTimersByTime(5100);
+
+      const banner = document.querySelector('.ios-install-banner');
+      expect(banner).toBeNull();
+
+      // Cleanup
+      (globalThis as any).BeforeInstallPromptEvent =
+        originalBeforeInstallPromptEvent;
+    });
+
+    test('iOS banner migrates old boolean format', async () => {
+      // Mock iOS user agent
+      Object.defineProperty(navigator, 'userAgent', {
+        configurable: true,
+        value:
+          'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15',
+      });
+
+      const originalBeforeInstallPromptEvent = (globalThis as any)
+        .BeforeInstallPromptEvent;
+      delete (globalThis as any).BeforeInstallPromptEvent;
+
+      // Set old boolean format
+      localStorage.setItem('pwa-ios-instructions-dismissed', 'true');
+
+      // Set up engagement data
+      const now = Date.now();
+      localStorage.setItem(
+        'pwa-engagement',
+        JSON.stringify({
+          firstVisit: now - 20 * 24 * 60 * 60 * 1000,
+          lastVisit: now,
+          totalTime: 60_000,
+          visitCount: 5,
+        }),
+      );
+
+      await import('../../src/install-button');
+
+      vi.advanceTimersByTime(5100);
+
+      // Should show immediately (14 days assumed)
+      const banner = document.querySelector('.ios-install-banner');
+      expect(banner).toBeTruthy();
+
+      const migratedData = JSON.parse(
+        localStorage.getItem('pwa-ios-instructions-dismissed')!,
+      );
+      expect(migratedData).toMatchObject({
+        dismissCount: 1,
+        dismissedAt: expect.any(Number),
+        firstDismissedAt: expect.any(Number),
+        visitCountAtDismiss: expect.any(Number),
+      });
 
       // Cleanup
       (globalThis as any).BeforeInstallPromptEvent =
