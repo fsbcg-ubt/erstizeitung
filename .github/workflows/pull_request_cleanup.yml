@@ -1,8 +1,6 @@
 on:
   pull_request:
     types: [closed]
-    branches:
-      - main
 
 name: "Clean up PR preview repository"
 
