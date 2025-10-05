@@ -9,6 +9,9 @@ Output: GitBook (HTML) + PDF aus R Markdown.
 # GitBook mit Docker
 make render-gitbook
 
+# GitBook mit PWA-Funktionalität
+make render-pwa
+
 # R direkt
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
@@ -94,6 +97,7 @@ Immer von `main` abzweigen.
 - ❌ Neue Dokumentationsdateien ohne Anforderung
 - ❌ Bilder ohne korrekte Formatierung
 - ❌ Abweichungen von SPRACHLEITFADEN.md
+- ❌ PWA-Dateien ändern ohne spezifischen PWA-Kontext (siehe pwa/AGENTS.md)
 
 ## Referenzen
 

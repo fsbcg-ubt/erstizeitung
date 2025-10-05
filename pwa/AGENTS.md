@@ -34,6 +34,11 @@ LLM-specific automation rules for writing tests in the Erstizeitung PWA project.
 
 ### 1. Prerequisites Check (REQUIRED)
 
+**Before running any commands: Verify you're in the correct directory with `pwd`**
+
+- npm commands: `pwa/` directory
+- make commands: Project root
+
 **Before writing or running tests, verify:**
 
 ```bash
