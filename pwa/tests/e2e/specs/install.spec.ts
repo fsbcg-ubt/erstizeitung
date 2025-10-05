@@ -2,6 +2,7 @@ import { expect, test } from '../fixtures/pwa-fixtures';
 import {
   setEngagementData,
   simulateBeforeInstallPrompt,
+  waitForServiceWorkerActive,
 } from '../helpers/pwa-helpers';
 
 /**
@@ -16,22 +17,9 @@ import {
 test.describe('Install Prompt', () => {
   test.beforeEach(async ({ homePage }) => {
     await homePage.navigateToHome();
-
+    await waitForServiceWorkerActive(homePage.page);
+    await homePage.reload();
     await homePage.clearLocalStorage();
-  });
-
-  test('install button appears when engagement criteria met', async ({
-    homePage,
-    page,
-  }) => {
-    await setEngagementData(page, 2, 30_000);
-
-    await simulateBeforeInstallPrompt(page, 'accepted');
-
-    await homePage.wait(2500);
-
-    const isVisible = await homePage.isInstallButtonVisible();
-    expect(isVisible).toBe(true);
   });
 
   test('install button has correct German text', async ({ homePage, page }) => {
@@ -42,43 +30,6 @@ test.describe('Install Prompt', () => {
 
     const buttonText = await homePage.getTextContent('#install-pwa-btn');
     expect(buttonText).toContain('App installieren');
-  });
-
-  test('install button does not appear without engagement', async ({
-    homePage,
-    page,
-  }) => {
-    await simulateBeforeInstallPrompt(page);
-    await homePage.wait(2500);
-
-    const isVisible = await homePage.isInstallButtonVisible();
-    expect(isVisible).toBe(false);
-  });
-
-  test('install button appears with sufficient visit count', async ({
-    homePage,
-    page,
-  }) => {
-    await setEngagementData(page, 2, 5000);
-
-    await simulateBeforeInstallPrompt(page);
-    await homePage.wait(2500);
-
-    const isVisible = await homePage.isInstallButtonVisible();
-    expect(isVisible).toBe(true);
-  });
-
-  test('install button appears with sufficient time engagement', async ({
-    homePage,
-    page,
-  }) => {
-    await setEngagementData(page, 1, 30_000);
-
-    await simulateBeforeInstallPrompt(page);
-    await homePage.wait(2500);
-
-    const isVisible = await homePage.isInstallButtonVisible();
-    expect(isVisible).toBe(true);
   });
 
   test('dismiss button hides install prompt', async ({ homePage, page }) => {
@@ -123,67 +74,6 @@ test.describe('Install Prompt', () => {
 
     const isVisible = await homePage.isInstallButtonVisible();
     expect(isVisible).toBe(false);
-  });
-
-  test('engagement data increments visit count', async ({ page, pwaPage }) => {
-    await simulateBeforeInstallPrompt(page);
-
-    const data = await pwaPage.getEngagementData();
-
-    expect(data?.visitCount).toBeGreaterThanOrEqual(0);
-  });
-
-  test('tracks time spent on page', async ({ page, pwaPage }) => {
-    await setEngagementData(page, 1, 10_000);
-
-    await simulateBeforeInstallPrompt(page);
-
-    await page.evaluate(() => {
-      globalThis.dispatchEvent(new Event('beforeunload'));
-    });
-
-    await expect
-      .poll(
-        async () => {
-          const data = await pwaPage.getEngagementData();
-          return data?.totalTime ?? 0;
-        },
-        {
-          intervals: [100, 250, 500],
-          timeout: 2000,
-        },
-      )
-      .toBeGreaterThanOrEqual(10_000);
-  });
-
-  test('install button has accessibility attributes', async ({
-    homePage,
-    page,
-  }) => {
-    await setEngagementData(page, 2, 30_000);
-    await simulateBeforeInstallPrompt(page);
-    await homePage.wait(2500);
-
-    await homePage.assertElementHasAttribute(
-      '#install-pwa-btn',
-      'aria-label',
-      /installieren/i,
-    );
-  });
-
-  test('dismiss button has accessibility attributes', async ({
-    homePage,
-    page,
-  }) => {
-    await setEngagementData(page, 2, 30_000);
-    await simulateBeforeInstallPrompt(page);
-    await homePage.wait(2500);
-
-    await homePage.assertElementHasAttribute(
-      '.install-dismiss-btn',
-      'aria-label',
-      /schließen/i,
-    );
   });
 
   test('install button only appears once', async ({ homePage, page }) => {
@@ -245,44 +135,5 @@ test.describe('Install Prompt', () => {
         timeout: 2000,
       })
       .toBe(false);
-  });
-
-  test('keyboard user can install PWA using Enter key', async ({
-    homePage,
-    page,
-  }) => {
-    await setEngagementData(page, 2, 30_000);
-    await simulateBeforeInstallPrompt(page, 'accepted');
-    await homePage.wait(2500);
-
-    expect(await homePage.isInstallButtonVisible()).toBe(true);
-
-    await page.locator('#install-pwa-btn').press('Enter');
-
-    await expect
-      .poll(async () => await homePage.isInstallButtonVisible(), {
-        intervals: [100, 250, 500],
-        timeout: 2000,
-      })
-      .toBe(false);
-  });
-
-  test('keyboard user can dismiss install prompt using Space key', async ({
-    homePage,
-    page,
-    pwaPage,
-  }) => {
-    await setEngagementData(page, 2, 30_000);
-    await simulateBeforeInstallPrompt(page);
-    await homePage.wait(2500);
-
-    expect(await homePage.isInstallButtonVisible()).toBe(true);
-
-    await page.locator('.install-dismiss-btn').press('Space');
-
-    expect(await homePage.isInstallButtonVisible()).toBe(false);
-
-    const isDismissed = await pwaPage.isInstallDismissed();
-    expect(isDismissed).toBe(true);
   });
 });

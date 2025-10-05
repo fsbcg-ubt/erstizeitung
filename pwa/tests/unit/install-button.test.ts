@@ -89,33 +89,23 @@ describe('install-button engagement tracking', () => {
   });
 
   describe('install button visibility', () => {
-    test('shows button after minimum visits (2 visits)', async () => {
-      const engagementData = {
-        firstVisit: Date.now(),
-        lastVisit: Date.now(),
+    test.each([
+      {
+        reason: 'minimum visits (2 visits)',
         totalTime: 0,
         visitCount: 2,
-      };
-      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
-
-      await import('../../src/install-button');
-
-      const event = createBeforeInstallPromptEvent();
-      globalThis.dispatchEvent(event);
-
-      vi.advanceTimersByTime(2100);
-
-      const button = document.querySelector('#install-pwa-btn');
-      expect(button).toBeTruthy();
-      expect((button as HTMLElement).style.display).toBe('flex');
-    });
-
-    test('shows button after minimum time spent (30 seconds)', async () => {
+      },
+      {
+        reason: 'minimum time spent (30 seconds)',
+        totalTime: 31_000,
+        visitCount: 1,
+      },
+    ])('shows button with $reason', async ({ totalTime, visitCount }) => {
       const engagementData = {
         firstVisit: Date.now(),
         lastVisit: Date.now(),
-        totalTime: 31_000, // >30 seconds
-        visitCount: 1,
+        totalTime,
+        visitCount,
       };
       localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
 
@@ -293,7 +283,10 @@ describe('install-button engagement tracking', () => {
   });
 
   describe('accessibility improvements', () => {
-    test('install button responds to Enter key', async () => {
+    test.each([
+      { key: 'Enter', label: 'Enter key' },
+      { key: ' ', label: 'Space key' },
+    ])('install button responds to $label', async ({ key }) => {
       const engagementData = {
         firstVisit: Date.now(),
         lastVisit: Date.now(),
@@ -311,8 +304,8 @@ describe('install-button engagement tracking', () => {
       const button = document.querySelector('#install-pwa-btn')!;
       expect(button).toBeTruthy();
 
-      const enterEvent = new KeyboardEvent('keydown', { key: 'Enter' });
-      button.dispatchEvent(enterEvent);
+      const keyEvent = new KeyboardEvent('keydown', { key });
+      button.dispatchEvent(keyEvent);
 
       await vi.runOnlyPendingTimersAsync();
       await Promise.resolve();
@@ -320,34 +313,10 @@ describe('install-button engagement tracking', () => {
       expect(document.querySelector('#install-pwa-btn')).toBeNull();
     });
 
-    test('install button responds to Space key', async () => {
-      const engagementData = {
-        firstVisit: Date.now(),
-        lastVisit: Date.now(),
-        totalTime: 0,
-        visitCount: 2,
-      };
-      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
-
-      await import('../../src/install-button');
-
-      const event = createBeforeInstallPromptEvent('accepted');
-      globalThis.dispatchEvent(event);
-      vi.advanceTimersByTime(2100);
-
-      const button = document.querySelector('#install-pwa-btn')!;
-      expect(button).toBeTruthy();
-
-      const spaceEvent = new KeyboardEvent('keydown', { key: ' ' });
-      button.dispatchEvent(spaceEvent);
-
-      await vi.runOnlyPendingTimersAsync();
-      await Promise.resolve();
-
-      expect(document.querySelector('#install-pwa-btn')).toBeNull();
-    });
-
-    test('dismiss button responds to Enter key', async () => {
+    test.each([
+      { key: 'Enter', label: 'Enter key' },
+      { key: ' ', label: 'Space key' },
+    ])('dismiss button responds to $label', async ({ key }) => {
       const engagementData = {
         firstVisit: Date.now(),
         lastVisit: Date.now(),
@@ -368,36 +337,8 @@ describe('install-button engagement tracking', () => {
       const dismissButton = button!.querySelector('.install-dismiss-btn')!;
       expect(dismissButton).toBeTruthy();
 
-      const enterEvent = new KeyboardEvent('keydown', { key: 'Enter' });
-      dismissButton.dispatchEvent(enterEvent);
-
-      expect(document.querySelector('#install-pwa-btn')).toBeNull();
-      expect(localStorage.getItem('pwa-install-dismissed')).toBe('true');
-    });
-
-    test('dismiss button responds to Space key', async () => {
-      const engagementData = {
-        firstVisit: Date.now(),
-        lastVisit: Date.now(),
-        totalTime: 0,
-        visitCount: 2,
-      };
-      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
-
-      await import('../../src/install-button');
-
-      const event = createBeforeInstallPromptEvent();
-      globalThis.dispatchEvent(event);
-      vi.advanceTimersByTime(2100);
-
-      const button = document.querySelector('#install-pwa-btn');
-      expect(button).toBeTruthy();
-
-      const dismissButton = button!.querySelector('.install-dismiss-btn')!;
-      expect(dismissButton).toBeTruthy();
-
-      const spaceEvent = new KeyboardEvent('keydown', { key: ' ' });
-      dismissButton.dispatchEvent(spaceEvent);
+      const keyEvent = new KeyboardEvent('keydown', { key });
+      dismissButton.dispatchEvent(keyEvent);
 
       expect(document.querySelector('#install-pwa-btn')).toBeNull();
       expect(localStorage.getItem('pwa-install-dismissed')).toBe('true');
@@ -565,74 +506,59 @@ describe('install-button engagement tracking', () => {
   });
 
   describe('iOS/Safari fallback', () => {
-    test('shows iOS instructions for iOS Safari users', async () => {
-      // Mock iOS user agent
-      Object.defineProperty(navigator, 'userAgent', {
-        configurable: true,
-        value:
+    test.each([
+      {
+        checkContent: true,
+        platform: 'iOS Safari',
+        userAgent:
           'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
-      });
-
-      // Mock BeforeInstallPromptEvent as not available
-      const originalBeforeInstallPromptEvent = (globalThis as any)
-        .BeforeInstallPromptEvent;
-      delete (globalThis as any).BeforeInstallPromptEvent;
-
-      const engagementData = {
-        firstVisit: Date.now(),
-        lastVisit: Date.now(),
-        totalTime: 0,
-        visitCount: 2,
-      };
-      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
-
-      await import('../../src/install-button');
-
-      // Advance timer to trigger iOS banner (5 seconds delay)
-      vi.advanceTimersByTime(5100);
-
-      const banner = document.querySelector('.ios-install-banner');
-      expect(banner).toBeTruthy();
-      expect(banner?.innerHTML).toContain('Als App installieren');
-      expect(banner?.innerHTML).toContain('Zum Home-Bildschirm');
-
-      // Cleanup
-      (globalThis as any).BeforeInstallPromptEvent =
-        originalBeforeInstallPromptEvent;
-    });
-
-    test('shows iOS instructions for macOS Safari users', async () => {
-      // Mock Safari macOS user agent
-      Object.defineProperty(navigator, 'userAgent', {
-        configurable: true,
-        value:
+      },
+      {
+        checkContent: false,
+        platform: 'macOS Safari',
+        userAgent:
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15',
-      });
+      },
+    ])(
+      'shows iOS instructions for $platform users',
+      async ({ checkContent, userAgent }) => {
+        // Mock user agent
+        Object.defineProperty(navigator, 'userAgent', {
+          configurable: true,
+          value: userAgent,
+        });
 
-      // Mock BeforeInstallPromptEvent as not available
-      const originalBeforeInstallPromptEvent = (globalThis as any)
-        .BeforeInstallPromptEvent;
-      delete (globalThis as any).BeforeInstallPromptEvent;
+        // Mock BeforeInstallPromptEvent as not available
+        const originalBeforeInstallPromptEvent = (globalThis as any)
+          .BeforeInstallPromptEvent;
+        delete (globalThis as any).BeforeInstallPromptEvent;
 
-      const engagementData = {
-        firstVisit: Date.now(),
-        lastVisit: Date.now(),
-        totalTime: 0,
-        visitCount: 2,
-      };
-      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
+        const engagementData = {
+          firstVisit: Date.now(),
+          lastVisit: Date.now(),
+          totalTime: 0,
+          visitCount: 2,
+        };
+        localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
 
-      await import('../../src/install-button');
+        await import('../../src/install-button');
 
-      vi.advanceTimersByTime(5100);
+        // Advance timer to trigger iOS banner (5 seconds delay)
+        vi.advanceTimersByTime(5100);
 
-      const banner = document.querySelector('.ios-install-banner');
-      expect(banner).toBeTruthy();
+        const banner = document.querySelector('.ios-install-banner');
+        expect(banner).toBeTruthy();
 
-      // Cleanup
-      (globalThis as any).BeforeInstallPromptEvent =
-        originalBeforeInstallPromptEvent;
-    });
+        if (checkContent) {
+          expect(banner?.innerHTML).toContain('Als App installieren');
+          expect(banner?.innerHTML).toContain('Zum Home-Bildschirm');
+        }
+
+        // Cleanup
+        (globalThis as any).BeforeInstallPromptEvent =
+          originalBeforeInstallPromptEvent;
+      },
+    );
 
     test('iOS banner respects engagement threshold', async () => {
       // Mock iOS user agent
