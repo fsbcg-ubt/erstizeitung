@@ -17,6 +17,9 @@ Die Erstizeitung ist ein Magazin, das von der [Fachschaft BCG](https://www.fs-bc
 - 📚 **GitBook-Format**: Moderne, durchsuchbare HTML-Version
 - 📄 **PDF-Export**: Druckfähige PDF-Version
 - 📱 **PWA-fähig**: Offline-Zugriff und Installation als App möglich
+  - Intelligentes Installationsangebot nach Nutzer\*innen-Engagement
+  - Plattformspezifische Installation (automatisch auf Desktop/Android, manuell auf iOS)
+  - Detaillierte Installationsanleitung direkt in der App
 - ♿ **Barrierearm**: Zugängliches Web-Format
 - 🌐 **Geschlechterneutrale Sprache**: Konform mit den Empfehlungen der Universität Bayreuth
 
