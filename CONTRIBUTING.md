@@ -209,7 +209,11 @@ Wenn du lieber mit einer lokalen Kopie des Repositories arbeiten möchtest, kann
 Um deine Änderungen lokal zu überprüfen, kannst du die GitBook-Version mit Docker erstellen:
 
 ```bash
+# GitBook-Version erstellen
 make render-gitbook
+
+# Optional: Mit PWA-Funktionalität (Offline-Zugriff, Installation)
+make render-pwa
 ```
 
 Die generierte HTML-Version findest du dann im `_book/` Verzeichnis.
