@@ -17,3 +17,51 @@ pre code {
 #bachelor_geografie_professional_fields ul {
   list-style-type: '√ ';
 }
+
+/* Responsive table wrapper - enables horizontal scrolling on narrow screens */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1em;
+}
+
+/* Styled scrollbar for better UX */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mobile optimizations for tables inside responsive wrapper */
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 14px;
+  }
+
+  .table-responsive table td,
+  .table-responsive table th {
+    padding: 8px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  /* Allow URLs to break on mobile */
+  .table-responsive table td a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
