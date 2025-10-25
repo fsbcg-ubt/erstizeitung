@@ -75,10 +75,14 @@ Ebenfalls angerechnet werden die GDCh-Vorlesungen, in denen Gastredner*innen ihr
 
 Zuletzt gibts hier noch den Praktikumsplan des Studiums für euch (alle Angaben ohne Gewähr)
 
+::: {.table-responsive}
+
 ```{r, echo=FALSE}
 praktika <- read.csv(file = "data/bachelor-chemie-praktika.csv", sep = ";")
-knitr::kable(praktika, "pipe")
+knitr::kable(praktika, "html")
 ```
+
+:::
 
 Dann bleibt uns nur noch folgendes zu sagen:<br>
 💕**Viel Glück im Studium und einen guten Und schnellen Abschluss,<br>
