@@ -58,6 +58,7 @@ jobs:
     name: "Create PR Repository"
     runs-on: ubuntu-latest
     needs: [inject_pwa]
+    if: always() && needs.inject_pwa.result == 'success'
     steps:
       - name: "Create new repository for temporary deployment"
         uses: f1lander/create-repository-action@790b25d255717b5a81416a8390f3344396181805
@@ -131,6 +132,7 @@ jobs:
 
   deploy_gitbook:
     needs: [create_repository, inject_pwa, test]
+    if: always() && needs.create_repository.result == 'success' && needs.inject_pwa.result == 'success' && (needs.test.result == 'success' || needs.test.result == 'skipped')
     name: "Deploy GitBook to PR Repository"
     runs-on: ubuntu-latest
     environment:
