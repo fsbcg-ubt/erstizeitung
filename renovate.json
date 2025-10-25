@@ -5,6 +5,15 @@
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests"
   ],
+  "schedule": [
+    "every weekend"
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": [
+      "security"
+    ]
+  },
   "customManagers": [
     {
       "customType": "regex",
@@ -22,19 +31,26 @@
       "matchDatasources": [
         "github-tags"
       ],
-      "groupName": "github workflow actions",
-      "schedule": [
-        "every weekend"
-      ]
+      "groupName": "github workflow actions"
     },
     {
       "matchDatasources": [
         "docker"
       ],
-      "groupName": "docker dependencies",
-      "schedule": [
-        "every weekend"
-      ]
+      "groupName": "docker dependencies"
+    },
+    {
+      "matchFileNames": [
+        "pwa/**"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "PWA non-major dependencies"
     }
   ]
 }
