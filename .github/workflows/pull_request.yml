@@ -163,6 +163,7 @@ jobs:
 
   create_deployment_comment:
     needs: deploy_gitbook
+    if: always() && needs.deploy_gitbook.result == 'success'
     name: "Create comment with GH Pages URL"
     runs-on: ubuntu-latest
     steps:
