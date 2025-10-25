@@ -13,7 +13,7 @@ jobs:
       - name: "Setup Node.js"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           cache: 'npm'
           cache-dependency-path: 'pwa/package-lock.json'
       - name: "Install Node.js dependencies"
@@ -36,7 +36,7 @@ jobs:
       - name: "Setup Node.js"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           cache: 'npm'
           cache-dependency-path: 'pwa/package-lock.json'
       - name: "Install Node.js dependencies"
@@ -68,7 +68,7 @@ jobs:
       - name: "Setup Node.js"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           cache: 'npm'
           cache-dependency-path: 'pwa/package-lock.json'
       - name: "Install Node.js dependencies"
@@ -134,7 +134,7 @@ jobs:
       - name: "Setup Node.js"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           cache: 'npm'
           cache-dependency-path: 'pwa/package-lock.json'
       - name: "Download PWA artifact"
@@ -178,7 +178,7 @@ jobs:
       - name: "Setup Node.js"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           cache: 'npm'
           cache-dependency-path: 'pwa/package-lock.json'
       - name: "Install Node.js dependencies"
