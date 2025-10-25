@@ -231,4 +231,42 @@ test.describe('Offline Functionality', () => {
     await homePage.waitForOfflineIndicator();
     await homePage.verifyOfflineMessage();
   });
+
+  test('manifest icons are accessible offline', async ({
+    browserName,
+    context,
+    page,
+    pwaPage,
+  }) => {
+    test.skip(
+      browserName === 'webkit',
+      'WebKit has known issues with context.setOffline() and service workers (Playwright #2311)',
+    );
+
+    await waitForServiceWorkerActive(page);
+    await page.reload();
+
+    const manifest = await pwaPage.getManifest();
+    const firstIconPath = new URL(manifest.icons[0].src, page.url()).pathname;
+
+    await expect
+      .poll(async () => await pwaPage.isURLCached(firstIconPath), {
+        intervals: [100, 250, 500],
+        timeout: 3000,
+      })
+      .toBe(true);
+
+    await goOffline(context);
+
+    const iconLoadsOffline = await page.evaluate(async (iconSource) => {
+      try {
+        const response = await fetch(iconSource);
+        return response.ok;
+      } catch {
+        return false;
+      }
+    }, manifest.icons[0].src);
+
+    expect(iconLoadsOffline).toBe(true);
+  });
 });

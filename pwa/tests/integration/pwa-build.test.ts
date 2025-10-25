@@ -45,6 +45,21 @@ describe('PWA Build Output', () => {
       const swContent = fs.readFileSync(swPath, 'utf8');
       expect(swContent).toContain('workbox');
     });
+
+    test('service-worker.js precaches icons from icons directory', () => {
+      const swPath = path.join(BOOK_DIR, 'service-worker.js');
+      const swContent = fs.readFileSync(swPath, 'utf8');
+
+      const iconsDirectory = path.join(BOOK_DIR, 'icons');
+      const iconFiles = fs
+        .readdirSync(iconsDirectory)
+        .filter((file) => file.endsWith('.png'));
+
+      expect(swContent).toContain('icons/');
+
+      const iconMatches = swContent.match(/icons\/[^"']+\.png/g) ?? [];
+      expect(iconMatches.length).toBeGreaterThanOrEqual(iconFiles.length);
+    });
   });
 
   describe('PWA support files', () => {

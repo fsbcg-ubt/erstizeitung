@@ -37,6 +37,7 @@ const config: WorkboxConfig = {
     '**/*.css',
     '**/*.js',
     'images/**/*.{png,jpg,jpeg,svg,gif,webp}',
+    'icons/**/*.png',
     'search_index.json',
   ],
   maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
