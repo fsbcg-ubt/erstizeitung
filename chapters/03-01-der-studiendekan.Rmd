@@ -1,7 +1,7 @@
 ## Der Studiendekan {#studiendekan}
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/schuster.jpg")
+knitr::include_graphics("images/schuster.png")
 ```
 
 Prof. Dr. Stefan Schuster<br>

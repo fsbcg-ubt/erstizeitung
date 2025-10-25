@@ -1,7 +1,7 @@
 ## Der PULS Studiensupport {#der-puls-studiensupport}
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/lfuerst.JPG")
+knitr::include_graphics("images/lfuerst.png")
 ```
 
 Lina Fürst<br>
