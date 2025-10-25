@@ -35,7 +35,7 @@ jobs:
     name: "Render GitBook"
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/fsbcg-ubt/docker-bookdown:0.4.1@sha256:c55544143c2b5343113499ff3d2deaa14c36e7f66dabdead4d1ced1e1582b897
+      image: ghcr.io/fsbcg-ubt/docker-bookdown:0.4.2@sha256:118bd2468c7d30d24a85f9ffba86e8882a1fb99f499e452d7f0c485b4cfb1d51
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
