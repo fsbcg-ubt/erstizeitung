@@ -13,3 +13,5 @@ github-repo: fsbcg-ubt/erstizeitung
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/cover.png")
 ```
+
+**Hinweis:** Diese Zeitung kann als App auf deinem Smartphone installiert werden – Details am Ende der Zeitung.

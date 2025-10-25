@@ -16,7 +16,10 @@ Die Erstizeitung ist ein Magazin, das von der [Fachschaft BCG](https://www.fs-bc
 
 - 📚 **GitBook-Format**: Moderne, durchsuchbare HTML-Version
 - 📄 **PDF-Export**: Druckfähige PDF-Version
-- 🚀 **Automatisches Deployment**: Bei jedem Release automatisch auf GitHub Pages veröffentlicht
+- 📱 **PWA-fähig**: Offline-Zugriff und Installation als App möglich
+  - Intelligentes Installationsangebot nach Nutzer\*innen-Engagement
+  - Plattformspezifische Installation (automatisch auf Desktop/Android, manuell auf iOS)
+  - Detaillierte Installationsanleitung direkt in der App
 - ♿ **Barrierearm**: Zugängliches Web-Format
 - 🌐 **Geschlechterneutrale Sprache**: Konform mit den Empfehlungen der Universität Bayreuth
 
@@ -34,6 +37,7 @@ Das Projekt nutzt:
 - **[Docker](https://www.docker.com/)** - Containerisierung für reproduzierbare Builds
 - **[GitHub Actions](https://github.com/features/actions)** - CI/CD Pipeline
 - **[GitHub Pages](https://pages.github.com/)** - Hosting der Web-Version
+- **[PWA](https://web.dev/progressive-web-apps/)** - Progressive Web App Funktionalität (Offline-Zugriff, App-Installation)
 
 ## Schnellstart
 
@@ -45,6 +49,15 @@ make render-gitbook
 
 # Ausgabe im Ordner _book/
 open _book/index.html
+```
+
+### Mit PWA-Funktionalität
+
+```bash
+# GitBook mit PWA-Features erstellen
+make render-pwa
+
+# Ausgabe im Ordner _book/ mit installier- und offline-fähiger Version
 ```
 
 ### Mit R direkt
@@ -78,6 +91,7 @@ Dieses Projekt verfügt über umfangreiche Dokumentation:
 
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Ausführliche Anleitung zum Beitragen (für Menschen, speziell für nicht-technische Personen)
 - **[SPRACHLEITFADEN.md](SPRACHLEITFADEN.md)** - Richtlinien für geschlechterneutrale Sprache
+- **[pwa/README.md](pwa/README.md)** - Technische Dokumentation der PWA-Implementierung
 - **[AGENTS.md](AGENTS.md)** - Kontext für AI-Coding-Assistenten
 - **[CLAUDE.md](CLAUDE.md)** - Spezifische Anweisungen für Claude Code
 
