@@ -42,5 +42,9 @@ termine
 bcg-raetsel
 kruemel
 feten-am-campus
+diese-zeitung-als-app-nutzen
+auf-dem-smartphone-androidchrome
+auf-ios-iphoneipad
+auf-dem-computer
 datenschutzerklaerung
 impressum
