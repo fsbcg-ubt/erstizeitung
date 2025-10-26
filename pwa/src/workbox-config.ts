@@ -12,6 +12,7 @@ interface WorkboxConfig {
   globDirectory: string;
   globIgnores: string[];
   globPatterns: string[];
+  ignoreURLParametersMatching: RegExp[];
   maximumFileSizeToCacheInBytes: number;
   navigateFallback: string;
   navigateFallbackDenylist: RegExp[];
@@ -53,6 +54,7 @@ const config: WorkboxConfig = {
     'libs/**/*.{woff,woff2,ttf,eot}',
     'search_index.json',
   ],
+  ignoreURLParametersMatching: [/^v$/],
   maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
   navigateFallback: `${BASE_PATH}/offline.html`,
   navigateFallbackDenylist: [

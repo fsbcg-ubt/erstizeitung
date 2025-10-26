@@ -318,4 +318,29 @@ test.describe('Caching Strategies', () => {
     expect(cachedContent?.hasBookBody).toBe(true);
     expect(cachedContent?.hasNoErrors).toBe(true);
   });
+
+  test('font files with query parameters are cached and accessible', async ({
+    homePage,
+    page,
+  }) => {
+    await homePage.navigateToHome();
+    await page.waitForLoadState('networkidle');
+
+    const fontCached = await page.evaluate(async () => {
+      const cacheNames = await caches.keys();
+      for (const cacheName of cacheNames) {
+        const cache = await caches.open(cacheName);
+        const requests = await cache.keys();
+        const fontRequest = requests.find((request) =>
+          /\.(woff2?|ttf|eot)/i.exec(request.url),
+        );
+        if (fontRequest) {
+          return true;
+        }
+      }
+      return false;
+    });
+
+    expect(fontCached).toBe(true);
+  });
 });
