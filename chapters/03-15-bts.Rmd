@@ -1,7 +1,7 @@
 ## btS. e.V. - Biotechnologische Studierendeninitiative {#bts}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/bts-titelbild.png")
+knitr::include_graphics("images/organisationen/bts-titelbild.png")
 ```
 
 btS – das stand früher einmal für „biotechnologische Studierendeninitiative“ heutzutage heißt es aber „Life Science Studierendeninitiative“ und das bedeutet wir vereinen alle Biowissenschaften, also zum Beispiel Biologie, 

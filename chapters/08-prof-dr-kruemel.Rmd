@@ -1,7 +1,7 @@
 # Prof. Dr. Krümel - Das dienstälteste Fachschaftsmitglied {#kruemel}
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/kruemel.jpg")
+knitr::include_graphics("images/fachschaftler/kruemel.png")
 ```
 
 **Name**

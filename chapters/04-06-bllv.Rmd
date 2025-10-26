@@ -1,7 +1,7 @@
 ## BLLV-Studierendengruppe Bayreuth - Erfolgreich Lehramt studieren! {#bllv}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/bllv-titelbild.png")
+knitr::include_graphics("images/organisationen/bllv-titelbild.png")
 ```
 
 > "Du willst also wirklich Lehrer\*in werden? Hast du dir das auch gut überlegt? Ich meine mit den Kindern und so... Na ja, wenigstens hast du dann lange Ferien!"

@@ -1,7 +1,7 @@
 ## CSG e.V. - Alumniverein der Chemie an der Universität Bayreuth {#csg}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/csg-titelbild.png")
+knitr::include_graphics("images/organisationen/csg-titelbild.png")
 ```
 
 Die Chemiker Spass Gesellschaft e.V. (CSG e.V.) ist seit August 2008 der offizielle Alumniverein der Chemie an der Universität Bayreuth.

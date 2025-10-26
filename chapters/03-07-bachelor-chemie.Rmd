@@ -55,7 +55,7 @@ Für jedes Praktikum solltest du außerdem versichert sein, falls doch mal was z
 Aus diesem Grund wird zu Beginn der meisten Praktika ein schriftlicher Nachweis einer Haftpflichtversicherung verlangt.
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/bachelor-chemie-meme.png")
+knitr::include_graphics("images/studiengaenge/bachelor-chemie-meme.png")
 ```
 
 Im zweiten Semester wird dann noch einmal richtig nachgelegt: Einerseits wird eure Nebenfachausbildung mit Mathe 2 und Biochemie 1 abgeschlossen.

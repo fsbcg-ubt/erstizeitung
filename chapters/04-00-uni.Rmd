@@ -1,5 +1,5 @@
 # Universität Bayreuth {#uni}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/uni-cover.png")
+knitr::include_graphics("images/cover/uni-cover.png")
 ```
