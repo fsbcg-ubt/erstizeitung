@@ -1,6 +1,12 @@
 const BASE_PATH = process.env.BASE_PATH ?? '';
 
+interface ManifestEntry {
+  revision: string | null;
+  url: string;
+}
+
 interface WorkboxConfig {
+  additionalManifestEntries: ManifestEntry[];
   cacheId: string;
   clientsClaim: boolean;
   globDirectory: string;
@@ -28,6 +34,12 @@ interface RuntimeCachingEntry {
 }
 
 const config: WorkboxConfig = {
+  additionalManifestEntries: [
+    {
+      revision: null,
+      url: `${BASE_PATH}/offline.html`,
+    },
+  ],
   cacheId: 'erstizeitung-v2',
   clientsClaim: true,
   globDirectory: '../_book/',

@@ -174,7 +174,7 @@ test.describe('Caching Strategies', () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
-        const response = await cache.match('/offline-page.html');
+        const response = await cache.match('/offline.html');
         if (response) {
           return true;
         }
@@ -182,8 +182,7 @@ test.describe('Caching Strategies', () => {
       return false;
     });
 
-    // Note: Offline page caching depends on workbox configuration
-    expect(typeof isOfflinePageCached).toBe('boolean');
+    expect(isOfflinePageCached).toBe(true);
   });
 
   test('service worker cache ID matches configuration', async ({ pwaPage }) => {

@@ -89,6 +89,31 @@ describe('PWA Build Output', () => {
         }
       }
     });
+
+    test('service-worker.js includes offline.html in precache manifest', () => {
+      const swPath = path.join(BOOK_DIR, 'service-worker.js');
+      const swContent = fs.readFileSync(swPath, 'utf8');
+
+      expect(
+        swContent,
+        'offline.html should be in precache manifest',
+      ).toContain('offline.html');
+
+      expect(
+        swContent,
+        'offline.html should be explicitly listed in precache array (from additionalManifestEntries)',
+      ).toMatch(/\{[^}]{0,200}url:\s*["'][^"']{0,100}\/offline\.html/);
+    });
+
+    test('service-worker.js uses offline.html as navigation fallback', () => {
+      const swPath = path.join(BOOK_DIR, 'service-worker.js');
+      const swContent = fs.readFileSync(swPath, 'utf8');
+
+      expect(
+        swContent,
+        'createHandlerBoundToURL should reference offline.html',
+      ).toMatch(/createHandlerBoundToURL\([^)]*offline\.html[^)]*\)/);
+    });
   });
 
   describe('PWA support files', () => {
