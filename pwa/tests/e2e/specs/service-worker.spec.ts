@@ -48,7 +48,8 @@ test.describe('Service Worker Lifecycle', () => {
     const isHomeCached = await pwaPage.isURLCached('/');
     const isManifestCached = await pwaPage.isURLCached('/manifest.json');
 
-    expect(isHomeCached || isManifestCached).toBe(true);
+    expect(isHomeCached).toBe(true);
+    expect(isManifestCached).toBe(true);
   });
 
   test('precache includes all manifest icons', async ({ page, pwaPage }) => {

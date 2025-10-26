@@ -145,11 +145,13 @@ export class PWAPage extends BasePage {
    * Fetch and parse manifest.json
    */
   async getManifest(): Promise<ManifestData> {
-    const response = await this.page.goto('/manifest.json');
-    if (!response) {
-      throw new Error('Failed to fetch manifest.json');
-    }
-    return (await response.json()) as ManifestData;
+    return (await this.page.evaluate(async (): Promise<unknown> => {
+      const response = await fetch('/manifest.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch manifest.json');
+      }
+      return await response.json();
+    })) as ManifestData;
   }
 
   /**

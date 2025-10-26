@@ -40,6 +40,10 @@ const config: WorkboxConfig = {
       revision: null,
       url: `${BASE_PATH}/offline.html`,
     },
+    {
+      revision: null,
+      url: `${BASE_PATH}/manifest.json`,
+    },
   ],
   cacheId: 'erstizeitung-v2',
   clientsClaim: true,

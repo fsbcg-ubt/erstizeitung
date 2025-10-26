@@ -343,4 +343,10 @@ test.describe('Caching Strategies', () => {
 
     expect(fontCached).toBe(true);
   });
+
+  test('manifest.json is precached', async ({ pwaPage }) => {
+    const isCached = await pwaPage.isURLCached('/manifest.json');
+
+    expect(isCached).toBe(true);
+  });
 });
