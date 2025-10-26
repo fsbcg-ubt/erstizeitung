@@ -1,11 +1,18 @@
 const BASE_PATH = process.env.BASE_PATH ?? '';
 
+interface ManifestEntry {
+  revision: string | null;
+  url: string;
+}
+
 interface WorkboxConfig {
+  additionalManifestEntries: ManifestEntry[];
   cacheId: string;
   clientsClaim: boolean;
   globDirectory: string;
   globIgnores: string[];
   globPatterns: string[];
+  ignoreURLParametersMatching: RegExp[];
   maximumFileSizeToCacheInBytes: number;
   navigateFallback: string;
   navigateFallbackDenylist: RegExp[];
@@ -28,6 +35,16 @@ interface RuntimeCachingEntry {
 }
 
 const config: WorkboxConfig = {
+  additionalManifestEntries: [
+    {
+      revision: null,
+      url: `${BASE_PATH}/offline.html`,
+    },
+    {
+      revision: null,
+      url: `${BASE_PATH}/manifest.json`,
+    },
+  ],
   cacheId: 'erstizeitung-v2',
   clientsClaim: true,
   globDirectory: '../_book/',
@@ -41,6 +58,7 @@ const config: WorkboxConfig = {
     'libs/**/*.{woff,woff2,ttf,eot}',
     'search_index.json',
   ],
+  ignoreURLParametersMatching: [/^v$/],
   maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
   navigateFallback: `${BASE_PATH}/offline.html`,
   navigateFallbackDenylist: [

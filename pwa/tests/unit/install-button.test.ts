@@ -161,6 +161,44 @@ describe('install-button engagement tracking', () => {
       const button = document.querySelector('#install-pwa-btn');
       expect(button).toBeNull();
     });
+
+    test('does not call preventDefault when engagement criteria not met', async () => {
+      const engagementData = {
+        firstVisit: Date.now(),
+        lastVisit: Date.now(),
+        totalTime: 5000, // < 30 seconds
+        visitCount: 0, // < 2 visits
+      };
+      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
+
+      await import('../../src/install-button');
+
+      const event = createBeforeInstallPromptEvent();
+      globalThis.dispatchEvent(event);
+
+      vi.advanceTimersByTime(2100);
+
+      expect(event.preventDefault).not.toHaveBeenCalled();
+    });
+
+    test('calls preventDefault when engagement criteria met', async () => {
+      const engagementData = {
+        firstVisit: Date.now(),
+        lastVisit: Date.now(),
+        totalTime: 0,
+        visitCount: 2, // >= 2 visits
+      };
+      localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
+
+      await import('../../src/install-button');
+
+      const event = createBeforeInstallPromptEvent();
+      globalThis.dispatchEvent(event);
+
+      vi.advanceTimersByTime(2100);
+
+      expect(event.preventDefault).toHaveBeenCalled();
+    });
   });
 
   describe('install button interaction', () => {

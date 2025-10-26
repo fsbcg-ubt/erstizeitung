@@ -307,4 +307,39 @@ test.describe('Offline Functionality', () => {
 
     expect(fontLoadsOffline).toBe(true);
   });
+
+  test('manifest.json is accessible offline', async ({
+    browserName,
+    context,
+    page,
+    pwaPage,
+  }) => {
+    test.skip(
+      browserName === 'webkit',
+      'WebKit has known issues with context.setOffline() and service workers (Playwright #2311)',
+    );
+
+    await waitForServiceWorkerActive(page);
+    await page.reload();
+
+    await expect
+      .poll(async () => await pwaPage.isURLCached('/manifest.json'), {
+        intervals: [100, 250, 500],
+        timeout: 3000,
+      })
+      .toBe(true);
+
+    await goOffline(context);
+
+    const manifestLoadsOffline = await page.evaluate(async () => {
+      try {
+        const response = await fetch('/manifest.json');
+        return response.ok;
+      } catch {
+        return false;
+      }
+    });
+
+    expect(manifestLoadsOffline).toBe(true);
+  });
 });

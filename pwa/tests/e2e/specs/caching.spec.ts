@@ -174,7 +174,7 @@ test.describe('Caching Strategies', () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
-        const response = await cache.match('/offline-page.html');
+        const response = await cache.match('/offline.html');
         if (response) {
           return true;
         }
@@ -182,8 +182,7 @@ test.describe('Caching Strategies', () => {
       return false;
     });
 
-    // Note: Offline page caching depends on workbox configuration
-    expect(typeof isOfflinePageCached).toBe('boolean');
+    expect(isOfflinePageCached).toBe(true);
   });
 
   test('service worker cache ID matches configuration', async ({ pwaPage }) => {
@@ -318,5 +317,36 @@ test.describe('Caching Strategies', () => {
     expect(cachedContent).not.toBeNull();
     expect(cachedContent?.hasBookBody).toBe(true);
     expect(cachedContent?.hasNoErrors).toBe(true);
+  });
+
+  test('font files with query parameters are cached and accessible', async ({
+    homePage,
+    page,
+  }) => {
+    await homePage.navigateToHome();
+    await page.waitForLoadState('networkidle');
+
+    const fontCached = await page.evaluate(async () => {
+      const cacheNames = await caches.keys();
+      for (const cacheName of cacheNames) {
+        const cache = await caches.open(cacheName);
+        const requests = await cache.keys();
+        const fontRequest = requests.find((request) =>
+          /\.(woff2?|ttf|eot)/i.exec(request.url),
+        );
+        if (fontRequest) {
+          return true;
+        }
+      }
+      return false;
+    });
+
+    expect(fontCached).toBe(true);
+  });
+
+  test('manifest.json is precached', async ({ pwaPage }) => {
+    const isCached = await pwaPage.isURLCached('/manifest.json');
+
+    expect(isCached).toBe(true);
   });
 });
