@@ -114,15 +114,15 @@ test.describe('Web App Manifest', () => {
     const shortcutNames =
       manifest.shortcuts?.map((s) => s.name.toLowerCase()) ?? [];
 
-    expect(
-      shortcutNames.some(
-        (name) => name.includes('studienstart') || name.includes('studium'),
-      ),
-    ).toBe(true);
     expect(shortcutNames.some((name) => name.includes('fachschaft'))).toBe(
       true,
     );
-    expect(shortcutNames.some((name) => name.includes('campus'))).toBe(true);
+    expect(
+      shortcutNames.some(
+        (name) => name.includes('dschungel') || name.includes('abc'),
+      ),
+    ).toBe(true);
+    expect(shortcutNames.some((name) => name.includes('termine'))).toBe(true);
   });
 
   test('manifest start_url points to root', async ({ pwaPage }) => {
@@ -196,6 +196,71 @@ test.describe('Web App Manifest', () => {
         expect(shortcut.url).toMatch(/^\//);
         expect(shortcut.url).toMatch(/\.html$/);
       }
+    }
+  });
+
+  test('manifest shortcut URLs are accessible', async ({ page, pwaPage }) => {
+    const manifest = await pwaPage.getManifest();
+
+    for (const shortcut of manifest.shortcuts ?? []) {
+      const response = await page.goto(shortcut.url);
+      expect(
+        response.status() === 200 || response.status() === 304,
+      ).toBeTruthy();
+    }
+  });
+
+  test('manifest shortcuts have required properties', async ({ pwaPage }) => {
+    const manifest = await pwaPage.getManifest();
+
+    for (const shortcut of manifest.shortcuts ?? []) {
+      expect(shortcut.name).toBeTruthy();
+      expect(shortcut.url).toBeTruthy();
+    }
+  });
+
+  test('manifest shortcuts have recommended properties', async ({
+    pwaPage,
+  }) => {
+    const manifest = await pwaPage.getManifest();
+
+    for (const shortcut of manifest.shortcuts ?? []) {
+      expect(shortcut.short_name).toBeTruthy();
+      expect(shortcut.description).toBeTruthy();
+      expect(shortcut.icons).toBeDefined();
+      expect(Array.isArray(shortcut.icons)).toBe(true);
+    }
+  });
+
+  test('manifest shortcut icons meet requirements', async ({ pwaPage }) => {
+    const manifest = await pwaPage.getManifest();
+
+    for (const shortcut of manifest.shortcuts ?? []) {
+      expect(shortcut.icons.length).toBeGreaterThan(0);
+
+      for (const icon of shortcut.icons) {
+        expect(icon.sizes).toBe('192x192');
+        expect(icon.type).toBe('image/png');
+      }
+    }
+  });
+
+  test('manifest shortcuts follow best practices (≤3 for Android)', async ({
+    pwaPage,
+  }) => {
+    const manifest = await pwaPage.getManifest();
+
+    expect(manifest.shortcuts?.length).toBeLessThanOrEqual(3);
+  });
+
+  test('manifest shortcuts have meaningful descriptions for accessibility', async ({
+    pwaPage,
+  }) => {
+    const manifest = await pwaPage.getManifest();
+
+    for (const shortcut of manifest.shortcuts ?? []) {
+      expect(shortcut.description).toBeTruthy();
+      expect(shortcut.description.length).toBeGreaterThan(10);
     }
   });
 

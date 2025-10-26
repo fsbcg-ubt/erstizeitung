@@ -81,23 +81,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Studienstart",
-      "short_name": "Studium",
-      "description": "Informationen zum Studienstart",
-      "url": "{{BASE_PATH}}/studienstart.html",
-      "icons": [
-        {
-          "src": "{{BASE_PATH}}/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
       "name": "Fachschaft",
       "short_name": "Fachschaft",
-      "description": "Über die Fachschaft BCG",
-      "url": "{{BASE_PATH}}/die-fachschaft.html",
+      "description": "Kontakt zur Fachschaft BCG",
+      "url": "{{BASE_PATH}}/fachschaft.html",
       "icons": [
         {
           "src": "{{BASE_PATH}}/icons/icon-192.png",
@@ -107,10 +94,23 @@
       ]
     },
     {
-      "name": "Campus & Stadt",
-      "short_name": "Campus",
-      "description": "Campus und Bayreuth kennenlernen",
-      "url": "{{BASE_PATH}}/campus-stadt.html",
+      "name": "Dschungel-ABC",
+      "short_name": "ABC",
+      "description": "Uni-Lexikon und Begriffserklärungen",
+      "url": "{{BASE_PATH}}/dschungel-abc.html",
+      "icons": [
+        {
+          "src": "{{BASE_PATH}}/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Termine",
+      "short_name": "Termine",
+      "description": "Erstiveranstaltungen und wichtige Termine",
+      "url": "{{BASE_PATH}}/termine.html",
       "icons": [
         {
           "src": "{{BASE_PATH}}/icons/icon-192.png",
