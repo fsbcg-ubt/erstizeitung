@@ -115,6 +115,13 @@ jobs:
       - name: "Compile TypeScript"
         run: npm run build
         working-directory: pwa
+      - name: "Generate PWA icons"
+        run: npm run generate-icons
+        working-directory: pwa
+      - name: "Copy icons to _book"
+        run: |
+          mkdir -p _book/icons
+          cp -r pwa/icons/* _book/icons/ 2>/dev/null || true
       - name: "Generate Service Worker"
         run: npx workbox-cli@7.3.0 generateSW dist/workbox-config.js
         working-directory: pwa

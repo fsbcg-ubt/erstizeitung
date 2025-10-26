@@ -51,6 +51,30 @@ test.describe('Service Worker Lifecycle', () => {
     expect(isHomeCached || isManifestCached).toBe(true);
   });
 
+  test('precache includes all manifest icons', async ({ page, pwaPage }) => {
+    await waitForServiceWorkerActive(page);
+
+    const manifest = await pwaPage.getManifest();
+    const iconPaths = manifest.icons.map(
+      (icon) => new URL(icon.src, page.url()).pathname,
+    );
+
+    for (const iconPath of iconPaths) {
+      const isCached = await pwaPage.isURLCached(iconPath);
+      expect(isCached).toBe(true);
+    }
+  });
+
+  test('precache includes font files from libs', async ({ page, pwaPage }) => {
+    await waitForServiceWorkerActive(page);
+
+    const fontPath =
+      '/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf';
+
+    const isCached = await pwaPage.isURLCached(fontPath);
+    expect(isCached).toBe(true);
+  });
+
   test('verifies PWA installability criteria', async ({ pwaPage }) => {
     await waitForServiceWorkerActive(pwaPage.page);
 

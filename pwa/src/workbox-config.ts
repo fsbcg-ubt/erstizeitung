@@ -28,18 +28,17 @@ interface RuntimeCachingEntry {
 }
 
 const config: WorkboxConfig = {
-  cacheId: 'erstizeitung-v1',
+  cacheId: 'erstizeitung-v2',
   clientsClaim: true,
   globDirectory: '../_book/',
   globIgnores: ['**/node_modules/**', '**/workbox-*.js', '**/*-lock.json'],
   globPatterns: [
     '**/*.html',
-    'style.css',
-    'pwa-styles.css',
-    '*.js',
-    'libs/**/*.{css,js}',
-    'images/cover.png',
+    '**/*.css',
+    '**/*.js',
+    'images/**/*.{png,jpg,jpeg,svg,gif,webp}',
     'icons/**/*.png',
+    'libs/**/*.{woff,woff2,ttf,eot}',
     'search_index.json',
   ],
   maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,

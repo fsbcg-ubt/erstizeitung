@@ -166,12 +166,11 @@ if (require.main === module) {
     );
 
     const iconsDestination = path.join(BOOK_DIR, 'icons');
-    if (fs.existsSync(iconsDestination)) {
-      fs.rmSync(iconsDestination, { recursive: true });
+    if (!fs.existsSync(iconsDestination)) {
+      fs.cpSync(path.join(PWA_DIR, 'icons'), iconsDestination, {
+        recursive: true,
+      });
     }
-    fs.cpSync(path.join(PWA_DIR, 'icons'), iconsDestination, {
-      recursive: true,
-    });
 
     const fuseSourcePath = path.join(
       PWA_DIR,

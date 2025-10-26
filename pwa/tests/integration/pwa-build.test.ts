@@ -45,6 +45,50 @@ describe('PWA Build Output', () => {
       const swContent = fs.readFileSync(swPath, 'utf8');
       expect(swContent).toContain('workbox');
     });
+
+    test('service-worker.js precaches icons from icons directory', () => {
+      const swPath = path.join(BOOK_DIR, 'service-worker.js');
+      const swContent = fs.readFileSync(swPath, 'utf8');
+
+      const iconsDirectory = path.join(BOOK_DIR, 'icons');
+      const iconFiles = fs
+        .readdirSync(iconsDirectory)
+        .filter((file) => file.endsWith('.png'));
+
+      expect(swContent).toContain('icons/');
+
+      const iconMatches = swContent.match(/icons\/[^"']+\.png/g) ?? [];
+      expect(iconMatches.length).toBeGreaterThanOrEqual(iconFiles.length);
+    });
+
+    test('service-worker.js precaches font files from libs directory', () => {
+      const swPath = path.join(BOOK_DIR, 'service-worker.js');
+      const swContent = fs.readFileSync(swPath, 'utf8');
+      const libsDirectory = path.join(BOOK_DIR, 'libs');
+
+      if (fs.existsSync(libsDirectory)) {
+        const fontFiles: string[] = [];
+        const findFonts = (dir: string): void => {
+          const entries = fs.readdirSync(dir, { withFileTypes: true });
+          for (const entry of entries) {
+            const fullPath = path.join(dir, entry.name);
+            if (entry.isDirectory()) {
+              findFonts(fullPath);
+            } else if (/\.(?:woff2?|ttf|eot)$/i.test(entry.name)) {
+              fontFiles.push(entry.name);
+            }
+          }
+        };
+        findFonts(libsDirectory);
+
+        if (fontFiles.length > 0) {
+          expect(swContent).toContain('libs/');
+          const fontMatches =
+            swContent.match(/libs\/[^"']+\.(?:woff2?|ttf|eot)/gi) ?? [];
+          expect(fontMatches.length).toBeGreaterThanOrEqual(fontFiles.length);
+        }
+      }
+    });
   });
 
   describe('PWA support files', () => {
