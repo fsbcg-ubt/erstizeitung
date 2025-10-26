@@ -269,4 +269,42 @@ test.describe('Offline Functionality', () => {
 
     expect(iconLoadsOffline).toBe(true);
   });
+
+  test('font files are accessible offline', async ({
+    browserName,
+    context,
+    page,
+    pwaPage,
+  }) => {
+    test.skip(
+      browserName === 'webkit',
+      'WebKit has known issues with context.setOffline() and service workers (Playwright #2311)',
+    );
+
+    await waitForServiceWorkerActive(page);
+    await page.reload();
+
+    const fontPath =
+      '/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf';
+
+    await expect
+      .poll(async () => await pwaPage.isURLCached(fontPath), {
+        intervals: [100, 250, 500],
+        timeout: 3000,
+      })
+      .toBe(true);
+
+    await goOffline(context);
+
+    const fontLoadsOffline = await page.evaluate(async (fontSource) => {
+      try {
+        const response = await fetch(fontSource);
+        return response.ok;
+      } catch {
+        return false;
+      }
+    }, fontPath);
+
+    expect(fontLoadsOffline).toBe(true);
+  });
 });

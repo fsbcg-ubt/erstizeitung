@@ -65,6 +65,16 @@ test.describe('Service Worker Lifecycle', () => {
     }
   });
 
+  test('precache includes font files from libs', async ({ page, pwaPage }) => {
+    await waitForServiceWorkerActive(page);
+
+    const fontPath =
+      '/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf';
+
+    const isCached = await pwaPage.isURLCached(fontPath);
+    expect(isCached).toBe(true);
+  });
+
   test('verifies PWA installability criteria', async ({ pwaPage }) => {
     await waitForServiceWorkerActive(pwaPage.page);
 
