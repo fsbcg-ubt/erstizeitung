@@ -49,7 +49,7 @@ So kommen Genetik, Molekularbiologie sowie Botanik dazu und es wird vertieft auf
 Der Studiengang erhält nun seinen biochemischen Kern, was jedoch ein gesundes Bewusstsein für Lernen und Verantwortung voraussetzt.
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/bachelor-biochemie-meme.png")
+knitr::include_graphics("images/studiengaenge/bachelor-biochemie-meme.png")
 ```
 
 Neben den Vorlesungen und den dazugehörigen Übungen gibt es noch diverse Praktika: Im Labor werden nach Anweisung Synthesen, Umlagerungen und andere interessante Sachen gemacht,

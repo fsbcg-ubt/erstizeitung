@@ -1,5 +1,5 @@
 # Fakultät II {#fakultaet-ii}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/fakultaet-ii-cover.png")
+knitr::include_graphics("images/cover/fakultaet-ii-cover.png")
 ```

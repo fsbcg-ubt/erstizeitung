@@ -14,7 +14,7 @@ Die Realschullehrer\*innen studieren stattdessen ihre Fächer gleichwertig, habe
 Nach dem Bachelor der Gymis dreht sich das Spiel um und die holen im Master den ganzen EWS-Kram nach ^^  
 
 ```{r, echo=FALSE, out.width="400pt"}
-knitr::include_graphics("images/lehramt-meme.png")
+knitr::include_graphics("images/studiengaenge/lehramt-meme.png")
 ```
 
 #### Alles, was ihr sonst noch wissen solltet {-}

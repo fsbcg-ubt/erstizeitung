@@ -1,7 +1,7 @@
 ## Das Glashaus {#glashaus}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/das-glashaus-titelbild.png")
+knitr::include_graphics("images/organisationen/das-glashaus-titelbild.png")
 ```
 
 Gerade Lust auf eine Pause vom Unistress - aber wo ist das nächste Sofa? Lust auf Kaffee - aber die Kaffeeautomaten entsprechen einfach nicht deinem Geschmack?

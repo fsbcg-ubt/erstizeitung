@@ -4,7 +4,7 @@ Hallo, an dieser Stelle dürfen wir uns einmal vorstellen. Wir sind die Fachscha
 
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/gruppenbild-fachschaft-2025.png")
+knitr::include_graphics("images/fachschaftler/gruppenbild.png")
 ```
 
 ## Was ist die Fachschaft? {#fachschaft-was-ist-das}
