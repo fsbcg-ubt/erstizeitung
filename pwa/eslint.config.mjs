@@ -274,7 +274,7 @@ export default tseslint.config(
     },
   },
 
-  // Test files configuration
+  // Test files configuration - General
   {
     files: ['tests/**/*.ts', '**/*.test.ts', '**/*.spec.ts'],
     languageOptions: {
@@ -300,6 +300,14 @@ export default tseslint.config(
       'sonarjs/no-duplicate-string': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       'unicorn/import-style': 'off', // Allow namespace imports for Node.js built-ins
+    },
+  },
+
+  // Test files configuration - Unit tests only
+  {
+    files: ['tests/unit/**/*.ts', 'tests/setup/**/*.ts'],
+    rules: {
+      '@typescript-eslint/unbound-method': 'off', // Vitest mocks are safe from this binding
     },
   },
 );

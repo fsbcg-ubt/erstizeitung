@@ -422,15 +422,20 @@ const beforeInstallPromptHandler = (event: Event): void => {
     return;
   }
 
-  event.preventDefault();
-  deferredPrompt = event as BeforeInstallPromptEvent;
+  const shouldPreventDefault = shouldShowInstallPrompt();
 
   updateEngagementData();
   startTimeTracking();
 
-  setTimeout(() => {
-    showInstallButton();
-  }, 2000);
+  if (shouldPreventDefault) {
+    event.preventDefault();
+    deferredPrompt = event as BeforeInstallPromptEvent;
+
+    setTimeout(() => {
+      showInstallButton();
+    }, 2000);
+  }
+  // Let Chrome show its default banner (better UX for low-engagement visitors)
 };
 
 const beforeUnloadHandler = (): void => {
