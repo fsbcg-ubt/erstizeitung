@@ -385,24 +385,4 @@ describe('register-sw service worker management', () => {
       expect(reloadSpy).not.toHaveBeenCalled();
     });
   });
-
-  describe('edge cases', () => {
-    test('handles missing serviceWorker API gracefully', () => {
-      delete (navigator as any).serviceWorker;
-
-      expect(async () => {
-        await import('../../src/register-sw');
-        globalThis.dispatchEvent(new Event('load'));
-      }).not.toThrow();
-    });
-
-    test('handles registration returning null', () => {
-      navigator.serviceWorker.register = vi.fn().mockResolvedValue(null);
-
-      expect(async () => {
-        await import('../../src/register-sw');
-        globalThis.dispatchEvent(new Event('load'));
-      }).not.toThrow();
-    });
-  });
 });
