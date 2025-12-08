@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: validate_csv
     container:
-      image: ghcr.io/fsbcg-ubt/docker-bookdown:0.4.2@sha256:118bd2468c7d30d24a85f9ffba86e8882a1fb99f499e452d7f0c485b4cfb1d51
+      image: ghcr.io/fsbcg-ubt/docker-bookdown:0.4.3@sha256:70f4720e357ffce75a52e7b46153392c037384793bb98d2ea6dd36223d2fd7a7
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
