@@ -155,7 +155,6 @@ export default tseslint.config(
             'internal',
             ['parent', 'sibling', 'index'],
             'type',
-            'object',
             'unknown',
           ],
           newlinesBetween: 0,
