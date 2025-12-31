@@ -158,7 +158,7 @@ export default tseslint.config(
             'object',
             'unknown',
           ],
-          newlinesBetween: 'never',
+          newlinesBetween: 0,
           internalPattern: ['^@/.+'],
         },
       ],
