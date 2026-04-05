@@ -64,7 +64,7 @@
     "prettier": "^3.6.2",
     "serve": "^14.2.5",
     "typescript": "^6.0.0",
-    "typescript-eslint": "^8.45.0",
+    "typescript-eslint": "^8.58.0",
     "vitest": "^4.0.0"
   },
   "repository": {
