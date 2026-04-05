@@ -182,8 +182,15 @@ test.describe('Web App Manifest', () => {
   });
 
   test('BASE_PATH template is replaced in manifest', async ({ pwaPage }) => {
-    const response = await pwaPage.page.goto('/manifest.json');
-    const manifestText = await response?.text();
+    // Use in-browser fetch instead of page.goto + response.text()
+    // to avoid Firefox CDP protocol error (NS_ERROR_FAILURE)
+    const manifestText = await pwaPage.page.evaluate(async () => {
+      const response = await fetch('/manifest.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch manifest.json');
+      }
+      return await response.text();
+    });
 
     expect(manifestText).not.toContain('{{BASE_PATH}}');
   });
