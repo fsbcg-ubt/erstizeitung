@@ -1,8 +1,10 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
 
-const BOOK_DIR = path.join(__dirname, '..', '..', '..', '_book');
+const currentDirectory = path.dirname(fileURLToPath(import.meta.url));
+const BOOK_DIR = path.join(currentDirectory, '..', '..', '..', '_book');
 
 // Run 'make render-pwa' before running these tests
 

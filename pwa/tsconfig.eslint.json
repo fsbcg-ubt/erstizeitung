@@ -4,6 +4,6 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["node", "vitest/globals"]
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts", "*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.cts", "tests/**/*.ts", "*.ts"],
   "exclude": ["node_modules", "dist", "coverage"]
 }

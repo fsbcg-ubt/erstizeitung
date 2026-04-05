@@ -1,5 +1,5 @@
-let hideOnlineTimer: NodeJS.Timeout | null = null;
-let removeTimer: NodeJS.Timeout | null = null;
+let hideOnlineTimer: ReturnType<typeof setTimeout> | null = null;
+let removeTimer: ReturnType<typeof setTimeout> | null = null;
 
 function getOrCreateIndicator(): HTMLElement {
   const existingIndicator =

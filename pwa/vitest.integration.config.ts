@@ -7,7 +7,7 @@ export default defineConfig({
 
     // Global test utilities (keep false to avoid magic globals)
     coverage: {
-      exclude: ['dist/**', 'tests/**', 'src/workbox-config.ts'],
+      exclude: ['dist/**', 'tests/**', 'src/workbox-config.cts'],
       include: ['src/**/*.ts'],
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
