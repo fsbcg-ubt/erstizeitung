@@ -1,5 +1,6 @@
 import * as fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
 
 const BOOK_DIR = '_book';
@@ -119,8 +120,8 @@ function injectPWALinks(htmlFile: string, basePath: string): boolean {
   return true;
 }
 
-// Only run main code if executed directly (not required as module)
-if (require.main === module) {
+// Only run main code if executed directly (not imported as module)
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   try {
     const BASE_PATH = validateBasePath(process.env.BASE_PATH);
     console.log(`PWA Injection starting (BASE_PATH="${BASE_PATH}")...`);

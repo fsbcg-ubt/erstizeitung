@@ -231,7 +231,7 @@ export default tseslint.config(
 
   // Node.js-specific configuration for build scripts
   {
-    files: ['src/inject-html.ts', 'src/workbox-config.ts'],
+    files: ['src/inject-html.ts', 'src/workbox-config.cts'],
     rules: {
       // Allow console in CLI scripts
       'no-console': 'off',

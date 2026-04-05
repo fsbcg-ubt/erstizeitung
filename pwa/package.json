@@ -5,6 +5,7 @@
   "description": "PWA implementation for Erstizeitung BCG GitBook",
   "author": "Fachschaft BCG - Universität Bayreuth",
   "license": "MIT",
+  "type": "module",
   "engines": {
     "node": ">=20.19.1"
   },
@@ -59,7 +60,7 @@
     "eslint-plugin-regexp": "^3.0.0",
     "eslint-plugin-sonarjs": "^4.0.0",
     "eslint-plugin-unicorn": "^64.0.0",
-    "fuse.js": "^7.1.0",
+    "fuse.js": "6.4.6",
     "happy-dom": "^20.0.0",
     "prettier": "^3.6.2",
     "serve": "^14.2.5",

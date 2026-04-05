@@ -14,7 +14,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
       include: ['src/**/*.ts'],
-      exclude: ['dist/**', 'tests/**', 'src/workbox-config.ts'],
+      exclude: ['dist/**', 'tests/**', 'src/workbox-config.cts'],
     },
 
     // Test file patterns - ONLY unit tests (integration tests require _book/ build)

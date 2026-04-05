@@ -26,7 +26,7 @@ copy-pwa-assets: build-ts ## Copy PWA assets to _book
 	@cp -r pwa/icons/* _book/icons/ 2>/dev/null || true
 
 render-pwa: render-gitbook install-deps copy-pwa-assets ## Render GitBook + inject PWA
-	@cd pwa && BASE_PATH=$(BASE_PATH) npx workbox-cli@7.3.0 generateSW dist/workbox-config.js
+	@cd pwa && BASE_PATH=$(BASE_PATH) npx workbox-cli@7.3.0 generateSW dist/workbox-config.cjs
 	@BASE_PATH=$(BASE_PATH) node pwa/dist/inject-html.js
 	@echo "✅ PWA build complete!"
 

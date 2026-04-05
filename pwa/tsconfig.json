@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "CommonJS",
+    "module": "ES2022",
     "lib": ["ES2022"],
     "outDir": "./dist",
     "rootDir": "./src",
@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -19,6 +19,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/inject-html.ts", "src/workbox-config.ts"],
+  "include": ["src/inject-html.ts", "src/workbox-config.cts"],
   "exclude": ["node_modules", "dist", "tests"]
 }
