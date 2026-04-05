@@ -85,7 +85,7 @@ jobs:
           mkdir -p _book/icons
           cp -r pwa/icons/* _book/icons/ 2>/dev/null || true
       - name: "Generate Service Worker"
-        run: npx workbox-cli@7.3.0 generateSW dist/workbox-config.js
+        run: npx workbox-cli@7.3.0 generateSW dist/workbox-config.cjs
         working-directory: pwa
       - name: "Inject PWA files"
         run: node pwa/dist/inject-html.js
