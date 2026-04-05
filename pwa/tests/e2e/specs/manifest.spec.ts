@@ -186,6 +186,9 @@ test.describe('Web App Manifest', () => {
     // to avoid Firefox CDP protocol error (NS_ERROR_FAILURE)
     const manifestText = await pwaPage.page.evaluate(async () => {
       const response = await fetch('/manifest.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch manifest.json');
+      }
       return await response.text();
     });
 
