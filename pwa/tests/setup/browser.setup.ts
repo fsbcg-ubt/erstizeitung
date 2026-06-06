@@ -35,7 +35,7 @@ const createLocalStorageMock = (): Storage => {
     setItem: vi.fn((key: string, value: string) => {
       store[key] = value;
     }),
-  } as Storage;
+  };
 };
 
 // Mock Service Worker API
@@ -52,7 +52,7 @@ const createServiceWorkerMock = (): Partial<ServiceWorkerContainer> => ({
     active: null,
     addEventListener: vi.fn(),
     installing: null,
-    update: vi.fn().mockResolvedValue(undefined as never),
+    update: vi.fn().mockResolvedValue(),
     waiting: null,
   }),
 });
@@ -67,10 +67,10 @@ export const createBeforeInstallPromptEvent = (
   outcome: 'accepted' | 'dismissed' = 'accepted',
 ): BeforeInstallPromptEvent => {
   const event = new Event('beforeinstallprompt') as BeforeInstallPromptEvent;
-  event.preventDefault = vi.fn() as unknown as () => void;
+  event.preventDefault = vi.fn();
   (event as { prompt: () => Promise<void> }).prompt = vi
     .fn()
-    .mockResolvedValue(undefined as never);
+    .mockResolvedValue();
   (
     event as { userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }> }
   ).userChoice = Promise.resolve({ outcome });

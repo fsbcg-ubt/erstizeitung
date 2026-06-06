@@ -204,7 +204,7 @@ if (fileURLToPath(import.meta.url) === process.argv[1]) {
     const err = error as Error;
     console.error(`❌ PWA injection failed: ${err.message}`);
     console.error(err.stack);
-    throw new Error(`PWA injection failed: ${err.message}`);
+    throw new Error(`PWA injection failed: ${err.message}`, { cause: error });
   }
 }
 
