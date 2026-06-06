@@ -349,4 +349,21 @@ describe('downloadAsset', () => {
       ),
     ).rejects.toThrow();
   });
+
+  test('normalizes protocol-relative URLs to https before fetching', async () => {
+    const destination = path.join(temporaryDirectory, 'fuse.min.js');
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(new Response('FUSE_BYTES', { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await downloadAsset(
+      '//cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
+      destination,
+    );
+
+    expect(fetchMock).toHaveBeenCalledWith(
+      'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
+    );
+  });
 });

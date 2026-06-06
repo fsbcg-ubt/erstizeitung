@@ -130,10 +130,13 @@ async function downloadAsset(
   url: string,
   destinationPath: string,
 ): Promise<void> {
-  const response = await fetch(url);
+  // Node's fetch cannot parse protocol-relative URLs (//host/...), which are
+  // valid in HTML; resolve them to https before fetching.
+  const fetchUrl = url.startsWith('//') ? `https:${url}` : url;
+  const response = await fetch(fetchUrl);
   if (!response.ok) {
     throw new Error(
-      `Failed to download ${url}: HTTP ${String(response.status)}`,
+      `Failed to download ${fetchUrl}: HTTP ${String(response.status)}`,
     );
   }
   const data = Buffer.from(await response.arrayBuffer());
