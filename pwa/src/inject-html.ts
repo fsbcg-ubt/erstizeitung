@@ -78,12 +78,67 @@ function validateBookdownStructure(
   return { isValid: true };
 }
 
-function replaceCDNWithLocal($: cheerio.CheerioAPI, basePath: string): void {
-  $('script[src*="cdn.jsdelivr.net/npm/fuse.js"]').each(
-    (_index: number, element) => {
-      $(element).attr('src', `${basePath}/libs/fuse-6.4.6/fuse.min.js`);
-    },
-  );
+const JSDELIVR_NPM_PATTERN = /\/\/cdn\.jsdelivr\.net\/npm\/(.+)$/;
+
+// Maps a jsdelivr npm URL to a local path mirroring it under libs/, so the
+// vendored copy always matches whatever asset (and version) GitBook references.
+function cdnUrlToLocalPath(url: string): string | null {
+  const match = JSDELIVR_NPM_PATTERN.exec(url);
+  if (match === null) {
+    return null;
+  }
+  const npmPath = match[1].split(/[?#]/)[0];
+  return `libs/${npmPath}`;
+}
+
+function localizeCdnResources($: cheerio.CheerioAPI, basePath: string): void {
+  const rewrite = (selector: string, attribute: 'href' | 'src'): void => {
+    $(selector).each((_index, element) => {
+      const url = $(element).attr(attribute);
+      const localPath = url === undefined ? null : cdnUrlToLocalPath(url);
+      if (localPath !== null) {
+        $(element).attr(attribute, `${basePath}/${localPath}`);
+      }
+    });
+  };
+  rewrite('script[src*="cdn.jsdelivr.net/npm/"]', 'src');
+  rewrite('link[href*="cdn.jsdelivr.net/npm/"]', 'href');
+}
+
+// Returns a map of local mirror path -> source CDN URL for every jsdelivr npm
+// resource referenced in the document.
+function collectCdnAssets($: cheerio.CheerioAPI): Map<string, string> {
+  const assets = new Map<string, string>();
+  const collect = (selector: string, attribute: 'href' | 'src'): void => {
+    $(selector).each((_index, element) => {
+      const url = $(element).attr(attribute);
+      if (url === undefined) {
+        return;
+      }
+      const localPath = cdnUrlToLocalPath(url);
+      if (localPath !== null) {
+        assets.set(localPath, url);
+      }
+    });
+  };
+  collect('script[src*="cdn.jsdelivr.net/npm/"]', 'src');
+  collect('link[href*="cdn.jsdelivr.net/npm/"]', 'href');
+  return assets;
+}
+
+async function downloadAsset(
+  url: string,
+  destinationPath: string,
+): Promise<void> {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to download ${url}: HTTP ${String(response.status)}`,
+    );
+  }
+  const data = Buffer.from(await response.arrayBuffer());
+  fs.mkdirSync(path.dirname(destinationPath), { recursive: true });
+  fs.writeFileSync(destinationPath, data);
 }
 
 function injectPWALinks(htmlFile: string, basePath: string): boolean {
@@ -92,7 +147,7 @@ function injectPWALinks(htmlFile: string, basePath: string): boolean {
 
   validateBookdownStructure($, htmlFile);
 
-  replaceCDNWithLocal($, basePath);
+  localizeCdnResources($, basePath);
 
   $('link[rel="manifest"]').remove();
   $('link[rel="apple-touch-icon"]').remove();
@@ -173,23 +228,23 @@ if (fileURLToPath(import.meta.url) === process.argv[1]) {
       });
     }
 
-    const fuseSourcePath = path.join(
-      PWA_DIR,
-      'node_modules',
-      'fuse.js',
-      'dist',
-      'fuse.min.js',
-    );
-    const fuseDestinationDirectory = path.join(BOOK_DIR, 'libs', 'fuse-6.4.6');
-    if (!fs.existsSync(fuseDestinationDirectory)) {
-      fs.mkdirSync(fuseDestinationDirectory, { recursive: true });
-    }
-    fs.copyFileSync(
-      fuseSourcePath,
-      path.join(fuseDestinationDirectory, 'fuse.min.js'),
-    );
-
     const htmlFiles = findHTMLFiles(BOOK_DIR);
+
+    // Mirror every externally loaded jsdelivr asset locally before rewriting the
+    // references, so the rendered output makes no third-party requests (GDPR)
+    // and the vendored version always matches what GitBook references.
+    const cdnAssets = new Map<string, string>();
+    for (const htmlFile of htmlFiles) {
+      const $ = cheerio.load(fs.readFileSync(htmlFile, 'utf8'));
+      for (const [localPath, url] of collectCdnAssets($)) {
+        cdnAssets.set(localPath, url);
+      }
+    }
+    for (const [localPath, url] of cdnAssets) {
+      await downloadAsset(url, path.join(BOOK_DIR, localPath));
+      console.log(`📦 Localized CDN asset: ${url} → ${localPath}`);
+    }
+
     let modifiedCount = 0;
     for (const htmlFile of htmlFiles) {
       if (injectPWALinks(htmlFile, BASE_PATH)) {
@@ -213,6 +268,8 @@ export {
   processTemplate,
   findHTMLFiles,
   validateBookdownStructure,
-  replaceCDNWithLocal,
+  cdnUrlToLocalPath,
+  localizeCdnResources,
+  downloadAsset,
   injectPWALinks,
 };

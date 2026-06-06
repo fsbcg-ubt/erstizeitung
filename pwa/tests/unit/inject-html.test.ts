@@ -1,8 +1,13 @@
+import * as fs from 'node:fs';
+import * as os from 'node:os';
+import * as path from 'node:path';
 import * as cheerio from 'cheerio';
-import { describe, expect, test } from 'vitest';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import {
+  cdnUrlToLocalPath,
+  downloadAsset,
+  localizeCdnResources,
   processTemplate,
-  replaceCDNWithLocal,
   validateBasePath,
 } from '../../src/inject-html';
 
@@ -146,140 +151,202 @@ describe('processTemplate', () => {
   });
 });
 
-describe('replaceCDNWithLocal', () => {
-  describe('CDN replacement behavior', () => {
-    test.each([
-      {
-        basePath: '',
-        description: 'empty BASE_PATH',
-        expected: '/libs/fuse-6.4.6/fuse.min.js',
-      },
-      {
-        basePath: '/erstizeitung',
-        description: 'with BASE_PATH',
-        expected: '/erstizeitung/libs/fuse-6.4.6/fuse.min.js',
-      },
-    ])(
-      'replaces fuse.js CDN URL with local path ($description)',
-      ({ basePath, expected }) => {
-        const html =
-          '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script></head></html>';
-        const $ = cheerio.load(html);
+describe('cdnUrlToLocalPath', () => {
+  test.each([
+    {
+      description: 'fuse.js dist file',
+      expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
+      input: 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
+    },
+    {
+      description: 'arbitrary npm package',
+      expected: 'libs/lunr@2.3.9/lunr.min.js',
+      input: 'https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js',
+    },
+    {
+      description: 'scoped package',
+      expected: 'libs/@scope/pkg@2.0.0/index.js',
+      input: 'https://cdn.jsdelivr.net/npm/@scope/pkg@2.0.0/index.js',
+    },
+    {
+      description: 'protocol-relative URL',
+      expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
+      input: '//cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
+    },
+  ])(
+    'mirrors the npm path under libs/ ($description)',
+    ({ expected, input }) => {
+      expect(cdnUrlToLocalPath(input)).toBe(expected);
+    },
+  );
 
-        replaceCDNWithLocal($, basePath);
+  test('strips query string and hash fragments', () => {
+    expect(
+      cdnUrlToLocalPath(
+        'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js?v=1#frag',
+      ),
+    ).toBe('libs/fuse.js@6.4.6/dist/fuse.min.js');
+  });
 
-        const scriptSource = $('script[src*="fuse"]').attr('src');
-        expect(scriptSource).toBe(expected);
-      },
+  test.each([
+    {
+      description: 'non-jsdelivr host',
+      input: 'https://example.com/npm/fuse.js@6.4.6/dist/fuse.min.js',
+    },
+    {
+      description: 'jsdelivr non-npm path',
+      input: 'https://cdn.jsdelivr.net/gh/user/repo/file.js',
+    },
+    { description: 'local path', input: '/libs/local.js' },
+  ])('returns null for non-jsdelivr-npm URLs ($description)', ({ input }) => {
+    expect(cdnUrlToLocalPath(input)).toBeNull();
+  });
+});
+
+describe('localizeCdnResources', () => {
+  test.each([
+    {
+      basePath: '',
+      description: 'empty BASE_PATH',
+      expected: '/libs/fuse.js@6.4.6/dist/fuse.min.js',
+    },
+    {
+      basePath: '/erstizeitung',
+      description: 'with BASE_PATH',
+      expected: '/erstizeitung/libs/fuse.js@6.4.6/dist/fuse.min.js',
+    },
+  ])(
+    'rewrites a jsdelivr script src to a local mirror path ($description)',
+    ({ basePath, expected }) => {
+      const html =
+        '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script></head></html>';
+      const $ = cheerio.load(html);
+
+      localizeCdnResources($, basePath);
+
+      expect($('script[src*="fuse"]').attr('src')).toBe(expected);
+    },
+  );
+
+  test('rewrites a jsdelivr link href, not only scripts', () => {
+    const html =
+      '<html><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/some-lib@1.0.0/dist/style.css"></head></html>';
+    const $ = cheerio.load(html);
+
+    localizeCdnResources($, '');
+
+    expect($('link[rel="stylesheet"]').attr('href')).toBe(
+      '/libs/some-lib@1.0.0/dist/style.css',
+    );
+  });
+
+  test('localizes any jsdelivr npm package, not only fuse', () => {
+    const html =
+      '<html><head><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script></head></html>';
+    const $ = cheerio.load(html);
+
+    localizeCdnResources($, '');
+
+    expect($('script').attr('src')).toBe('/libs/lunr@2.3.9/lunr.min.js');
+  });
+
+  test('rewrites scripts in both head and body', () => {
+    const html =
+      '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script></head><body><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script></body></html>';
+    const $ = cheerio.load(html);
+
+    localizeCdnResources($, '');
+
+    expect(
+      $('head script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]').length,
+    ).toBe(1);
+    expect(
+      $('body script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]').length,
+    ).toBe(1);
+  });
+
+  test('does not modify non-jsdelivr resources', () => {
+    const html =
+      '<html><head><script src="/local/script.js"></script><link rel="stylesheet" href="https://fonts.example.com/x.css"></head></html>';
+    const $ = cheerio.load(html);
+    const before = $.html();
+
+    localizeCdnResources($, '');
+
+    expect($.html()).toBe(before);
+  });
+
+  test('preserves other attributes on rewritten elements', () => {
+    const html =
+      '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js" defer async data-test="value"></script></head></html>';
+    const $ = cheerio.load(html);
+
+    localizeCdnResources($, '');
+
+    const script = $('script[src*="fuse"]');
+    expect(script.attr('src')).toBe('/libs/fuse.js@6.4.6/dist/fuse.min.js');
+    expect(script.attr('defer')).toBeDefined();
+    expect(script.attr('async')).toBeDefined();
+    expect(script.attr('data-test')).toBe('value');
+  });
+
+  test('leaves HTML untouched when there are no CDN references', () => {
+    const html =
+      '<html><head><script src="/local/script.js"></script></head></html>';
+    const $ = cheerio.load(html);
+    const before = $.html();
+
+    localizeCdnResources($, '');
+
+    expect($.html()).toBe(before);
+  });
+});
+
+describe('downloadAsset', () => {
+  let temporaryDirectory: string;
+
+  beforeEach(() => {
+    temporaryDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'inject-test-'));
+  });
+
+  afterEach(() => {
+    fs.rmSync(temporaryDirectory, { force: true, recursive: true });
+    vi.restoreAllMocks();
+  });
+
+  test('writes fetched bytes to a nested destination path', async () => {
+    const destination = path.join(
+      temporaryDirectory,
+      'libs',
+      'fuse.js@6.4.6',
+      'dist',
+      'fuse.min.js',
+    );
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue(new Response('FUSE_BYTES', { status: 200 })),
     );
 
-    test('replaces multiple CDN script tags', () => {
-      const html = `
-        <html><head>
-          <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-        </head></html>
-      `;
-      const $ = cheerio.load(html);
+    await downloadAsset(
+      'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
+      destination,
+    );
 
-      replaceCDNWithLocal($, '');
-
-      const scripts = $('script[src*="fuse"]');
-      expect(scripts.length).toBe(2);
-      scripts.each((_, element) => {
-        expect($(element).attr('src')).toBe('/libs/fuse-6.4.6/fuse.min.js');
-      });
-    });
-
-    test('replaces CDN scripts in body as well as head', () => {
-      const html = `
-        <html>
-          <head>
-            <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-          </head>
-          <body>
-            <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-          </body>
-        </html>
-      `;
-      const $ = cheerio.load(html);
-
-      replaceCDNWithLocal($, '');
-
-      expect($('head script[src="/libs/fuse-6.4.6/fuse.min.js"]').length).toBe(
-        1,
-      );
-      expect($('body script[src="/libs/fuse-6.4.6/fuse.min.js"]').length).toBe(
-        1,
-      );
-    });
+    expect(fs.readFileSync(destination, 'utf8')).toBe('FUSE_BYTES');
   });
 
-  describe('preservation behavior', () => {
-    test('does not modify non-CDN script tags', () => {
-      const html = `
-        <html><head>
-          <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-          <script src="/local/script.js"></script>
-          <script src="libs/other.js"></script>
-        </head></html>
-      `;
-      const $ = cheerio.load(html);
+  test('throws on a non-ok HTTP response', async () => {
+    const destination = path.join(temporaryDirectory, 'missing.js');
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue(new Response('not found', { status: 404 })),
+    );
 
-      replaceCDNWithLocal($, '');
-
-      expect($('script[src="/local/script.js"]').length).toBe(1);
-      expect($('script[src="libs/other.js"]').length).toBe(1);
-      expect($('script[src="/libs/fuse-6.4.6/fuse.min.js"]').length).toBe(1);
-    });
-
-    test('preserves other script attributes', () => {
-      const html =
-        '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js" defer async data-test="value"></script></head></html>';
-      const $ = cheerio.load(html);
-
-      replaceCDNWithLocal($, '');
-
-      const script = $('script[src*="fuse"]');
-      expect(script.attr('src')).toBe('/libs/fuse-6.4.6/fuse.min.js');
-      expect(script.attr('defer')).toBeDefined();
-      expect(script.attr('async')).toBeDefined();
-      expect(script.attr('data-test')).toBe('value');
-    });
-  });
-
-  describe('edge cases', () => {
-    test('handles HTML with no CDN references', () => {
-      const html = `
-        <html><head>
-          <script src="/local/script.js"></script>
-          <script src="another.js"></script>
-        </head></html>
-      `;
-      const $ = cheerio.load(html);
-      const originalHtml = $.html();
-
-      replaceCDNWithLocal($, '');
-
-      expect($.html()).toBe(originalHtml);
-    });
-
-    test('handles empty HTML', () => {
-      const $ = cheerio.load('');
-
-      replaceCDNWithLocal($, '');
-
-      expect($('script').length).toBe(0);
-    });
-
-    test('handles HTML without head or body', () => {
-      const html =
-        '<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>';
-      const $ = cheerio.load(html);
-
-      replaceCDNWithLocal($, '');
-
-      expect($('script[src="/libs/fuse-6.4.6/fuse.min.js"]').length).toBe(1);
-    });
+    await expect(
+      downloadAsset(
+        'https://cdn.jsdelivr.net/npm/missing@1.0.0/missing.js',
+        destination,
+      ),
+    ).rejects.toThrow();
   });
 });
