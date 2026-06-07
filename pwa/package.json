@@ -53,7 +53,7 @@
     "baseline-browser-mapping": "^2.9.11",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-n": "^18.0.0",
     "eslint-plugin-perfectionist": "^5.0.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-promise": "^7.3.0",
