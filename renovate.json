@@ -52,6 +52,20 @@
         "patch"
       ],
       "groupName": "PWA non-major dependencies"
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "eslint",
+        "typescript-eslint",
+        "@eslint/*",
+        "@typescript-eslint/*",
+        "eslint-plugin-*",
+        "eslint-config-*"
+      ],
+      "groupName": "ESLint ecosystem"
     }
   ]
 }
