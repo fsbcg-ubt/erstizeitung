@@ -78,12 +78,83 @@ function validateBookdownStructure(
   return { isValid: true };
 }
 
-function replaceCDNWithLocal($: cheerio.CheerioAPI, basePath: string): void {
-  $('script[src*="cdn.jsdelivr.net/npm/fuse.js"]').each(
-    (_index: number, element) => {
-      $(element).attr('src', `${basePath}/libs/fuse-6.4.6/fuse.min.js`);
-    },
-  );
+const JSDELIVR_NPM_PATTERN = /\/\/cdn\.jsdelivr\.net\/npm\/(.+)$/;
+
+// The local path mirrors the CDN path, so the vendored copy is always the
+// exact asset (and version) GitBook references — nothing is pinned that could
+// drift when GitBook updates.
+function cdnUrlToLocalPath(url: string): string | null {
+  const match = JSDELIVR_NPM_PATTERN.exec(url);
+  if (match === null) {
+    return null;
+  }
+  const npmPath = match[1].split(/[?#]/)[0];
+  return `libs/${npmPath}`;
+}
+
+const CDN_RESOURCE_QUERIES = [
+  { attribute: 'src', selector: 'script[src*="cdn.jsdelivr.net/npm/"]' },
+  { attribute: 'href', selector: 'link[href*="cdn.jsdelivr.net/npm/"]' },
+] as const;
+
+// Single source of truth for what counts as a localizable CDN resource:
+// discovery (collectCdnAssets) and rewriting (localizeCdnResources) must never
+// disagree, or the output would either keep a third-party request or point to
+// a file that was never downloaded.
+function visitCdnResources(
+  $: cheerio.CheerioAPI,
+  visit: (
+    url: string,
+    localPath: string,
+    setUrl: (value: string) => void,
+  ) => void,
+): void {
+  for (const { attribute, selector } of CDN_RESOURCE_QUERIES) {
+    $(selector).each((_index, element) => {
+      const url = $(element).attr(attribute);
+      if (url === undefined) {
+        return;
+      }
+      const localPath = cdnUrlToLocalPath(url);
+      if (localPath !== null) {
+        visit(url, localPath, (value: string) => {
+          $(element).attr(attribute, value);
+        });
+      }
+    });
+  }
+}
+
+function localizeCdnResources($: cheerio.CheerioAPI, basePath: string): void {
+  visitCdnResources($, (_url, localPath, setUrl) => {
+    setUrl(`${basePath}/${localPath}`);
+  });
+}
+
+function collectCdnAssets($: cheerio.CheerioAPI): Map<string, string> {
+  const assets = new Map<string, string>();
+  visitCdnResources($, (url, localPath) => {
+    assets.set(localPath, url);
+  });
+  return assets;
+}
+
+async function downloadAsset(
+  url: string,
+  destinationPath: string,
+): Promise<void> {
+  // Node's fetch cannot parse protocol-relative URLs (//host/...), which are
+  // valid in HTML; resolve them to https before fetching.
+  const fetchUrl = url.startsWith('//') ? `https:${url}` : url;
+  const response = await fetch(fetchUrl);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to download ${fetchUrl}: HTTP ${String(response.status)}`,
+    );
+  }
+  const data = Buffer.from(await response.arrayBuffer());
+  fs.mkdirSync(path.dirname(destinationPath), { recursive: true });
+  fs.writeFileSync(destinationPath, data);
 }
 
 function injectPWALinks(htmlFile: string, basePath: string): boolean {
@@ -92,7 +163,7 @@ function injectPWALinks(htmlFile: string, basePath: string): boolean {
 
   validateBookdownStructure($, htmlFile);
 
-  replaceCDNWithLocal($, basePath);
+  localizeCdnResources($, basePath);
 
   $('link[rel="manifest"]').remove();
   $('link[rel="apple-touch-icon"]').remove();
@@ -173,23 +244,23 @@ if (fileURLToPath(import.meta.url) === process.argv[1]) {
       });
     }
 
-    const fuseSourcePath = path.join(
-      PWA_DIR,
-      'node_modules',
-      'fuse.js',
-      'dist',
-      'fuse.min.js',
-    );
-    const fuseDestinationDirectory = path.join(BOOK_DIR, 'libs', 'fuse-6.4.6');
-    if (!fs.existsSync(fuseDestinationDirectory)) {
-      fs.mkdirSync(fuseDestinationDirectory, { recursive: true });
-    }
-    fs.copyFileSync(
-      fuseSourcePath,
-      path.join(fuseDestinationDirectory, 'fuse.min.js'),
-    );
-
     const htmlFiles = findHTMLFiles(BOOK_DIR);
+
+    // Mirror every jsdelivr asset locally so the rendered output makes no
+    // third-party requests (GDPR). Discovery has to happen before
+    // injectPWALinks rewrites the CDN URLs away.
+    const cdnAssets = new Map<string, string>();
+    for (const htmlFile of htmlFiles) {
+      const $ = cheerio.load(fs.readFileSync(htmlFile, 'utf8'));
+      for (const [localPath, url] of collectCdnAssets($)) {
+        cdnAssets.set(localPath, url);
+      }
+    }
+    for (const [localPath, url] of cdnAssets) {
+      await downloadAsset(url, path.join(BOOK_DIR, localPath));
+      console.log(`📦 Localized CDN asset: ${url} → ${localPath}`);
+    }
+
     let modifiedCount = 0;
     for (const htmlFile of htmlFiles) {
       if (injectPWALinks(htmlFile, BASE_PATH)) {
@@ -213,6 +284,8 @@ export {
   processTemplate,
   findHTMLFiles,
   validateBookdownStructure,
-  replaceCDNWithLocal,
+  cdnUrlToLocalPath,
+  localizeCdnResources,
+  downloadAsset,
   injectPWALinks,
 };
