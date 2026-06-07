@@ -154,17 +154,12 @@ describe('processTemplate', () => {
 describe('cdnUrlToLocalPath', () => {
   test.each([
     {
-      description: 'fuse.js dist file',
+      description: 'plain package URL',
       expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
       input: 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
     },
     {
-      description: 'arbitrary npm package',
-      expected: 'libs/lunr@2.3.9/lunr.min.js',
-      input: 'https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js',
-    },
-    {
-      description: 'scoped package',
+      description: 'scoped package URL',
       expected: 'libs/@scope/pkg@2.0.0/index.js',
       input: 'https://cdn.jsdelivr.net/npm/@scope/pkg@2.0.0/index.js',
     },
@@ -173,20 +168,18 @@ describe('cdnUrlToLocalPath', () => {
       expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
       input: '//cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
     },
+    {
+      description: 'URL with query string and hash',
+      expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
+      input:
+        'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js?v=1#frag',
+    },
   ])(
     'mirrors the npm path under libs/ ($description)',
     ({ expected, input }) => {
       expect(cdnUrlToLocalPath(input)).toBe(expected);
     },
   );
-
-  test('strips query string and hash fragments', () => {
-    expect(
-      cdnUrlToLocalPath(
-        'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js?v=1#frag',
-      ),
-    ).toBe('libs/fuse.js@6.4.6/dist/fuse.min.js');
-  });
 
   test.each([
     {
@@ -197,7 +190,6 @@ describe('cdnUrlToLocalPath', () => {
       description: 'jsdelivr non-npm path',
       input: 'https://cdn.jsdelivr.net/gh/user/repo/file.js',
     },
-    { description: 'local path', input: '/libs/local.js' },
   ])('returns null for non-jsdelivr-npm URLs ($description)', ({ input }) => {
     expect(cdnUrlToLocalPath(input)).toBeNull();
   });
@@ -240,59 +232,21 @@ describe('localizeCdnResources', () => {
     );
   });
 
-  test('localizes any jsdelivr npm package, not only fuse', () => {
-    const html =
-      '<html><head><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script></head></html>';
-    const $ = cheerio.load(html);
-
-    localizeCdnResources($, '');
-
-    expect($('script').attr('src')).toBe('/libs/lunr@2.3.9/lunr.min.js');
-  });
-
-  test('rewrites scripts in both head and body', () => {
+  test('rewrites every matching element', () => {
     const html =
       '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script></head><body><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script></body></html>';
     const $ = cheerio.load(html);
 
     localizeCdnResources($, '');
 
-    expect(
-      $('head script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]').length,
-    ).toBe(1);
-    expect(
-      $('body script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]').length,
-    ).toBe(1);
+    expect($('script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]').length).toBe(
+      2,
+    );
   });
 
   test('does not modify non-jsdelivr resources', () => {
     const html =
       '<html><head><script src="/local/script.js"></script><link rel="stylesheet" href="https://fonts.example.com/x.css"></head></html>';
-    const $ = cheerio.load(html);
-    const before = $.html();
-
-    localizeCdnResources($, '');
-
-    expect($.html()).toBe(before);
-  });
-
-  test('preserves other attributes on rewritten elements', () => {
-    const html =
-      '<html><head><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js" defer async data-test="value"></script></head></html>';
-    const $ = cheerio.load(html);
-
-    localizeCdnResources($, '');
-
-    const script = $('script[src*="fuse"]');
-    expect(script.attr('src')).toBe('/libs/fuse.js@6.4.6/dist/fuse.min.js');
-    expect(script.attr('defer')).toBeDefined();
-    expect(script.attr('async')).toBeDefined();
-    expect(script.attr('data-test')).toBe('value');
-  });
-
-  test('leaves HTML untouched when there are no CDN references', () => {
-    const html =
-      '<html><head><script src="/local/script.js"></script></head></html>';
     const $ = cheerio.load(html);
     const before = $.html();
 

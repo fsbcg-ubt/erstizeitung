@@ -80,8 +80,9 @@ function validateBookdownStructure(
 
 const JSDELIVR_NPM_PATTERN = /\/\/cdn\.jsdelivr\.net\/npm\/(.+)$/;
 
-// Maps a jsdelivr npm URL to a local path mirroring it under libs/, so the
-// vendored copy always matches whatever asset (and version) GitBook references.
+// The local path mirrors the CDN path, so the vendored copy is always the
+// exact asset (and version) GitBook references — nothing is pinned that could
+// drift when GitBook updates.
 function cdnUrlToLocalPath(url: string): string | null {
   const match = JSDELIVR_NPM_PATTERN.exec(url);
   if (match === null) {
@@ -91,25 +92,24 @@ function cdnUrlToLocalPath(url: string): string | null {
   return `libs/${npmPath}`;
 }
 
-function localizeCdnResources($: cheerio.CheerioAPI, basePath: string): void {
-  const rewrite = (selector: string, attribute: 'href' | 'src'): void => {
-    $(selector).each((_index, element) => {
-      const url = $(element).attr(attribute);
-      const localPath = url === undefined ? null : cdnUrlToLocalPath(url);
-      if (localPath !== null) {
-        $(element).attr(attribute, `${basePath}/${localPath}`);
-      }
-    });
-  };
-  rewrite('script[src*="cdn.jsdelivr.net/npm/"]', 'src');
-  rewrite('link[href*="cdn.jsdelivr.net/npm/"]', 'href');
-}
+const CDN_RESOURCE_QUERIES = [
+  { attribute: 'src', selector: 'script[src*="cdn.jsdelivr.net/npm/"]' },
+  { attribute: 'href', selector: 'link[href*="cdn.jsdelivr.net/npm/"]' },
+] as const;
 
-// Returns a map of local mirror path -> source CDN URL for every jsdelivr npm
-// resource referenced in the document.
-function collectCdnAssets($: cheerio.CheerioAPI): Map<string, string> {
-  const assets = new Map<string, string>();
-  const collect = (selector: string, attribute: 'href' | 'src'): void => {
+// Single source of truth for what counts as a localizable CDN resource:
+// discovery (collectCdnAssets) and rewriting (localizeCdnResources) must never
+// disagree, or the output would either keep a third-party request or point to
+// a file that was never downloaded.
+function visitCdnResources(
+  $: cheerio.CheerioAPI,
+  visit: (
+    url: string,
+    localPath: string,
+    setUrl: (value: string) => void,
+  ) => void,
+): void {
+  for (const { attribute, selector } of CDN_RESOURCE_QUERIES) {
     $(selector).each((_index, element) => {
       const url = $(element).attr(attribute);
       if (url === undefined) {
@@ -117,12 +117,25 @@ function collectCdnAssets($: cheerio.CheerioAPI): Map<string, string> {
       }
       const localPath = cdnUrlToLocalPath(url);
       if (localPath !== null) {
-        assets.set(localPath, url);
+        visit(url, localPath, (value: string) => {
+          $(element).attr(attribute, value);
+        });
       }
     });
-  };
-  collect('script[src*="cdn.jsdelivr.net/npm/"]', 'src');
-  collect('link[href*="cdn.jsdelivr.net/npm/"]', 'href');
+  }
+}
+
+function localizeCdnResources($: cheerio.CheerioAPI, basePath: string): void {
+  visitCdnResources($, (_url, localPath, setUrl) => {
+    setUrl(`${basePath}/${localPath}`);
+  });
+}
+
+function collectCdnAssets($: cheerio.CheerioAPI): Map<string, string> {
+  const assets = new Map<string, string>();
+  visitCdnResources($, (url, localPath) => {
+    assets.set(localPath, url);
+  });
   return assets;
 }
 
@@ -233,9 +246,9 @@ if (fileURLToPath(import.meta.url) === process.argv[1]) {
 
     const htmlFiles = findHTMLFiles(BOOK_DIR);
 
-    // Mirror every externally loaded jsdelivr asset locally before rewriting the
-    // references, so the rendered output makes no third-party requests (GDPR)
-    // and the vendored version always matches what GitBook references.
+    // Mirror every jsdelivr asset locally so the rendered output makes no
+    // third-party requests (GDPR). Discovery has to happen before
+    // injectPWALinks rewrites the CDN URLs away.
     const cdnAssets = new Map<string, string>();
     for (const htmlFile of htmlFiles) {
       const $ = cheerio.load(fs.readFileSync(htmlFile, 'utf8'));
