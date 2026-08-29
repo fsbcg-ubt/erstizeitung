@@ -1,12 +1,12 @@
-## Der 3. Vorstand {#fachschaftsmitglieder-dritter-vorsitz}
+## Der 3 .Vorstand {#fachschaftsmitglieder-zweiter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/simon.png")
+knitr::include_graphics("images/fachschaftler/Hendrik.png")
 ```
 
 **Name**
 
-> Simon
+> Hendrik
 
 **Job in der Fachschaft**
 
@@ -14,28 +14,28 @@ knitr::include_graphics("images/fachschaftler/simon.png")
 
 **Studiengang**
 
-> Nachhaltige Chemie und Energie
+> B.Sc. Biochemie
 
 **Motto**
 
-> Ein Bier ist kein Bier
+> What doesn't kill you, evolves and tries again...
 
 **Beste Bar in Bayreuth**
 
-> Kanapee
+> KANAPEE
 
 **Bester Ort in Bayreuth**
 
-> ÖBG
+> Mein Bett
 
 **Ziel für dieses Jahr**
 
-> Weiterhin Spaß an der Uni haben
+> Meinen Kaffeekonsum reduzieren...
 
 **Das kann ich gar nicht!**
 
-> Mathe
+> Auf Koffein verzichten
 
 **Wie viel Uhr ist es?**
 
-> 11:02
+> 17:48

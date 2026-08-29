@@ -1,12 +1,12 @@
 ## Die Goldene-Kreide-Verantwortliche {#fachschaftsmitglieder-goldene-kreide}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/lena.png")
+knitr::include_graphics("images/fachschaftler/Justine.png")
 ```
 
 **Name**
 
-> Lena
+> Justine
 
 **Job in der Fachschaft**
 
@@ -14,11 +14,11 @@ knitr::include_graphics("images/fachschaftler/lena.png")
 
 **Studiengang**
 
-> Polymerscience M. Sc.
+> Biologie
 
 **Motto**
 
-> That's halt irgendwo auch the game
+> Das ist Trivialwissen (ist es nicht)
 
 **Beste Bar in Bayreuth**
 
@@ -26,16 +26,16 @@ knitr::include_graphics("images/fachschaftler/lena.png")
 
 **Bester Ort in Bayreuth**
 
-> NW1 Bib
+> Der Wald beim Siegesturm
 
 **Ziel für dieses Jahr**
 
-> Keine Krise kriegen
+> Keinen Burnout bekommen
 
 **Das kann ich gar nicht!**
 
-> Hydrated bleiben
+> Morgens gut gelaunt sein
 
 **Wie viel Uhr ist es?**
 
-> Immer zwei Minuten nach der eigentlichen Uhrzeit
+> 21:09

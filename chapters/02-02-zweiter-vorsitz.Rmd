@@ -1,12 +1,12 @@
-## Der 2.Vorstand {#fachschaftsmitglieder-zweiter-vorsitz}
+## Der 2. Vorstand {#fachschaftsmitglieder-dritter-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/janik.png")
+knitr::include_graphics("images/fachschaftler/simon.png")
 ```
 
 **Name**
 
-> Janik
+> Simon
 
 **Job in der Fachschaft**
 
@@ -14,28 +14,28 @@ knitr::include_graphics("images/fachschaftler/janik.png")
 
 **Studiengang**
 
-> Geo-Physik Lehramt Gymnasium (Geo Hauptfach)
+> Chemie B.Sc.
 
 **Motto**
 
-> Geographen torkeln nicht, sie Mäandrieren!
+> Ein Bier ist kein Bier
 
 **Beste Bar in Bayreuth**
 
-> Heimathafen
+> Kanapee
 
 **Bester Ort in Bayreuth**
 
-> Volleyballfelder an der Mainaue
+> ÖBG
 
 **Ziel für dieses Jahr**
 
-> Unfallfrei älter werden
+> Weiterhin Spaß an der Uni haben
 
 **Das kann ich gar nicht!**
 
-> Spagat
+> Mathe
 
 **Wie viel Uhr ist es?**
 
-> 11:46 vormittags (ich hab mein Leben unter Kontrolle!)
+> 11:02
