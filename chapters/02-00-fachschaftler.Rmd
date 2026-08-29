@@ -1,5 +1,5 @@
 # Fachschaftsmitglieder {#fachschaftsmitglieder}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("images/fachschaftler/wahlplakat.png")
+knitr::include_graphics("images/fachschaftler/wahlplakat2026.png")
 ```
