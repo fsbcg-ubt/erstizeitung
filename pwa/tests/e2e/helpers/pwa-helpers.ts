@@ -11,9 +11,9 @@ import { type BrowserContext, type Page } from '@playwright/test';
  */
 export async function setOnline(
   context: BrowserContext,
-  online: boolean,
+  isOnline: boolean,
 ): Promise<void> {
-  await context.setOffline(!online);
+  await context.setOffline(!isOnline);
 }
 
 /**
@@ -76,16 +76,17 @@ export async function simulateBeforeInstallPrompt(
   await page.evaluate((userOutcome) => {
     const event = new Event('beforeinstallprompt') as BeforeInstallPromptEvent;
 
-    Object.defineProperty(event, 'prompt', {
-      value: async () => {
-        // Empty implementation for mock
+    Object.defineProperties(event, {
+      prompt: {
+        value: async () => {
+          // Empty implementation for mock
+        },
+        writable: true,
       },
-      writable: true,
-    });
-
-    Object.defineProperty(event, 'userChoice', {
-      value: Promise.resolve({ outcome: userOutcome }),
-      writable: true,
+      userChoice: {
+        value: Promise.resolve({ outcome: userOutcome }),
+        writable: true,
+      },
     });
 
     globalThis.dispatchEvent(event);
@@ -163,7 +164,7 @@ export async function getCacheNames(page: Page): Promise<string[]> {
 /**
  * Verify cache exists with specific name pattern
  */
-export async function verifyCacheExists(
+export async function hasMatchingCache(
   page: Page,
   namePattern: RegExp,
 ): Promise<boolean> {
@@ -181,7 +182,7 @@ export async function waitForCache(
 ): Promise<void> {
   const startTime = Date.now();
   while (Date.now() - startTime < timeout) {
-    if (await verifyCacheExists(page, cacheNamePattern)) {
+    if (await hasMatchingCache(page, cacheNamePattern)) {
       return;
     }
     await page.waitForTimeout(100);

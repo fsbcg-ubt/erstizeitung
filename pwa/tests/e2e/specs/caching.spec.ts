@@ -137,10 +137,7 @@ test.describe('Caching Strategies', () => {
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
         const requests = await cache.keys();
-        const cssRequest = requests.find((request) =>
-          request.url.includes('.css'),
-        );
-        if (cssRequest) {
+        if (requests.some((request) => request.url.includes('.css'))) {
           return true;
         }
       }
@@ -156,10 +153,7 @@ test.describe('Caching Strategies', () => {
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
         const requests = await cache.keys();
-        const jsRequest = requests.find((request) =>
-          request.url.includes('.js'),
-        );
-        if (jsRequest) {
+        if (requests.some((request) => request.url.includes('.js'))) {
           return true;
         }
       }
@@ -226,10 +220,11 @@ test.describe('Caching Strategies', () => {
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
         const requests = await cache.keys();
-        const imageRequest = requests.find((request) =>
-          /\.(png|jpg|jpeg|svg|gif|webp)$/i.exec(request.url),
-        );
-        if (imageRequest) {
+        if (
+          requests.some((request) =>
+            /\.(?:png|jpg|jpeg|svg|gif|webp)$/i.test(request.url),
+          )
+        ) {
           return true;
         }
       }
@@ -326,22 +321,21 @@ test.describe('Caching Strategies', () => {
     await homePage.navigateToHome();
     await page.waitForLoadState('networkidle');
 
-    const fontCached = await page.evaluate(async () => {
+    const isFontCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
         const requests = await cache.keys();
-        const fontRequest = requests.find((request) =>
-          /\.(woff2?|ttf|eot)/i.exec(request.url),
-        );
-        if (fontRequest) {
+        if (
+          requests.some((request) => /\.(?:woff2?|ttf|eot)/i.test(request.url))
+        ) {
           return true;
         }
       }
       return false;
     });
 
-    expect(fontCached).toBe(true);
+    expect(isFontCached).toBe(true);
   });
 
   test('manifest.json is precached', async ({ pwaPage }) => {

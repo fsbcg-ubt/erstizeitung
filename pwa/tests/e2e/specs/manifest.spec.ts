@@ -209,7 +209,9 @@ test.describe('Web App Manifest', () => {
   test('manifest shortcut URLs are accessible', async ({ page, pwaPage }) => {
     const manifest = await pwaPage.getManifest();
 
-    for (const shortcut of manifest.shortcuts ?? []) {
+    const shortcuts = manifest.shortcuts ?? [];
+
+    for (const shortcut of shortcuts) {
       const response = await page.goto(shortcut.url);
       expect(
         response.status() === 200 || response.status() === 304,
@@ -220,7 +222,9 @@ test.describe('Web App Manifest', () => {
   test('manifest shortcuts have required properties', async ({ pwaPage }) => {
     const manifest = await pwaPage.getManifest();
 
-    for (const shortcut of manifest.shortcuts ?? []) {
+    const shortcuts = manifest.shortcuts ?? [];
+
+    for (const shortcut of shortcuts) {
       expect(shortcut.name).toBeTruthy();
       expect(shortcut.url).toBeTruthy();
     }
@@ -231,7 +235,9 @@ test.describe('Web App Manifest', () => {
   }) => {
     const manifest = await pwaPage.getManifest();
 
-    for (const shortcut of manifest.shortcuts ?? []) {
+    const shortcuts = manifest.shortcuts ?? [];
+
+    for (const shortcut of shortcuts) {
       expect(shortcut.short_name).toBeTruthy();
       expect(shortcut.description).toBeTruthy();
       expect(shortcut.icons).toBeDefined();
@@ -242,7 +248,9 @@ test.describe('Web App Manifest', () => {
   test('manifest shortcut icons meet requirements', async ({ pwaPage }) => {
     const manifest = await pwaPage.getManifest();
 
-    for (const shortcut of manifest.shortcuts ?? []) {
+    const shortcuts = manifest.shortcuts ?? [];
+
+    for (const shortcut of shortcuts) {
       expect(shortcut.icons.length).toBeGreaterThan(0);
 
       for (const icon of shortcut.icons) {
@@ -265,7 +273,9 @@ test.describe('Web App Manifest', () => {
   }) => {
     const manifest = await pwaPage.getManifest();
 
-    for (const shortcut of manifest.shortcuts ?? []) {
+    const shortcuts = manifest.shortcuts ?? [];
+
+    for (const shortcut of shortcuts) {
       expect(shortcut.description).toBeTruthy();
       expect(shortcut.description.length).toBeGreaterThan(10);
     }

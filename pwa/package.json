@@ -59,7 +59,7 @@
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-regexp": "^3.0.0",
     "eslint-plugin-sonarjs": "^4.0.0",
-    "eslint-plugin-unicorn": "^64.0.0",
+    "eslint-plugin-unicorn": "^74.0.0",
     "happy-dom": "^20.0.0",
     "prettier": "^3.6.2",
     "serve": "^14.2.5",

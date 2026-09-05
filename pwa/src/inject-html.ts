@@ -23,7 +23,9 @@ function validateBasePath(basePath: string | undefined): string {
 }
 
 function processTemplate(content: string, basePath: string): string {
-  return content.replaceAll('{{BASE_PATH}}', basePath);
+  // Replacer function, not a string: a literal `$&` or `$'` in basePath would
+  // otherwise be expanded as a replacement pattern.
+  return content.replaceAll('{{BASE_PATH}}', () => basePath);
 }
 
 function findHTMLFiles(dir: string): string[] {
@@ -49,13 +51,14 @@ function validateBookdownStructure(
   htmlFile: string,
 ): ValidationResult {
   const head = $('head');
-  const body = $('body');
 
   if (head.length === 0) {
     throw new Error(
       `Invalid HTML structure in ${htmlFile}: <head> element not found`,
     );
   }
+
+  const body = $('body');
 
   if (body.length === 0) {
     throw new Error(
@@ -88,7 +91,7 @@ function cdnUrlToLocalPath(url: string): string | null {
   if (match === null) {
     return null;
   }
-  const npmPath = match[1].split(/[?#]/)[0];
+  const npmPath = match[1].split(/[?#]/, 1)[0];
   return `libs/${npmPath}`;
 }
 
@@ -157,7 +160,7 @@ async function downloadAsset(
   fs.writeFileSync(destinationPath, data);
 }
 
-function injectPWALinks(htmlFile: string, basePath: string): boolean {
+function injectPWALinks(htmlFile: string, basePath: string): void {
   const html = fs.readFileSync(htmlFile, 'utf8');
   const $ = cheerio.load(html);
 
@@ -188,7 +191,6 @@ function injectPWALinks(htmlFile: string, basePath: string): boolean {
   `);
 
   fs.writeFileSync(htmlFile, $.html());
-  return true;
 }
 
 // Only run main code if executed directly (not imported as module)
@@ -263,9 +265,8 @@ if (fileURLToPath(import.meta.url) === process.argv[1]) {
 
     let modifiedCount = 0;
     for (const htmlFile of htmlFiles) {
-      if (injectPWALinks(htmlFile, BASE_PATH)) {
-        modifiedCount++;
-      }
+      injectPWALinks(htmlFile, BASE_PATH);
+      modifiedCount++;
     }
 
     console.log(

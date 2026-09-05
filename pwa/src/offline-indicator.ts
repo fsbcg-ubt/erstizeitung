@@ -1,5 +1,5 @@
 let hideOnlineTimer: ReturnType<typeof setTimeout> | null = null;
-let removeTimer: ReturnType<typeof setTimeout> | null = null;
+let removalTimer: ReturnType<typeof setTimeout> | null = null;
 
 function getOrCreateIndicator(): HTMLElement {
   const existingIndicator =
@@ -24,9 +24,9 @@ function showOfflineIndicator(): void {
     clearTimeout(hideOnlineTimer);
     hideOnlineTimer = null;
   }
-  if (removeTimer) {
-    clearTimeout(removeTimer);
-    removeTimer = null;
+  if (removalTimer) {
+    clearTimeout(removalTimer);
+    removalTimer = null;
   }
 
   const indicator = getOrCreateIndicator();
@@ -52,9 +52,9 @@ function showOnlineNotification(): void {
     clearTimeout(hideOnlineTimer);
     hideOnlineTimer = null;
   }
-  if (removeTimer) {
-    clearTimeout(removeTimer);
-    removeTimer = null;
+  if (removalTimer) {
+    clearTimeout(removalTimer);
+    removalTimer = null;
   }
 
   const indicator = getOrCreateIndicator();
@@ -73,11 +73,11 @@ function showOnlineNotification(): void {
   hideOnlineTimer = setTimeout(() => {
     indicator.classList.remove('show');
 
-    removeTimer = setTimeout(() => {
+    removalTimer = setTimeout(() => {
       if (!indicator.classList.contains('show')) {
         indicator.remove();
       }
-      removeTimer = null;
+      removalTimer = null;
     }, 300);
 
     hideOnlineTimer = null;

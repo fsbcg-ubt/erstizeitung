@@ -187,7 +187,7 @@ test.describe('Offline Functionality', () => {
       })
       .toBe(true);
 
-    const bothCached = await page.evaluate(async () => {
+    const areBothCached = await page.evaluate(async () => {
       const cache1 = await caches.match('fachschaft.html', {
         ignoreSearch: true,
         ignoreVary: true,
@@ -198,15 +198,15 @@ test.describe('Offline Functionality', () => {
       });
       return Boolean(cache1 && cache2);
     });
-    expect(bothCached).toBe(true);
+    expect(areBothCached).toBe(true);
   });
 
   test('handles online-offline-online transitions correctly', async ({
     context,
     homePage,
   }) => {
-    const initialOnline = await homePage.evaluate(() => navigator.onLine);
-    expect(initialOnline).toBe(true);
+    const wasInitiallyOnline = await homePage.evaluate(() => navigator.onLine);
+    expect(wasInitiallyOnline).toBe(true);
 
     await goOffline(context);
     await homePage.page.evaluate(() => {
@@ -258,7 +258,7 @@ test.describe('Offline Functionality', () => {
 
     await goOffline(context);
 
-    const iconLoadsOffline = await page.evaluate(async (iconSource) => {
+    const canLoadIconOffline = await page.evaluate(async (iconSource) => {
       try {
         const response = await fetch(iconSource);
         return response.ok;
@@ -267,7 +267,7 @@ test.describe('Offline Functionality', () => {
       }
     }, manifest.icons[0].src);
 
-    expect(iconLoadsOffline).toBe(true);
+    expect(canLoadIconOffline).toBe(true);
   });
 
   test('font files are accessible offline', async ({
@@ -296,7 +296,7 @@ test.describe('Offline Functionality', () => {
 
     await goOffline(context);
 
-    const fontLoadsOffline = await page.evaluate(async (fontSource) => {
+    const canLoadFontOffline = await page.evaluate(async (fontSource) => {
       try {
         const response = await fetch(fontSource);
         return response.ok;
@@ -305,7 +305,7 @@ test.describe('Offline Functionality', () => {
       }
     }, fontPath);
 
-    expect(fontLoadsOffline).toBe(true);
+    expect(canLoadFontOffline).toBe(true);
   });
 
   test('manifest.json is accessible offline', async ({
@@ -331,7 +331,7 @@ test.describe('Offline Functionality', () => {
 
     await goOffline(context);
 
-    const manifestLoadsOffline = await page.evaluate(async () => {
+    const canLoadManifestOffline = await page.evaluate(async () => {
       try {
         const response = await fetch('/manifest.json');
         return response.ok;
@@ -340,6 +340,6 @@ test.describe('Offline Functionality', () => {
       }
     });
 
-    expect(manifestLoadsOffline).toBe(true);
+    expect(canLoadManifestOffline).toBe(true);
   });
 });
