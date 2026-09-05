@@ -63,7 +63,7 @@
     "happy-dom": "^20.0.0",
     "prettier": "^3.6.2",
     "serve": "^14.2.5",
-    "typescript": "^6.0.0",
+    "typescript": "^7.0.0",
     "typescript-eslint": "^8.60.1",
     "vitest": "^5.0.0"
   },
