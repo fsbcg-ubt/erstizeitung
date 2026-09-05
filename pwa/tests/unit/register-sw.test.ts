@@ -222,7 +222,7 @@ describe('register-sw service worker management', () => {
       // updatefound events create no duplicate toast.
       // eslint-disable-next-line unicorn/no-incorrect-query-selector
       const toasts = document.querySelectorAll('#sw-update-toast');
-      expect(toasts.length).toBe(1);
+      expect(toasts).toHaveLength(1);
     });
   });
 

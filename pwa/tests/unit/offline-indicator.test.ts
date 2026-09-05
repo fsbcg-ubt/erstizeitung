@@ -202,7 +202,7 @@ describe('offline-indicator network state management', () => {
       // offline events create no duplicate element.
       // eslint-disable-next-line unicorn/no-incorrect-query-selector
       const indicators = document.querySelectorAll('#offline-indicator');
-      expect(indicators.length).toBe(1);
+      expect(indicators).toHaveLength(1);
     });
 
     test('prevents auto-dismiss if going offline again during online notification', async () => {
