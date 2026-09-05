@@ -234,6 +234,9 @@ test.describe('Caching Strategies', () => {
     expect(typeof areImagesCached).toBe('boolean');
   });
 
+  // The expect.poll() below is this test's assertion; the rule only recognizes
+  // direct expect() calls.
+  // eslint-disable-next-line sonarjs/assertions-in-tests
   test('service worker handles cache updates', async ({ pwaPage }) => {
     await pwaPage.triggerServiceWorkerUpdate();
 

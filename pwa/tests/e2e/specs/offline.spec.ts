@@ -238,6 +238,7 @@ test.describe('Offline Functionality', () => {
     page,
     pwaPage,
   }) => {
+    // Conditional skip, not a disabled test: this runs on chromium and firefox.
     test.skip(
       browserName === 'webkit',
       'WebKit has known issues with context.setOffline() and service workers (Playwright #2311)',
@@ -276,6 +277,7 @@ test.describe('Offline Functionality', () => {
     page,
     pwaPage,
   }) => {
+    // Conditional skip, not a disabled test: this runs on chromium and firefox.
     test.skip(
       browserName === 'webkit',
       'WebKit has known issues with context.setOffline() and service workers (Playwright #2311)',
@@ -314,6 +316,7 @@ test.describe('Offline Functionality', () => {
     page,
     pwaPage,
   }) => {
+    // Conditional skip, not a disabled test: this runs on chromium and firefox.
     test.skip(
       browserName === 'webkit',
       'WebKit has known issues with context.setOffline() and service workers (Playwright #2311)',
