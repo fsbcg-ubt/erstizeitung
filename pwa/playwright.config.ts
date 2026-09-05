@@ -122,5 +122,5 @@ export default defineConfig({
     timeout: 5 * 1000, // 5 seconds
   },
 
-  timeout: process.env.CI ? 120 * 1000 : 30 * 1000, // 120s in CI, 30s locally
+  timeout: (process.env.CI ? 120 : 30) * 1000, // 120s in CI, 30s locally
 });

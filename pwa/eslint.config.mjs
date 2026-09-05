@@ -112,7 +112,7 @@ export default tseslint.config(
 
       // Unicorn recommended rules
       ...unicorn.configs.recommended.rules,
-      'unicorn/prevent-abbreviations': [
+      'unicorn/name-replacements': [
         'error',
         {
           allowList: {
@@ -133,6 +133,9 @@ export default tseslint.config(
         },
       ],
       'unicorn/no-null': 'off', // TypeScript uses null
+      // The browser entry points are scripts, not libraries: prompt state and
+      // timer handles live at module scope by design.
+      'unicorn/no-top-level-assignment-in-function': 'off',
       'unicorn/filename-case': [
         'error',
         {
@@ -299,6 +302,32 @@ export default tseslint.config(
       'sonarjs/no-duplicate-string': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       'unicorn/import-style': 'off', // Allow namespace imports for Node.js built-ins
+      // Tests delete and restore globalThis.BeforeInstallPromptEvent to drive
+      // the iOS/Safari branch of isIOSorSafari().
+      'unicorn/no-global-object-property-assignment': 'off',
+      // Setup files register beforeEach/afterEach hooks at module scope.
+      'unicorn/no-top-level-side-effects': 'off',
+    },
+  },
+
+  // Test files configuration - E2E tests only
+  {
+    files: ['tests/e2e/**/*.ts'],
+    languageOptions: {
+      // Callbacks passed to page.evaluate() run in the browser, not in Node.
+      // unicorn/isolated-functions only permits globals declared here.
+      globals: {
+        caches: 'readonly',
+        document: 'readonly',
+        DOMParser: 'readonly',
+        Event: 'readonly',
+        fetch: 'readonly',
+        localStorage: 'readonly',
+        navigator: 'readonly',
+        sessionStorage: 'readonly',
+        URL: 'readonly',
+        window: 'readonly',
+      },
     },
   },
 

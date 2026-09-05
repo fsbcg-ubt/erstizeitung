@@ -31,7 +31,7 @@ const RESET_CYCLE_DAYS = 90;
 
 let deferredPrompt: BeforeInstallPromptEvent | null = null;
 let trackingStartTime: number | null = null;
-let iosInstructionsShownThisSession = false;
+let hasShownIosInstructionsThisSession = false;
 
 const installWindow = globalThis as InstallWindow;
 
@@ -68,9 +68,10 @@ function isIOSorSafari(): boolean {
   const isIOS = /iPad|iPhone|iPod/.test(userAgent);
   const isSafari = /^(?:(?!chrome|android).)*safari/i.test(userAgent);
 
-  const supportsBeforeInstallPrompt = 'BeforeInstallPromptEvent' in globalThis;
+  const hasBeforeInstallPromptSupport =
+    'BeforeInstallPromptEvent' in globalThis;
 
-  return (isIOS || isSafari) && !supportsBeforeInstallPrompt;
+  return (isIOS || isSafari) && !hasBeforeInstallPromptSupport;
 }
 
 /**
@@ -181,7 +182,7 @@ function showIOSInstallInstructions(): void {
     return;
   }
 
-  if (iosInstructionsShownThisSession) {
+  if (hasShownIosInstructionsThisSession) {
     return;
   }
 
@@ -208,7 +209,7 @@ function showIOSInstallInstructions(): void {
   `;
 
   document.body.append(banner);
-  iosInstructionsShownThisSession = true;
+  hasShownIosInstructionsThisSession = true;
 
   const dismissButton = banner.querySelector('.ios-install-dismiss');
   const handleDismiss = (): void => {
@@ -321,12 +322,14 @@ function startTimeTracking(): void {
 }
 
 function saveTimeSpent(): void {
-  if (trackingStartTime !== null) {
-    const data = getEngagementData();
-    data.totalTime += Date.now() - trackingStartTime;
-    localStorage.setItem(ENGAGEMENT_KEY, JSON.stringify(data));
-    trackingStartTime = null;
+  if (trackingStartTime === null) {
+    return;
   }
+
+  const data = getEngagementData();
+  data.totalTime += Date.now() - trackingStartTime;
+  localStorage.setItem(ENGAGEMENT_KEY, JSON.stringify(data));
+  trackingStartTime = null;
 }
 
 function shouldShowInstallPrompt(): boolean {
@@ -369,25 +372,29 @@ function showInstallButton(): void {
 
   const handleInstallClick = (): void => {
     void (async () => {
-      if (deferredPrompt) {
-        await deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-          // Intentionally empty - just wait for outcome
-        }
-        deferredPrompt = null;
-        button.remove();
+      if (!deferredPrompt) {
+        return;
       }
+
+      await deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        // Intentionally empty - just wait for outcome
+      }
+      deferredPrompt = null;
+      button.remove();
     })();
   };
 
   button.addEventListener('click', handleInstallClick);
 
   button.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleInstallClick();
+    if (!(event.key === 'Enter' || event.key === ' ')) {
+      return;
     }
+
+    event.preventDefault();
+    handleInstallClick();
   });
 
   const dismissButton = document.createElement('button');
@@ -410,10 +417,12 @@ function showInstallButton(): void {
   dismissButton.addEventListener('click', handleDismissClick);
 
   dismissButton.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleDismissClick(event);
+    if (!(event.key === 'Enter' || event.key === ' ')) {
+      return;
     }
+
+    event.preventDefault();
+    handleDismissClick(event);
   });
 }
 

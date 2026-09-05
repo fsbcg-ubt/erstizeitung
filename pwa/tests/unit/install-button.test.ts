@@ -5,7 +5,7 @@ describe('install-button engagement tracking', () => {
   beforeEach(() => {
     vi.resetModules();
     localStorage.clear();
-    document.body.innerHTML = '';
+    document.body.replaceChildren();
     vi.clearAllTimers();
     vi.useFakeTimers();
   });
@@ -219,8 +219,8 @@ describe('install-button engagement tracking', () => {
 
       const button = document.querySelector('#install-pwa-btn');
 
-      expect(button?.innerHTML).toContain('📱');
-      expect(button?.innerHTML).toContain('App installieren');
+      expect(button?.getHTML()).toContain('📱');
+      expect(button?.getHTML()).toContain('App installieren');
 
       expect(button?.getAttribute('aria-label')).toBe(
         'Erstizeitung als Progressive Web App installieren',
@@ -588,8 +588,8 @@ describe('install-button engagement tracking', () => {
         expect(banner).toBeTruthy();
 
         if (checkContent) {
-          expect(banner?.innerHTML).toContain('Als App installieren');
-          expect(banner?.innerHTML).toContain('Zum Home-Bildschirm');
+          expect(banner?.getHTML()).toContain('Als App installieren');
+          expect(banner?.getHTML()).toContain('Zum Home-Bildschirm');
         }
 
         // Cleanup
