@@ -239,9 +239,9 @@ describe('localizeCdnResources', () => {
 
     localizeCdnResources($, '');
 
-    expect($('script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]').length).toBe(
-      2,
-    );
+    expect(
+      $('script[src="/libs/fuse.js@6.4.6/dist/fuse.min.js"]'),
+    ).toHaveLength(2);
   });
 
   test('does not modify non-jsdelivr resources', () => {

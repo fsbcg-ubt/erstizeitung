@@ -21,7 +21,7 @@ function showUpdateNotification(newWorker: ServiceWorker): void {
       navigator.serviceWorker.addEventListener(
         'controllerchange',
         () => {
-          globalThis.location.reload();
+          location.reload();
         },
         { once: true },
       );
@@ -38,9 +38,12 @@ function showUpdateNotification(newWorker: ServiceWorker): void {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('{{BASE_PATH}}/service-worker.js')
-      .then((registration) => {
+    void (async () => {
+      try {
+        const registration = await navigator.serviceWorker.register(
+          '{{BASE_PATH}}/service-worker.js',
+        );
+
         document.addEventListener('visibilitychange', () => {
           if (!document.hidden) {
             void registration.update();
@@ -71,11 +74,9 @@ if ('serviceWorker' in navigator) {
             }
           });
         });
-
-        return registration;
-      })
-      .catch((error: unknown) => {
+      } catch (error: unknown) {
         console.error('SW registration failed:', error);
-      });
+      }
+    })();
   });
 }

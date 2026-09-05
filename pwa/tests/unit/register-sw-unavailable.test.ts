@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 describe('register-sw unavailable serviceWorker', () => {
   beforeEach(() => {
     vi.resetModules();
-    document.body.innerHTML = '';
+    document.body.replaceChildren();
     vi.useFakeTimers();
   });
 

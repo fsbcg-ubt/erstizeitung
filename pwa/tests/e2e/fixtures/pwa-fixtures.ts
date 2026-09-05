@@ -49,9 +49,9 @@ export { expect } from '@playwright/test';
  */
 export async function setNetworkCondition(
   context: BrowserContext,
-  online: boolean,
+  isOnline: boolean,
 ): Promise<void> {
-  await context.setOffline(!online);
+  await context.setOffline(!isOnline);
 }
 
 /**
@@ -101,16 +101,17 @@ export async function simulateInstallPrompt(
     const event = new Event('beforeinstallprompt') as BeforeInstallPromptEvent;
 
     // Add required properties
-    Object.defineProperty(event, 'prompt', {
-      value: async () => {
-        // Empty implementation for mock
+    Object.defineProperties(event, {
+      prompt: {
+        value: async () => {
+          // Empty implementation for mock
+        },
+        writable: true,
       },
-      writable: true,
-    });
-
-    Object.defineProperty(event, 'userChoice', {
-      value: Promise.resolve({ outcome: userOutcome }),
-      writable: true,
+      userChoice: {
+        value: Promise.resolve({ outcome: userOutcome }),
+        writable: true,
+      },
     });
 
     // Dispatch the event

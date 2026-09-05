@@ -48,8 +48,8 @@
     "@typescript-eslint/eslint-plugin": "^8.45.0",
     "@typescript-eslint/parser": "^8.45.0",
     "@vite-pwa/assets-generator": "^1.0.1",
-    "@vitest/coverage-v8": "^4.0.0",
-    "@vitest/ui": "^4.0.0",
+    "@vitest/coverage-v8": "^5.0.0",
+    "@vitest/ui": "^5.0.0",
     "baseline-browser-mapping": "^2.9.11",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
@@ -59,13 +59,13 @@
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-regexp": "^3.0.0",
     "eslint-plugin-sonarjs": "^4.0.0",
-    "eslint-plugin-unicorn": "^64.0.0",
+    "eslint-plugin-unicorn": "^74.0.0",
     "happy-dom": "^20.0.0",
     "prettier": "^3.6.2",
     "serve": "^14.2.5",
     "typescript": "^6.0.0",
     "typescript-eslint": "^8.60.1",
-    "vitest": "^4.0.0"
+    "vitest": "^5.0.0"
   },
   "repository": {
     "type": "git",

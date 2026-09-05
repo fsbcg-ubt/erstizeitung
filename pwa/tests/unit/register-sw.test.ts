@@ -6,7 +6,7 @@ describe('register-sw service worker management', () => {
 
   beforeEach(() => {
     vi.resetModules();
-    document.body.innerHTML = '';
+    document.body.replaceChildren();
     vi.clearAllTimers();
     vi.useFakeTimers();
 
@@ -177,8 +177,8 @@ describe('register-sw service worker management', () => {
 
       const toast = document.querySelector('#sw-update-toast');
 
-      expect(toast?.innerHTML).toContain('Neue Version verfügbar!');
-      expect(toast?.innerHTML).toContain('Aktualisieren');
+      expect(toast?.getHTML()).toContain('Neue Version verfügbar!');
+      expect(toast?.getHTML()).toContain('Aktualisieren');
 
       expect(toast?.getAttribute('role')).toBe('status');
       expect(toast?.getAttribute('aria-live')).toBe('polite');
@@ -218,8 +218,11 @@ describe('register-sw service worker management', () => {
       updateFoundHandler?.();
       await vi.runAllTimersAsync();
 
+      // querySelectorAll, not querySelector: the assertion is that repeated
+      // updatefound events create no duplicate toast.
+      // eslint-disable-next-line unicorn/no-incorrect-query-selector
       const toasts = document.querySelectorAll('#sw-update-toast');
-      expect(toasts.length).toBe(1);
+      expect(toasts).toHaveLength(1);
     });
   });
 

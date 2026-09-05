@@ -125,7 +125,9 @@ export class PWAPage extends BasePage {
         target.pathname.replace(/^\//, ''), // Pathname without leading slash (e.g., "fachschaft.html")
       ]);
 
-      for (const cacheName of await caches.keys()) {
+      const cacheNames = await caches.keys();
+
+      for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
         for (const candidate of candidates) {
           const response = await cache.match(candidate, {
@@ -198,16 +200,17 @@ export class PWAPage extends BasePage {
         'beforeinstallprompt',
       ) as BeforeInstallPromptEvent;
 
-      Object.defineProperty(event, 'prompt', {
-        value: async () => {
-          // Empty implementation for mock
+      Object.defineProperties(event, {
+        prompt: {
+          value: async () => {
+            // Empty implementation for mock
+          },
+          writable: true,
         },
-        writable: true,
-      });
-
-      Object.defineProperty(event, 'userChoice', {
-        value: Promise.resolve({ outcome: 'accepted' }),
-        writable: true,
+        userChoice: {
+          value: Promise.resolve({ outcome: 'accepted' }),
+          writable: true,
+        },
       });
 
       globalThis.dispatchEvent(event);

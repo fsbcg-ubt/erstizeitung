@@ -143,10 +143,10 @@ test.describe('Service Worker Lifecycle', () => {
 
     // This verifies the visibilitychange listener is working
     await homePage.wait(500);
-    const consoleErrors = await page.evaluate(() => {
+    const hasNoConsoleErrors = await page.evaluate(() => {
       return true; // If we reach here, no errors occurred
     });
-    expect(consoleErrors).toBe(true);
+    expect(hasNoConsoleErrors).toBe(true);
   });
 
   test('service worker registration uses correct scope', async ({ page }) => {

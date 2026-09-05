@@ -86,24 +86,25 @@ beforeEach(() => {
   });
 
   const serviceWorkerMock = createServiceWorkerMock();
-  Object.defineProperty(navigator, 'serviceWorker', {
-    configurable: true,
-    value: serviceWorkerMock,
-    writable: true,
-  });
-
-  Object.defineProperty(navigator, 'onLine', {
-    configurable: true,
-    value: true,
-    writable: true,
+  Object.defineProperties(navigator, {
+    onLine: {
+      configurable: true,
+      value: true,
+      writable: true,
+    },
+    serviceWorker: {
+      configurable: true,
+      value: serviceWorkerMock,
+      writable: true,
+    },
   });
 });
 
 afterEach(() => {
   vi.clearAllMocks();
 
-  document.body.innerHTML = '';
-  document.head.innerHTML = '';
+  document.body.replaceChildren();
+  document.head.replaceChildren();
 
   localStorage.clear();
 });

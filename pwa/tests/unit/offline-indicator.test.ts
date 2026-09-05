@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 describe('offline-indicator network state management', () => {
   beforeEach(() => {
     vi.resetModules();
-    document.body.innerHTML = '';
+    document.body.replaceChildren();
     vi.clearAllTimers();
     vi.useFakeTimers();
   });
@@ -21,11 +21,11 @@ describe('offline-indicator network state management', () => {
       expect(indicator).toBeTruthy();
       expect(indicator?.classList.contains('offline-toast')).toBe(true);
 
-      expect(indicator?.innerHTML).toContain('Keine Internetverbindung');
-      expect(indicator?.innerHTML).toContain(
+      expect(indicator?.getHTML()).toContain('Keine Internetverbindung');
+      expect(indicator?.getHTML()).toContain(
         'Bereits geladene Inhalte bleiben verfügbar',
       );
-      expect(indicator?.innerHTML).toContain('📵');
+      expect(indicator?.getHTML()).toContain('📵');
 
       expect(indicator?.getAttribute('role')).toBe('status');
       expect(indicator?.getAttribute('aria-live')).toBe('polite');
@@ -61,9 +61,9 @@ describe('offline-indicator network state management', () => {
       const indicator = document.querySelector('#offline-indicator');
       expect(indicator).toBeTruthy();
 
-      expect(indicator?.innerHTML).toContain('Wieder online');
-      expect(indicator?.innerHTML).toContain('Verbindung wiederhergestellt');
-      expect(indicator?.innerHTML).toContain('✅');
+      expect(indicator?.getHTML()).toContain('Wieder online');
+      expect(indicator?.getHTML()).toContain('Verbindung wiederhergestellt');
+      expect(indicator?.getHTML()).toContain('✅');
 
       expect(indicator?.classList.contains('online')).toBe(true);
       expect(indicator?.classList.contains('show')).toBe(true);
@@ -121,14 +121,14 @@ describe('offline-indicator network state management', () => {
 
       let indicator = document.querySelector('#offline-indicator');
       expect(indicator?.classList.contains('offline')).toBe(true);
-      expect(indicator?.innerHTML).toContain('Keine Internetverbindung');
+      expect(indicator?.getHTML()).toContain('Keine Internetverbindung');
 
       globalThis.dispatchEvent(new Event('online'));
 
       indicator = document.querySelector('#offline-indicator');
       expect(indicator?.classList.contains('online')).toBe(true);
       expect(indicator?.classList.contains('offline')).toBe(false);
-      expect(indicator?.innerHTML).toContain('Wieder online');
+      expect(indicator?.getHTML()).toContain('Wieder online');
     });
 
     test('handles rapid offline/online state changes', async () => {
@@ -141,7 +141,7 @@ describe('offline-indicator network state management', () => {
 
       const indicator = document.querySelector('#offline-indicator');
       expect(indicator?.classList.contains('online')).toBe(true);
-      expect(indicator?.innerHTML).toContain('Wieder online');
+      expect(indicator?.getHTML()).toContain('Wieder online');
     });
 
     test('creates new indicator if triggered after complete removal', async () => {
@@ -156,7 +156,7 @@ describe('offline-indicator network state management', () => {
 
       const indicator = document.querySelector('#offline-indicator');
       expect(indicator).toBeTruthy();
-      expect(indicator?.innerHTML).toContain('Wieder online');
+      expect(indicator?.getHTML()).toContain('Wieder online');
     });
   });
 
@@ -198,8 +198,11 @@ describe('offline-indicator network state management', () => {
       globalThis.dispatchEvent(new Event('offline'));
       globalThis.dispatchEvent(new Event('offline'));
 
+      // querySelectorAll, not querySelector: the assertion is that repeated
+      // offline events create no duplicate element.
+      // eslint-disable-next-line unicorn/no-incorrect-query-selector
       const indicators = document.querySelectorAll('#offline-indicator');
-      expect(indicators.length).toBe(1);
+      expect(indicators).toHaveLength(1);
     });
 
     test('prevents auto-dismiss if going offline again during online notification', async () => {
