@@ -285,7 +285,7 @@ describe('install-button engagement tracking', () => {
   });
 
   describe('appinstalled event handling', () => {
-    test('removes button when app is installed', () => {
+    test('removes button when app is installed', async () => {
       const engagementData = {
         firstVisit: Date.now(),
         lastVisit: Date.now(),
@@ -293,6 +293,8 @@ describe('install-button engagement tracking', () => {
         visitCount: 2,
       };
       localStorage.setItem('pwa-engagement', JSON.stringify(engagementData));
+
+      await import('../../src/install-button');
 
       const beforeInstallEvent = createBeforeInstallPromptEvent();
       globalThis.dispatchEvent(beforeInstallEvent);
