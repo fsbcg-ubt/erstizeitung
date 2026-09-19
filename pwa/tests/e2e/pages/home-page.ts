@@ -11,7 +11,6 @@ export class HomePage extends BasePage {
     // Page elements
     mainContent: 'main',
     navigation: '.book-summary',
-    searchButton: '.fa-search',
 
     // PWA-specific elements
     dismissUpdateButton: '#sw-dismiss-btn',
@@ -22,7 +21,6 @@ export class HomePage extends BasePage {
     updateToast: '#sw-update-toast',
 
     // Content elements
-    pageContent: '.page-inner',
     pageTitle: 'h1',
   };
 

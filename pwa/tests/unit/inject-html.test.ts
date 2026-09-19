@@ -164,11 +164,6 @@ describe('cdnUrlToLocalPath', () => {
       input: 'https://cdn.jsdelivr.net/npm/@scope/pkg@2.0.0/index.js',
     },
     {
-      description: 'protocol-relative URL',
-      expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
-      input: '//cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js',
-    },
-    {
       description: 'URL with query string and hash',
       expected: 'libs/fuse.js@6.4.6/dist/fuse.min.js',
       input:

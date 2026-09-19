@@ -52,32 +52,12 @@ export class PWAPage extends BasePage {
   }
 
   /**
-   * Unregister all service workers
-   */
-  async unregisterServiceWorkers(): Promise<void> {
-    await this.page.evaluate(async () => {
-      const registrations = await navigator.serviceWorker.getRegistrations();
-      await Promise.all(registrations.map((reg) => reg.unregister()));
-    });
-  }
-
-  /**
    * Get all cache names
    */
   async getCacheNames(): Promise<string[]> {
     return await this.page.evaluate(async () => {
       return await caches.keys();
     });
-  }
-
-  /**
-   * Check if specific cache exists
-   */
-  async cacheExists(cacheName: string): Promise<boolean> {
-    return await this.page.evaluate(async (name) => {
-      const cacheNames = await caches.keys();
-      return cacheNames.includes(name);
-    }, cacheName);
   }
 
   /**
@@ -177,62 +157,6 @@ export class PWAPage extends BasePage {
   }
 
   /**
-   * Simulate beforeinstallprompt event with engagement data
-   */
-  async simulateInstallPromptWithEngagement(
-    visitCount = 2,
-    totalTime = 30_000,
-  ): Promise<void> {
-    // Set engagement data in localStorage
-    await this.setLocalStorageItem(
-      'pwa-engagement',
-      JSON.stringify({
-        firstVisit: Date.now() - 86_400_000, // 1 day ago
-        lastVisit: Date.now(),
-        totalTime,
-        visitCount,
-      }),
-    );
-
-    // Simulate beforeinstallprompt event
-    await this.page.evaluate(() => {
-      const event = new Event(
-        'beforeinstallprompt',
-      ) as BeforeInstallPromptEvent;
-
-      Object.defineProperties(event, {
-        prompt: {
-          value: async () => {
-            // Empty implementation for mock
-          },
-          writable: true,
-        },
-        userChoice: {
-          value: Promise.resolve({ outcome: 'accepted' }),
-          writable: true,
-        },
-      });
-
-      globalThis.dispatchEvent(event);
-    });
-  }
-
-  /**
-   * Get install engagement data from localStorage
-   */
-  async getEngagementData(): Promise<EngagementData | null> {
-    const data = await this.getLocalStorageItem('pwa-engagement');
-    if (!data) {
-      return null;
-    }
-    try {
-      return JSON.parse(data) as EngagementData;
-    } catch {
-      return null;
-    }
-  }
-
-  /**
    * Check if install was dismissed
    */
   async isInstallDismissed(): Promise<boolean> {
@@ -250,31 +174,6 @@ export class PWAPage extends BasePage {
         await registration.update();
       }
     });
-  }
-
-  /**
-   * Listen for service worker update event
-   */
-  async listenForUpdateEvent(): Promise<void> {
-    await this.page.evaluate(async () => {
-      const registration = await navigator.serviceWorker.getRegistration();
-      if (!registration) {
-        return;
-      }
-
-      return new Promise<void>((resolve) => {
-        registration.addEventListener('updatefound', () => {
-          resolve();
-        });
-      });
-    });
-  }
-
-  /**
-   * Get network state (online/offline)
-   */
-  async isOnline(): Promise<boolean> {
-    return await this.page.evaluate(() => navigator.onLine);
   }
 
   /**
@@ -306,18 +205,6 @@ export class PWAPage extends BasePage {
 /**
  * TypeScript interfaces
  */
-
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-interface EngagementData {
-  firstVisit: number;
-  lastVisit: number;
-  totalTime: number;
-  visitCount: number;
-}
 
 interface ManifestData {
   background_color: string;
