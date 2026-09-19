@@ -44,15 +44,10 @@ const installWindow = globalThis as InstallWindow;
  * @returns {boolean} True if app is installed and running in standalone mode
  */
 function isAlreadyInstalled(): boolean {
-  if (globalThis.matchMedia('(display-mode: standalone)').matches) {
-    return true;
-  }
-
-  if ((navigator as IOSNavigator).standalone === true) {
-    return true;
-  }
-
-  return false;
+  return (
+    globalThis.matchMedia('(display-mode: standalone)').matches ||
+    (navigator as IOSNavigator).standalone === true
+  );
 }
 
 /**
@@ -178,19 +173,12 @@ function shouldRepromptIOSBanner(): boolean {
  * since iOS doesn't support the beforeinstallprompt event.
  */
 function showIOSInstallInstructions(): void {
-  if (isAlreadyInstalled()) {
-    return;
-  }
-
-  if (hasShownIosInstructionsThisSession) {
-    return;
-  }
-
-  if (!shouldShowInstallPrompt()) {
-    return;
-  }
-
-  if (!shouldRepromptIOSBanner()) {
+  if (
+    hasShownIosInstructionsThisSession ||
+    isAlreadyInstalled() ||
+    !shouldShowInstallPrompt() ||
+    !shouldRepromptIOSBanner()
+  ) {
     return;
   }
 
@@ -245,10 +233,12 @@ function showIOSInstallInstructions(): void {
 
   dismissButton?.addEventListener('keydown', (event: Event) => {
     const keyEvent = event as KeyboardEvent;
-    if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
-      keyEvent.preventDefault();
-      handleDismiss();
+    if (!(keyEvent.key === 'Enter' || keyEvent.key === ' ')) {
+      return;
     }
+
+    keyEvent.preventDefault();
+    handleDismiss();
   });
 }
 
@@ -436,15 +426,17 @@ const beforeInstallPromptHandler = (event: Event): void => {
   updateEngagementData();
   startTimeTracking();
 
-  if (shouldPreventDefault) {
-    event.preventDefault();
-    deferredPrompt = event as BeforeInstallPromptEvent;
-
-    setTimeout(() => {
-      showInstallButton();
-    }, 2000);
+  if (!shouldPreventDefault) {
+    // Let Chrome show its default banner (better UX for low-engagement visitors)
+    return;
   }
-  // Let Chrome show its default banner (better UX for low-engagement visitors)
+
+  event.preventDefault();
+  deferredPrompt = event as BeforeInstallPromptEvent;
+
+  setTimeout(() => {
+    showInstallButton();
+  }, 2000);
 };
 
 const beforeUnloadHandler = (): void => {

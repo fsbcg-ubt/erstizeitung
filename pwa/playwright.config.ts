@@ -7,10 +7,9 @@ import { defineConfig, devices } from '@playwright/test';
  * falling back to os.cpus().length for older Node.js versions
  */
 const getCpuCores = (): number => {
-  if (typeof os.availableParallelism === 'function') {
-    return os.availableParallelism();
-  }
-  return os.cpus().length;
+  return typeof os.availableParallelism === 'function'
+    ? os.availableParallelism()
+    : os.cpus().length;
 };
 
 /**
