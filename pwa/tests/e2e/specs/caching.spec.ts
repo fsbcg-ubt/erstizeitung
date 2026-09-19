@@ -81,8 +81,6 @@ test.describe('Caching Strategies', () => {
     await expect(page.locator('.book-body')).toBeVisible();
 
     await homePage.navigateToPage('/fachschaft.html');
-    await page.waitForLoadState('networkidle');
-
     await expect
       .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
         intervals: [100, 250, 500],
@@ -97,8 +95,6 @@ test.describe('Caching Strategies', () => {
     pwaPage,
   }) => {
     await homePage.navigateToPage('/fachschaft.html');
-    await page.waitForLoadState('networkidle');
-
     await expect
       .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
         intervals: [100, 250, 500],
@@ -202,14 +198,11 @@ test.describe('Caching Strategies', () => {
 
   test('new content is cached during navigation', async ({
     homePage,
-    page,
     pwaPage,
   }) => {
     const initialCaches = await pwaPage.getCacheNames();
 
     await homePage.navigateToPage('/studienstart.html');
-    await page.waitForLoadState('networkidle');
-
     const afterNavCaches = await pwaPage.getCacheNames();
     expect(afterNavCaches.length).toBeGreaterThanOrEqual(initialCaches.length);
   });
@@ -266,8 +259,6 @@ test.describe('Caching Strategies', () => {
     page,
   }) => {
     await homePage.navigateToPage('/campus-card.html');
-    await page.waitForLoadState('networkidle');
-
     await expect
       .poll(
         async () => {
@@ -322,8 +313,6 @@ test.describe('Caching Strategies', () => {
     page,
   }) => {
     await homePage.navigateToHome();
-    await page.waitForLoadState('networkidle');
-
     const isFontCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {

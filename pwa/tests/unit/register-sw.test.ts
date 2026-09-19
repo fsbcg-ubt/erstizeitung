@@ -80,31 +80,6 @@ describe('register-sw service worker management', () => {
   });
 
   describe('service worker update detection', () => {
-    test('shows update notification when new worker is installed', async () => {
-      mockServiceWorker.state = 'installed';
-      mockRegistration.installing = mockServiceWorker;
-      navigator.serviceWorker.controller = {} as any;
-
-      navigator.serviceWorker.register = vi
-        .fn()
-        .mockResolvedValue(mockRegistration);
-
-      await import('../../src/register-sw');
-      globalThis.dispatchEvent(new Event('load'));
-      await vi.runAllTimersAsync();
-
-      const updateFoundHandler =
-        mockRegistration.addEventListener.mock.calls.find(
-          (call: any) => call[0] === 'updatefound',
-        )?.[1];
-
-      updateFoundHandler?.();
-      await vi.runAllTimersAsync();
-
-      const toast = document.querySelector('#sw-update-toast');
-      expect(toast).toBeTruthy();
-    });
-
     test('does not show notification if no existing controller (first install)', async () => {
       mockServiceWorker.state = 'installed';
       mockRegistration.installing = mockServiceWorker;

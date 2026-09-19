@@ -101,8 +101,6 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  vi.clearAllMocks();
-
   document.body.replaceChildren();
   document.head.replaceChildren();
 

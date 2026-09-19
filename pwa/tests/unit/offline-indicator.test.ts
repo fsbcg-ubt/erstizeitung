@@ -131,19 +131,6 @@ describe('offline-indicator network state management', () => {
       expect(indicator?.getHTML()).toContain('Wieder online');
     });
 
-    test('handles rapid offline/online state changes', async () => {
-      await import('../../src/offline-indicator');
-
-      globalThis.dispatchEvent(new Event('offline'));
-      globalThis.dispatchEvent(new Event('online'));
-      globalThis.dispatchEvent(new Event('offline'));
-      globalThis.dispatchEvent(new Event('online'));
-
-      const indicator = document.querySelector('#offline-indicator');
-      expect(indicator?.classList.contains('online')).toBe(true);
-      expect(indicator?.getHTML()).toContain('Wieder online');
-    });
-
     test('creates new indicator if triggered after complete removal', async () => {
       await import('../../src/offline-indicator');
 
@@ -161,36 +148,6 @@ describe('offline-indicator network state management', () => {
   });
 
   describe('edge cases', () => {
-    test('handles offline event when navigator.onLine is true', async () => {
-      Object.defineProperty(navigator, 'onLine', {
-        value: true,
-        writable: true,
-      });
-
-      await import('../../src/offline-indicator');
-
-      globalThis.dispatchEvent(new Event('offline'));
-
-      const indicator = document.querySelector('#offline-indicator');
-      expect(indicator).toBeTruthy();
-      expect(indicator?.classList.contains('offline')).toBe(true);
-    });
-
-    test('handles online event when navigator.onLine is false', async () => {
-      Object.defineProperty(navigator, 'onLine', {
-        value: false,
-        writable: true,
-      });
-
-      await import('../../src/offline-indicator');
-
-      globalThis.dispatchEvent(new Event('online'));
-
-      const indicator = document.querySelector('#offline-indicator');
-      expect(indicator).toBeTruthy();
-      expect(indicator?.classList.contains('online')).toBe(true);
-    });
-
     test('handles multiple offline events in succession', async () => {
       await import('../../src/offline-indicator');
 

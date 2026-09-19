@@ -168,8 +168,6 @@ test.describe('Offline Functionality', () => {
     pwaPage,
   }) => {
     await homePage.navigateToPage('/fachschaft.html');
-    await page.waitForLoadState('networkidle');
-
     await expect
       .poll(async () => await pwaPage.isURLCached('fachschaft.html'), {
         intervals: [100, 250, 500],
@@ -178,8 +176,6 @@ test.describe('Offline Functionality', () => {
       .toBe(true);
 
     await homePage.navigateToPage('/termine.html');
-    await page.waitForLoadState('networkidle');
-
     await expect
       .poll(async () => await pwaPage.isURLCached('termine.html'), {
         intervals: [100, 250, 500],

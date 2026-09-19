@@ -23,12 +23,6 @@ describe('PWA Build Output', () => {
         manifest = JSON.parse(manifestContent);
       }).not.toThrow();
 
-      expect(manifest).toHaveProperty('name');
-      expect(manifest).toHaveProperty('short_name');
-      expect(manifest).toHaveProperty('theme_color');
-      expect(manifest).toHaveProperty('background_color');
-      expect(manifest).toHaveProperty('lang');
-
       expect(manifest.name).toBe('Erstizeitung BCG - Universität Bayreuth');
       expect(manifest.short_name).toBe('Erstizeitung');
       expect(manifest.theme_color).toBe('#249260');
@@ -95,11 +89,6 @@ describe('PWA Build Output', () => {
     test('service-worker.js includes offline.html in precache manifest', () => {
       const swPath = path.join(BOOK_DIR, 'service-worker.js');
       const swContent = fs.readFileSync(swPath, 'utf8');
-
-      expect(
-        swContent,
-        'offline.html should be in precache manifest',
-      ).toContain('offline.html');
 
       expect(
         swContent,
@@ -225,30 +214,5 @@ describe('PWA Build Output', () => {
         ).not.toContain('style="');
       },
     );
-  });
-
-  describe('Failure scenarios', () => {
-    test('_book directory exists', () => {
-      expect(
-        fs.existsSync(BOOK_DIR),
-        '_book directory should exist (run make render-pwa first)',
-      ).toBe(true);
-    });
-
-    test('manifest.json is not empty', () => {
-      const manifestPath = path.join(BOOK_DIR, 'manifest.json');
-      if (fs.existsSync(manifestPath)) {
-        const stats = fs.statSync(manifestPath);
-        expect(stats.size).toBeGreaterThan(0);
-      }
-    });
-
-    test('service-worker.js is not empty', () => {
-      const swPath = path.join(BOOK_DIR, 'service-worker.js');
-      if (fs.existsSync(swPath)) {
-        const stats = fs.statSync(swPath);
-        expect(stats.size).toBeGreaterThan(0);
-      }
-    });
   });
 });

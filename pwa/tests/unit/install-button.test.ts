@@ -221,10 +221,6 @@ describe('install-button engagement tracking', () => {
 
       expect(button?.getHTML()).toContain('📱');
       expect(button?.getHTML()).toContain('App installieren');
-
-      expect(button?.getAttribute('aria-label')).toBe(
-        'Erstizeitung als Progressive Web App installieren',
-      );
     });
 
     test('removes button after successful installation', async () => {

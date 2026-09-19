@@ -1,6 +1,11 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
 /**
+ * Content container every rendered GitBook page carries.
+ */
+const CONTENT_SELECTOR = '.book-body';
+
+/**
  * Base Page Object
  *
  * Provides common functionality for all page objects.
@@ -21,10 +26,13 @@ export class BasePage {
   }
 
   /**
-   * Wait for page to be fully loaded (including network idle)
+   * Wait until the rendered page content is present.
+   *
+   * goto() already awaits the load event, so this asserts the stronger
+   * condition the specs need: that the book's content container is rendered.
    */
   async waitForPageLoad(): Promise<void> {
-    await this.page.waitForLoadState('networkidle');
+    await expect(this.page.locator(CONTENT_SELECTOR)).toBeVisible();
   }
 
   /**
@@ -52,13 +60,6 @@ export class BasePage {
   }
 
   /**
-   * Check if element exists in DOM (visible or not)
-   */
-  async elementExists(selector: string): Promise<boolean> {
-    return (await this.page.locator(selector).count()) > 0;
-  }
-
-  /**
    * Check if element is visible
    */
   async isVisible(selector: string): Promise<boolean> {
@@ -82,18 +83,6 @@ export class BasePage {
   }
 
   /**
-   * Set localStorage item
-   */
-  async setLocalStorageItem(key: string, value: string): Promise<void> {
-    await this.page.evaluate(
-      ({ storageKey, storageValue }) => {
-        localStorage.setItem(storageKey, storageValue);
-      },
-      { storageKey: key, storageValue: value },
-    );
-  }
-
-  /**
    * Clear all localStorage
    */
   async clearLocalStorage(): Promise<void> {
@@ -110,21 +99,11 @@ export class BasePage {
   }
 
   /**
-   * Reload the current page
-   * @param waitUntil - Optional wait condition (default: 'networkidle')
-   *                    Use 'domcontentloaded' for offline scenarios
+   * Reload the current page and wait for its content to be rendered again.
    */
-  async reload(
-    waitUntil: 'load' | 'domcontentloaded' | 'networkidle' = 'networkidle',
-  ): Promise<void> {
-    await this.page.reload({ waitUntil });
-  }
-
-  /**
-   * Get current page title
-   */
-  async getTitle(): Promise<string> {
-    return await this.page.title();
+  async reload(): Promise<void> {
+    await this.page.reload();
+    await this.waitForPageLoad();
   }
 
   /**
@@ -145,13 +124,6 @@ export class BasePage {
   }
 
   /**
-   * Assert element is hidden
-   */
-  async assertElementHidden(selector: string): Promise<void> {
-    await expect(this.page.locator(selector)).toBeHidden();
-  }
-
-  /**
    * Assert element has specific attribute value
    */
   async assertElementHasAttribute(
@@ -163,23 +135,9 @@ export class BasePage {
   }
 
   /**
-   * Get page URL
-   */
-  getURL(): string {
-    return this.page.url();
-  }
-
-  /**
    * Execute JavaScript in page context
    */
   async evaluate<T>(pageFunction: () => T): Promise<T> {
     return await this.page.evaluate(pageFunction);
-  }
-
-  /**
-   * Take a screenshot (useful for debugging)
-   */
-  async screenshot(path?: string): Promise<Buffer> {
-    return await this.page.screenshot({ fullPage: true, path });
   }
 }
