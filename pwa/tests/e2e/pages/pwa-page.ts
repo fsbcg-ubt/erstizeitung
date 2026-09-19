@@ -24,10 +24,9 @@ export class PWAPage extends BasePage {
    */
   async getServiceWorkerState(): Promise<string | null> {
     return await this.page.evaluate(() => {
-      if (navigator.serviceWorker.controller) {
-        return navigator.serviceWorker.controller.state;
-      }
-      return null;
+      return navigator.serviceWorker.controller
+        ? navigator.serviceWorker.controller.state
+        : null;
     });
   }
 

@@ -62,28 +62,32 @@ describe('PWA Build Output', () => {
       const swContent = fs.readFileSync(swPath, 'utf8');
       const libsDirectory = path.join(BOOK_DIR, 'libs');
 
-      if (fs.existsSync(libsDirectory)) {
-        const fontFiles: string[] = [];
-        const findFonts = (dir: string): void => {
-          const entries = fs.readdirSync(dir, { withFileTypes: true });
-          for (const entry of entries) {
-            const fullPath = path.join(dir, entry.name);
-            if (entry.isDirectory()) {
-              findFonts(fullPath);
-            } else if (/\.(?:woff2?|ttf|eot)$/i.test(entry.name)) {
-              fontFiles.push(entry.name);
-            }
-          }
-        };
-        findFonts(libsDirectory);
-
-        if (fontFiles.length > 0) {
-          expect(swContent).toContain('libs/');
-          const fontMatches =
-            swContent.match(/libs\/[^"']+\.(?:woff2?|ttf|eot)/gi) ?? [];
-          expect(fontMatches.length).toBeGreaterThanOrEqual(fontFiles.length);
-        }
+      if (!fs.existsSync(libsDirectory)) {
+        return;
       }
+
+      const fontFiles: string[] = [];
+      const findFonts = (dir: string): void => {
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+        for (const entry of entries) {
+          const fullPath = path.join(dir, entry.name);
+          if (entry.isDirectory()) {
+            findFonts(fullPath);
+          } else if (/\.(?:woff2?|ttf|eot)$/i.test(entry.name)) {
+            fontFiles.push(entry.name);
+          }
+        }
+      };
+      findFonts(libsDirectory);
+
+      if (fontFiles.length === 0) {
+        return;
+      }
+
+      expect(swContent).toContain('libs/');
+      const fontMatches =
+        swContent.match(/libs\/[^"']+\.(?:woff2?|ttf|eot)/gi) ?? [];
+      expect(fontMatches.length).toBeGreaterThanOrEqual(fontFiles.length);
     });
 
     test('service-worker.js includes offline.html in precache manifest', () => {
