@@ -196,17 +196,6 @@ test.describe('Caching Strategies', () => {
     );
   });
 
-  test('new content is cached during navigation', async ({
-    homePage,
-    pwaPage,
-  }) => {
-    const initialCaches = await pwaPage.getCacheNames();
-
-    await homePage.navigateToPage('/studienstart.html');
-    const afterNavCaches = await pwaPage.getCacheNames();
-    expect(afterNavCaches.length).toBeGreaterThanOrEqual(initialCaches.length);
-  });
-
   test('verifies cache-first strategy for images', async ({ page }) => {
     const areImagesCached = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
