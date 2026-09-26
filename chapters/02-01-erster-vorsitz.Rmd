@@ -1,12 +1,12 @@
 ## Der 1. Vorstand {#fachschaftsmitglieder-erster-vorsitz}
 
 ```{r, echo=FALSE, out.width="500pt"}
-knitr::include_graphics("images/fachschaftler/miri.png")
+knitr::include_graphics("images/fachschaftler/shelly.png")
 ```
 
 **Name**
 
-> Miri
+> Michelle/Shelly
 
 **Job in der Fachschaft**
 
@@ -14,28 +14,28 @@ knitr::include_graphics("images/fachschaftler/miri.png")
 
 **Studiengang**
 
-> LA Realschule Bio/Englisch
+> Biologie B. Sc.
 
 **Motto**
 
-> "In a world where you can be anything, be kind" - Jennifer Dukes Lee 
+> Fake it till you make it 
 
 **Beste Bar in Bayreuth**
 
-> Latibo
+> Heimathafen
 
 **Bester Ort in Bayreuth**
 
-> Die Fachschaft 
+> Röhrensee, ÖBG 
 
 **Ziel für dieses Jahr**
 
-> Mehr Ordnung in meinem Kopf
+> Irgendwie durchkommen ohne verrückt zu werden (und Mathe bestehen)
 
 **Das kann ich gar nicht!**
 
-> Still sitzen
+> Mathe und lange still sitzen
 
 **Wie viel Uhr ist es?**
 
-> Es ist 18:40
+> Zeit für Kaffee

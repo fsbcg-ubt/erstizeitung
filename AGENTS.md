@@ -75,12 +75,33 @@ allgemein/beschreibung
 
 Immer von `main` abzweigen.
 
-## Bilder (Fachschaftsmitglieder)
+## Bilder
+
+### Fachschaftsmitglieder
 
 - Format: Quadratisch 1000×1000 px
 - Ecken: Radius 60 abgerundet
 - Finale Größe: 500×500 px
 - Dateiformat: PNG + Interlacing
+- Ablage: `images/fachschaftler/`, Dateiname kleingeschrieben
+
+### Fotos (Gruppen-, Kapitel-, Veranstaltungsbilder)
+
+- Dateiformat: JPEG, Qualität 85, progressiv
+- Maximale Kantenlänge: 1600 px
+- Kein WebP — `_output.yml` erzeugt auch `pdf_book`, LaTeX bettet WebP nicht ein
+
+```bash
+magick <quelle> -colorspace RGB -filter Lanczos -resize '1600x1600>' \
+  -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace Plane -strip <ziel>.jpg
+```
+
+`-colorspace RGB` skaliert in linearem Licht. Ohne den Umweg mittelt ImageMagick gammakodierte Werte und das Ergebnis wird dunkler.
+
+### Grafiken (Plakate, Logos, Titelbilder)
+
+- Dateiformat: PNG
+- Titelbilder von Organisationskapiteln: `images/organisationen/`
 
 ## Workflow-Regeln
 
