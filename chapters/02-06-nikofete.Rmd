@@ -18,7 +18,7 @@ knitr::include_graphics("images/fachschaftler/marie.png")
 
 **Motto**
 
-> Just do it yo! (und: 4 gewinnt!)
+> Augen zu und durch
 
 **Beste Bar in Bayreuth**
 
@@ -34,7 +34,7 @@ knitr::include_graphics("images/fachschaftler/marie.png")
 
 **Das kann ich gar nicht!**
 
-> Nein sagen
+> Bowling und Ballsportarten 🤡
 
 **Wie viel Uhr ist es?**
 
